@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude /buddy --help)",
+      "Bash(python3 -c ':*)",
+      "Bash(gh auth:*)",
+      "Bash(git --version)",
+      "Bash(git config:*)"
+    ]
+  }
+}

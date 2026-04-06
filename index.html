@@ -190,6 +190,32 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 3px
 
 /* ── Question counter ── */
 .q-counter { font-size: 13px; color: var(--text2); text-align: right; }
+
+/* ── Bookmark button ── */
+.btn-bookmark { background: transparent; border: 1px solid var(--border); border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: 16px; transition: all .2s; line-height: 1; margin-left: auto; }
+.btn-bookmark:hover { border-color: var(--yellow); }
+.btn-bookmark.active { border-color: var(--yellow); color: var(--yellow); background: rgba(245,158,11,.12); }
+
+/* ── Flashcard ── */
+.card-wrap { display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 20px 0; }
+.flash-card { width: 100%; max-width: 700px; cursor: pointer; perspective: 1200px; }
+.flash-inner { position: relative; min-height: 280px; transition: transform .5s cubic-bezier(.4,0,.2,1); transform-style: preserve-3d; }
+.flash-card.flipped .flash-inner { transform: rotateY(180deg); }
+.flash-front, .flash-back { position: absolute; width: 100%; min-height: 280px; backface-visibility: hidden; border-radius: var(--radius); padding: 32px 36px; display: flex; flex-direction: column; justify-content: center; }
+.flash-front { background: var(--bg2); border: 2px solid var(--border); }
+.flash-back { background: var(--bg3); border: 2px solid var(--accent); transform: rotateY(180deg); }
+.flash-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text2); margin-bottom: 14px; }
+.flash-q { font-size: 16px; line-height: 1.85; white-space: pre-wrap; }
+.flash-ans { font-size: 20px; font-weight: 700; color: var(--accent2); margin-bottom: 14px; line-height: 1.5; white-space: pre-wrap; }
+.flash-kws { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.flash-kw { background: rgba(91,106,240,.2); color: var(--accent2); border-radius: 20px; padding: 3px 12px; font-size: 13px; font-weight: 600; }
+.flash-hint { font-size: 12px; color: var(--text2); margin-top: 16px; }
+.flash-spacer { min-height: 280px; }
+.flash-nav { display: flex; align-items: center; gap: 14px; width: 100%; max-width: 700px; }
+.flash-ctr { font-size: 14px; color: var(--text2); flex: 1; text-align: center; }
+.flash-prog { width: 100%; max-width: 700px; height: 5px; background: var(--bg3); border-radius: 3px; overflow: hidden; }
+.flash-prog-fill { height: 100%; background: var(--accent); border-radius: 3px; transition: width .35s; }
+.flash-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
 </style>
 </head>
 <body>
@@ -203,6 +229,7 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 3px
       <span>남은 문제 <b id="hsRemain">0</b></span>
     </div>
     <div class="header-actions">
+      <button class="icon-btn" id="btnBookmarkMode" onclick="goBookmarkMode()" title="즐겨찾기 문제만 풀기" style="display:none">⭐ <span id="bookmarkCount">0</span></button>
       <button class="icon-btn" onclick="resetProgress()" title="진행 초기화">↺ 초기화</button>
     </div>
   </header>
@@ -217,6 +244,13 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 3px
           <label class="filter-chip"><input type="checkbox" value="단답형" checked onchange="onFilterChange()"> 단답형 <small style="color:var(--text2);margin-left:auto" id="cnt-단답형">0</small></label>
           <label class="filter-chip"><input type="checkbox" value="서술형" checked onchange="onFilterChange()"> 서술형 <small style="color:var(--text2);margin-left:auto" id="cnt-서술형">0</small></label>
           <label class="filter-chip"><input type="checkbox" value="실무형" checked onchange="onFilterChange()"> 실무형 <small style="color:var(--text2);margin-left:auto" id="cnt-실무형">0</small></label>
+        </div>
+      </div>
+      <!-- 즐겨찾기 필터 -->
+      <div class="sidebar-section">
+        <h3>즐겨찾기</h3>
+        <div class="filter-group">
+          <label class="filter-chip"><input type="checkbox" id="filterBookmark" onchange="onFilterChange()"> 즐겨찾기만 보기 <small style="color:var(--yellow);margin-left:auto" id="sideBookmarkCount">0</small></label>
         </div>
       </div>
       <!-- 출처 필터 -->
@@ -256,7 +290,7 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 3px
         <div class="mode-section">
           <h2>정보보안기사 실기 문제은행</h2>
           <p>18회~28회 기출 + 단답형 151제 + 요약정리<br>총 <b id="totalCount" style="color:var(--accent2)">0</b>개 문제</p>
-          <div class="mode-cards">
+          <div class="mode-cards" style="grid-template-columns:1fr 1fr 1fr">
             <div class="mode-card selected" id="modeAll" onclick="setMode('all')">
               <h4>🎲 전체 섞기</h4>
               <p>모든 출처의 문제를 랜덤으로</p>
@@ -273,8 +307,50 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 3px
               <h4>✏️ 유형별 연습</h4>
               <p>단답형/서술형/실무형 별도</p>
             </div>
+            <div class="mode-card" id="modeBookmark" onclick="setMode('bookmark')">
+              <h4>⭐ 즐겨찾기</h4>
+              <p>북마크한 문제만 풀기</p>
+            </div>
+            <div class="mode-card" id="modeFlash" onclick="setMode('flash')">
+              <h4>🃏 카드 암기</h4>
+              <p>플래시카드로 빠른 암기</p>
+            </div>
           </div>
           <button class="load-btn" onclick="startStudy()">학습 시작 →</button>
+        </div>
+      </div>
+
+      <!-- Flashcard area (hidden initially) -->
+      <div id="cardArea" style="display:none">
+        <div class="card-wrap">
+          <div class="flash-prog"><div class="flash-prog-fill" id="flashProgFill" style="width:0%"></div></div>
+          <div class="flash-card" id="flashCard" onclick="flipCard()">
+            <div class="flash-inner" id="flashInner">
+              <div class="flash-front">
+                <div class="flash-meta" id="flashMeta"></div>
+                <div class="flash-tag">문제 (클릭하면 정답 공개)</div>
+                <div class="flash-q" id="flashQ"></div>
+              </div>
+              <div class="flash-back">
+                <div class="flash-tag">정답</div>
+                <div class="flash-ans" id="flashAns"></div>
+                <div class="flash-kws" id="flashKws"></div>
+                <div class="flash-hint" id="flashComm"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flash-spacer" id="flashSpacer" style="display:none"></div>
+          <div class="flash-nav">
+            <button class="btn btn-reveal" onclick="flashPrev()">← 이전</button>
+            <span class="flash-ctr" id="flashCtr"></span>
+            <button class="btn btn-next" onclick="flashNext()">다음 →</button>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+            <button class="btn btn-reveal" onclick="flipCard()" style="min-width:120px">뒤집기 (Space)</button>
+            <button class="btn-bookmark" id="flashBookmarkBtn" onclick="flashToggleBookmark(event)" title="즐겨찾기 토글">☆</button>
+            <button class="btn btn-skip" onclick="shuffleFlash()">🔀 섞기</button>
+            <button class="btn btn-skip" onclick="exitFlash()">✕ 종료</button>
+          </div>
         </div>
       </div>
 
@@ -323,21 +399,29 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 3px
 // State
 // ══════════════════════════════════════════════
 const HIST_KEY = 'sqbank_hist_v2';
+const BOOK_KEY = 'sqbank_book_v1';
 
 let questions = [];
 let history = {};   // { qid: { correct, partial, wrong } }
+let bookmarks = new Set();  // Set of bookmarked question ids
 let current = null;
 let phase = 'loading';  // loading | question | revealed | graded
 let studyMode = 'all';
 let activeExams = new Set();
 let allExams = [];
 
+// Flashcard state
+let flashDeck = [];
+let flashIdx = 0;
+
 // ══════════════════════════════════════════════
 // Init
 // ══════════════════════════════════════════════
 window.addEventListener('DOMContentLoaded', () => {
   history = JSON.parse(localStorage.getItem(HIST_KEY) || '{}');
+  bookmarks = new Set(JSON.parse(localStorage.getItem(BOOK_KEY) || '[]'));
   loadQuestions();
+  document.addEventListener('keydown', onGlobalKey);
 });
 
 async function loadQuestions() {
@@ -386,7 +470,7 @@ function onLoaded() {
 // ══════════════════════════════════════════════
 function setMode(m) {
   studyMode = m;
-  ['all','wrong','exam','type'].forEach(id => {
+  ['all','wrong','exam','type','bookmark','flash'].forEach(id => {
     document.getElementById('mode' + id[0].toUpperCase() + id.slice(1))?.classList.toggle('selected', id === m);
   });
 }
@@ -395,8 +479,26 @@ function startStudy() {
   document.getElementById('sidebar').style.display = 'flex';
   document.getElementById('headerStats').style.display = 'flex';
   document.getElementById('loadScreen').style.display = 'none';
-  document.getElementById('studyArea').style.display = 'block';
-  nextQuestion();
+
+  if (studyMode === 'flash') {
+    document.getElementById('cardArea').style.display = 'block';
+    document.getElementById('studyArea').style.display = 'none';
+    initFlash();
+  } else {
+    document.getElementById('studyArea').style.display = 'block';
+    document.getElementById('cardArea').style.display = 'none';
+    nextQuestion();
+  }
+}
+
+function goBookmarkMode() {
+  // From header button: go to bookmark mode quiz
+  setMode('bookmark');
+  if (document.getElementById('loadScreen').style.display !== 'none') {
+    startStudy();
+  } else {
+    nextQuestion();
+  }
 }
 
 // ══════════════════════════════════════════════
@@ -446,6 +548,7 @@ function toggleAllExams() {
 function getFilteredQuestions() {
   const types = new Set(getActiveTypes());
   const sources = new Set(getActiveSources());
+  const bookmarkOnly = document.getElementById('filterBookmark')?.checked;
 
   return questions.filter(q => {
     if (!types.has(q.type)) return false;
@@ -455,6 +558,8 @@ function getFilteredQuestions() {
       const h = history[q.id];
       return h && h.wrong > 0 && (h.wrong > (h.correct || 0));
     }
+    if (studyMode === 'bookmark') return bookmarks.has(q.id);
+    if (bookmarkOnly) return bookmarks.has(q.id);
     return true;
   });
 }
@@ -560,11 +665,13 @@ function renderQuestion() {
   const diffBadge = q.difficulty ? `<span class="badge diff-${q.difficulty}">${q.difficulty}</span>` : '';
   const examBadge = q.source === '기출' ? `<span class="badge exam">${q.exam} ${q.number}번</span>` : `<span class="badge source">${q.source} ${q.number}번</span>`;
 
+  const isBookmarked = bookmarks.has(q.id);
   document.getElementById('qMeta').innerHTML = `
     ${examBadge}
     <span class="badge type-${q.type}">${q.type}</span>
     <span class="badge points">${q.points}점</span>
     ${diffBadge}
+    <button class="btn-bookmark ${isBookmarked ? 'active' : ''}" id="bookmarkBtn" onclick="toggleBookmark('${q.id}')" title="${isBookmarked ? '즐겨찾기 해제' : '즐겨찾기 추가'}">${isBookmarked ? '⭐' : '☆'}</button>
   `;
 
   // Question text
@@ -869,6 +976,15 @@ function updateStats() {
   document.getElementById('statPartial').textContent = totP;
   document.getElementById('statWrong').textContent = totW;
 
+  // Bookmark count
+  const bkCnt = bookmarks.size;
+  const bkEl = document.getElementById('bookmarkCount');
+  const sbBkEl = document.getElementById('sideBookmarkCount');
+  if (bkEl) bkEl.textContent = bkCnt;
+  if (sbBkEl) sbBkEl.textContent = bkCnt;
+  const hdrBk = document.getElementById('btnBookmarkMode');
+  if (hdrBk) hdrBk.style.display = bkCnt > 0 ? 'block' : 'none';
+
   // Per-type bars
   const types = ['단답형', '서술형', '실무형'];
   const colors = ['var(--accent)', 'var(--green)', 'var(--yellow)'];
@@ -900,6 +1016,180 @@ function highlightKeywords(html, keywords) {
     html = html.replace(re, '<span class="kw-highlight">$1</span>');
   });
   return html;
+}
+
+// ══════════════════════════════════════════════
+// Bookmark
+// ══════════════════════════════════════════════
+function toggleBookmark(id) {
+  if (bookmarks.has(id)) {
+    bookmarks.delete(id);
+    showToast('즐겨찾기 해제');
+  } else {
+    bookmarks.add(id);
+    showToast('⭐ 즐겨찾기 추가!');
+  }
+  localStorage.setItem(BOOK_KEY, JSON.stringify([...bookmarks]));
+  // Update button state without re-rendering question
+  const btn = document.getElementById('bookmarkBtn');
+  if (btn) {
+    const active = bookmarks.has(id);
+    btn.classList.toggle('active', active);
+    btn.textContent = active ? '⭐' : '☆';
+    btn.title = active ? '즐겨찾기 해제' : '즐겨찾기 추가';
+  }
+  updateStats();
+}
+
+// ══════════════════════════════════════════════
+// Flashcard
+// ══════════════════════════════════════════════
+function initFlash() {
+  const pool = getFilteredQuestions();
+  if (!pool.length) {
+    showToast('조건에 맞는 문제가 없습니다.');
+    exitFlash();
+    return;
+  }
+  flashDeck = shuffle([...pool]);
+  flashIdx = 0;
+  renderFlashCard();
+}
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function renderFlashCard() {
+  const q = flashDeck[flashIdx];
+  if (!q) return;
+
+  // Reset flip
+  document.getElementById('flashCard').classList.remove('flipped');
+  // Fix min-height after flip reset
+  document.getElementById('flashSpacer').style.display = 'none';
+  setTimeout(() => {
+    document.getElementById('flashSpacer').style.display = 'none';
+  }, 520);
+
+  // Progress
+  document.getElementById('flashProgFill').style.width = ((flashIdx + 1) / flashDeck.length * 100) + '%';
+  document.getElementById('flashCtr').textContent = `${flashIdx + 1} / ${flashDeck.length}`;
+
+  // Meta
+  const examLabel = q.source === '기출' ? `${q.exam} ${q.number}번` : `${q.source} ${q.number}번`;
+  document.getElementById('flashMeta').innerHTML = `
+    <span class="badge exam">${examLabel}</span>
+    <span class="badge type-${q.type}">${q.type}</span>
+    <span class="badge points">${q.points}점</span>
+  `;
+
+  // Question text (front)
+  document.getElementById('flashQ').innerHTML = formatQuestionText(q.question);
+
+  // Answer (back)
+  let ansHtml = '';
+  if (q.sub_questions && q.sub_questions.length > 0) {
+    ansHtml = q.sub_questions.map(sq =>
+      `<div style="border-left:3px solid var(--accent);padding-left:10px;margin:6px 0">
+        <div style="font-size:12px;color:var(--text2)">${escHtml(sq.number)})</div>
+        <div style="font-size:15px;color:var(--text);margin-top:2px">${escHtml(sq.answer)}</div>
+      </div>`
+    ).join('');
+  } else {
+    ansHtml = escHtml(q.answer);
+  }
+  document.getElementById('flashAns').innerHTML = ansHtml;
+
+  // Keywords
+  document.getElementById('flashKws').innerHTML = (q.keywords || [])
+    .map(kw => `<span class="flash-kw">${escHtml(kw)}</span>`).join('');
+
+  // Commentary
+  document.getElementById('flashComm').textContent = q.commentary
+    ? '💡 ' + q.commentary.slice(0, 80) + (q.commentary.length > 80 ? '…' : '')
+    : '';
+
+  // Bookmark button
+  const bkBtn = document.getElementById('flashBookmarkBtn');
+  if (bkBtn) {
+    const active = bookmarks.has(q.id);
+    bkBtn.className = 'btn-bookmark' + (active ? ' active' : '');
+    bkBtn.textContent = active ? '⭐' : '☆';
+  }
+}
+
+function flipCard() {
+  const card = document.getElementById('flashCard');
+  const spacer = document.getElementById('flashSpacer');
+  card.classList.toggle('flipped');
+  // After flip, set spacer height so card area doesn't collapse
+  setTimeout(() => {
+    const inner = document.getElementById('flashInner');
+    spacer.style.minHeight = inner.offsetHeight + 'px';
+  }, 10);
+}
+
+function flashNext() {
+  if (flashIdx < flashDeck.length - 1) {
+    flashIdx++;
+    renderFlashCard();
+  } else {
+    showToast('마지막 카드입니다! 처음으로 돌아가려면 섞기를 눌러주세요.');
+  }
+}
+
+function flashPrev() {
+  if (flashIdx > 0) {
+    flashIdx--;
+    renderFlashCard();
+  }
+}
+
+function shuffleFlash() {
+  initFlash();
+  showToast('카드를 새로 섞었습니다!');
+}
+
+function flashToggleBookmark(e) {
+  e.stopPropagation();
+  const q = flashDeck[flashIdx];
+  if (!q) return;
+  if (bookmarks.has(q.id)) {
+    bookmarks.delete(q.id);
+    showToast('즐겨찾기 해제');
+  } else {
+    bookmarks.add(q.id);
+    showToast('⭐ 즐겨찾기 추가!');
+  }
+  localStorage.setItem(BOOK_KEY, JSON.stringify([...bookmarks]));
+  updateStats();
+  const btn = document.getElementById('flashBookmarkBtn');
+  if (btn) {
+    const active = bookmarks.has(q.id);
+    btn.className = 'btn-bookmark' + (active ? ' active' : '');
+    btn.textContent = active ? '⭐' : '☆';
+  }
+}
+
+function exitFlash() {
+  document.getElementById('cardArea').style.display = 'none';
+  document.getElementById('loadScreen').style.display = 'flex';
+  document.getElementById('sidebar').style.display = 'none';
+  document.getElementById('headerStats').style.display = 'none';
+}
+
+function onGlobalKey(e) {
+  const cardArea = document.getElementById('cardArea');
+  if (!cardArea || cardArea.style.display === 'none') return;
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  if (e.key === ' ' || e.code === 'Space') { e.preventDefault(); flipCard(); }
+  else if (e.key === 'ArrowRight') flashNext();
+  else if (e.key === 'ArrowLeft') flashPrev();
 }
 
 function showToast(msg) {
