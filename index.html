@@ -206,7 +206,7 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 3px
 .flash-back { background: var(--bg3); border: 2px solid var(--accent); transform: rotateY(180deg); }
 .flash-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text2); margin-bottom: 14px; }
 .flash-q { font-size: 16px; line-height: 1.85; white-space: pre-wrap; }
-.flash-ans { font-size: 20px; font-weight: 700; color: var(--accent2); margin-bottom: 14px; line-height: 1.5; white-space: pre-wrap; }
+.flash-ans { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 14px; line-height: 1.5; white-space: pre-wrap; }
 .flash-kws { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
 .flash-kw { background: rgba(91,106,240,.2); color: var(--accent2); border-radius: 20px; padding: 3px 12px; font-size: 13px; font-weight: 600; }
 .flash-hint { font-size: 12px; color: var(--text2); margin-top: 16px; }
@@ -764,10 +764,19 @@ function renderAnswerSection(q) {
     if (q.sub_questions && q.sub_questions.length > 0) {
       q.sub_questions.forEach((sq, i) => {
         const row = document.createElement('div');
-        row.style.cssText = 'border-left:3px solid var(--border);padding-left:12px;margin:4px 0;';
-        row.innerHTML = `<div style="font-size:13px;color:var(--text2);margin-bottom:4px">${sq.number}) ${escHtml(sq.question.slice(0,80))}${sq.question.length>80?'…':''}</div>`;
+        row.style.cssText = 'border-left:3px solid var(--border);padding-left:12px;margin:8px 0;';
+        row.innerHTML = `
+          <div style="font-size:13px;color:var(--text2);margin-bottom:6px">${sq.number}) ${escHtml(sq.question)}</div>
+          <textarea class="ans-textarea sub-ans-input" rows="3" placeholder="답안을 작성하세요..." style="margin-top:2px"></textarea>
+        `;
         inputsDiv.appendChild(row);
       });
+    } else {
+      const ta = document.createElement('textarea');
+      ta.className = 'ans-textarea sub-ans-input';
+      ta.rows = 4;
+      ta.placeholder = '답안을 작성하세요...';
+      inputsDiv.appendChild(ta);
     }
 
     btnRow.innerHTML = `
@@ -865,6 +874,9 @@ function revealAnswer() {
   const q = current;
   phase = 'revealed';
 
+  // Disable textareas
+  document.querySelectorAll('.sub-ans-input').forEach(ta => ta.disabled = true);
+
   document.getElementById('btnRow').innerHTML = `
     <button class="btn btn-correct" onclick="selfGrade('correct')">✅ 완전정답</button>
     <button class="btn btn-partial" onclick="selfGrade('partial')">🟡 부분정답</button>
@@ -874,18 +886,38 @@ function revealAnswer() {
   let ansHtml = '';
 
   if (q.sub_questions && q.sub_questions.length > 0) {
-    ansHtml = q.sub_questions.map(sq => `
-      <div class="sub-answer">
-        <div class="sub-num">${sq.number}) 소문항</div>
-        <div class="answer-text">${highlightKeywords(escHtml(sq.question).replace(/\n/g,'<br>'), q.keywords)}</div>
-        <div style="margin-top:6px;padding-top:6px;border-top:1px solid var(--border)">
-          <span style="font-size:12px;color:var(--text2)">▶ 답:</span>
-          <div class="answer-text" style="margin-top:4px">${highlightKeywords(escHtml(sq.answer).replace(/\n/g,'<br>'), q.keywords)}</div>
+    ansHtml = q.sub_questions.map((sq, i) => {
+      const userInputs = document.querySelectorAll('.sub-ans-input');
+      const userVal = userInputs[i] ? userInputs[i].value.trim() : '';
+      const myAnsHtml = userVal
+        ? `<div style="margin-bottom:10px;padding:10px 12px;background:rgba(255,255,255,.04);border-radius:6px;border-left:3px solid var(--text2)">
+            <div style="font-size:11px;color:var(--text2);font-weight:700;margin-bottom:4px">내 답안</div>
+            <div style="font-size:14px;line-height:1.7;white-space:pre-wrap">${escHtml(userVal)}</div>
+           </div>` : '';
+      return `
+        <div style="margin:12px 0;padding:14px 16px;background:var(--bg2);border-radius:8px;border:1px solid var(--border)">
+          <div style="font-size:12px;font-weight:700;color:var(--cyan);letter-spacing:.5px;margin-bottom:8px">▶ ${sq.number}번 소문항</div>
+          <div class="answer-text" style="color:var(--text2);margin-bottom:10px">${highlightKeywords(escHtml(sq.question).replace(/\n/g,'<br>'), q.keywords)}</div>
+          <div style="border-top:1px solid var(--border);padding-top:10px">
+            ${myAnsHtml}
+            <div style="font-size:11px;color:var(--text2);font-weight:700;margin-bottom:6px">📋 모범 답안</div>
+            <div class="answer-text">${highlightKeywords(escHtml(sq.answer ? sq.answer : '답안 없음').replace(/\n/g,'<br>'), q.keywords)}</div>
+          </div>
         </div>
-      </div>
-    `).join('');
+      `;
+    }).join('');
   } else {
-    ansHtml = `<div class="answer-text">${highlightKeywords(escHtml(q.answer).replace(/\n/g,'<br>'), q.keywords)}</div>`;
+    const userInputs = document.querySelectorAll('.sub-ans-input');
+    const userVal = userInputs[0] ? userInputs[0].value.trim() : '';
+    const myAnsHtml = userVal
+      ? `<div style="margin-bottom:10px;padding:10px 12px;background:rgba(255,255,255,.04);border-radius:6px;border-left:3px solid var(--text2)">
+          <div style="font-size:11px;color:var(--text2);font-weight:700;margin-bottom:4px">내 답안</div>
+          <div style="font-size:14px;line-height:1.7;white-space:pre-wrap">${escHtml(userVal)}</div>
+         </div>` : '';
+    ansHtml = `
+      ${myAnsHtml}
+      <div class="answer-text">${highlightKeywords(escHtml(q.answer).replace(/\n/g,'<br>'), q.keywords)}</div>
+    `;
   }
 
   document.getElementById('resultArea').style.display = 'block';
@@ -901,13 +933,12 @@ function revealAnswer() {
 
 function selfGrade(grade) {
   recordHistory(current.id, grade);
-  document.getElementById('btnRow').innerHTML = `<button class="btn btn-next" onclick="nextQuestion()">다음 문제 →</button>`;
-  document.querySelectorAll('.btn-correct,.btn-partial,.btn-wrong').forEach(b => b.disabled = true);
   updateStats();
   phase = 'graded';
 
   const label = { correct: '✅ 완전정답으로 기록', partial: '🟡 부분정답으로 기록', wrong: '❌ 오답으로 기록' };
   showToast(label[grade] || '기록 완료');
+  nextQuestion();
 }
 
 // ══════════════════════════════════════════════
