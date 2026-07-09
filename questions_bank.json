@@ -15555,5 +15555,1410 @@
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_001",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 1,
+    "type": "단답형",
+    "points": 3,
+    "question": "(1) ftp 접근 여부를 검토할 수 있는로그 \n(2) 경로",
+    "answer": "(1) xferlog \n(2) /var/log/xferlog",
+    "keywords": [
+      "xferlog",
+      "/var/log/xferlog"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_002",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 2,
+    "type": "단답형",
+    "points": 3,
+    "question": "(1) 현재 시스템에 로그인 되어있는 사용자들의 정보를 담고 있는 파일 \n(2) 명령어 \n(3) 리눅스 경로 \n(4) 유닉스 경로",
+    "answer": "(1) utmp \n(2) who, w, finger \n(3) /var/run/utmp \n(4) /var/adm/umtpx",
+    "keywords": [
+      "utmp",
+      "who, w, finger",
+      "/var/run/utmp",
+      "/var/adm/umtpx"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_003",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 3,
+    "type": "단답형",
+    "points": 3,
+    "question": "(1) 시스템 사용자들의 로그인, 로그아웃 기록\n(2) 명령어\n(3) 리눅스 경로\n(4) 유닉스 경로",
+    "answer": "(1) wtmp\n(2) last\n(3) /var/log/wtmp\n(4) /var/adm/wtmpx",
+    "keywords": [
+      "wtmp",
+      "last",
+      "/var/log/wtmp",
+      "/var/adm/wtmpx"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_004",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 4,
+    "type": "단답형",
+    "points": 3,
+    "question": "(1) 각 사용자가 마지막으로 성공적으로 로그인한 시간, 호스트 정보\n(2) 명령어\n(3) 리눅스 경로\n(4) 유닉스 경로",
+    "answer": "(1) lastlog\n(2) lastlog\n(3) /var/log/lastlog\n(4) /var/adm/lastlog",
+    "keywords": [
+      "lastlog",
+      "lastlog",
+      "/var/log/lastlog",
+      "/var/adm/lastlog"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_005",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 5,
+    "type": "단답형",
+    "points": 3,
+    "question": "(1) 로그인 실패 기록\n(2) 명령어\n(3) 리눅스 경로\n(4) 유닉스 경로",
+    "answer": "(1) btmp\n(2) lastb\n(3) /var/log/btmp\n(4)/var/adm/loginlog",
+    "keywords": [
+      "btmp",
+      "lastb",
+      "/var/log/btmp",
+      "/var/adm/loginlog"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_006",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 6,
+    "type": "단답형",
+    "points": 3,
+    "question": "(1) root 권한으로 전환하는 과정에서 발생하는 로그 기록\n(2) 리눅스 경로\n(3) 유닉스 경로",
+    "answer": "(1) sulog\n(2) /var/log/secure\n(3) /var/adm/sulog",
+    "keywords": [
+      "sulog",
+      "/var/log/secure",
+      "/var/adm/sulog"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_007",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 7,
+    "type": "단답형",
+    "points": 3,
+    "question": "주로 카메라 , DVR 등 인터넷에 연결된 기기들을 감염시켜 봇넷을 만든 후 DDoS 공격 수행",
+    "answer": "Mirai 악성코드",
+    "keywords": [
+      "Mirai 악성코드"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_008",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 8,
+    "type": "단답형",
+    "points": 3,
+    "question": "악성코드가 브라우저 메모리에 침투하여 사용자가 정상적인 은행 사이트에 접속했을 때 가짜 입력창을 중간에 삽입하여 정보를 탈취하는 기술",
+    "answer": "Web Injection",
+    "keywords": [
+      "Web Injection"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_009",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 9,
+    "type": "단답형",
+    "points": 3,
+    "question": "웹 브라우저의 취약점이나 확장 기능을 악용하여 사용자 화면과 웹 서버 사이의 트래픽을 가로채고 조작하는 공격 기법",
+    "answer": "MitB (Man-in-the-Browser) 공격",
+    "keywords": [
+      "MitB (Man-in-the-Browser) 공격"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_010",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 10,
+    "type": "단답형",
+    "points": 3,
+    "question": "금융기관 직원 등 특정 타겟을 정하고, 신뢰할 만한 발송인 (송장, 공문서 등)으로 위장하여 악성 메일을 보내는 사회공학적 공격기법",
+    "answer": "스피어 피싱 (Spear Phishing)",
+    "keywords": [
+      "스피어 피싱 (Spear Phishing)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_011",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 11,
+    "type": "단답형",
+    "points": 3,
+    "question": "사용자의 컴퓨터에 몰래 설치되어 웹 브라우저의 메모리나 트래픽을 감시하다가, 사용자가 금융기관이나 인터넷뱅킹 사이트에 접속할 때 가짜 로그인 창을 띄우거나 금융인증정보를 가로채 자산을 탈취하는 악성코드",
+    "answer": "뱅킹 트로이목마 (Banking Trojan)",
+    "keywords": [
+      "뱅킹 트로이목마 (Banking Trojan)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_012",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 12,
+    "type": "단답형",
+    "points": 3,
+    "question": "2016년 등장하여 과거 다이어 악성코드의 소스코드를 기반으로 발전한 악성코드. 초기에는 금융정보를 탈취하는 뱅킹트로이목마였으나, 이후 플러그인 추가가 용이한 모듈형 구조로 진화하여 네트워크 정찰, 권한상승, 감염 확산 등 다양한 기능을 수행하게 되었다. 특히 이모텟에 의해 1차 감염된 시스템에 설치된 후, 최종적으로 류크나 콘티와 같은 대규모 기업형 랜섬웨어를 내려받아 실행하는 징검다리 역할로 악명이 높은 악성코드",
+    "answer": "트릭봇(Trickbot)",
+    "keywords": [
+      "트릭봇(Trickbot)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_013",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 13,
+    "type": "단답형",
+    "points": 3,
+    "question": "소프트웨어 개발사, 업데이트 서버, 배포 인프라 등 신뢰 관계에 있는 공급망의 취약점을 파고드는 공격방식이다. 대표적인 사례로 2020년 말 발견된 미국 '솔라윈즈' 사태가 있으며 , 공격자는 정상적인 네트워크 관리 프로그램 업데이트 파일에 악성코드를 삽입하여 이를 다운로드한 수많은 정부 기관과 기업을 한번에 감염시켰다.",
+    "answer": "공급망 공격 (Supply chain attack)",
+    "keywords": [
+      "공급망 공격 (Supply chain attack)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_014",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 14,
+    "type": "단답형",
+    "points": 3,
+    "question": "2021년 말 발견된 오픈소스 라이브러리의 치명적인 원격 코드 실행(RCE) 취약점(CVE-2021-44228)이다. 자바 프로그램이 로그를 기록하는 특정 모듈의 결함을 이용하여 해커가 입력창이나 헤더에 특정 문자열을 입력하면 서버가 악성 스크립트를 원격으로 다운로드해 실행하게 만든다.",
+    "answer": "Log4j 취약점",
+    "keywords": [
+      "Log4j 취약점"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_015",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 15,
+    "type": "단답형",
+    "points": 3,
+    "question": "락빗이나 콘티와 같은 현대적인 랜섬웨어 조직이 사용하는 비즈니스 모델이다. 실력이 뛰어난 해커 조직이 랜섬웨어 플랫폼과 결제 시스템을 개발하여 클라우드 서비스 형태로 제공하면, 실제 공격을 수행하는 하부 유포 대리인들이 이를 구매해 공격을 감행한 뒤 몸값을 나눠 갖는 형태",
+    "answer": "RaaS (Service형 랜섬웨어)",
+    "keywords": [
+      "RaaS (Service형 랜섬웨어)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_016",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 16,
+    "type": "단답형",
+    "points": 3,
+    "question": "공격자는 이미 다른 웹사이트에서 유출된 사용자들의 아이디와 패스워드 목록을 확보한 뒤, 자동화된 봇 프로그램을 이용해 타겟 웹 사이트에 무차별적으로 대입하며 로그인을 시도한다.",
+    "answer": "크리덴셜 스터핑 (Credential Stuffing)",
+    "keywords": [
+      "크리덴셜 스터핑 (Credential Stuffing)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_017",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 17,
+    "type": "단답형",
+    "points": 3,
+    "question": "시스템에서 열린 파일 목록을 알려주고 사용하는 프로세스, 디바이스 정보, 파일의 종류 등 상세한 정보를 출력",
+    "answer": "lsof (list open files)",
+    "keywords": [
+      "lsof (list open files)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_018",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 18,
+    "type": "단답형",
+    "points": 3,
+    "question": "특정 파일, 디렉토리 또는 파일 시스템을 사용 중인 프로세스를 확인하고, 해당 프로세스를 강제 종료(kill)할 때 주로 사용하는 유닉스/리눅스 명령어",
+    "answer": "fuser",
+    "keywords": [
+      "fuser"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_019",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 19,
+    "type": "단답형",
+    "points": 3,
+    "question": "매개변수 형식 \n(1) 정수형 10진수 상수\n(2) 문자스트링\n(3) 16진수 양의 정수\n(4) %n의 반인 2바이트 단위",
+    "answer": "(1) %d\n(2) %s\n(3) %x\n(4) %hn",
+    "keywords": [
+      "%d",
+      "%s",
+      "%x",
+      "%hn"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_020",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 20,
+    "type": "단답형",
+    "points": 3,
+    "question": "전송계층 보안 프로토콜, TCP/IP 프로토콜 스택의 전송 계층에서 작동하고 데이터를 암호화하고 인증하는 역할",
+    "answer": "SSL",
+    "keywords": [
+      "SSL"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_021",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 21,
+    "type": "단답형",
+    "points": 3,
+    "question": "하나 이상의 기본 테이블에서 유도된 논리적 가상 테이블로, 사용자에게 허용된 데이터만 제한적으로 보여주어 데이터베이스의 기밀성을 높이는 보안기술",
+    "answer": "View",
+    "keywords": [
+      "View"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_022",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 22,
+    "type": "단답형",
+    "points": 3,
+    "question": "DBMS에서 주체가 객체에 접근할 때 권한을 검증하고, 인가되지 않은 접근을 차단하는 데이터베이스 보안 메커니즘",
+    "answer": "Access Control (접근제어)",
+    "keywords": [
+      "Access Control (접근제어)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_023",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 23,
+    "type": "단답형",
+    "points": 3,
+    "question": "데이터베이스 객체의 소유자가 자율적인 판단에 따라 다른 사용자에게 권한을 부여하는 방식으로 , SQL의 GRANT/REVOKE 명령어로 구현되는 접근 제어의 모델",
+    "answer": "DAC (임의적 접근제어)",
+    "keywords": [
+      "DAC (임의적 접근제어)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_024",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 24,
+    "type": "단답형",
+    "points": 3,
+    "question": "사용자의 신분이 아닌 조직 내에서 직무상 맡은 역할에 따라 권한을 부여하고 통제하는 대규모 DBMS용 접근제어 모델",
+    "answer": "RBAC (역할 기반 접근 제어)",
+    "keywords": [
+      "RBAC (역할 기반 접근 제어)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_025",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 25,
+    "type": "단답형",
+    "points": 3,
+    "question": "Windows 운영체제의 대표적인 파일 시스템으로, 파일 및 폴더에 대한 개별 보안 권한 (ACL) 설정, 암호화(EFS), 압축, 저널링을 통한 복구 기능을 지원하는 파일 시스템",
+    "answer": "NTFS",
+    "keywords": [
+      "NTFS"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_026",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 26,
+    "type": "단답형",
+    "points": 3,
+    "question": "다양한 OS와 호환성이 높으나, 파일 및 폴더에 대한 개별적인 접근제어(보안권한설저) 기능이 없으며, 대용량 하드디스크 지원에 한계가 있는 파일 시스템 계열을 쓰시오.",
+    "answer": "FAT",
+    "keywords": [
+      "FAT"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_027",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 27,
+    "type": "단답형",
+    "points": 3,
+    "question": "FAT32 파일 시스템 환경에서 단일 파일이 가질 수 있는 최대파일 크기 한계",
+    "answer": "4GB",
+    "keywords": [
+      "4GB"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_028",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 28,
+    "type": "단답형",
+    "points": 3,
+    "question": "FAT나 NTFS 같은 파일 시스템에서 디스크에 파일을 저장할 때 사용하는 논리적인 기본 할당 단위",
+    "answer": "클러스터 (Cluster)",
+    "keywords": [
+      "클러스터 (Cluster)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_029",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 29,
+    "type": "단답형",
+    "points": 3,
+    "question": "Windows 시스템에서 원격 서버 관리를 위한 IPC$ 공율ㄹ 악용하는 취약점. 공격자가 사용자 이름과 패스워드를 null로 설정하여 인증을 우회접속한 뒤, 네트워크 내부 정보 (사용자 계정, 그룹, 공유 자원 등)를 수집하는 취약점",
+    "answer": "Null Session 취약점",
+    "keywords": [
+      "Null Session 취약점"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_030",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 30,
+    "type": "단답형",
+    "points": 3,
+    "question": "널 세션 공격은 Windows의 파일 및 프린터 공유 프로토콜인 SMB를 기반으로 작동한다. 방화벽에서 이 공격을 원천 차단하기 위해 막아야하는 SMB서비스의 대표적인 TCP 포트 번호",
+    "answer": "445",
+    "keywords": [
+      "445"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_031",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 31,
+    "type": "단답형",
+    "points": 3,
+    "question": "Windows 서버에서 익명 사용자가 널 세션을 통해 내부 정보 (SAM 계정 등)을 열람하지 못하도록 차단하려한다. 레지스트리 경로에서 익명 접근을 제한하기 위해 설정해야하는 레지스트리 키(Key)의 명칭",
+    "answer": "RestrictAnonymous",
+    "keywords": [
+      "RestrictAnonymous"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_032",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 32,
+    "type": "단답형",
+    "points": 3,
+    "question": "유닉스 및 리눅스 환경에서 패킷 필터 기반으로 호스트에 대한 접근 통제를 수행하는 대표적인 소프트웨어 도구. 외부에서 서비스 요청이 오면 데몬 실행 전 가로채서 접근 권한을 확인하며, 접근 제어 설정 파일로 /etc/hosts.allow와 /etc/hosts.deny를 사용하는 이 도구의 명칭",
+    "answer": "TCP Wrapper",
+    "keywords": [
+      "TCP Wrapper"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_033",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 33,
+    "type": "단답형",
+    "points": 3,
+    "question": "리눅스 커널 내부에서 패킷을 검사하고 차단/허용하는 패킷 필터링 도구들의 계보이다. 리눅스 커널 2.0의 (1), 2.2의 (2), 그리고 현재까지 널리 쓰이는 커널 2.4 이상의 (3) 순으로 발전하였다.",
+    "answer": "(1) ipfwadm\n(2) ipchains\n(3) iptables",
+    "keywords": [
+      "ipfwadm",
+      "ipchains",
+      "iptables"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_034",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 34,
+    "type": "단답형",
+    "points": 3,
+    "question": "리눅스 환경에서 내장된 방화벽 기능을 관리하기 위한 패킷필터링 도구. 패킷을 제어하기 위해 INPUT, OUTPUT, FORWARD등의 기본 체인과 테이블 구조를 사용하여 룰셋을 관리하는 도구",
+    "answer": "iptables",
+    "keywords": [
+      "iptables"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_035",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 35,
+    "type": "단답형",
+    "points": 3,
+    "question": "리눅스 실행 레벨 중 하나로, 네트워크 기능을 지원하지 않고 오직 관리자(root) 혼자서만 접근할 수 있는 모드. 주로 시스템점검이나 루트 비밀번호를 분실했을 때 이를 초기화/복구하기 위해 사용하는 레벨의 번호",
+    "answer": "1 (단일 사용자 모드)",
+    "keywords": [
+      "1 (단일 사용자 모드)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_036",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 36,
+    "type": "단답형",
+    "points": 3,
+    "question": "리눅스(SysV init 방식) 시스템이 부팅될 때 기본 실행레벨을 설정하기 위해 참조하는 핵심 설정 파일의 절대 경로",
+    "answer": "/etc/inittab",
+    "keywords": [
+      "/etc/inittab"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_037",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 37,
+    "type": "단답형",
+    "points": 3,
+    "question": "최신 리눅스 systemd 환경에서 시스템 부팅 시 적용될 기본 실행 레벨을 확인하거나 설정할 때 사용하는 관리 명령어.",
+    "answer": "systemctl",
+    "keywords": [
+      "systemctl"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_038",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 38,
+    "type": "단답형",
+    "points": 3,
+    "question": "리눅스 os에서 개별 파일에 관련된 속성 정보를 가지고 있는 약 120byte의 구조체, 모든 파일은 정확히 하나의 (a)를 가지며 (a)리스트에 저장됨",
+    "answer": "i-node",
+    "keywords": [
+      "i-node"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_039",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 39,
+    "type": "단답형",
+    "points": 3,
+    "question": "(1) 실제 서비스를 제공하는 서비스 프로세스를 제외하고는 클라이언트의 접속 요청이 있을 때까지 대기하다가 요청이 들어오면 해당요청을 처리할 서비스 프로세스를 실행\n(2) 전체 서비스에 공통 적용할 보안규칙 설정하는 파일\n(3) 특정 서비스만 끄거나 켤 때 설정하는 파일 경로",
+    "answer": "(1) 슈퍼데몬(xinetd)\n(2) /etc/xinetd.conf\n(3) /etc/xinetd.d",
+    "keywords": [
+      "슈퍼데몬(xinetd)",
+      "/etc/xinetd.conf",
+      "/etc/xinetd.d"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_040",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 40,
+    "type": "단답형",
+    "points": 3,
+    "question": "xinetd.conf 설정값\n(1) = SYSLOG | FILE (로그파일 관리 위치)\n(2) = HOST | USERID | ATTEMPT (접속에 실패했을 때 기록될 값)\n(3) = PID | HOST | USERID | EXIT | DURATION | TRAFFIC (접속 성공시 기록값)\n(4) = [초당 요청수] [제한시간] (DoS공격을 막기 위해 cps = 50 10이면 초당 50개 넘으면 10초간 대기)\n(5) = 최대 서버수\n(6) = 최대 접속수\n(7) = 접속 허용할 호스트 (ip나 네트워크 대역 지정)\n(8)= 접속 차단할  호스트 (ip)",
+    "answer": "(1) log_type\n(2) log_on_failure\n(3) log_on_success\n(4) cps\n(5) instances\n(6) per_source\n(7) only_from\n(8) no_access",
+    "keywords": [
+      "log_type",
+      "log_on_failure",
+      "log_on_success",
+      "cps",
+      "instances"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_041",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 41,
+    "type": "단답형",
+    "points": 3,
+    "question": "xinetd.d 설정값\n(1) = yes | no (활성화)\n(2) = yes | no (단일스레드 | 다중스레드)",
+    "answer": "(1) disable\n(2) wait",
+    "keywords": [
+      "disable",
+      "wait"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_042",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 42,
+    "type": "단답형",
+    "points": 3,
+    "question": "[윈도우 레지스터 루트키]\n(1) 파일의 확장자와 프로그램간의 연결 정보 관리\n(2) 현재 로그인한 사용자 한 명의 프로필, 배경화면, 설정 정보\n(3) 컴퓨터 전체의 하드웨어, 드라이버, 소프트웨어 보안 설정 (출제율 최고)\n(4) 시스템에 등록된 모든 사용자의 프로필 정보\n(5) 부팅 시 사용되는 하드웨어 프로필 정보",
+    "answer": "(1) HKEY_CLASSES_ROOT\n(2) HKEY_CURRENT_USER\n(3) HKEY_LOCAL_MACHINE\n(4) HKEY_USERS\n(5) HKEY_CURRENT_CONFIG",
+    "keywords": [
+      "HKEY_CLASSES_ROOT",
+      "HKEY_CURRENT_USER",
+      "HKEY_LOCAL_MACHINE",
+      "HKEY_USERS",
+      "HKEY_CURRENT_CONFIG"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_043",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 43,
+    "type": "단답형",
+    "points": 3,
+    "question": "Windows 침해사고 분석(포렌식) 시 반드시 점검해야 하는 레지스트리 경로이다. 시스템이 부팅될 때 특정 악성코드가 지속적으로 자동실행되도록 공격자가 주로 악용하는 아래 경로의 빈칸 (a)에 들어갈 핵심 키 명칭\n<<HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\(a)>>",
+    "answer": "Run",
+    "keywords": [
+      "Run"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_044",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 44,
+    "type": "단답형",
+    "points": 3,
+    "question": "Windows 레지스트리의 5대 기본 루트 키 중 하나이다. 시스템에 설치된 하드웨어 드라이버 설정, 소프트웨어 환경 설정, 그리고 전체 보안 정책 데이터가 저장되어있어 컴퓨터 전체(모든 사용자)에게 공통으로 적용되는 최상위 루트 키",
+    "answer": "HKEY_LOCAL_MACHINE (HKLM)",
+    "keywords": [
+      "HKEY_LOCAL_MACHINE (HKLM)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_045",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 45,
+    "type": "단답형",
+    "points": 3,
+    "question": "Windows 레지스트리 루트 키 중 하나로, 파일의 확장자와 이를 실행할 실제 응용 프로그램 간의 연결 관계 정보 (OLE데이터 등)를 관리하는 루트 키의 명칭",
+    "answer": "HKEY_CLASSES_ROOT (HKCR)",
+    "keywords": [
+      "HKEY_CLASSES_ROOT (HKCR)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_046",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 46,
+    "type": "단답형",
+    "points": 3,
+    "question": "Windows의 대표적인 파일 시스템인 NTFS에서 매우 중요한 역할을 하는 메타데이터 파일. 볼륨에 존재하는 모든 파일과 디렉터리에 대한 위치, 크기, 시간 정보(MAC Time), 보안 권한 등의 세부 메타데이터를 테이블 형태로 기록, 관리하는 이 핵심 시스템 파일의 명칭",
+    "answer": "$MFT",
+    "keywords": [
+      "$MFT"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_047",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 47,
+    "type": "단답형",
+    "points": 3,
+    "question": "(1) NTFS의 메타데이터 파일\n(2) 리눅스의 메타데이터 구조",
+    "answer": "(1) $MFT\n(2) Inode",
+    "keywords": [
+      "$MFT",
+      "Inode"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_048",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 48,
+    "type": "단답형",
+    "points": 3,
+    "question": "저장 매체의 가장 첫번째 섹터에 위치하며, 컴퓨터 부팅 시 BIOS에 의해 가장 먼저 로드되는 512바이트 크기의 핵심 부팅 영역",
+    "answer": "MBR (Master Boot Record)",
+    "keywords": [
+      "MBR (Master Boot Record)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_049",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 49,
+    "type": "단답형",
+    "points": 3,
+    "question": "MBR 내부 구조 크기 (순서대로)\n(1) 부트코드 크기\n(2) 파티션 테이블 크기\n(3) 시그니처 크기",
+    "answer": "(1) 446바이트\n(2) 64바이트\n(3) 2바이트",
+    "keywords": [
+      "446바이트",
+      "64바이트",
+      "2바이트"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_050",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 50,
+    "type": "단답형",
+    "points": 3,
+    "question": "디지털 포렌식 분석 시 MBR 영역의 유효성을 검증하기 위해 확인하는 매직 넘버(시그니처)로, MBR 섹터의 가장 마지막 2 바이트에 고정되어 있는 16진수 값",
+    "answer": "0x55AA",
+    "keywords": [
+      "0x55AA"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_051",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 51,
+    "type": "단답형",
+    "points": 3,
+    "question": "하드웨어 레벨에서 버퍼 오버플로우 공격을 방어하기 위한 기술이다. 메모리의 스택이나 힙과 같은 데이터 영역을 '실행 불가능' 상태로 지정하여, 공격자가 주입한 악성 쉘코드가 임의로 실행되는 것을 차단하는 CPU 및 OS 기반의 보안 매커니즘",
+    "answer": "NX bit (또는 DEP/XD bit)",
+    "keywords": [
+      "NX bit (또는 DEP/XD bit)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_052",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 52,
+    "type": "단답형",
+    "points": 3,
+    "question": "메인보드 롬(ROM)에 저장되어 있으며, PC 전원이 켜졌을때 하드웨어 자가진단을 수행하고 운영체제를 로드하기 전까지 컴퓨터의 입출력을 제어하는 가장 기본적인 펌웨어",
+    "answer": "BIOS",
+    "keywords": [
+      "BIOS"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_053",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 53,
+    "type": "단답형",
+    "points": 3,
+    "question": "공격자가 악의적으로 시스템에 접근하여 부팅 순서를 변경하거나 리눅스 싱글 모드로 진입하는 것을 차단하기 위해, 메인보드 설정 화면에서 반드시 관리자 패스워드를 지정해야 하는 대상",
+    "answer": "BIOS",
+    "keywords": [
+      "BIOS"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_054",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 54,
+    "type": "단답형",
+    "points": 3,
+    "question": "전통적인 레거시 BIOS의 용량 한계 (16비트 호환, 2TB 이상 디스크 인식 불가 등)를 극복하기 위해 개발된 최신 표준 펌웨어 인터페이스의 명칭",
+    "answer": "UEFI",
+    "keywords": [
+      "UEFI"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_055",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 55,
+    "type": "단답형",
+    "points": 3,
+    "question": "UEFI 규격에서 지원하는 보안기능이다. 시스템 부팅시 위변조 되지 않은 인증된 운영체제 커널 및 디지털 서명된 드라이버만 실행되도록 보장하여, 부팅 단계에서 실행되는 루트킷 등의 악성코드를 원천 차단하는 기술명",
+    "answer": "Secure Boot (보안 부팅)",
+    "keywords": [
+      "Secure Boot (보안 부팅)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_056",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 56,
+    "type": "단답형",
+    "points": 3,
+    "question": "정보 보안에서 자원에 대한 통제와 관리를 위해 사용하는 프레임워크로, 신원확인, 권한부여, 이용 로그 기록 및 감사의 세가지 핵심요소로 구성된 보안모델의 약어",
+    "answer": "AAA",
+    "keywords": [
+      "AAA"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_057",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 57,
+    "type": "단답형",
+    "points": 3,
+    "question": "보안 접근 통제의 AAA 메커니즘은 주체의 신원을 검증하는 (1) , 주체에게 차등적인 권한을 부여하는 (2), 그리고 주체의 활동 내역을 기록하여 책임추적성을 확보하는 (3) 으로 구성된다.",
+    "answer": "(1) Authentication (인증)\n(2) Authorization (인가)\n(3) Accounting (계정관리)",
+    "keywords": [
+      "Authentication (인증)",
+      "Authorization (인가)",
+      "Accounting (계정관리)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_058",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 58,
+    "type": "단답형",
+    "points": 3,
+    "question": "운영체제(OS)의 가장 핵심적인 부분으로, 메모리에 상주하며 하드웨어 자원(CPU, 메모리, 디스크 등)을 관리하고 프로세스 스케줄링, 파일 시스템 제어 등 시스템의 모든 기초적인 기능을 수행하는 영역",
+    "answer": "커널 (Kernel)",
+    "keywords": [
+      "커널 (Kernel)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_059",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 59,
+    "type": "단답형",
+    "points": 3,
+    "question": "사용자가 입력한 명령어를 해석하여 커널에 전달하고, 그 처리결과를 사용자에게 보여주는 명령어 해석기(인터페이스) 역할을 하는 영역",
+    "answer": "쉘 (Shell)",
+    "keywords": [
+      "쉘 (Shell)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_060",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 60,
+    "type": "단답형",
+    "points": 3,
+    "question": "리눅스에서 특정 서비스 계정(예:ntp, mysql 등)이 악의적으로 쉘에 로그인하여 시스템 명령어를 실행하는 것을 방지하고자 한다. /etc/passwd 파일에서 해당 계정들의 로그인 쉘을 제한하기 위해 설정해야하는 가상 쉘의 절대 경로",
+    "answer": "/sbin/nologin (또는 /bin/false)",
+    "keywords": [
+      "/sbin/nologin (또는 /bin/false)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_061",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 61,
+    "type": "단답형",
+    "points": 3,
+    "question": "버퍼 오버플로우나 입력값 검증 미흡 등의 취약점을 공략하여 시스템을 비정상적인 상태로 만드는 행위나 코드",
+    "answer": "Exploit Code",
+    "keywords": [
+      "Exploit Code"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_062",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 62,
+    "type": "단답형",
+    "points": 3,
+    "question": "취약점을 공격하는 익스플로잇 코드 구조에서, 취약점 유도 성공 후 공격자가 타깃 시스템에서 실제 실행하고자 하는 쉘코드 등의 핵심 악성 기능 코드 영역",
+    "answer": "Payload",
+    "keywords": [
+      "Payload"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_063",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 63,
+    "type": "단답형",
+    "points": 3,
+    "question": "소프트웨어 제작사에서 취약점을 보완하기 위한 보안패치가 출시 되기 전에 해당 취약점을 악용하는 익스플로잇 코드를 제작하여 감행하는 해킹 공격 형태",
+    "answer": "제로데이 공격",
+    "keywords": [
+      "제로데이 공격"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_064",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 64,
+    "type": "단답형",
+    "points": 3,
+    "question": "리눅스 시스템에서 관리자가 useradd 명령어를 사용하여 새로운 사용자 계정을 생성할 때, 해당 사용자의 홈 디렉터리에 기본적으로 복사되어 채워지는 프로필 및 기본환경 설정 파일들(.bashrc, .bash_profiel 등)이 저장되어 있는 뼈대 디렉터리의 절대경로",
+    "answer": "/etc/skel",
+    "keywords": [
+      "/etc/skel"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_065",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 65,
+    "type": "단답형",
+    "points": 3,
+    "question": "보안관리자인 A씨는 앞으로 시스템에 등록될 모든 신규 사용자들의 터미널 환경에 공통적인 보안 경고문구(Banner)와 초기 별칭(Alias) 설정을 자동으로 배포하고자 한다. 리눅스 시스템 구조상 A씨가 가장 먼저 수정하고 설정 파일들을 배치해야 하는 디렉터리 경로",
+    "answer": "/etc/skel",
+    "keywords": [
+      "/etc/skel"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_066",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 66,
+    "type": "단답형",
+    "points": 3,
+    "question": "리눅스 운영체제에서 애플리케이션의 소스코드를 수정하지 않고도 메인보드 및 시스템의 인증방식을 유연하게 추가, 변경, 통합 관리할 수 있도록 지원하는 장착형 인증 모듈 프레임워크의 약어",
+    "answer": "PAM",
+    "keywords": [
+      "PAM"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_067",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 67,
+    "type": "단답형",
+    "points": 3,
+    "question": "다음은 사용자의 패스워드 복잡도를 설정하는 PAM 설정 파일의 일부이다. 빈칸 (a)에 들어갈 알맞은 모듈 타입을 쓰시오.\n<<(a) requried pam_cracklib.so retry=3 minlen=8 dcredit=-1>>",
+    "answer": "(a) password",
+    "keywords": [
+      "(a) password"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_068",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 68,
+    "type": "단답형",
+    "points": 3,
+    "question": "다음은 리눅스 PAM 설정 파일에 사용하는 제어플래그에 대한 설명이다. 알맞은 플래그 명칭을 영문소문자로 쓰시오.\n이 플래그는 최종 인증 성공을 위해 반드시 만족(성공)해야 하는 필수 조건이다. 만약 이 모듈에서 인증이 실패하더라도 즉시 거부 처리하지 않고, 보안상 어떤 단계에서 실패했는지 공격자가 유추하지 못하도록 같은 스택에 있는 다음 모듈들을 계속해서 실행하는 특징이 있다.",
+    "answer": "requried",
+    "keywords": [
+      "requried"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_069",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 69,
+    "type": "단답형",
+    "points": 3,
+    "question": "보안관리자 B씨는 리눅스 서버 사용자들의 패스워드 유추공격을 방지하기 위해 PAM 설정을 변경하려고 한다. 패스워드 변경 시 최소길이, 대소문자 및 숫자 포함 여부 등의 복잡도 검사를 강제할 때 사용하는 PAM 모듈 파일명",
+    "answer": "pam_cracklib.so (또는 pam_qwquality.so)",
+    "keywords": [
+      "pam_cracklib.so (또는 pam_qwquality.so)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_070",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 70,
+    "type": "단답형",
+    "points": 3,
+    "question": "다음 PAM 설정 파일의 예시에서 빈칸에 들어갈 알맞은 모듈타입을 쓰시오. (단, 해당 라인은 특정 사용자의 로그인 허용 시간대 및 만료 여부 등 계정의 유효성을 검사하는 설정이다.)\n<<(a) required pam_time.so>>",
+    "answer": "(a) account",
+    "keywords": [
+      "(a) account"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_071",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 71,
+    "type": "단답형",
+    "points": 3,
+    "question": "PAM 설정 관련\n(1) 실패해도 티 안내고 다음 모듈 계속 실행\n(2) 즉시 실패 처리하고 종료\n(3) 패스워드 복잡도 규칙 강제 모듈\n(4) 계정 유효성, 접근 제한 시간 검사 타입",
+    "answer": "(1) required\n(2) requisite\n(3) pam_cracklib.so\n(4) account",
+    "keywords": [
+      "required",
+      "requisite",
+      "pam_cracklib.so",
+      "account"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_072",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 72,
+    "type": "단답형",
+    "points": 3,
+    "question": "(1) 클라이언트가 메일 서버로 메일을 발송하거나 메일 서버끼리 메일을 주고받을때 사용하는 프로토콜\n(2) 포트번호",
+    "answer": "(1) SMTP\n(2) 25",
+    "keywords": [
+      "SMTP",
+      "25"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_073",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 73,
+    "type": "단답형",
+    "points": 3,
+    "question": "(1) 메일 서버에 도착한 메일을 사용자 컴퓨터로 다운로드하여 읽게 해주는 프로토콜, 기본적으로 메일을 서버에서 로컬PC로 가져오면서 서버에 있는 메일을 삭제하는 방식을 사용\n(2) 포트번호",
+    "answer": "(1) POP3\n(2) 110",
+    "keywords": [
+      "POP3",
+      "110"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_074",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 74,
+    "type": "단답형",
+    "points": 3,
+    "question": "(1) 이메일 수신 프로토콜 중 하나로, POP3의 단점을 보완하여 메일 서버의 전송함과 로컬 클라이언트의 전송함을 실시간으로 동기화한다. 사용자는 메일을 로컬PC로 완전히 다운로드하지 않고도 서버에 상주하는 메일의 헤더와 본문을 확인할수 있어 여러 단말기에서 동시 관리가 가능한 이 프로토콜의 약어\n(2) 포트번호",
+    "answer": "(1) IMAP\n(2) 143",
+    "keywords": [
+      "IMAP",
+      "143"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_075",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 75,
+    "type": "단답형",
+    "points": 3,
+    "question": "이메일 프로토콜 보안포트\n(1) SMTPS\n(2) IMAPS\n(3) POP3S",
+    "answer": "(1) 465\n(2) 993\n(3) 995",
+    "keywords": [
+      "465",
+      "993",
+      "995"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_076",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 76,
+    "type": "단답형",
+    "points": 3,
+    "question": "SNMPv3은 구버전의 보안 취약점 해결을 위해 USM(User-based Security Model) 기술을 도입하였다. 이를 통해 지원하는 3대 보안 서비스 유형에 알맞은 핵심 키워드를 쓰시오.\n(1) 메시지가 전송 도중 위,변조되지 않았음을 보장(MD5, SHA 등 활용)\n(2) 승인된 사용자만 메시지를 읽을수 있도록 암호화 제공(DES, AES등 활용)",
+    "answer": "(1) 무결성\n(2) 기밀성",
+    "keywords": [
+      "무결성",
+      "기밀성"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_077",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 77,
+    "type": "단답형",
+    "points": 3,
+    "question": "SNMPv1과 v2c 버전에서 인증을 위해 사용하는 일종의 패스워드로, 암호화되지 않은 평문상태로 네트워크에 전송되어 스니핑 공격에 매우 취약한 설정 명칭을 쓰시오.",
+    "answer": "Community String",
+    "keywords": [
+      "Community String"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_078",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 78,
+    "type": "단답형",
+    "points": 3,
+    "question": "다음은 Windows 10 이상 시스템 (BIOS/MBR 레거시 환경)의 부팅과정을 순서없이 나열한 것이다. 올바른 부팅 순서대로 기호를 나열하시오.\n(ㄱ) bootmgr 실행\n(ㄴ) Winlogon 실행\n(ㄷ) MBR 로드\n(ㄹ) ntoskrnl.ext 실행\n(ㅁ) SMSS 실행",
+    "answer": "(ㄷ) -> (ㄱ) -> (ㄹ) -> (ㅁ) -> (ㄴ)",
+    "keywords": [
+      "(ㄷ) -> (ㄱ) -> (ㄹ) -> (ㅁ) -> (ㄴ)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_079",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 79,
+    "type": "단답형",
+    "points": 3,
+    "question": "Windows VIsta/7 버전 이후부터 적용된 부팅 아키텍처에서 기존의 boot.ini 설정을 대체하여, 부팅에 필요한 구성정보(설정 값)를 텍스트가 아닌 바이너리 형태로 저장, 관리하는 데이터베이스파일의 명칭",
+    "answer": "BCD (Boot Configuration Data)",
+    "keywords": [
+      "BCD (Boot Configuration Data)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
+    "id": "sheet_단_1_080",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 80,
+    "type": "단답형",
+    "points": 3,
+    "question": "최신 UEFI 부팅 환경에서 기존 레거시 BIOS의 bootmgr 대신 실행되는 파일로, EFI 시스템 파티션(ESP)내부에 존재하며 Windows 커널을 로드하기 위해 실행되는 확장 펌웨어 기반 부팅 관리자 파일명",
+    "answer": "bootmgfw.efi",
+    "keywords": [
+      "bootmgfw.efi"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
   }
 ]
