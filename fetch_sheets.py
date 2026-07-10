@@ -4,9 +4,6 @@ Google Sheets에서 문제 데이터를 가져와 questions_bank.json에 병합�
 사용법: python fetch_sheets.py
 """
 
-import csv
-import hashlib
-import io
 import json
 import re
 import urllib.request
@@ -23,57 +20,73 @@ SUBJECT_MAP = {
     5: "보안관리및법규",
 }
 
-# (시트명, 과목번호, 유형)
+# (시트명, 과목번호, 유형) — 없는 시트는 sig 중복으로 자동 스킵
 SHEET_NAMES = [
     ("단답형(1)", 1, "단답형"),
-    ("단답형(2)", 2, "단답형"),
-    ("단답형(3)", 3, "단답형"),
-    ("단답형(4)", 4, "단답형"),
-    ("단답형(5)", 5, "단답형"),
     ("서술형(1)", 1, "서술형"),
+    ("단답형(2)", 2, "단답형"),
     ("서술형(2)", 2, "서술형"),
+    ("단답형(3)", 3, "단답형"),
     ("서술형(3)", 3, "서술형"),
+    ("단답형(4)", 4, "단답형"),
     ("서술형(4)", 4, "서술형"),
+    ("단답형(5)", 5, "단답형"),
     ("서술형(5)", 5, "서술형"),
 ]
 
 OUTPUT_FILE = "questions_bank.json"
 
+HEADER_LABELS = {"답", "정답", "answer", "Answer", "문제", "question", "Question"}
 
-def fetch_csv(sheet_name: str) -> str:
+
+def fetch_gviz(sheet_name: str) -> dict:
     encoded = urllib.parse.quote(sheet_name, safe="", encoding="utf-8")
-    url = f"https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}/export?format=csv&sheet={encoded}"
+    url = (
+        f"https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}"
+        f"/gviz/tq?tqx=out:json&sheet={encoded}"
+    )
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=15) as resp:
-        return resp.read().decode("utf-8")
+        raw = resp.read().decode("utf-8")
+    m = re.search(r"setResponse\((\{.*\})\)", raw, re.DOTALL)
+    if not m:
+        raise ValueError("gviz 응답 파싱 실패")
+    return json.loads(m.group(1))
 
 
-def content_hash(raw: str) -> str:
-    return hashlib.md5(raw.strip().encode()).hexdigest()
+def get_sig(data: dict) -> str:
+    return data.get("sig", "")
 
 
-def parse_csv(raw_csv: str, sheet_name: str, subject_num: int, q_type: str) -> list[dict]:
+def parse_gviz(data: dict, subject_num: int, q_type: str) -> list[dict]:
     subject = SUBJECT_MAP[subject_num]
-    reader = csv.reader(io.StringIO(raw_csv))
-    rows = list(reader)
+    table = data.get("table", {})
+    cols = table.get("cols", [])
+    rows = table.get("rows", [])
 
-    # 첫 행이 헤더인 경우 건너뜀
-    start = 1 if rows and rows[0] and rows[0][0].strip() in ("답", "answer", "Answer") else 0
+    items: list[tuple[str, str]] = []
+
+    # gviz는 스프레드시트 1행을 cols[].label로 사용
+    if len(cols) >= 2:
+        ans0 = (cols[0].get("label") or "").strip()
+        q0 = (cols[1].get("label") or "").strip()
+        if ans0 and q0 and ans0 not in HEADER_LABELS and q0 not in HEADER_LABELS:
+            items.append((ans0, q0))
+
+    for row in rows:
+        c = row.get("c") or []
+        if len(c) < 2:
+            continue
+        ans = str(c[0].get("v") or "").strip() if c[0] else ""
+        q_text = str(c[1].get("v") or "").strip() if c[1] else ""
+        if ans and q_text:
+            items.append((ans, q_text))
 
     questions = []
-    for i, row in enumerate(rows[start:], start=1):
-        if len(row) < 2:
-            continue
-        answer = row[0].strip()
-        question = row[1].strip()
-        if not answer or not question:
-            continue
-
+    for i, (answer, question) in enumerate(items, start=1):
         q_id = f"sheet_{q_type[0]}_{subject_num}_{i:03d}"
-
         keywords = [kw.strip() for kw in re.split(r"\n|\(\d+\)\s*", answer) if kw.strip()]
         keywords = [k for k in keywords if k and len(k) < 60][:5]
-
         questions.append({
             "id": q_id,
             "source": SOURCE_LABEL,
@@ -111,26 +124,24 @@ def save(data: list[dict]):
 
 def main():
     existing = load_existing()
-
-    # 기존 요약시트 항목 제거 후 재수집 (업데이트 반영)
     base = [q for q in existing if q.get("source") != SOURCE_LABEL and not q.get("id", "").startswith("sheet_")]
     base_questions = {q["question"].strip() for q in base}
 
-    seen_hashes: set[str] = set()
+    seen_sigs: set[str] = set()
     new_questions: list[dict] = []
 
     for sheet_name, subject_num, q_type in SHEET_NAMES:
         print(f"  [{sheet_name}] 가져오는 중...", end=" ", flush=True)
         try:
-            raw = fetch_csv(sheet_name)
-            h = content_hash(raw)
+            data = fetch_gviz(sheet_name)
+            sig = get_sig(data)
 
-            if h in seen_hashes:
+            if sig in seen_sigs:
                 print("스킵 (미작성 시트)")
                 continue
-            seen_hashes.add(h)
+            seen_sigs.add(sig)
 
-            parsed = parse_csv(raw, sheet_name, subject_num, q_type)
+            parsed = parse_gviz(data, subject_num, q_type)
 
             added = []
             seen_in_batch = {q["question"].strip() for q in new_questions}

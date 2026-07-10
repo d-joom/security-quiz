@@ -302,28 +302,25 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
 .mode-section > p { color: var(--text2); margin-bottom: 28px; font-size: 14px; }
 .mode-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 20px; }
 .mode-card {
-  border-radius: var(--radius); padding: 20px 16px 18px;
-  cursor: pointer; transition: all .22s; border: 2px solid transparent;
-  position: relative; overflow: hidden; min-height: 110px;
+  border-radius: var(--radius); padding: 22px 18px;
+  cursor: pointer; transition: opacity .2s; overflow: hidden; min-height: 100px;
+  display: flex; flex-direction: column; justify-content: center;
 }
-.mode-card::before {
-  content: ''; position: absolute; inset: 0;
-  border-radius: inherit; opacity: .12; transition: opacity .22s;
+.mode-card.selected {
+  box-shadow: 0 12px 32px rgba(0,0,0,.35);
+  transform: scale(1.04);
 }
-.mode-card:hover::before { opacity: .22; }
-.mode-card.selected { border-color: rgba(255,255,255,.35); }
-.mode-card:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,.45); }
+.mode-card:hover { opacity: .9; }
 .mode-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 5px; color: #fff; }
 .mode-card p { font-size: 11px; color: rgba(255,255,255,.7); margin: 0; line-height: 1.5; }
-.mode-card .mc-icon { font-size: 24px; margin-bottom: 10px; display: block; }
 
 /* 모드별 색상 */
-#modeAll    { background: linear-gradient(135deg, #4f6ef7 0%, #7b5ea7 100%); }
-#modeWrong  { background: linear-gradient(135deg, #f24e6b 0%, #ff7b4f 100%); }
-#modeExam   { background: linear-gradient(135deg, #10d98a 0%, #0891b2 100%); }
-#modeType   { background: linear-gradient(135deg, #9b6cf5 0%, #6b21a8 100%); }
-#modeBookmark { background: linear-gradient(135deg, #f5a623 0%, #e05d5d 100%); }
-#modeFlash  { background: linear-gradient(135deg, #22d3ee 0%, #4f6ef7 100%); }
+#modeAll    { background: linear-gradient(135deg, #2d4fd6 0%, #5b3d8f 100%); }
+#modeWrong  { background: linear-gradient(135deg, #c8183a 0%, #d95a28 100%); }
+#modeExam   { background: linear-gradient(135deg, #059660 0%, #0670a0 100%); }
+#modeType   { background: linear-gradient(135deg, #7040d8 0%, #4c0d8a 100%); }
+#modeBookmark { background: linear-gradient(135deg, #c97d10 0%, #b83a3a 100%); }
+#modeFlash  { background: linear-gradient(135deg, #0baec7 0%, #2d4fd6 100%); }
 
 .mode-start-row { display: flex; flex-direction: column; gap: 10px; width: 100%; }
 .mode-start-row .load-btn { width: 100%; display: block; }
@@ -533,45 +530,38 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
     <div class="q-area" id="qArea">
       <!-- Loading screen -->
       <div class="center-msg" id="loadScreen">
-        <div style="font-size:48px">🔐</div>
         <div class="mode-section">
           <h2>정보보안기사 실기</h2>
           <p>18회~28회 기출 · 단답형 151제 · 요약시트 &nbsp;|&nbsp; 총 <b id="totalCount" style="color:var(--accent2)">0</b>개 문제</p>
           <div class="mode-cards">
             <div class="mode-card selected" id="modeAll" onclick="setMode('all')">
-              <span class="mc-icon">🎲</span>
               <h4>전체 섞기</h4>
               <p>모든 출처 랜덤</p>
             </div>
             <div class="mode-card" id="modeWrong" onclick="setMode('wrong')">
-              <span class="mc-icon">📌</span>
               <h4>오답 집중</h4>
               <p>틀린 문제만 반복</p>
             </div>
             <div class="mode-card" id="modeExam" onclick="setMode('exam')">
-              <span class="mc-icon">📝</span>
               <h4>회차별 시험</h4>
               <p>특정 회차 선택</p>
             </div>
             <div class="mode-card" id="modeType" onclick="setMode('type')">
-              <span class="mc-icon">✏️</span>
               <h4>유형별 연습</h4>
               <p>단답·서술·실무</p>
             </div>
             <div class="mode-card" id="modeBookmark" onclick="setMode('bookmark')">
-              <span class="mc-icon">⭐</span>
               <h4>즐겨찾기</h4>
               <p>북마크 문제만</p>
             </div>
             <div class="mode-card" id="modeFlash" onclick="setMode('flash')">
-              <span class="mc-icon">🃏</span>
               <h4>카드 암기</h4>
               <p>플래시카드 학습</p>
             </div>
           </div>
           <div class="mode-start-row">
             <button class="load-btn" onclick="startStudy()">학습 시작 →</button>
-            <button class="load-btn" onclick="openSummary()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">📋 요약시트 보기</button>
+            <button class="load-btn" onclick="openSummary()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">요약시트 보기</button>
           </div>
         </div>
       </div>
