@@ -1848,9 +1848,10 @@ function openMockExam() {
   document.getElementById('sidebar').style.display = 'none';
   document.getElementById('headerStats').style.display = 'none';
 
-  const dan = shuffle([...questions.filter(q => q.type === '단답형')]).slice(0, 12);
-  const seo = shuffle([...questions.filter(q => q.type === '서술형')]).slice(0, 4);
-  const sil = shuffle([...questions.filter(q => q.type === '실무형')]).slice(0, 2);
+  const isExam = q => q.source !== '요약시트';
+  const dan = shuffle([...questions.filter(q => q.type === '단답형' && isExam(q))]).slice(0, 12);
+  const seo = shuffle([...questions.filter(q => q.type === '서술형' && isExam(q))]).slice(0, 4);
+  const sil = shuffle([...questions.filter(q => q.type === '실무형' && isExam(q))]).slice(0, 2);
 
   if (dan.length < 12) { showToast('단답형 문제가 부족합니다.'); return; }
   if (seo.length < 4)  { showToast('서술형 문제가 부족합니다.'); return; }
