@@ -1848,7 +1848,7 @@ function openMockExam() {
   document.getElementById('sidebar').style.display = 'none';
   document.getElementById('headerStats').style.display = 'none';
 
-  const isExam = q => q.source !== '요약시트';
+  const isExam = q => q.source !== '요약정리';
   const dan = shuffle([...questions.filter(q => q.type === '단답형' && isExam(q))]).slice(0, 12);
   const seo = shuffle([...questions.filter(q => q.type === '서술형' && isExam(q))]).slice(0, 4);
   const sil = shuffle([...questions.filter(q => q.type === '실무형' && isExam(q))]).slice(0, 2);
