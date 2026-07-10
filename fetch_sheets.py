@@ -20,18 +20,19 @@ SUBJECT_MAP = {
     5: "보안관리및법규",
 }
 
-# (시트명, 과목번호, 유형) — 없는 시트는 sig 중복으로 자동 스킵
+# (시트명, 과목번호, 유형, A열이_답인지) — 없는 시트는 sig 중복으로 자동 스킵
+# 단답형: A열=답, B열=문제 / 서술형: A열=문제, B열=답
 SHEET_NAMES = [
-    ("단답형(1)", 1, "단답형"),
-    ("서술형(1)", 1, "서술형"),
-    ("단답형(2)", 2, "단답형"),
-    ("서술형(2)", 2, "서술형"),
-    ("단답형(3)", 3, "단답형"),
-    ("서술형(3)", 3, "서술형"),
-    ("단답형(4)", 4, "단답형"),
-    ("서술형(4)", 4, "서술형"),
-    ("단답형(5)", 5, "단답형"),
-    ("서술형(5)", 5, "서술형"),
+    ("단답형(1)", 1, "단답형", True),
+    ("서술형(1)", 1, "서술형", False),
+    ("단답형(2)", 2, "단답형", True),
+    ("서술형(2)", 2, "서술형", False),
+    ("단답형(3)", 3, "단답형", True),
+    ("서술형(3)", 3, "서술형", False),
+    ("단답형(4)", 4, "단답형", True),
+    ("서술형(4)", 4, "서술형", False),
+    ("단답형(5)", 5, "단답형", True),
+    ("서술형(5)", 5, "서술형", False),
 ]
 
 OUTPUT_FILE = "questions_bank.json"
@@ -58,29 +59,30 @@ def get_sig(data: dict) -> str:
     return data.get("sig", "")
 
 
-def parse_gviz(data: dict, subject_num: int, q_type: str) -> list[dict]:
+def parse_gviz(data: dict, subject_num: int, q_type: str, a_col_is_answer: bool) -> list[dict]:
     subject = SUBJECT_MAP[subject_num]
     table = data.get("table", {})
-    cols = table.get("cols", [])
     rows = table.get("rows", [])
 
     items: list[tuple[str, str]] = []
 
-    # gviz는 스프레드시트 1행을 cols[].label로 사용
-    if len(cols) >= 2:
-        ans0 = (cols[0].get("label") or "").strip()
-        q0 = (cols[1].get("label") or "").strip()
-        if ans0 and q0 and ans0 not in HEADER_LABELS and q0 not in HEADER_LABELS:
-            items.append((ans0, q0))
-
+    # cols[].label(1행)은 신뢰할 수 없어 무시, rows만 사용
     for row in rows:
         c = row.get("c") or []
         if len(c) < 2:
             continue
-        ans = str(c[0].get("v") or "").strip() if c[0] else ""
-        q_text = str(c[1].get("v") or "").strip() if c[1] else ""
-        if ans and q_text:
-            items.append((ans, q_text))
+        col_a = str(c[0].get("v") or "").strip() if c[0] else ""
+        col_b = str(c[1].get("v") or "").strip() if c[1] else ""
+        # 헤더행 스킵 (예: "문제"/"답" 레이블)
+        if col_a in HEADER_LABELS or col_b in HEADER_LABELS:
+            continue
+        if not col_a or not col_b:
+            continue
+        if a_col_is_answer:
+            ans, q_text = col_a, col_b   # 단답형: A=답, B=문제
+        else:
+            ans, q_text = col_b, col_a   # 서술형: A=문제, B=답
+        items.append((ans, q_text))
 
     questions = []
     for i, (answer, question) in enumerate(items, start=1):
@@ -130,7 +132,7 @@ def main():
     seen_sigs: set[str] = set()
     new_questions: list[dict] = []
 
-    for sheet_name, subject_num, q_type in SHEET_NAMES:
+    for sheet_name, subject_num, q_type, a_col_is_answer in SHEET_NAMES:
         print(f"  [{sheet_name}] 가져오는 중...", end=" ", flush=True)
         try:
             data = fetch_gviz(sheet_name)
@@ -141,7 +143,7 @@ def main():
                 continue
             seen_sigs.add(sig)
 
-            parsed = parse_gviz(data, subject_num, q_type)
+            parsed = parse_gviz(data, subject_num, q_type, a_col_is_answer)
 
             added = []
             seen_in_batch = {q["question"].strip() for q in new_questions}

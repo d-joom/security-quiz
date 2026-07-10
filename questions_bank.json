@@ -15564,14 +15564,10 @@
     "number": 1,
     "type": "단답형",
     "points": 3,
-    "question": "문제 (1) ftp 접근 여부를 검토할 수 있는로그 \n(2) 경로 (1) 현재 시스템에 로그인 되어있는 사용자들의 정보를 담고 있는 파일 \n(2) 명령어 \n(3) 리눅스 경로 \n(4) 유닉스 경로 (1) 시스템 사용자들의 로그인, 로그아웃 기록\n(2) 명령어\n(3) 리눅스 경로\n(4) 유닉스 경로\n (1) 각 사용자가 마지막으로 성공적으로 로그인한 시간, 호스트 정보\n(2) 명령어\n(3) 리눅스 경로\n(4) 유닉스 경로 (1) 로그인 실패 기록\n(2) 명령어\n(3) 리눅스 경로\n(4) 유닉스 경로 (1) root 권한으로 전환하는 과정에서 발생하는 로그 기록\n(2) 리눅스 경로\n(3) 유닉스 경로 주로 카메라 , DVR 등 인터넷에 연결된 기기들을 감염시켜 봇넷을 만든 후 DDoS 공격 수행 악성코드가 브라우저 메모리에 침투하여 사용자가 정상적인 은행 사이트에 접속했을 때 가짜 입력창을 중간에 삽입하여 정보를 탈취하는 기술 웹 브라우저의 취약점이나 확장 기능을 악용하여 사용자 화면과 웹 서버 사이의 트래픽을 가로채고 조작하는 공격 기법 금융기관 직원 등 특정 타겟을 정하고, 신뢰할 만한 발송인 (송장, 공문서 등)으로 위장하여 악성 메일을 보내는 사회공학적 공격기법 사용자의 컴퓨터에 몰래 설치되어 웹 브라우저의 메모리나 트래픽을 감시하다가, 사용자가 금융기관이나 인터넷뱅킹 사이트에 접속할 때 가짜 로그인 창을 띄우거나 금융인증정보를 가로채 자산을 탈취하는 악성코드 2016년 등장하여 과거 다이어 악성코드의 소스코드를 기반으로 발전한 악성코드. 초기에는 금융정보를 탈취하는 뱅킹트로이목마였으나, 이후 플러그인 추가가 용이한 모듈형 구조로 진화하여 네트워크 정찰, 권한상승, 감염 확산 등 다양한 기능을 수행하게 되었다. 특히 이모텟에 의해 1차 감염된 시스템에 설치된 후, 최종적으로 류크나 콘티와 같은 대규모 기업형 랜섬웨어를 내려받아 실행하는 징검다리 역할로 악명이 높은 악성코드 소프트웨어 개발사, 업데이트 서버, 배포 인프라 등 신뢰 관계에 있는 공급망의 취약점을 파고드는 공격방식이다. 대표적인 사례로 2020년 말 발견된 미국 '솔라윈즈' 사태가 있으며 , 공격자는 정상적인 네트워크 관리 프로그램 업데이트 파일에 악성코드를 삽입하여 이를 다운로드한 수많은 정부 기관과 기업을 한번에 감염시켰다. 2021년 말 발견된 오픈소스 라이브러리의 치명적인 원격 코드 실행(RCE) 취약점(CVE-2021-44228)이다. 자바 프로그램이 로그를 기록하는 특정 모듈의 결함을 이용하여 해커가 입력창이나 헤더에 특정 문자열을 입력하면 서버가 악성 스크립트를 원격으로 다운로드해 실행하게 만든다. 락빗이나 콘티와 같은 현대적인 랜섬웨어 조직이 사용하는 비즈니스 모델이다. 실력이 뛰어난 해커 조직이 랜섬웨어 플랫폼과 결제 시스템을 개발하여 클라우드 서비스 형태로 제공하면, 실제 공격을 수행하는 하부 유포 대리인들이 이를 구매해 공격을 감행한 뒤 몸값을 나눠 갖는 형태 공격자는 이미 다른 웹사이트에서 유출된 사용자들의 아이디와 패스워드 목록을 확보한 뒤, 자동화된 봇 프로그램을 이용해 타겟 웹 사이트에 무차별적으로 대입하며 로그인을 시도한다. 시스템에서 열린 파일 목록을 알려주고 사용하는 프로세스, 디바이스 정보, 파일의 종류 등 상세한 정보를 출력 특정 파일, 디렉토리 또는 파일 시스템을 사용 중인 프로세스를 확인하고, 해당 프로세스를 강제 종료(kill)할 때 주로 사용하는 유닉스/리눅스 명령어 매개변수 형식 \n(1) 정수형 10진수 상수\n(2) 문자스트링\n(3) 16진수 양의 정수\n(4) %n의 반인 2바이트 단위 전송계층 보안 프로토콜, TCP/IP 프로토콜 스택의 전송 계층에서 작동하고 데이터를 암호화하고 인증하는 역할 하나 이상의 기본 테이블에서 유도된 논리적 가상 테이블로, 사용자에게 허용된 데이터만 제한적으로 보여주어 데이터베이스의 기밀성을 높이는 보안기술 DBMS에서 주체가 객체에 접근할 때 권한을 검증하고, 인가되지 않은 접근을 차단하는 데이터베이스 보안 메커니즘 데이터베이스 객체의 소유자가 자율적인 판단에 따라 다른 사용자에게 권한을 부여하는 방식으로 , SQL의 GRANT/REVOKE 명령어로 구현되는 접근 제어의 모델 사용자의 신분이 아닌 조직 내에서 직무상 맡은 역할에 따라 권한을 부여하고 통제하는 대규모 DBMS용 접근제어 모델 Windows 운영체제의 대표적인 파일 시스템으로, 파일 및 폴더에 대한 개별 보안 권한 (ACL) 설정, 암호화(EFS), 압축, 저널링을 통한 복구 기능을 지원하는 파일 시스템 다양한 OS와 호환성이 높으나, 파일 및 폴더에 대한 개별적인 접근제어(보안권한설저) 기능이 없으며, 대용량 하드디스크 지원에 한계가 있는 파일 시스템 계열을 쓰시오. FAT32 파일 시스템 환경에서 단일 파일이 가질 수 있는 최대파일 크기 한계 FAT나 NTFS 같은 파일 시스템에서 디스크에 파일을 저장할 때 사용하는 논리적인 기본 할당 단위 Windows 시스템에서 원격 서버 관리를 위한 IPC$ 공율ㄹ 악용하는 취약점. 공격자가 사용자 이름과 패스워드를 null로 설정하여 인증을 우회접속한 뒤, 네트워크 내부 정보 (사용자 계정, 그룹, 공유 자원 등)를 수집하는 취약점",
-    "answer": "답 (1) xferlog \n(2) /var/log/xferlog (1) utmp \n(2) who, w, finger \n(3) /var/run/utmp \n(4) /var/adm/umtpx (1) wtmp\n(2) last\n(3) /var/log/wtmp\n(4) /var/adm/wtmpx (1) lastlog\n(2) lastlog\n(3) /var/log/lastlog\n(4) /var/adm/lastlog (1) btmp\n(2) lastb\n(3) /var/log/btmp\n(4)/var/adm/loginlog (1) sulog\n(2) /var/log/secure\n(3) /var/adm/sulog Mirai 악성코드 Web Injection MitB (Man-in-the-Browser) 공격 스피어 피싱 (Spear Phishing) 뱅킹 트로이목마 (Banking Trojan) 트릭봇(Trickbot) 공급망 공격 (Supply chain attack) Log4j 취약점 RaaS (Service형 랜섬웨어) 크리덴셜 스터핑 (Credential Stuffing) lsof (list open files) fuser (1) %d\n(2) %s\n(3) %x\n(4) %hn SSL View Access Control (접근제어) DAC (임의적 접근제어) RBAC (역할 기반 접근 제어) NTFS FAT 4GB 클러스터 (Cluster) Null Session 취약점",
+    "question": "널 세션 공격은 Windows의 파일 및 프린터 공유 프로토콜인 SMB를 기반으로 작동한다. 방화벽에서 이 공격을 원천 차단하기 위해 막아야하는 SMB서비스의 대표적인 TCP 포트 번호",
+    "answer": "445",
     "keywords": [
-      "답",
-      "xferlog",
-      "/var/log/xferlog",
-      "utmp",
-      "who, w, finger"
+      "445"
     ],
     "commentary": "",
     "difficulty": "",
@@ -15585,10 +15581,10 @@
     "number": 2,
     "type": "단답형",
     "points": 3,
-    "question": "널 세션 공격은 Windows의 파일 및 프린터 공유 프로토콜인 SMB를 기반으로 작동한다. 방화벽에서 이 공격을 원천 차단하기 위해 막아야하는 SMB서비스의 대표적인 TCP 포트 번호",
-    "answer": "445",
+    "question": "Windows 서버에서 익명 사용자가 널 세션을 통해 내부 정보 (SAM 계정 등)을 열람하지 못하도록 차단하려한다. 레지스트리 경로에서 익명 접근을 제한하기 위해 설정해야하는 레지스트리 키(Key)의 명칭",
+    "answer": "RestrictAnonymous",
     "keywords": [
-      "445"
+      "RestrictAnonymous"
     ],
     "commentary": "",
     "difficulty": "",
@@ -15602,10 +15598,10 @@
     "number": 3,
     "type": "단답형",
     "points": 3,
-    "question": "Windows 서버에서 익명 사용자가 널 세션을 통해 내부 정보 (SAM 계정 등)을 열람하지 못하도록 차단하려한다. 레지스트리 경로에서 익명 접근을 제한하기 위해 설정해야하는 레지스트리 키(Key)의 명칭",
-    "answer": "RestrictAnonymous",
+    "question": "유닉스 및 리눅스 환경에서 패킷 필터 기반으로 호스트에 대한 접근 통제를 수행하는 대표적인 소프트웨어 도구. 외부에서 서비스 요청이 오면 데몬 실행 전 가로채서 접근 권한을 확인하며, 접근 제어 설정 파일로 /etc/hosts.allow와 /etc/hosts.deny를 사용하는 이 도구의 명칭",
+    "answer": "TCP Wrapper",
     "keywords": [
-      "RestrictAnonymous"
+      "TCP Wrapper"
     ],
     "commentary": "",
     "difficulty": "",
@@ -15617,23 +15613,6 @@
     "exam": "시스템보안",
     "subject_num": 1,
     "number": 4,
-    "type": "단답형",
-    "points": 3,
-    "question": "유닉스 및 리눅스 환경에서 패킷 필터 기반으로 호스트에 대한 접근 통제를 수행하는 대표적인 소프트웨어 도구. 외부에서 서비스 요청이 오면 데몬 실행 전 가로채서 접근 권한을 확인하며, 접근 제어 설정 파일로 /etc/hosts.allow와 /etc/hosts.deny를 사용하는 이 도구의 명칭",
-    "answer": "TCP Wrapper",
-    "keywords": [
-      "TCP Wrapper"
-    ],
-    "commentary": "",
-    "difficulty": "",
-    "sub_questions": null
-  },
-  {
-    "id": "sheet_단_1_005",
-    "source": "요약시트",
-    "exam": "시스템보안",
-    "subject_num": 1,
-    "number": 5,
     "type": "단답형",
     "points": 3,
     "question": "리눅스 커널 내부에서 패킷을 검사하고 차단/허용하는 패킷 필터링 도구들의 계보이다. 리눅스 커널 2.0의 (1), 2.2의 (2), 그리고 현재까지 널리 쓰이는 커널 2.4 이상의 (3) 순으로 발전하였다.",
@@ -15648,6 +15627,23 @@
     "sub_questions": null
   },
   {
+    "id": "sheet_단_1_005",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 5,
+    "type": "단답형",
+    "points": 3,
+    "question": "리눅스 환경에서 내장된 방화벽 기능을 관리하기 위한 패킷필터링 도구. 패킷을 제어하기 위해 INPUT, OUTPUT, FORWARD등의 기본 체인과 테이블 구조를 사용하여 룰셋을 관리하는 도구",
+    "answer": "iptables",
+    "keywords": [
+      "iptables"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
     "id": "sheet_단_1_006",
     "source": "요약시트",
     "exam": "시스템보안",
@@ -15655,10 +15651,10 @@
     "number": 6,
     "type": "단답형",
     "points": 3,
-    "question": "리눅스 환경에서 내장된 방화벽 기능을 관리하기 위한 패킷필터링 도구. 패킷을 제어하기 위해 INPUT, OUTPUT, FORWARD등의 기본 체인과 테이블 구조를 사용하여 룰셋을 관리하는 도구",
-    "answer": "iptables",
+    "question": "리눅스 실행 레벨 중 하나로, 네트워크 기능을 지원하지 않고 오직 관리자(root) 혼자서만 접근할 수 있는 모드. 주로 시스템점검이나 루트 비밀번호를 분실했을 때 이를 초기화/복구하기 위해 사용하는 레벨의 번호",
+    "answer": "1 (단일 사용자 모드)",
     "keywords": [
-      "iptables"
+      "1 (단일 사용자 모드)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -15672,10 +15668,10 @@
     "number": 7,
     "type": "단답형",
     "points": 3,
-    "question": "리눅스 실행 레벨 중 하나로, 네트워크 기능을 지원하지 않고 오직 관리자(root) 혼자서만 접근할 수 있는 모드. 주로 시스템점검이나 루트 비밀번호를 분실했을 때 이를 초기화/복구하기 위해 사용하는 레벨의 번호",
-    "answer": "1 (단일 사용자 모드)",
+    "question": "리눅스(SysV init 방식) 시스템이 부팅될 때 기본 실행레벨을 설정하기 위해 참조하는 핵심 설정 파일의 절대 경로",
+    "answer": "/etc/inittab",
     "keywords": [
-      "1 (단일 사용자 모드)"
+      "/etc/inittab"
     ],
     "commentary": "",
     "difficulty": "",
@@ -15689,10 +15685,10 @@
     "number": 8,
     "type": "단답형",
     "points": 3,
-    "question": "리눅스(SysV init 방식) 시스템이 부팅될 때 기본 실행레벨을 설정하기 위해 참조하는 핵심 설정 파일의 절대 경로",
-    "answer": "/etc/inittab",
+    "question": "최신 리눅스 systemd 환경에서 시스템 부팅 시 적용될 기본 실행 레벨을 확인하거나 설정할 때 사용하는 관리 명령어.",
+    "answer": "systemctl",
     "keywords": [
-      "/etc/inittab"
+      "systemctl"
     ],
     "commentary": "",
     "difficulty": "",
@@ -15706,10 +15702,10 @@
     "number": 9,
     "type": "단답형",
     "points": 3,
-    "question": "최신 리눅스 systemd 환경에서 시스템 부팅 시 적용될 기본 실행 레벨을 확인하거나 설정할 때 사용하는 관리 명령어.",
-    "answer": "systemctl",
+    "question": "리눅스 os에서 개별 파일에 관련된 속성 정보를 가지고 있는 약 120byte의 구조체, 모든 파일은 정확히 하나의 (a)를 가지며 (a)리스트에 저장됨",
+    "answer": "i-node",
     "keywords": [
-      "systemctl"
+      "i-node"
     ],
     "commentary": "",
     "difficulty": "",
@@ -15721,23 +15717,6 @@
     "exam": "시스템보안",
     "subject_num": 1,
     "number": 10,
-    "type": "단답형",
-    "points": 3,
-    "question": "리눅스 os에서 개별 파일에 관련된 속성 정보를 가지고 있는 약 120byte의 구조체, 모든 파일은 정확히 하나의 (a)를 가지며 (a)리스트에 저장됨",
-    "answer": "i-node",
-    "keywords": [
-      "i-node"
-    ],
-    "commentary": "",
-    "difficulty": "",
-    "sub_questions": null
-  },
-  {
-    "id": "sheet_단_1_011",
-    "source": "요약시트",
-    "exam": "시스템보안",
-    "subject_num": 1,
-    "number": 11,
     "type": "단답형",
     "points": 3,
     "question": "(1) 실제 서비스를 제공하는 서비스 프로세스를 제외하고는 클라이언트의 접속 요청이 있을 때까지 대기하다가 요청이 들어오면 해당요청을 처리할 서비스 프로세스를 실행\n(2) 전체 서비스에 공통 적용할 보안규칙 설정하는 파일\n(3) 특정 서비스만 끄거나 켤 때 설정하는 파일 경로",
@@ -15752,11 +15731,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_1_012",
+    "id": "sheet_단_1_011",
     "source": "요약시트",
     "exam": "시스템보안",
     "subject_num": 1,
-    "number": 12,
+    "number": 11,
     "type": "단답형",
     "points": 3,
     "question": "xinetd.conf 설정값\n(1) = SYSLOG | FILE (로그파일 관리 위치)\n(2) = HOST | USERID | ATTEMPT (접속에 실패했을 때 기록될 값)\n(3) = PID | HOST | USERID | EXIT | DURATION | TRAFFIC (접속 성공시 기록값)\n(4) = [초당 요청수] [제한시간] (DoS공격을 막기 위해 cps = 50 10이면 초당 50개 넘으면 10초간 대기)\n(5) = 최대 서버수\n(6) = 최대 접속수\n(7) = 접속 허용할 호스트 (ip나 네트워크 대역 지정)\n(8)= 접속 차단할  호스트 (ip)",
@@ -15773,11 +15752,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_1_013",
+    "id": "sheet_단_1_012",
     "source": "요약시트",
     "exam": "시스템보안",
     "subject_num": 1,
-    "number": 13,
+    "number": 12,
     "type": "단답형",
     "points": 3,
     "question": "xinetd.d 설정값\n(1) = yes | no (활성화)\n(2) = yes | no (단일스레드 | 다중스레드)",
@@ -15791,11 +15770,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_1_014",
+    "id": "sheet_단_1_013",
     "source": "요약시트",
     "exam": "시스템보안",
     "subject_num": 1,
-    "number": 14,
+    "number": 13,
     "type": "단답형",
     "points": 3,
     "question": "[윈도우 레지스터 루트키]\n(1) 파일의 확장자와 프로그램간의 연결 정보 관리\n(2) 현재 로그인한 사용자 한 명의 프로필, 배경화면, 설정 정보\n(3) 컴퓨터 전체의 하드웨어, 드라이버, 소프트웨어 보안 설정 (출제율 최고)\n(4) 시스템에 등록된 모든 사용자의 프로필 정보\n(5) 부팅 시 사용되는 하드웨어 프로필 정보",
@@ -15812,6 +15791,23 @@
     "sub_questions": null
   },
   {
+    "id": "sheet_단_1_014",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 14,
+    "type": "단답형",
+    "points": 3,
+    "question": "Windows 침해사고 분석(포렌식) 시 반드시 점검해야 하는 레지스트리 경로이다. 시스템이 부팅될 때 특정 악성코드가 지속적으로 자동실행되도록 공격자가 주로 악용하는 아래 경로의 빈칸 (a)에 들어갈 핵심 키 명칭\n<<HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\(a)>>",
+    "answer": "Run",
+    "keywords": [
+      "Run"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
     "id": "sheet_단_1_015",
     "source": "요약시트",
     "exam": "시스템보안",
@@ -15819,10 +15815,10 @@
     "number": 15,
     "type": "단답형",
     "points": 3,
-    "question": "Windows 침해사고 분석(포렌식) 시 반드시 점검해야 하는 레지스트리 경로이다. 시스템이 부팅될 때 특정 악성코드가 지속적으로 자동실행되도록 공격자가 주로 악용하는 아래 경로의 빈칸 (a)에 들어갈 핵심 키 명칭\n<<HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\(a)>>",
-    "answer": "Run",
+    "question": "Windows 레지스트리의 5대 기본 루트 키 중 하나이다. 시스템에 설치된 하드웨어 드라이버 설정, 소프트웨어 환경 설정, 그리고 전체 보안 정책 데이터가 저장되어있어 컴퓨터 전체(모든 사용자)에게 공통으로 적용되는 최상위 루트 키",
+    "answer": "HKEY_LOCAL_MACHINE (HKLM)",
     "keywords": [
-      "Run"
+      "HKEY_LOCAL_MACHINE (HKLM)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -15836,10 +15832,10 @@
     "number": 16,
     "type": "단답형",
     "points": 3,
-    "question": "Windows 레지스트리의 5대 기본 루트 키 중 하나이다. 시스템에 설치된 하드웨어 드라이버 설정, 소프트웨어 환경 설정, 그리고 전체 보안 정책 데이터가 저장되어있어 컴퓨터 전체(모든 사용자)에게 공통으로 적용되는 최상위 루트 키",
-    "answer": "HKEY_LOCAL_MACHINE (HKLM)",
+    "question": "Windows 레지스트리 루트 키 중 하나로, 파일의 확장자와 이를 실행할 실제 응용 프로그램 간의 연결 관계 정보 (OLE데이터 등)를 관리하는 루트 키의 명칭",
+    "answer": "HKEY_CLASSES_ROOT (HKCR)",
     "keywords": [
-      "HKEY_LOCAL_MACHINE (HKLM)"
+      "HKEY_CLASSES_ROOT (HKCR)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -15853,10 +15849,10 @@
     "number": 17,
     "type": "단답형",
     "points": 3,
-    "question": "Windows 레지스트리 루트 키 중 하나로, 파일의 확장자와 이를 실행할 실제 응용 프로그램 간의 연결 관계 정보 (OLE데이터 등)를 관리하는 루트 키의 명칭",
-    "answer": "HKEY_CLASSES_ROOT (HKCR)",
+    "question": "Windows의 대표적인 파일 시스템인 NTFS에서 매우 중요한 역할을 하는 메타데이터 파일. 볼륨에 존재하는 모든 파일과 디렉터리에 대한 위치, 크기, 시간 정보(MAC Time), 보안 권한 등의 세부 메타데이터를 테이블 형태로 기록, 관리하는 이 핵심 시스템 파일의 명칭",
+    "answer": "$MFT",
     "keywords": [
-      "HKEY_CLASSES_ROOT (HKCR)"
+      "$MFT"
     ],
     "commentary": "",
     "difficulty": "",
@@ -15870,10 +15866,11 @@
     "number": 18,
     "type": "단답형",
     "points": 3,
-    "question": "Windows의 대표적인 파일 시스템인 NTFS에서 매우 중요한 역할을 하는 메타데이터 파일. 볼륨에 존재하는 모든 파일과 디렉터리에 대한 위치, 크기, 시간 정보(MAC Time), 보안 권한 등의 세부 메타데이터를 테이블 형태로 기록, 관리하는 이 핵심 시스템 파일의 명칭",
-    "answer": "$MFT",
+    "question": "(1) NTFS의 메타데이터 파일\n(2) 리눅스의 메타데이터 구조",
+    "answer": "(1) $MFT\n(2) Inode",
     "keywords": [
-      "$MFT"
+      "$MFT",
+      "Inode"
     ],
     "commentary": "",
     "difficulty": "",
@@ -15887,11 +15884,10 @@
     "number": 19,
     "type": "단답형",
     "points": 3,
-    "question": "(1) NTFS의 메타데이터 파일\n(2) 리눅스의 메타데이터 구조",
-    "answer": "(1) $MFT\n(2) Inode",
+    "question": "저장 매체의 가장 첫번째 섹터에 위치하며, 컴퓨터 부팅 시 BIOS에 의해 가장 먼저 로드되는 512바이트 크기의 핵심 부팅 영역",
+    "answer": "MBR (Master Boot Record)",
     "keywords": [
-      "$MFT",
-      "Inode"
+      "MBR (Master Boot Record)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -15903,23 +15899,6 @@
     "exam": "시스템보안",
     "subject_num": 1,
     "number": 20,
-    "type": "단답형",
-    "points": 3,
-    "question": "저장 매체의 가장 첫번째 섹터에 위치하며, 컴퓨터 부팅 시 BIOS에 의해 가장 먼저 로드되는 512바이트 크기의 핵심 부팅 영역",
-    "answer": "MBR (Master Boot Record)",
-    "keywords": [
-      "MBR (Master Boot Record)"
-    ],
-    "commentary": "",
-    "difficulty": "",
-    "sub_questions": null
-  },
-  {
-    "id": "sheet_단_1_021",
-    "source": "요약시트",
-    "exam": "시스템보안",
-    "subject_num": 1,
-    "number": 21,
     "type": "단답형",
     "points": 3,
     "question": "MBR 내부 구조 크기 (순서대로)\n(1) 부트코드 크기\n(2) 파티션 테이블 크기\n(3) 시그니처 크기",
@@ -15934,6 +15913,23 @@
     "sub_questions": null
   },
   {
+    "id": "sheet_단_1_021",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 21,
+    "type": "단답형",
+    "points": 3,
+    "question": "디지털 포렌식 분석 시 MBR 영역의 유효성을 검증하기 위해 확인하는 매직 넘버(시그니처)로, MBR 섹터의 가장 마지막 2 바이트에 고정되어 있는 16진수 값",
+    "answer": "0x55AA",
+    "keywords": [
+      "0x55AA"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
     "id": "sheet_단_1_022",
     "source": "요약시트",
     "exam": "시스템보안",
@@ -15941,10 +15937,10 @@
     "number": 22,
     "type": "단답형",
     "points": 3,
-    "question": "디지털 포렌식 분석 시 MBR 영역의 유효성을 검증하기 위해 확인하는 매직 넘버(시그니처)로, MBR 섹터의 가장 마지막 2 바이트에 고정되어 있는 16진수 값",
-    "answer": "0x55AA",
+    "question": "하드웨어 레벨에서 버퍼 오버플로우 공격을 방어하기 위한 기술이다. 메모리의 스택이나 힙과 같은 데이터 영역을 '실행 불가능' 상태로 지정하여, 공격자가 주입한 악성 쉘코드가 임의로 실행되는 것을 차단하는 CPU 및 OS 기반의 보안 매커니즘",
+    "answer": "NX bit (또는 DEP/XD bit)",
     "keywords": [
-      "0x55AA"
+      "NX bit (또는 DEP/XD bit)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -15958,10 +15954,10 @@
     "number": 23,
     "type": "단답형",
     "points": 3,
-    "question": "하드웨어 레벨에서 버퍼 오버플로우 공격을 방어하기 위한 기술이다. 메모리의 스택이나 힙과 같은 데이터 영역을 '실행 불가능' 상태로 지정하여, 공격자가 주입한 악성 쉘코드가 임의로 실행되는 것을 차단하는 CPU 및 OS 기반의 보안 매커니즘",
-    "answer": "NX bit (또는 DEP/XD bit)",
+    "question": "메인보드 롬(ROM)에 저장되어 있으며, PC 전원이 켜졌을때 하드웨어 자가진단을 수행하고 운영체제를 로드하기 전까지 컴퓨터의 입출력을 제어하는 가장 기본적인 펌웨어",
+    "answer": "BIOS",
     "keywords": [
-      "NX bit (또는 DEP/XD bit)"
+      "BIOS"
     ],
     "commentary": "",
     "difficulty": "",
@@ -15975,7 +15971,7 @@
     "number": 24,
     "type": "단답형",
     "points": 3,
-    "question": "메인보드 롬(ROM)에 저장되어 있으며, PC 전원이 켜졌을때 하드웨어 자가진단을 수행하고 운영체제를 로드하기 전까지 컴퓨터의 입출력을 제어하는 가장 기본적인 펌웨어",
+    "question": "공격자가 악의적으로 시스템에 접근하여 부팅 순서를 변경하거나 리눅스 싱글 모드로 진입하는 것을 차단하기 위해, 메인보드 설정 화면에서 반드시 관리자 패스워드를 지정해야 하는 대상",
     "answer": "BIOS",
     "keywords": [
       "BIOS"
@@ -15992,10 +15988,10 @@
     "number": 25,
     "type": "단답형",
     "points": 3,
-    "question": "공격자가 악의적으로 시스템에 접근하여 부팅 순서를 변경하거나 리눅스 싱글 모드로 진입하는 것을 차단하기 위해, 메인보드 설정 화면에서 반드시 관리자 패스워드를 지정해야 하는 대상",
-    "answer": "BIOS",
+    "question": "전통적인 레거시 BIOS의 용량 한계 (16비트 호환, 2TB 이상 디스크 인식 불가 등)를 극복하기 위해 개발된 최신 표준 펌웨어 인터페이스의 명칭",
+    "answer": "UEFI",
     "keywords": [
-      "BIOS"
+      "UEFI"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16009,10 +16005,10 @@
     "number": 26,
     "type": "단답형",
     "points": 3,
-    "question": "전통적인 레거시 BIOS의 용량 한계 (16비트 호환, 2TB 이상 디스크 인식 불가 등)를 극복하기 위해 개발된 최신 표준 펌웨어 인터페이스의 명칭",
-    "answer": "UEFI",
+    "question": "UEFI 규격에서 지원하는 보안기능이다. 시스템 부팅시 위변조 되지 않은 인증된 운영체제 커널 및 디지털 서명된 드라이버만 실행되도록 보장하여, 부팅 단계에서 실행되는 루트킷 등의 악성코드를 원천 차단하는 기술명",
+    "answer": "Secure Boot (보안 부팅)",
     "keywords": [
-      "UEFI"
+      "Secure Boot (보안 부팅)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16026,10 +16022,10 @@
     "number": 27,
     "type": "단답형",
     "points": 3,
-    "question": "UEFI 규격에서 지원하는 보안기능이다. 시스템 부팅시 위변조 되지 않은 인증된 운영체제 커널 및 디지털 서명된 드라이버만 실행되도록 보장하여, 부팅 단계에서 실행되는 루트킷 등의 악성코드를 원천 차단하는 기술명",
-    "answer": "Secure Boot (보안 부팅)",
+    "question": "정보 보안에서 자원에 대한 통제와 관리를 위해 사용하는 프레임워크로, 신원확인, 권한부여, 이용 로그 기록 및 감사의 세가지 핵심요소로 구성된 보안모델의 약어",
+    "answer": "AAA",
     "keywords": [
-      "Secure Boot (보안 부팅)"
+      "AAA"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16041,23 +16037,6 @@
     "exam": "시스템보안",
     "subject_num": 1,
     "number": 28,
-    "type": "단답형",
-    "points": 3,
-    "question": "정보 보안에서 자원에 대한 통제와 관리를 위해 사용하는 프레임워크로, 신원확인, 권한부여, 이용 로그 기록 및 감사의 세가지 핵심요소로 구성된 보안모델의 약어",
-    "answer": "AAA",
-    "keywords": [
-      "AAA"
-    ],
-    "commentary": "",
-    "difficulty": "",
-    "sub_questions": null
-  },
-  {
-    "id": "sheet_단_1_029",
-    "source": "요약시트",
-    "exam": "시스템보안",
-    "subject_num": 1,
-    "number": 29,
     "type": "단답형",
     "points": 3,
     "question": "보안 접근 통제의 AAA 메커니즘은 주체의 신원을 검증하는 (1) , 주체에게 차등적인 권한을 부여하는 (2), 그리고 주체의 활동 내역을 기록하여 책임추적성을 확보하는 (3) 으로 구성된다.",
@@ -16072,6 +16051,23 @@
     "sub_questions": null
   },
   {
+    "id": "sheet_단_1_029",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 29,
+    "type": "단답형",
+    "points": 3,
+    "question": "운영체제(OS)의 가장 핵심적인 부분으로, 메모리에 상주하며 하드웨어 자원(CPU, 메모리, 디스크 등)을 관리하고 프로세스 스케줄링, 파일 시스템 제어 등 시스템의 모든 기초적인 기능을 수행하는 영역",
+    "answer": "커널 (Kernel)",
+    "keywords": [
+      "커널 (Kernel)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
     "id": "sheet_단_1_030",
     "source": "요약시트",
     "exam": "시스템보안",
@@ -16079,10 +16075,10 @@
     "number": 30,
     "type": "단답형",
     "points": 3,
-    "question": "운영체제(OS)의 가장 핵심적인 부분으로, 메모리에 상주하며 하드웨어 자원(CPU, 메모리, 디스크 등)을 관리하고 프로세스 스케줄링, 파일 시스템 제어 등 시스템의 모든 기초적인 기능을 수행하는 영역",
-    "answer": "커널 (Kernel)",
+    "question": "사용자가 입력한 명령어를 해석하여 커널에 전달하고, 그 처리결과를 사용자에게 보여주는 명령어 해석기(인터페이스) 역할을 하는 영역",
+    "answer": "쉘 (Shell)",
     "keywords": [
-      "커널 (Kernel)"
+      "쉘 (Shell)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16096,10 +16092,10 @@
     "number": 31,
     "type": "단답형",
     "points": 3,
-    "question": "사용자가 입력한 명령어를 해석하여 커널에 전달하고, 그 처리결과를 사용자에게 보여주는 명령어 해석기(인터페이스) 역할을 하는 영역",
-    "answer": "쉘 (Shell)",
+    "question": "리눅스에서 특정 서비스 계정(예:ntp, mysql 등)이 악의적으로 쉘에 로그인하여 시스템 명령어를 실행하는 것을 방지하고자 한다. /etc/passwd 파일에서 해당 계정들의 로그인 쉘을 제한하기 위해 설정해야하는 가상 쉘의 절대 경로",
+    "answer": "/sbin/nologin (또는 /bin/false)",
     "keywords": [
-      "쉘 (Shell)"
+      "/sbin/nologin (또는 /bin/false)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16113,10 +16109,10 @@
     "number": 32,
     "type": "단답형",
     "points": 3,
-    "question": "리눅스에서 특정 서비스 계정(예:ntp, mysql 등)이 악의적으로 쉘에 로그인하여 시스템 명령어를 실행하는 것을 방지하고자 한다. /etc/passwd 파일에서 해당 계정들의 로그인 쉘을 제한하기 위해 설정해야하는 가상 쉘의 절대 경로",
-    "answer": "/sbin/nologin (또는 /bin/false)",
+    "question": "버퍼 오버플로우나 입력값 검증 미흡 등의 취약점을 공략하여 시스템을 비정상적인 상태로 만드는 행위나 코드",
+    "answer": "Exploit Code",
     "keywords": [
-      "/sbin/nologin (또는 /bin/false)"
+      "Exploit Code"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16130,10 +16126,10 @@
     "number": 33,
     "type": "단답형",
     "points": 3,
-    "question": "버퍼 오버플로우나 입력값 검증 미흡 등의 취약점을 공략하여 시스템을 비정상적인 상태로 만드는 행위나 코드",
-    "answer": "Exploit Code",
+    "question": "취약점을 공격하는 익스플로잇 코드 구조에서, 취약점 유도 성공 후 공격자가 타깃 시스템에서 실제 실행하고자 하는 쉘코드 등의 핵심 악성 기능 코드 영역",
+    "answer": "Payload",
     "keywords": [
-      "Exploit Code"
+      "Payload"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16147,10 +16143,10 @@
     "number": 34,
     "type": "단답형",
     "points": 3,
-    "question": "취약점을 공격하는 익스플로잇 코드 구조에서, 취약점 유도 성공 후 공격자가 타깃 시스템에서 실제 실행하고자 하는 쉘코드 등의 핵심 악성 기능 코드 영역",
-    "answer": "Payload",
+    "question": "소프트웨어 제작사에서 취약점을 보완하기 위한 보안패치가 출시 되기 전에 해당 취약점을 악용하는 익스플로잇 코드를 제작하여 감행하는 해킹 공격 형태",
+    "answer": "제로데이 공격",
     "keywords": [
-      "Payload"
+      "제로데이 공격"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16164,10 +16160,10 @@
     "number": 35,
     "type": "단답형",
     "points": 3,
-    "question": "소프트웨어 제작사에서 취약점을 보완하기 위한 보안패치가 출시 되기 전에 해당 취약점을 악용하는 익스플로잇 코드를 제작하여 감행하는 해킹 공격 형태",
-    "answer": "제로데이 공격",
+    "question": "리눅스 시스템에서 관리자가 useradd 명령어를 사용하여 새로운 사용자 계정을 생성할 때, 해당 사용자의 홈 디렉터리에 기본적으로 복사되어 채워지는 프로필 및 기본환경 설정 파일들(.bashrc, .bash_profiel 등)이 저장되어 있는 뼈대 디렉터리의 절대경로",
+    "answer": "/etc/skel",
     "keywords": [
-      "제로데이 공격"
+      "/etc/skel"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16181,7 +16177,7 @@
     "number": 36,
     "type": "단답형",
     "points": 3,
-    "question": "리눅스 시스템에서 관리자가 useradd 명령어를 사용하여 새로운 사용자 계정을 생성할 때, 해당 사용자의 홈 디렉터리에 기본적으로 복사되어 채워지는 프로필 및 기본환경 설정 파일들(.bashrc, .bash_profiel 등)이 저장되어 있는 뼈대 디렉터리의 절대경로",
+    "question": "보안관리자인 A씨는 앞으로 시스템에 등록될 모든 신규 사용자들의 터미널 환경에 공통적인 보안 경고문구(Banner)와 초기 별칭(Alias) 설정을 자동으로 배포하고자 한다. 리눅스 시스템 구조상 A씨가 가장 먼저 수정하고 설정 파일들을 배치해야 하는 디렉터리 경로",
     "answer": "/etc/skel",
     "keywords": [
       "/etc/skel"
@@ -16198,10 +16194,10 @@
     "number": 37,
     "type": "단답형",
     "points": 3,
-    "question": "보안관리자인 A씨는 앞으로 시스템에 등록될 모든 신규 사용자들의 터미널 환경에 공통적인 보안 경고문구(Banner)와 초기 별칭(Alias) 설정을 자동으로 배포하고자 한다. 리눅스 시스템 구조상 A씨가 가장 먼저 수정하고 설정 파일들을 배치해야 하는 디렉터리 경로",
-    "answer": "/etc/skel",
+    "question": "리눅스 운영체제에서 애플리케이션의 소스코드를 수정하지 않고도 메인보드 및 시스템의 인증방식을 유연하게 추가, 변경, 통합 관리할 수 있도록 지원하는 장착형 인증 모듈 프레임워크의 약어",
+    "answer": "PAM",
     "keywords": [
-      "/etc/skel"
+      "PAM"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16215,10 +16211,10 @@
     "number": 38,
     "type": "단답형",
     "points": 3,
-    "question": "리눅스 운영체제에서 애플리케이션의 소스코드를 수정하지 않고도 메인보드 및 시스템의 인증방식을 유연하게 추가, 변경, 통합 관리할 수 있도록 지원하는 장착형 인증 모듈 프레임워크의 약어",
-    "answer": "PAM",
+    "question": "다음은 사용자의 패스워드 복잡도를 설정하는 PAM 설정 파일의 일부이다. 빈칸 (a)에 들어갈 알맞은 모듈 타입을 쓰시오.\n<<(a) requried pam_cracklib.so retry=3 minlen=8 dcredit=-1>>",
+    "answer": "(a) password",
     "keywords": [
-      "PAM"
+      "(a) password"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16232,10 +16228,10 @@
     "number": 39,
     "type": "단답형",
     "points": 3,
-    "question": "다음은 사용자의 패스워드 복잡도를 설정하는 PAM 설정 파일의 일부이다. 빈칸 (a)에 들어갈 알맞은 모듈 타입을 쓰시오.\n<<(a) requried pam_cracklib.so retry=3 minlen=8 dcredit=-1>>",
-    "answer": "(a) password",
+    "question": "다음은 리눅스 PAM 설정 파일에 사용하는 제어플래그에 대한 설명이다. 알맞은 플래그 명칭을 영문소문자로 쓰시오.\n이 플래그는 최종 인증 성공을 위해 반드시 만족(성공)해야 하는 필수 조건이다. 만약 이 모듈에서 인증이 실패하더라도 즉시 거부 처리하지 않고, 보안상 어떤 단계에서 실패했는지 공격자가 유추하지 못하도록 같은 스택에 있는 다음 모듈들을 계속해서 실행하는 특징이 있다.",
+    "answer": "requried",
     "keywords": [
-      "(a) password"
+      "requried"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16249,10 +16245,10 @@
     "number": 40,
     "type": "단답형",
     "points": 3,
-    "question": "다음은 리눅스 PAM 설정 파일에 사용하는 제어플래그에 대한 설명이다. 알맞은 플래그 명칭을 영문소문자로 쓰시오.\n이 플래그는 최종 인증 성공을 위해 반드시 만족(성공)해야 하는 필수 조건이다. 만약 이 모듈에서 인증이 실패하더라도 즉시 거부 처리하지 않고, 보안상 어떤 단계에서 실패했는지 공격자가 유추하지 못하도록 같은 스택에 있는 다음 모듈들을 계속해서 실행하는 특징이 있다.",
-    "answer": "requried",
+    "question": "보안관리자 B씨는 리눅스 서버 사용자들의 패스워드 유추공격을 방지하기 위해 PAM 설정을 변경하려고 한다. 패스워드 변경 시 최소길이, 대소문자 및 숫자 포함 여부 등의 복잡도 검사를 강제할 때 사용하는 PAM 모듈 파일명",
+    "answer": "pam_cracklib.so (또는 pam_qwquality.so)",
     "keywords": [
-      "requried"
+      "pam_cracklib.so (또는 pam_qwquality.so)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16266,10 +16262,10 @@
     "number": 41,
     "type": "단답형",
     "points": 3,
-    "question": "보안관리자 B씨는 리눅스 서버 사용자들의 패스워드 유추공격을 방지하기 위해 PAM 설정을 변경하려고 한다. 패스워드 변경 시 최소길이, 대소문자 및 숫자 포함 여부 등의 복잡도 검사를 강제할 때 사용하는 PAM 모듈 파일명",
-    "answer": "pam_cracklib.so (또는 pam_qwquality.so)",
+    "question": "다음 PAM 설정 파일의 예시에서 빈칸에 들어갈 알맞은 모듈타입을 쓰시오. (단, 해당 라인은 특정 사용자의 로그인 허용 시간대 및 만료 여부 등 계정의 유효성을 검사하는 설정이다.)\n<<(a) required pam_time.so>>",
+    "answer": "(a) account",
     "keywords": [
-      "pam_cracklib.so (또는 pam_qwquality.so)"
+      "(a) account"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16281,23 +16277,6 @@
     "exam": "시스템보안",
     "subject_num": 1,
     "number": 42,
-    "type": "단답형",
-    "points": 3,
-    "question": "다음 PAM 설정 파일의 예시에서 빈칸에 들어갈 알맞은 모듈타입을 쓰시오. (단, 해당 라인은 특정 사용자의 로그인 허용 시간대 및 만료 여부 등 계정의 유효성을 검사하는 설정이다.)\n<<(a) required pam_time.so>>",
-    "answer": "(a) account",
-    "keywords": [
-      "(a) account"
-    ],
-    "commentary": "",
-    "difficulty": "",
-    "sub_questions": null
-  },
-  {
-    "id": "sheet_단_1_043",
-    "source": "요약시트",
-    "exam": "시스템보안",
-    "subject_num": 1,
-    "number": 43,
     "type": "단답형",
     "points": 3,
     "question": "PAM 설정 관련\n(1) 실패해도 티 안내고 다음 모듈 계속 실행\n(2) 즉시 실패 처리하고 종료\n(3) 패스워드 복잡도 규칙 강제 모듈\n(4) 계정 유효성, 접근 제한 시간 검사 타입",
@@ -16313,11 +16292,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_1_044",
+    "id": "sheet_단_1_043",
     "source": "요약시트",
     "exam": "시스템보안",
     "subject_num": 1,
-    "number": 44,
+    "number": 43,
     "type": "단답형",
     "points": 3,
     "question": "(1) 클라이언트가 메일 서버로 메일을 발송하거나 메일 서버끼리 메일을 주고받을때 사용하는 프로토콜\n(2) 포트번호",
@@ -16331,11 +16310,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_1_045",
+    "id": "sheet_단_1_044",
     "source": "요약시트",
     "exam": "시스템보안",
     "subject_num": 1,
-    "number": 45,
+    "number": 44,
     "type": "단답형",
     "points": 3,
     "question": "(1) 메일 서버에 도착한 메일을 사용자 컴퓨터로 다운로드하여 읽게 해주는 프로토콜, 기본적으로 메일을 서버에서 로컬PC로 가져오면서 서버에 있는 메일을 삭제하는 방식을 사용\n(2) 포트번호",
@@ -16349,11 +16328,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_1_046",
+    "id": "sheet_단_1_045",
     "source": "요약시트",
     "exam": "시스템보안",
     "subject_num": 1,
-    "number": 46,
+    "number": 45,
     "type": "단답형",
     "points": 3,
     "question": "(1) 이메일 수신 프로토콜 중 하나로, POP3의 단점을 보완하여 메일 서버의 전송함과 로컬 클라이언트의 전송함을 실시간으로 동기화한다. 사용자는 메일을 로컬PC로 완전히 다운로드하지 않고도 서버에 상주하는 메일의 헤더와 본문을 확인할수 있어 여러 단말기에서 동시 관리가 가능한 이 프로토콜의 약어\n(2) 포트번호",
@@ -16367,11 +16346,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_1_047",
+    "id": "sheet_단_1_046",
     "source": "요약시트",
     "exam": "시스템보안",
     "subject_num": 1,
-    "number": 47,
+    "number": 46,
     "type": "단답형",
     "points": 3,
     "question": "이메일 프로토콜 보안포트\n(1) SMTPS\n(2) IMAPS\n(3) POP3S",
@@ -16386,11 +16365,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_1_048",
+    "id": "sheet_단_1_047",
     "source": "요약시트",
     "exam": "시스템보안",
     "subject_num": 1,
-    "number": 48,
+    "number": 47,
     "type": "단답형",
     "points": 3,
     "question": "SNMPv3은 구버전의 보안 취약점 해결을 위해 USM(User-based Security Model) 기술을 도입하였다. 이를 통해 지원하는 3대 보안 서비스 유형에 알맞은 핵심 키워드를 쓰시오.\n(1) 메시지가 전송 도중 위,변조되지 않았음을 보장(MD5, SHA 등 활용)\n(2) 승인된 사용자만 메시지를 읽을수 있도록 암호화 제공(DES, AES등 활용)",
@@ -16404,6 +16383,23 @@
     "sub_questions": null
   },
   {
+    "id": "sheet_단_1_048",
+    "source": "요약시트",
+    "exam": "시스템보안",
+    "subject_num": 1,
+    "number": 48,
+    "type": "단답형",
+    "points": 3,
+    "question": "SNMPv1과 v2c 버전에서 인증을 위해 사용하는 일종의 패스워드로, 암호화되지 않은 평문상태로 네트워크에 전송되어 스니핑 공격에 매우 취약한 설정 명칭을 쓰시오.",
+    "answer": "Community String",
+    "keywords": [
+      "Community String"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
     "id": "sheet_단_1_049",
     "source": "요약시트",
     "exam": "시스템보안",
@@ -16411,10 +16407,10 @@
     "number": 49,
     "type": "단답형",
     "points": 3,
-    "question": "SNMPv1과 v2c 버전에서 인증을 위해 사용하는 일종의 패스워드로, 암호화되지 않은 평문상태로 네트워크에 전송되어 스니핑 공격에 매우 취약한 설정 명칭을 쓰시오.",
-    "answer": "Community String",
+    "question": "다음은 Windows 10 이상 시스템 (BIOS/MBR 레거시 환경)의 부팅과정을 순서없이 나열한 것이다. 올바른 부팅 순서대로 기호를 나열하시오.\n(ㄱ) bootmgr 실행\n(ㄴ) Winlogon 실행\n(ㄷ) MBR 로드\n(ㄹ) ntoskrnl.ext 실행\n(ㅁ) SMSS 실행",
+    "answer": "(ㄷ) -> (ㄱ) -> (ㄹ) -> (ㅁ) -> (ㄴ)",
     "keywords": [
-      "Community String"
+      "(ㄷ) -> (ㄱ) -> (ㄹ) -> (ㅁ) -> (ㄴ)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16428,10 +16424,10 @@
     "number": 50,
     "type": "단답형",
     "points": 3,
-    "question": "다음은 Windows 10 이상 시스템 (BIOS/MBR 레거시 환경)의 부팅과정을 순서없이 나열한 것이다. 올바른 부팅 순서대로 기호를 나열하시오.\n(ㄱ) bootmgr 실행\n(ㄴ) Winlogon 실행\n(ㄷ) MBR 로드\n(ㄹ) ntoskrnl.ext 실행\n(ㅁ) SMSS 실행",
-    "answer": "(ㄷ) -> (ㄱ) -> (ㄹ) -> (ㅁ) -> (ㄴ)",
+    "question": "Windows VIsta/7 버전 이후부터 적용된 부팅 아키텍처에서 기존의 boot.ini 설정을 대체하여, 부팅에 필요한 구성정보(설정 값)를 텍스트가 아닌 바이너리 형태로 저장, 관리하는 데이터베이스파일의 명칭",
+    "answer": "BCD (Boot Configuration Data)",
     "keywords": [
-      "(ㄷ) -> (ㄱ) -> (ㄹ) -> (ㅁ) -> (ㄴ)"
+      "BCD (Boot Configuration Data)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16443,23 +16439,6 @@
     "exam": "시스템보안",
     "subject_num": 1,
     "number": 51,
-    "type": "단답형",
-    "points": 3,
-    "question": "Windows VIsta/7 버전 이후부터 적용된 부팅 아키텍처에서 기존의 boot.ini 설정을 대체하여, 부팅에 필요한 구성정보(설정 값)를 텍스트가 아닌 바이너리 형태로 저장, 관리하는 데이터베이스파일의 명칭",
-    "answer": "BCD (Boot Configuration Data)",
-    "keywords": [
-      "BCD (Boot Configuration Data)"
-    ],
-    "commentary": "",
-    "difficulty": "",
-    "sub_questions": null
-  },
-  {
-    "id": "sheet_단_1_052",
-    "source": "요약시트",
-    "exam": "시스템보안",
-    "subject_num": 1,
-    "number": 52,
     "type": "단답형",
     "points": 3,
     "question": "최신 UEFI 부팅 환경에서 기존 레거시 BIOS의 bootmgr 대신 실행되는 파일로, EFI 시스템 파티션(ESP)내부에 존재하며 Windows 커널을 로드하기 위해 실행되는 확장 펌웨어 기반 부팅 관리자 파일명",
@@ -16479,10 +16458,11 @@
     "number": 1,
     "type": "서술형",
     "points": 5,
-    "question": "답",
-    "answer": "문제",
+    "question": "보안 담당자 A씨는 사내 자산 취약점 진단을 수행하던 중, 내부망 및 일부 DMZ 구간의 네트워크 장비와 리눅스 서버에서 구버전 SNMP 서비스가 활성화되어 있는 것을 발견하였다. 또한 외부 침입테스트 결과, 외부망에서 UDP 161번포트를 통해 시스템 내부 정보가 유출될 수 잇는 위험성이 확인 되었다.\n(1) 취약점\n(2) 보안대책",
+    "answer": "(1) 취약점 : 구버전 (v1,v2c) SNMP는 인증정보인 Community String을 암호화하지 않고 평문으로 전송하므로 스니핑에 취약하며, 기본값 노출 시 불필요한 정보가 유출됨\n(2) 보안대책\n1. 기본 Community String(punnlic, private)을 유추하기 어려운 복잡한 문자열로 변경\n2. 평문 전송 문제를 해결하기 위해 암호화 및 무결성을 지원하는 SNMPv3 버전으로 전환\n3. 방화벽 또는 ACL 설정을 통해 신뢰할 수 있는 관리자 IP(NMS)만 UDP 161 포트에 접근하도록 제한.",
     "keywords": [
-      "문제"
+      "보안대책",
+      "2. 평문 전송 문제를 해결하기 위해 암호화 및 무결성을 지원하는 SNMPv3 버전으로 전환"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16496,11 +16476,12 @@
     "number": 2,
     "type": "서술형",
     "points": 5,
-    "question": "(1) 취약점 : 구버전 (v1,v2c) SNMP는 인증정보인 Community String을 암호화하지 않고 평문으로 전송하므로 스니핑에 취약하며, 기본값 노출 시 불필요한 정보가 유출됨\n(2) 보안대책\n1. 기본 Community String(punnlic, private)을 유추하기 어려운 복잡한 문자열로 변경\n2. 평문 전송 문제를 해결하기 위해 암호화 및 무결성을 지원하는 SNMPv3 버전으로 전환\n3. 방화벽 또는 ACL 설정을 통해 신뢰할 수 있는 관리자 IP(NMS)만 UDP 161 포트에 접근하도록 제한.",
-    "answer": "보안 담당자 A씨는 사내 자산 취약점 진단을 수행하던 중, 내부망 및 일부 DMZ 구간의 네트워크 장비와 리눅스 서버에서 구버전 SNMP 서비스가 활성화되어 있는 것을 발견하였다. 또한 외부 침입테스트 결과, 외부망에서 UDP 161번포트를 통해 시스템 내부 정보가 유출될 수 잇는 위험성이 확인 되었다.\n(1) 취약점\n(2) 보안대책",
+    "question": "보안 솔루션 운용자 B씨는 리눅스 서버의 시스템 점검 중 슈퍼 데몬(xinetd)을 통해 구동되는 텔넷 설정 파일인 /etc/xinetd.d/telnet 내용이 아래와 같이 취약하게 설정된 것을 확인하였다.\n\nservice tenlet\n{\n flags = REUSE\n socket_type = stream\n wait = no\n user = root\n server = /usr/sbin/in.telnetd\n log_on_failure += USERID\n disable = no\n}\n\n(1) 현재 활성화되어 있는 텔넷 서비스를 xinetd 설정 파일 내부에서 원천적으로 비활성화(차단)하고자 할때, 수정해야 하는 속성과 변경된 값의 형태를 쓰시오.\n(2) 텔넷 서비스를 완전히 끌 수는 없는 상황이어서 특정 호스트만 접근하도록 제한하려 한다. 해당 서비스 파일 내부에서 192.168.10.5 IP 주소만 접속을 허용하도록 설정하는 지시어 규칙을 라인 형태로 쓰시오.\n(3) 외부로부터 DoS(서비스거부) 공격을 방어하기 위해 초당 최대 접속수를 30개로 제한하고, 이를 초과할 경우 20초동안 서비스를 일시정지하도록 제한하는 xinetd 속성 지시어 규칙을 라인 형태로 쓰시오.",
+    "answer": "(1) disable = yes\n(2) only_from = 192.168.10.5\n(3) cps = 30 20",
     "keywords": [
-      "취약점",
-      "보안대책"
+      "disable = yes",
+      "only_from = 192.168.10.5",
+      "cps = 30 20"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16514,14 +16495,11 @@
     "number": 3,
     "type": "서술형",
     "points": 5,
-    "question": "(1) disable = yes\n(2) only_from = 192.168.10.5\n(3) cps = 30 20",
-    "answer": "보안 솔루션 운용자 B씨는 리눅스 서버의 시스템 점검 중 슈퍼 데몬(xinetd)을 통해 구동되는 텔넷 설정 파일인 /etc/xinetd.d/telnet 내용이 아래와 같이 취약하게 설정된 것을 확인하였다.\n\nservice tenlet\n{\n flags = REUSE\n socket_type = stream\n wait = no\n user = root\n server = /usr/sbin/in.telnetd\n log_on_failure += USERID\n disable = no\n}\n\n(1) 현재 활성화되어 있는 텔넷 서비스를 xinetd 설정 파일 내부에서 원천적으로 비활성화(차단)하고자 할때, 수정해야 하는 속성과 변경된 값의 형태를 쓰시오.\n(2) 텔넷 서비스를 완전히 끌 수는 없는 상황이어서 특정 호스트만 접근하도록 제한하려 한다. 해당 서비스 파일 내부에서 192.168.10.5 IP 주소만 접속을 허용하도록 설정하는 지시어 규칙을 라인 형태로 쓰시오.\n(3) 외부로부터 DoS(서비스거부) 공격을 방어하기 위해 초당 최대 접속수를 30개로 제한하고, 이를 초과할 경우 20초동안 서비스를 일시정지하도록 제한하는 xinetd 속성 지시어 규칙을 라인 형태로 쓰시오.",
+    "question": "시스템 보안 취약점 진단 기준에 따르면, 리눅스 서버는 비인가자의 무차별 대입공격(Brute Force)및 패스워드 추측 공격을 방어하기 위해 강력한 패스워드 복잡도 정책을 수립해야 한다. 이를 위해 리눅스에서는 PAM 설정을 활용한다.\n\n(1) 패스워드 변경 시 최소 길이 설정, 숫자 및 특수문자 포함 여부 등 패스워드 규정 및 복잡성을 검사하기 위해 사용하는 PAM 모듈파일명을 쓰시오.\n(2) PAM 설정 파일의 제어플래그 중 하나에 대한 설명이다. 빈칸에 들어갈 알맞은 플래그 명칭을 영문 소문자로 쓰시오.\n[이 플래그는 인증성공을 위해 반드시 만족해야 하는 필수 구문이다. 만약 이 단계에서 모듈 검증이 실패하더라도 사용자에게 즉시 실패를 알리지 않고 같은 스택에 있는 나머지 모듈을 계속 실행한다. 이는 공격자가 어떤 보안 단계에서 인증이 거부되었는지 정보를 유추하지 못하도록 방어하는 보안효과를 가진다.",
+    "answer": "(1) pam_cracklib.so (또는 최신 리눅스 기준인 pam_pwquality.so도 정답 인정)\n(2) requried",
     "keywords": [
-      "service tenlet",
-      "{",
-      "flags = REUSE",
-      "socket_type = stream",
-      "wait = no"
+      "pam_cracklib.so (또는 최신 리눅스 기준인 pam_pwquality.so도 정답 인정)",
+      "requried"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16535,9 +16513,12 @@
     "number": 4,
     "type": "서술형",
     "points": 5,
-    "question": "(1) pam_cracklib.so (또는 최신 리눅스 기준인 pam_pwquality.so도 정답 인정)\n(2) requried",
-    "answer": "시스템 보안 취약점 진단 기준에 따르면, 리눅스 서버는 비인가자의 무차별 대입공격(Brute Force)및 패스워드 추측 공격을 방어하기 위해 강력한 패스워드 복잡도 정책을 수립해야 한다. 이를 위해 리눅스에서는 PAM 설정을 활용한다.\n\n(1) 패스워드 변경 시 최소 길이 설정, 숫자 및 특수문자 포함 여부 등 패스워드 규정 및 복잡성을 검사하기 위해 사용하는 PAM 모듈파일명을 쓰시오.\n(2) PAM 설정 파일의 제어플래그 중 하나에 대한 설명이다. 빈칸에 들어갈 알맞은 플래그 명칭을 영문 소문자로 쓰시오.\n[이 플래그는 인증성공을 위해 반드시 만족해야 하는 필수 구문이다. 만약 이 단계에서 모듈 검증이 실패하더라도 사용자에게 즉시 실패를 알리지 않고 같은 스택에 있는 나머지 모듈을 계속 실행한다. 이는 공격자가 어떤 보안 단계에서 인증이 거부되었는지 정보를 유추하지 못하도록 방어하는 보안효과를 가진다.",
-    "keywords": [],
+    "question": "포렌식 분석가 D시는 침해사고가 발생한 Windows 시스템의 디스크 구조를 분석하고 있다. 저장 매체의 파티션 테이블 구조에 따라 복구 방식이 달라지므로, D씨는 MBR 방식과 GPT방식의 기술적 차이점을 보고서에 작성하고자 한다. 다음 각 질문에 답하시오.\n\n(1) 레거시 BIOS 환경에서 사용하는 MBR구조에서 생성할 수 있는 주 파티션의 최대 개수와, MBR 섹터 내부에서 파티션 테이블 정보가 차지하는 바이트 크기를 각각 쓰시오.\n(2) MBR의 용량 한계(2TB)와 파티션 개수 제한을 극복하기 위해 UEFI 환경에서 사용하는 최신 파티션 구조의 명칭을 쓰고, 이 구조가 주 파티션을 최대 몇 개 까지 지원하는지 쓰시오.",
+    "answer": "(1) 최대 4개 / 64바이트\n(2) GPT / 최대 128개",
+    "keywords": [
+      "최대 4개 / 64바이트",
+      "GPT / 최대 128개"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -16550,9 +16531,13 @@
     "number": 5,
     "type": "서술형",
     "points": 5,
-    "question": "(1) 최대 4개 / 64바이트\n(2) GPT / 최대 128개",
-    "answer": "포렌식 분석가 D시는 침해사고가 발생한 Windows 시스템의 디스크 구조를 분석하고 있다. 저장 매체의 파티션 테이블 구조에 따라 복구 방식이 달라지므로, D씨는 MBR 방식과 GPT방식의 기술적 차이점을 보고서에 작성하고자 한다. 다음 각 질문에 답하시오.\n\n(1) 레거시 BIOS 환경에서 사용하는 MBR구조에서 생성할 수 있는 주 파티션의 최대 개수와, MBR 섹터 내부에서 파티션 테이블 정보가 차지하는 바이트 크기를 각각 쓰시오.\n(2) MBR의 용량 한계(2TB)와 파티션 개수 제한을 극복하기 위해 UEFI 환경에서 사용하는 최신 파티션 구조의 명칭을 쓰고, 이 구조가 주 파티션을 최대 몇 개 까지 지원하는지 쓰시오.",
-    "keywords": [],
+    "question": "자산보호와 안정적인 접근 통제를 위해 전사적 시스템에 AAA 보안 프레임워크를 도입하고자 한다. AAA 모델을 구성하는 3대요소의 명칭을 쓰고, 각 요소의 핵심 역할(정의)을 비교하여 간략히 서술하시오.",
+    "answer": "AAA 모델은 인증(Authentication), 인가(Authorization), 계정관리(Accounting)로 구성된다.\n인증 : 시스템에 접근하려는 주체의 신원을 확인하고 검증하는 단계이다.\n인가 : 인증된 사용자에게 특정 자원에 접근할 수 있는 차등적인 권한을 부여하는 단계이다.\n계정관리 : 사용자가 자원을 이용한 내역을 로그로 기록하고 추적하여 책임추적성을 확보하는 단계이다.",
+    "keywords": [
+      "인증 : 시스템에 접근하려는 주체의 신원을 확인하고 검증하는 단계이다.",
+      "인가 : 인증된 사용자에게 특정 자원에 접근할 수 있는 차등적인 권한을 부여하는 단계이다.",
+      "계정관리 : 사용자가 자원을 이용한 내역을 로그로 기록하고 추적하여 책임추적성을 확보하는 단계이다."
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -16565,27 +16550,12 @@
     "number": 6,
     "type": "서술형",
     "points": 5,
-    "question": "AAA 모델은 인증(Authentication), 인가(Authorization), 계정관리(Accounting)로 구성된다.\n인증 : 시스템에 접근하려는 주체의 신원을 확인하고 검증하는 단계이다.\n인가 : 인증된 사용자에게 특정 자원에 접근할 수 있는 차등적인 권한을 부여하는 단계이다.\n계정관리 : 사용자가 자원을 이용한 내역을 로그로 기록하고 추적하여 책임추적성을 확보하는 단계이다.",
-    "answer": "자산보호와 안정적인 접근 통제를 위해 전사적 시스템에 AAA 보안 프레임워크를 도입하고자 한다. AAA 모델을 구성하는 3대요소의 명칭을 쓰고, 각 요소의 핵심 역할(정의)을 비교하여 간략히 서술하시오.",
-    "keywords": [],
-    "commentary": "",
-    "difficulty": "",
-    "sub_questions": null
-  },
-  {
-    "id": "sheet_서_1_007",
-    "source": "요약시트",
-    "exam": "시스템보안",
-    "subject_num": 1,
-    "number": 7,
-    "type": "서술형",
-    "points": 5,
-    "question": "(1) 465\n(2) 995\n(3) 993",
-    "answer": "침해사고 대응팀은 사내메일서버를 통한 정보 유출 및 패스워드 스니핑 위협을 인지하였다. 이에 따라 기존의 평문 기반 이메일 프로토콜을 SSL/TLS 기반의 암호화 프로토콜로 전면 전환하는 보안정책을 수립했다. 네트워크 방화벽 설정을 변경하기 위해, 다음 각 보안 프로토콜이 사용하는 전용 TCP 포트번호를 쓰시오.\n(1) SMPTS (SMTP over SSL)\n(2) POP3S (POP3 over SSL)\n(3) IMAPS (IAMP over SSL)",
+    "question": "침해사고 대응팀은 사내메일서버를 통한 정보 유출 및 패스워드 스니핑 위협을 인지하였다. 이에 따라 기존의 평문 기반 이메일 프로토콜을 SSL/TLS 기반의 암호화 프로토콜로 전면 전환하는 보안정책을 수립했다. 네트워크 방화벽 설정을 변경하기 위해, 다음 각 보안 프로토콜이 사용하는 전용 TCP 포트번호를 쓰시오.\n(1) SMPTS (SMTP over SSL)\n(2) POP3S (POP3 over SSL)\n(3) IMAPS (IAMP over SSL)",
+    "answer": "(1) 465\n(2) 995\n(3) 993",
     "keywords": [
-      "SMPTS (SMTP over SSL)",
-      "POP3S (POP3 over SSL)",
-      "IMAPS (IAMP over SSL)"
+      "465",
+      "995",
+      "993"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16599,10 +16569,10 @@
     "number": 1,
     "type": "단답형",
     "points": 3,
-    "question": "문제",
-    "answer": "답",
+    "question": "Apache, Nginx, IIS 등 웹 서버에 모듈 형태로 장착되어, HTTP/HTPPS 트래픽을 실시간으로 감시, 필터링, 차단하는 오픈소스 웹 방화벽",
+    "answer": "ModSecurity",
     "keywords": [
-      "답"
+      "ModSecurity"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16616,10 +16586,11 @@
     "number": 2,
     "type": "단답형",
     "points": 3,
-    "question": "Apache, Nginx, IIS 등 웹 서버에 모듈 형태로 장착되어, HTTP/HTPPS 트래픽을 실시간으로 감시, 필터링, 차단하는 오픈소스 웹 방화벽",
-    "answer": "ModSecurity",
+    "question": "ModSecurity의 감사로그 및 설정과 관련된 지시어\n(1) : ModSecurity의 동작 상태를 결정하는 지시어로 On, Off, DetectionOnly 값 중 하나를 가짐.\n(2) : 규칙에 매칭된 트래픽의 상세 내역을 기록하는 감사 로그의 저장 경로를 지정하는 지시어.",
+    "answer": "(1) SecRuleEngine\n(2) SecAuditLog",
     "keywords": [
-      "ModSecurity"
+      "SecRuleEngine",
+      "SecAuditLog"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16633,11 +16604,10 @@
     "number": 3,
     "type": "단답형",
     "points": 3,
-    "question": "ModSecurity의 감사로그 및 설정과 관련된 지시어\n(1) : ModSecurity의 동작 상태를 결정하는 지시어로 On, Off, DetectionOnly 값 중 하나를 가짐.\n(2) : 규칙에 매칭된 트래픽의 상세 내역을 기록하는 감사 로그의 저장 경로를 지정하는 지시어.",
-    "answer": "(1) SecRuleEngine\n(2) SecAuditLog",
+    "question": "보안담당자 F씨는 침해사고가 의심되는 윈도우 서버에 접속하여 현재 외부 네트워크와 연결되거나 공유 설정이 활성화된 디렉터리 자원이 있는지 모니터링 하고자 한다. 윈도우 명령 프롬프트(CMD) 환경에서 현재 로컬 시스템의 모든 공유 자원 이름, 리소스 경로, 설명 등을 한눈에 확인하기 위해 사용하는 기본 명령",
+    "answer": "net share",
     "keywords": [
-      "SecRuleEngine",
-      "SecAuditLog"
+      "net share"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16649,23 +16619,6 @@
     "exam": "네트워크보안",
     "subject_num": 2,
     "number": 4,
-    "type": "단답형",
-    "points": 3,
-    "question": "보안담당자 F씨는 침해사고가 의심되는 윈도우 서버에 접속하여 현재 외부 네트워크와 연결되거나 공유 설정이 활성화된 디렉터리 자원이 있는지 모니터링 하고자 한다. 윈도우 명령 프롬프트(CMD) 환경에서 현재 로컬 시스템의 모든 공유 자원 이름, 리소스 경로, 설명 등을 한눈에 확인하기 위해 사용하는 기본 명령",
-    "answer": "net share",
-    "keywords": [
-      "net share"
-    ],
-    "commentary": "",
-    "difficulty": "",
-    "sub_questions": null
-  },
-  {
-    "id": "sheet_단_2_005",
-    "source": "요약시트",
-    "exam": "네트워크보안",
-    "subject_num": 2,
-    "number": 5,
     "type": "단답형",
     "points": 3,
     "question": "다음은 운영체제별 경로 추적 명령어의 차이점이다. 빈칸에 들어갈 알맞은 용어 및 포트 번호를 쓰시오.\n- 리눅스 환경에서는 경로 추적을 위해 (1) 명령어를 사용하며, 기본적으로 네트워크 계층의 ICMP가 아닌 전송 계층의 (2) 프로토콜을 활용해 패킷을 전송한다.\n- 반면, 윈도우 환경에서는 (3) 명령어를 사용하며, 기본적으로 ICMP Echo Request를 활용한다.",
@@ -16680,11 +16633,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_006",
+    "id": "sheet_단_2_005",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 6,
+    "number": 5,
     "type": "단답형",
     "points": 3,
     "question": "다음은 무선 네트워크 보안 위협 및 솔루션에 대한 설명이다. \n(1) : 조직의 보안 정책에 따라 허가받지 않은 채 내부 유선 네트워크에 임의로 연결되어 외부 공격자의 내부망 침투 통로로 악용될 수 있는 '인가되지 않은 무선 액세스 포인트'를 의미한다.\n(2) : 공기 중의 무선 패킷을 실시간 감시하여 (1)을 탐지하고, 불법 연결이 발견되면 인증해제 프레임 등을 전송하여 강제로 연결을 차단하는 무선 전용 보안 시스템",
@@ -16698,6 +16651,23 @@
     "sub_questions": null
   },
   {
+    "id": "sheet_단_2_006",
+    "source": "요약시트",
+    "exam": "네트워크보안",
+    "subject_num": 2,
+    "number": 6,
+    "type": "단답형",
+    "points": 3,
+    "question": "무선 토폴로지의 구성 방식 중 하나이다. 무선 액세스 포인트(AP)와 같은 중앙 집중식 제어 장치(인프라)를 거치지 않고, 무선 랜카드를 탑재한 독립적인 단말기들이 동적으로 상호 간에 직접 점대점(Peer-to-Peer) 연결을 형성하여 구성하는 무선 네트워크 모드의 명칭",
+    "answer": "Ad-hoc (애드혹)",
+    "keywords": [
+      "Ad-hoc (애드혹)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
     "id": "sheet_단_2_007",
     "source": "요약시트",
     "exam": "네트워크보안",
@@ -16705,10 +16675,10 @@
     "number": 7,
     "type": "단답형",
     "points": 3,
-    "question": "무선 토폴로지의 구성 방식 중 하나이다. 무선 액세스 포인트(AP)와 같은 중앙 집중식 제어 장치(인프라)를 거치지 않고, 무선 랜카드를 탑재한 독립적인 단말기들이 동적으로 상호 간에 직접 점대점(Peer-to-Peer) 연결을 형성하여 구성하는 무선 네트워크 모드의 명칭",
-    "answer": "Ad-hoc (애드혹)",
+    "question": "어플리케이션 계층에서 발생하는 DDoS 공격 기법의 하나이다. 공격자는 HTTP 요청 헤더의 특정 지시어(no-store, no-cache)를 악용하여, 프록시나 캐시 서버가 기존 저장된 자원을 반환하지 못하고 모든 요청을 백엔드 웹 서버(Origin)로 직접 전달(Bypass)하도록 강제함으로써 웹 서버의 자원을 고갈시키는 공격 명칭",
+    "answer": "HTTP CC Attack (CC공격)",
     "keywords": [
-      "Ad-hoc (애드혹)"
+      "HTTP CC Attack (CC공격)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16722,10 +16692,10 @@
     "number": 8,
     "type": "단답형",
     "points": 3,
-    "question": "어플리케이션 계층에서 발생하는 DDoS 공격 기법의 하나이다. 공격자는 HTTP 요청 헤더의 특정 지시어(no-store, no-cache)를 악용하여, 프록시나 캐시 서버가 기존 저장된 자원을 반환하지 못하고 모든 요청을 백엔드 웹 서버(Origin)로 직접 전달(Bypass)하도록 강제함으로써 웹 서버의 자원을 고갈시키는 공격 명칭",
-    "answer": "HTTP CC Attack (CC공격)",
+    "question": "웹 애플리케이션 취약점 중 하나. 사용자가 특정 웹사이트에 로그인하여 인증된 세션 상태를 유지하고 있을 때, 공격자가 심어놓은 악성 스크립트나 링크를 통해 사용자의 의도와 상관없이 웹 서버에 위조된 공격 요청을 전송하여 비밀번호 변경 등의 불법적인 행위를 수행하게 만드는 공격 기법",
+    "answer": "CSRF (또는 XSRF)",
     "keywords": [
-      "HTTP CC Attack (CC공격)"
+      "CSRF (또는 XSRF)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -16737,23 +16707,6 @@
     "exam": "네트워크보안",
     "subject_num": 2,
     "number": 9,
-    "type": "단답형",
-    "points": 3,
-    "question": "웹 애플리케이션 취약점 중 하나. 사용자가 특정 웹사이트에 로그인하여 인증된 세션 상태를 유지하고 있을 때, 공격자가 심어놓은 악성 스크립트나 링크를 통해 사용자의 의도와 상관없이 웹 서버에 위조된 공격 요청을 전송하여 비밀번호 변경 등의 불법적인 행위를 수행하게 만드는 공격 기법",
-    "answer": "CSRF (또는 XSRF)",
-    "keywords": [
-      "CSRF (또는 XSRF)"
-    ],
-    "commentary": "",
-    "difficulty": "",
-    "sub_questions": null
-  },
-  {
-    "id": "sheet_단_2_010",
-    "source": "요약시트",
-    "exam": "네트워크보안",
-    "subject_num": 2,
-    "number": 10,
     "type": "단답형",
     "points": 3,
     "question": "다음은 크로스 사이트 스크립팅(XSS) 공격의 세부 유형에 대한 설명이다. \n(1) : 공격자가 취약한 웹 서버의 게시판이나 데이터베이스에 악성 스크립트를 지속적으로 저장시켜두고, 이를 열람하는 불특정 다수의 사용자 브라우저에서 스크립트가 실행되도록 하는 기법이다.\n(2) : 악성 스크립트가 포함된 악성 URL 주소를 사용자가 클릭했을 때, 요청값에 포함된 스크립트가 서버의 데이터베이스에 저장되지 않고 웹 서버의 응답 메시지를 통해 사용자 브라우저로 즉시 반사되어 실행되는 기법이다.\n(3) : 서버 측의 개입 없이, 사용자의 브라우저 단에서 취약한 스크립트 코드가 실행되면서 DOM(Document Object Model) 구조를 조작하여 악성 행위를 수행하는 기법이다.",
@@ -16768,11 +16721,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_011",
+    "id": "sheet_단_2_010",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 11,
+    "number": 10,
     "type": "단답형",
     "points": 3,
     "question": "(1) Apache나 Nginx 웹 서버에 모듈로 설치되어 HTTP/HTTPS 트래픽을 프로토콜 레벨에서 분석해 웹 공격을 차단하는 오픈소스 웹 방화벽(WAF)의 명칭\n(2) (1) 설정 중, 오탐방지를 위해 실제 차단은 하지 않고 탐지 및 로그 기록만 수행하도록 지정하는 지시어 구문\n(3) 윈도우 CMD 환경에서 현재 시스템의 숨김 공유를 포함한 모든 공유 자원의 목록과 리소스 경로를 확인하는 기본 명령\n(4) 윈도수 시스템이 관리 목적으로 자동 생성하는 기본 숨김 공유 자원들은 공유 이름 맨 뒤에 (4) 기호가 붙는 특징이 있다.\n(5) 자바 스크립트를 이용한 XSS 공격이 성공하더라도 공격자가 브라우저의 document. cookie 를 통해 사용자의 인증 쿠키를 탈취하지 못하도록 쿠키 생성 시 부여하는 보안속성",
@@ -16789,11 +16742,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_012",
+    "id": "sheet_단_2_011",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 12,
+    "number": 11,
     "type": "단답형",
     "points": 3,
     "question": "다음 무선 보안 위협 및 솔루션에 대한 각 질문에 답하시오.\n(1) 사내 보안 관리자의 승인을 받지 않은 채 내부 유선 네트워크 스위치 등에 임의로 연결되어, 외부 공격자에게 내부망 침투 백도어를 제공하는 '인가되지 않은 무선 액세스 포인트'의 명칭을 쓰시오.\n(2) 중앙의 무선 AP와 같은 중계 장치 없이, 무선 랜카드를 장착한 단말기끼리 1:1로 점대점 통신망을 형성하는 무선 네트워크 구성모드의 명칭을 쓰시오.\n(3) 공기 중의 무선 주파수를 실시간 감시하여 불법 AP를 탐지하고, 연결이 발견되면 인증해제 프레임을 발송하여 무선 연결을 강제 차단하는 무선 침해 방지 시스템의 약어를 쓰시오.",
@@ -16808,11 +16761,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_013",
+    "id": "sheet_단_2_012",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 13,
+    "number": 12,
     "type": "단답형",
     "points": 3,
     "question": "다음 각 지문을 읽고 (1~4)에 들어갈 알맞은 용어나 IP 주소 대역을 쓰시오.\n(1) IPv4 주소체계에서 첫번째 옥텟의 시작 비트가 110으로 시작하며, 공인 IP 대역이 192.0.0.0 부터 223.255.255.255 까지 할당된 기본 IP 클래스의 명칭\n(2) IPv4 주소 중 1대 다수 통신을 위한 멀티캐스트 용도로 미리 예약되어 있으며, 주로 라우팅 프로토콜의 광고나 스트리밍 서비스에 활용되는 IP 클래스의 명칭\n(3) 네트워크 보안 관리를 위해 외부망과 차단된 내부 호스트 장비에 할당하는 사설 IP(Private IP)대역 중, C 클래스에 해당하는 전체 IP 주소 대역 범위를 서브넷 마스크(CIDR 표기법)를 포함하여 쓰면 (3) 이다.\n(4) 로컬 호스트 자신을 가리키기 위해 예약된 루프백 주소의 대표적이 IPv4 주소",
@@ -16828,11 +16781,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_014",
+    "id": "sheet_단_2_013",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 14,
+    "number": 13,
     "type": "단답형",
     "points": 3,
     "question": "다음은 로그를 남기지 않는 스텔스 스캔의 세부 유형에 대한 설명이다. 빈칸에 알맞은 스캔 명칭을 쓰시오.\n(1) : 세션을 완전히 수립하지 않는 'Half-Open' 방식을 사용하여, 공격자가 SYN 패킷을 보낸 후 대상 서버로부터 SYN-ACK를 받으면 즉시 RST 패킷을 전송하여 로그 생성을 우회하는 기법이다.\n(2) : TCP 헤더의 제어 플래그를 전혀 설정하지 않은 채 패킷을 전송하여, 포트가 열려 있으면 응답이 없고 닫혀 있으면 RST+ACK 응답이 오는 것을 이용하는 기법이다.\n(3) : TCP 헤더의 FIN, PSH, URG 플래그를 모두 활성화하여 크리스마스트리처럼 전구를 켠 듯한 형태로 비정상 패킷을 전송하는 기법이다.",
@@ -16847,11 +16800,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_015",
+    "id": "sheet_단_2_014",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 15,
+    "number": 14,
     "type": "단답형",
     "points": 3,
     "question": "스텔스 스캔의 일종인 (1) 스캔은 TCP 제어 플래그 중 FIN, PSH, URG 플래그를 동시에 모두 설정하여 대상 시스템에 전송하는 방식이다. 이 스캔은 프로토콜의 취약성을 이용하므로 대상 시스템의 포트가 열려있을 경우 (2) 상태가 되며, 포트가 닫혀있을 경우 (3) 패킷이 반환되는 특징을 가진다.",
@@ -16866,11 +16819,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_016",
+    "id": "sheet_단_2_015",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 16,
+    "number": 15,
     "type": "단답형",
     "points": 3,
     "question": "TCP 헤더의 제어플래그(SYN, ACK, FIN, RST, PSH, URG등)를 전혀 설정하지 않은 채 비정상 패킷을 생성하여 대상의 포트 활성화 여부를 판별하는 스텔스 스캔 기법을 (1) 스캔이라고 한다. 이 기법은 대상 시스템의 포트가 열려있을 경우 (2) 상태가 되고, 포트가 닫혀있을 경우 (3) 패킷이 반환되는 특성을 활용한다.",
@@ -16885,11 +16838,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_017",
+    "id": "sheet_단_2_016",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 17,
+    "number": 16,
     "type": "단답형",
     "points": 3,
     "question": "TCP 연결 종료 요청에 사용되는 제어플래그인 (1)만을 활성화하여 비정상 패킷을 전송하는 스텔스 스캔 기법을 (1) 스캔이라고 한다. 이 기법은 유닉스계열 시스템의 TCP 표준규약 취약점을 이용하는 것으러, 대상 포트가 열려있을 경우 (2) 상태가 되며, 포트가 닫혀있을 경우 (3) 패킷이 반환되는 특성을 활용해 활성화 여부를 가려낸다.",
@@ -16904,11 +16857,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_018",
+    "id": "sheet_단_2_017",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 18,
+    "number": 17,
     "type": "단답형",
     "points": 3,
     "question": "다음은 IPv4와 IPv6 주소 체계에 대한 설명이다. 빈칸에 들어갈 알맞은 용어나 숫자를 쓰시오.\n(1) IPv4의 주소 길이는 32비트인 반면, IPv6의 주소 길이는 (1) 비트이다.\n(2) IPv6는 패킷 전송 방식 중 송신자와 망 내의 가장 가깝게 있는 단말 간의 1:1 통신을 지원하는 (2) 형식을 새롭게 도입하여, IPv4에서 사용되던 브로드캐스트 방식을 대체한다.\n(3) IPv6는 IP 계층에서 보안성(암호화 및 인증)을 제공하기 위해 (3) 프로토콜을 기본 사양으로 내재하고 있다.\n(4) IPv4 헤더와 달리 IPv6헤더는 처리 효율성을 극대화 하기 위해 기본 헤더의 크기를 (4) 바이트의 고정 길이로 단순화하였다.",
@@ -16924,11 +16877,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_019",
+    "id": "sheet_단_2_018",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 19,
+    "number": 18,
     "type": "단답형",
     "points": 3,
     "question": "IPv4와 IPv6 두 버전을 혼용하기 위한 기술\n(1) 하나의 단말기에 IPv4와 IPv6 프로토콜스택을 모두 탑재하여, 상대방에 따라 두 버전을 자유롭게 선택해 통신하는 방식입니다.\n(2) IPv6 네트워크끼리 통신하고 싶지만 중간에 IPv4 네트워크만 존재할 때, IPv6 패킷을 IPv4 패킷 내부의 데이터 영역에 캡슐화하여 IPv4 구간을 통과시키는 기술입니다.\n(3) IPv4 전용 단말과 IPv6 전용 단말이 서로 통신할 수 있도록, 중간 라우터나 게이트웨이가 네트워크 계층에서 프로토콜 주소를 상호 변환해주는 방식입니다.",
@@ -16943,11 +16896,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_020",
+    "id": "sheet_단_2_019",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 20,
+    "number": 19,
     "type": "단답형",
     "points": 3,
     "question": "스텔스 스캔의 일종인 (1) 스캔은 대상 시스템의 포트 개방 여부를 조사하기 보다는, 포트 앞단에 위치한 방화벽의 필터링 정책을 확인하고 방화벽이 세션을 추적하는지 판별하기 위해 사용된다. 공격자가 이 스캔 패킷을 보냈을때 방화벽이 차단하지 않는다면 포트의 개방 상태와 관계없이 대상 시스템은 공통적으로 (2) 패킷을 반환하는 특성을 가진다.",
@@ -16961,11 +16914,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_021",
+    "id": "sheet_단_2_020",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 21,
+    "number": 20,
     "type": "단답형",
     "points": 3,
     "question": "다음 각 지문을 읽고 빈칸 (①~⑤)에 들어갈 알맞은 방화벽 관련 용어를 쓰시오.\n\n(1) 외부 네트워크와 내부 네트워크 사이에 위치하여 침입 공격에 무방비로 노출되므로 하드닝(보안 강화) 작업이 필수적이며, 내부망으로 진입하기 위한 유일한 대문 역할을 수행하는 게이트웨이 시스템을 (①)라 한다.\n\n(2) 네트워크 계층(L3)과 전송 계층(L4)에서 IP 주소와 포트 번호를 기반으로 패킷을 제어하는 라우터의 ACL 기능을 활용한 가장 단순한 형태의 방화벽 구조를 (②)라 한다.\n\n(3) 외부망과 내부망에 각각 연결되는 **2개의 네트워크 인터페이스 카드(NIC)**를 가지며, 두 네트워크 간의 IP 라우팅(패킷 전달) 기능을 원천 차단하여 오직 프록시(Proxy) 서비스 형태로만 통신을 허용하는 구조는 (③)이다.\n\n(4) 스크리닝 라우터와 배스천 호스트를 혼합하여 구성한 형태로, 외부에서 유입되는 모든 트래픽이 1차 라우터를 거쳐 반드시 내부망의 배스천 호스트로만 전달되도록 ACL을 구성하는 방식을 (④)라 한다.\n\n(5) 외부 스크리닝 라우터와 내부 스크리닝 라우터 사이에 **DMZ(DeMilitarized Zone)**라는 독립된 완충 네트워크 구간을 생성하고, 웹 서버나 배스천 호스트를 해당 구간에 배치하여 깊이 있는 방어(Defense in Depth)를 제공하는 가장 안전한 구조를 (⑤)라 한다.",
@@ -16982,11 +16935,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_022",
+    "id": "sheet_단_2_021",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 22,
+    "number": 21,
     "type": "단답형",
     "points": 3,
     "question": "TCP SYN Flooding 공격은 TCP 3-Way Handshaking 과정의 취약점을 악용한다. 공격자는 출발지 IP를 위조하여 대량의 SYN 패킷을 서버로 전송하고, 서버는 SYN+ACK를 보낸 후 대기하는 (①) 상태가 된다. 이로 인해 서버 내부에서 연결 요청을 임시로 저장하는 대기 공간인 (②)가 고갈되어 정상적인 사용자의 접속을 차단하게 된다.",
@@ -16999,11 +16952,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_023",
+    "id": "sheet_단_2_022",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 23,
+    "number": 22,
     "type": "단답형",
     "points": 3,
     "question": "DoS 공격 중 하나인 (①)은 송신측에서 IP 패킷을 분할하여 전송할 때, 수신측에서 이를 올바르게 재조합하기 위해 사용하는 IP 헤더의 (②) 필드 값을 조작하는 공격이다. 공격자는 조각난 패킷들의 데이터 구간이 서로 (③, Overlap)되도록 설정하여 전송하며, 이를 수신한 운영체제는 패킷 재조합 과정에서 오류를 일으켜 시스템이 다운되거나 재부팅된다.",
@@ -17014,11 +16967,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_024",
+    "id": "sheet_단_2_023",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 24,
+    "number": 23,
     "type": "단답형",
     "points": 3,
     "question": "(①)은 전사 시스템의 이기종 장비로부터 로그를 수집하여 분석하는 통합 보안 관리 솔루션이다. 수집된 서로 다른 형태의 로그 포맷을 일정한 표준 형식으로 맞추는 과정을 (②)(이)라 하며, 서로 다른 장비에서 발생한 개별 이벤트들을 연계하여 숨겨진 위협 패턴을 찾아내는 핵심 기술을 (③)(이)라 한다.",
@@ -17031,11 +16984,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_025",
+    "id": "sheet_단_2_024",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 25,
+    "number": 24,
     "type": "단답형",
     "points": 3,
     "question": "다음은 네트워크 취약점 진단 도구인 nmap을 활용한 스캔 명령들이다. 각 설명에 맞는 빈칸 (①~③)에 들어갈 정확한 옵션을 쓰시오.\n\nnmap (①) 192.168.1.100 : 대상 서버의 세션을 완전히 수립하지 않고 SYN 패킷의 응답만을 확인하는 Half-Open 스캔을 수행한다.\n\nnmap (②) 192.168.1.100 : TCP와 달리 핸드셰이킹이 없는 원리를 이용하며, 포트가 닫혔을 때 ICMP Port Unreachable 메시지가 돌아오는 것을 확인하는 스캔을 수행한다.\n\nnmap (③) 192.168.1.100 : 대상 시스템이 리눅스인지 윈도우인지 구별하기 위해 운영체제(OS)의 지문(Fingerprinting) 정보를 탐지한다.",
@@ -17050,6 +17003,23 @@
     "sub_questions": null
   },
   {
+    "id": "sheet_단_2_025",
+    "source": "요약시트",
+    "exam": "네트워크보안",
+    "subject_num": 2,
+    "number": 25,
+    "type": "단답형",
+    "points": 3,
+    "question": "다음 각 지문의 설명에 해당하는 방화벽의 작동 명칭을 쓰시오.\n\n(1) OSI 7계층 중 전송 계층(L4)과 어플리케이션 계층(L7) 사이에 위치하여 통신을 중계하는 방식이다.\n\n(2) 서비스별 프록시 데몬을 각각 구동해야 하는 어플리케이션 방식과 달리, 전용 클라이언트 모듈과 (①) 프로토콜(대표적으로 버전 4, 5 존재)을 사용하여 내·외부 호스트 간 가상 회로를 형성하고 모든 서비스를 통과시키는 범용 프록시 구조를 가진다.\n\n(3) 이 방화벽 방식을 (②) 방식이라고 한다.",
+    "answer": "① SOCKS (또는 삭스) , ② 서킷 게이트웨이 (또는 Circuit Gateway)",
+    "keywords": [
+      "① SOCKS (또는 삭스) , ② 서킷 게이트웨이 (또는 Circuit Gateway)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
     "id": "sheet_단_2_026",
     "source": "요약시트",
     "exam": "네트워크보안",
@@ -17057,10 +17027,10 @@
     "number": 26,
     "type": "단답형",
     "points": 3,
-    "question": "다음 각 지문의 설명에 해당하는 방화벽의 작동 명칭을 쓰시오.\n\n(1) OSI 7계층 중 전송 계층(L4)과 어플리케이션 계층(L7) 사이에 위치하여 통신을 중계하는 방식이다.\n\n(2) 서비스별 프록시 데몬을 각각 구동해야 하는 어플리케이션 방식과 달리, 전용 클라이언트 모듈과 (①) 프로토콜(대표적으로 버전 4, 5 존재)을 사용하여 내·외부 호스트 간 가상 회로를 형성하고 모든 서비스를 통과시키는 범용 프록시 구조를 가진다.\n\n(3) 이 방화벽 방식을 (②) 방식이라고 한다.",
-    "answer": "① SOCKS (또는 삭스) , ② 서킷 게이트웨이 (또는 Circuit Gateway)",
+    "question": "다음은 통합보안관리(ESM) 시스템의 아키텍처 구조에 대한 설명이다. 빈칸 (①~③)에 들어갈 알맞은 구성 요소 명칭을 쓰시오.\n\n(①): 개별 보안 장비 및 시스템에 탑재되어 로그를 수집하고 매니저에게 전송하며, 역으로 전달받은 통제 명령을 실행하는 역할을 수행한다.\n\n(②): (①)이 수집한 이기종 로그들을 정규화하고 상관관계 분석 엔진을 통해 위협을 탐지하여 데이터베이스에 저장하는 ESM의 핵심 서버이다.\n\n(③): 관제 요원이 실시간 경보 현황을 모니터링하고 보안 정책을 수립하여 시스템 전반을 중앙 제어하는 그래픽 사용자 인터페이스(GUI) 환경이다.",
+    "answer": "① Agent (에이전트) , ② Manager (매니저) , ③ Console (콘솔)",
     "keywords": [
-      "① SOCKS (또는 삭스) , ② 서킷 게이트웨이 (또는 Circuit Gateway)"
+      "① Agent (에이전트) , ② Manager (매니저) , ③ Console (콘솔)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -17074,11 +17044,9 @@
     "number": 27,
     "type": "단답형",
     "points": 3,
-    "question": "다음은 통합보안관리(ESM) 시스템의 아키텍처 구조에 대한 설명이다. 빈칸 (①~③)에 들어갈 알맞은 구성 요소 명칭을 쓰시오.\n\n(①): 개별 보안 장비 및 시스템에 탑재되어 로그를 수집하고 매니저에게 전송하며, 역으로 전달받은 통제 명령을 실행하는 역할을 수행한다.\n\n(②): (①)이 수집한 이기종 로그들을 정규화하고 상관관계 분석 엔진을 통해 위협을 탐지하여 데이터베이스에 저장하는 ESM의 핵심 서버이다.\n\n(③): 관제 요원이 실시간 경보 현황을 모니터링하고 보안 정책을 수립하여 시스템 전반을 중앙 제어하는 그래픽 사용자 인터페이스(GUI) 환경이다.",
-    "answer": "① Agent (에이전트) , ② Manager (매니저) , ③ Console (콘솔)",
-    "keywords": [
-      "① Agent (에이전트) , ② Manager (매니저) , ③ Console (콘솔)"
-    ],
+    "question": "다음은 네트워크 장비 및 보안 구축 모드에 대한 설명이다. 빈칸 (①~③)에 들어갈 알맞은 용어를 쓰시오.\n\n(①)는 OSI 7계층 중 데이터 링크 계층에서 동작하는 장비로, 수신한 프레임의 목적지 (②) 주소를 기반으로 포워딩 및 필터링을 수행한다.\n\n보안 장비(IPS 등)를 네트워크에 도입할 때, 기존 네트워크의 IP 라우팅 구조를 전혀 변경하지 않고 장비의 IP 노출을 숨겨 외부 공격을 예방하는 구축 방식을 (①) 모드 또는 (③) 모드라고 부른다.",
+    "answer": "① 브릿지 (또는 브리지 / Bridge) , ② MAC (또는 매디컬 주소) , ③ 투명 (또는 Transparent)",
+    "keywords": [],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17089,21 +17057,6 @@
     "exam": "네트워크보안",
     "subject_num": 2,
     "number": 28,
-    "type": "단답형",
-    "points": 3,
-    "question": "다음은 네트워크 장비 및 보안 구축 모드에 대한 설명이다. 빈칸 (①~③)에 들어갈 알맞은 용어를 쓰시오.\n\n(①)는 OSI 7계층 중 데이터 링크 계층에서 동작하는 장비로, 수신한 프레임의 목적지 (②) 주소를 기반으로 포워딩 및 필터링을 수행한다.\n\n보안 장비(IPS 등)를 네트워크에 도입할 때, 기존 네트워크의 IP 라우팅 구조를 전혀 변경하지 않고 장비의 IP 노출을 숨겨 외부 공격을 예방하는 구축 방식을 (①) 모드 또는 (③) 모드라고 부른다.",
-    "answer": "① 브릿지 (또는 브리지 / Bridge) , ② MAC (또는 매디컬 주소) , ③ 투명 (또는 Transparent)",
-    "keywords": [],
-    "commentary": "",
-    "difficulty": "",
-    "sub_questions": null
-  },
-  {
-    "id": "sheet_단_2_029",
-    "source": "요약시트",
-    "exam": "네트워크보안",
-    "subject_num": 2,
-    "number": 29,
     "type": "단답형",
     "points": 3,
     "question": "다음은 스위치 환경에서 트래픽을 도청하기 위해 사용되는 스니핑 기법들에 대한 설명이다. 빈칸 (①~④)에 들어갈 알맞은 용어를 쓰시오.\n\n(1) 공격자가 위조된 가짜 ARP Reply 패킷을 전송하여 희생자의 단말기에 저장된 IP와 MAC 주소의 매핑 정보인 (①) 테이블을 조작하는 기법을 ARP 스푸핑이라 한다.\n\n(2) 스위치의 메모리 제안을 악용하여 무작위 위조 MAC 주소를 담은 프레임을 대량 전송하고, 메모리가 고갈된 스위치가 더미 허브처럼 전 포트로 패킷을 뿌리는 동작 특성을 악용하는 공격을 (②) 공격이라 한다.\n\n(3) (②) 공격 시 스위치가 기능을 상실하여 모든 포트로 브로드캐스트하는 일련의 상태나 동작 매커니즘을 방어적 용어로 (③)(이)라 부른다.\n\n(4) 3계층 네트워크 제어 프로토콜을 악용하여, 특정 목적지로 향하는 호스트의 라우팅 테이블 경로를 공격자 자신에게 향하도록 강제 리디렉션시키는 공격 기법을 (④) 리디렉트 공격이라 한다.",
@@ -17119,6 +17072,23 @@
     "sub_questions": null
   },
   {
+    "id": "sheet_단_2_029",
+    "source": "요약시트",
+    "exam": "네트워크보안",
+    "subject_num": 2,
+    "number": 29,
+    "type": "단답형",
+    "points": 3,
+    "question": "(①) 취약점(CVE-2014-0160)은 오픈소스 암호화 라이브러리인 (②)에서 연결 유지 기능을 수행하는 (③) 확장 프로토콜의 입력값 검증 부재로 인해 발생하였다. 공격자가 데이터 길이 필드를 최대 크기인 64KB로 조작하여 전송하면, 서버는 메모리에 저장된 핵심 개인키나 세션 쿠키 등의 중요 정보를 외부로 유출하게 된다.",
+    "answer": "① Heartbleed (또는 하트블리드) , ② OpenSSL , ③ Heartbeat (또는 하트비트)",
+    "keywords": [
+      "① Heartbleed (또는 하트블리드) , ② OpenSSL , ③ Heartbeat (또는 하트비트)"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
     "id": "sheet_단_2_030",
     "source": "요약시트",
     "exam": "네트워크보안",
@@ -17126,10 +17096,10 @@
     "number": 30,
     "type": "단답형",
     "points": 3,
-    "question": "(①) 취약점(CVE-2014-0160)은 오픈소스 암호화 라이브러리인 (②)에서 연결 유지 기능을 수행하는 (③) 확장 프로토콜의 입력값 검증 부재로 인해 발생하였다. 공격자가 데이터 길이 필드를 최대 크기인 64KB로 조작하여 전송하면, 서버는 메모리에 저장된 핵심 개인키나 세션 쿠키 등의 중요 정보를 외부로 유출하게 된다.",
-    "answer": "① Heartbleed (또는 하트블리드) , ② OpenSSL , ③ Heartbeat (또는 하트비트)",
+    "question": "현대 CPU의 하드웨어적 설계 결함을 악용하는 부채널 공격 기법들이 존재한다.\n\n(①): 현대 CPU의 '비순차적 명령어 실행' 기능을 악용하여, 사용자 권한의 프로세스가 운영체제(OS)의 커널 메모리 영역을 무단으로 읽을 수 있게 만드는 취약점이다.\n\n(②): CPU의 '추측 실행' 및 '분기 예측' 기술의 허점을 악용하여 다른 프로세스의 내부 메모리를 훔쳐보는 기법으로, 인텔뿐만 아니라 AMD, ARM 등 대부분의 현대 CPU 구조에 공통적으로 영향을 미친다.",
+    "answer": "① Meltdown (또는 멜트다운) , ② Spectre (또는 스펙터)",
     "keywords": [
-      "① Heartbleed (또는 하트블리드) , ② OpenSSL , ③ Heartbeat (또는 하트비트)"
+      "① Meltdown (또는 멜트다운) , ② Spectre (또는 스펙터)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -17143,11 +17113,9 @@
     "number": 31,
     "type": "단답형",
     "points": 3,
-    "question": "현대 CPU의 하드웨어적 설계 결함을 악용하는 부채널 공격 기법들이 존재한다.\n\n(①): 현대 CPU의 '비순차적 명령어 실행' 기능을 악용하여, 사용자 권한의 프로세스가 운영체제(OS)의 커널 메모리 영역을 무단으로 읽을 수 있게 만드는 취약점이다.\n\n(②): CPU의 '추측 실행' 및 '분기 예측' 기술의 허점을 악용하여 다른 프로세스의 내부 메모리를 훔쳐보는 기법으로, 인텔뿐만 아니라 AMD, ARM 등 대부분의 현대 CPU 구조에 공통적으로 영향을 미친다.",
-    "answer": "① Meltdown (또는 멜트다운) , ② Spectre (또는 스펙터)",
-    "keywords": [
-      "① Meltdown (또는 멜트다운) , ② Spectre (또는 스펙터)"
-    ],
+    "question": "(①) 취약점(CVE-2014-6271)은 리눅스/유닉스 계열 시스템의 기본 쉘인 (②)에서 환경 변수에 선언된 함수 뒤에 임의의 악성 명령어를 삽입하면, 쉘이 구동될 때 해당 명령이 자동으로 실행되는 원격 코드 실행(RCE) 취약점이다. 이 취약점은 특히 웹 서버의 (③) 환경을 사용하는 스크립트와 연계되어 웹을 통한 서버 장악 공격에 악용되었다.",
+    "answer": "① Shellshock (또는 쉘쇼크) , ② Bash (또는 바시 쉘) , ③ CGI (또는 Common Gateway Interface)",
+    "keywords": [],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17160,21 +17128,6 @@
     "number": 32,
     "type": "단답형",
     "points": 3,
-    "question": "(①) 취약점(CVE-2014-6271)은 리눅스/유닉스 계열 시스템의 기본 쉘인 (②)에서 환경 변수에 선언된 함수 뒤에 임의의 악성 명령어를 삽입하면, 쉘이 구동될 때 해당 명령이 자동으로 실행되는 원격 코드 실행(RCE) 취약점이다. 이 취약점은 특히 웹 서버의 (③) 환경을 사용하는 스크립트와 연계되어 웹을 통한 서버 장악 공격에 악용되었다.",
-    "answer": "① Shellshock (또는 쉘쇼크) , ② Bash (또는 바시 쉘) , ③ CGI (또는 Common Gateway Interface)",
-    "keywords": [],
-    "commentary": "",
-    "difficulty": "",
-    "sub_questions": null
-  },
-  {
-    "id": "sheet_단_2_033",
-    "source": "요약시트",
-    "exam": "네트워크보안",
-    "subject_num": 2,
-    "number": 33,
-    "type": "단답형",
-    "points": 3,
     "question": "Memcached 증폭 DDoS 공격은 분산 반사 서비스 거부 공격(DRDoS)의 일종이다. 공격자는 대용량 데이터를 가용 서버에 미리 캐싱해 둔 뒤, 출발지 IP를 공격 대상의 IP로 위조하여 Memcached의 기본 포트인 (①)번 (②) 프로토콜을 통해 조회 요청을 보낸다. 이 기법은 요청 프로토콜의 특성상 별도의 핸드셰이킹이 없고 응답 크기가 매우 커서 최대 수만 배의 (③) 효과를 발생시켜 대상의 네트워크 대역폭을 고갈시킨다.",
     "answer": "① 11211 , ② UDP , ③ 증폭 (또는 Amplification)",
     "keywords": [
@@ -17185,11 +17138,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_034",
+    "id": "sheet_단_2_033",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 34,
+    "number": 33,
     "type": "단답형",
     "points": 3,
     "question": "다음은 VPN(가상사설망) 구현 기술에 대한 설명이다. 빈칸 (①~④)에 들어갈 알맞은 용어를 쓰시오.\n\n(1) VPN은 공용망에서 안전한 기밀성을 확보하기 위해 패킷을 통째로 캡슐화하여 전송하는 (①) 기술을 핵심 기반으로 삼는다.\n\n(2) 3계층에서 작동하는 IPSec VPN은 암호화 캡슐화를 통해 기밀성을 제공하는 (②) 프로토콜과, 암호화는 제공하지 않지만 메시지 인증 코드(MAC)를 통해 발신처 인증과 무결성을 제공하는 (③) 프로토콜로 나뉜다.\n\n(3) 웹 브라우저의 기본 보안 기능을 내장하여 별도의 전용 클라이언트 프로그램 설치 없이 재택근무자가 외부에서 내부 사설망으로 안전하게 원격 접속할 수 있도록 지원하는 VPN 방식을 (④) VPN이라고 한다.",
@@ -17205,11 +17158,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_035",
+    "id": "sheet_단_2_034",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 35,
+    "number": 34,
     "type": "단답형",
     "points": 3,
     "question": "다음은 다양한 VPN 터널링 프로토콜에 대한 설명이다. 빈칸 (①~③)에 들어갈 알맞은 용어나 계층을 쓰시오.\n\n(1) PPTP와 L2F 프로토콜의 장점을 결합하여 RFC 표준으로 제정된 (①) 프로토콜은 OSI 7계층 중 (②) 계층에서 동작한다.\n\n(2) (①) 프로토콜은 자체적인 데이터 암호화 기능을 제공하지 않기 때문에, 기밀성을 보장받기 위해 네트워크 계층의 보안 프로토콜인 (③)과(와) 결합하여 L2TP/(**③**) 형태로 주로 현업에서 구축된다.",
@@ -17224,11 +17177,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_036",
+    "id": "sheet_단_2_035",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 36,
+    "number": 35,
     "type": "단답형",
     "points": 3,
     "question": "(①)은 내부 네트워크에 접속하려는 모든 단말기의 MAC 주소를 기반으로 사용자 인증을 수행하고, 단말기의 OS 패치나 백신 설치 여부 등 보안 무결성을 검증하여 차단 또는 허용을 결정하는 시스템이다. 만약 보안 정책을 위반한 PC가 발견되면 정상망과 분리된 (②) 구역으로 강제 이동시켜 패치 및 업데이트를 완료하도록 유도하는 동작 특성을 가진다.",
@@ -17239,11 +17192,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_037",
+    "id": "sheet_단_2_036",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 37,
+    "number": 36,
     "type": "단답형",
     "points": 3,
     "question": "IPSec은 보안을 제공하는 프로토콜에 따라 AH와 ESP로 나뉜다. 이 중 (①) 프로토콜은 기밀성을 제공하지 않지만, MAC을 통해 메시지 인증과 무결성을 제공하며, (②) 프로토콜은 데이터 암호화를 통해 기밀성을 제공한다. 또한, IPSec의 동작 모드 중 원래의 IP 헤더까지 포함하여 패킷 전체를 캡슐화하고 새로운 IP 헤더를 추가하는 모드를 (③)(이)라 한다.",
@@ -17256,11 +17209,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_038",
+    "id": "sheet_단_2_037",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 38,
+    "number": 37,
     "type": "단답형",
     "points": 3,
     "question": "IPSec 프레임워크를 구성하는 핵심 프로토콜 중 하나인 (①)은 통신 양단(피어) 간에 안전하게 비밀키를 교환하고, 보안 정책을 협상하여 보안 관계(SA, Security Association)를 생성 및 관리하는 역할을 담당한다. 이 프로토콜은 내부적으로 공개키 기반의 (②) 알고리즘을 활용하여 대칭키를 안전하게 공유한다. 빈칸에 들어갈 알맞은 프로토콜 및 알고리즘의 명칭을 쓰시오.",
@@ -17274,11 +17227,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_039",
+    "id": "sheet_단_2_038",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 39,
+    "number": 38,
     "type": "단답형",
     "points": 3,
     "question": "포트 스캔 기법 중 하나인 (①) 스캔은 대상 시스템과 완전히 TCP 3-Way Handshaking 과정을 수행하여 세션을 수립하는 방식이다. 이 기법은 특수한 생성을 위한 관리자 권한이 필요 없어 구현이 간단하지만, 세션이 연결됨에 따라 대상 서버의 시스템 로그에 (②)이(가) 명확하게 남기 때문에 공격 위치가 쉽게 노출되는 단점이 있다. nmap 도구에서는 (③) 옵션을 사용하여 이 스캔을 수행한다.",
@@ -17293,11 +17246,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_040",
+    "id": "sheet_단_2_039",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 40,
+    "number": 39,
     "type": "단답형",
     "points": 3,
     "question": "(①) 스캔은 TCP 3-Way Handshaking 과정을 완전히 완료하지 않으므로 'Half-Open' 스캔이라고도 불린다. 공격자가 대상을 향해 SYN 패킷을 보냈을 때, 포트가 열려있다면 대상은 (②) 패킷을 반환하며, 이때 공격자는 즉시 (③) 패킷을 발송하여 연결을 강제 종료함으로써 로그 생성을 우회한다. nmap 도구에서는 (④) 옵션으로 이 스캔을 수행할 수 있다.",
@@ -17313,11 +17266,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_041",
+    "id": "sheet_단_2_040",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 41,
+    "number": 40,
     "type": "단답형",
     "points": 3,
     "question": "대규모 네트워크 환경에서 주로 사용되는 (①)는 내·외부 라우팅 프로토콜 중 내부 라우팅 프로토콜(IGP)에 속하며, 링크 상태(Link-State) 알고리즘을 기반으로 동작한다. 이 프로토콜은 목적지까지의 최적 경로를 계산하기 위해 내부적으로 (②) 알고리즘을 사용하며, 경로 선택의 척도(Metric)로 홉 카운트 대신 (③)을(를) 반영한 Cost(비용) 값을 사용하는 특징이 있다.",
@@ -17332,11 +17285,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_042",
+    "id": "sheet_단_2_041",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 42,
+    "number": 41,
     "type": "단답형",
     "points": 3,
     "question": "침입탐지시스템(IDS)의 탐지 기법 중 하나인 (①)은 이미 알려진 구체적인 공격 행위를 패턴(시그니처)으로 정형화하여 데이터베이스에 저장한 뒤, 유입되는 트래픽과 비교하는 방식이다. 이 방식은 알려진 공격에 대해 정확히 매칭하므로 정상 트래픽을 공격으로 잘못 판단하는 (②) 오류가 매우 낮다는 장점이 있으나, 패턴에 없는 새로운 제로데이(Zero-Day) 공격은 탐지하지 못하고 놓치는 (③) 오류가 높다는 치명적인 한계가 있다.",
@@ -17351,11 +17304,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_043",
+    "id": "sheet_단_2_042",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 43,
+    "number": 42,
     "type": "단답형",
     "points": 3,
     "question": "보안 담당자 A 씨는 외부망 방화벽의 인바운드 접근 제어 정책(ACL)을 검토 중이다. 기존 웹 서버의 보안을 강화하기 위해 평문 텍스트 통신을 수행하는 (①)번 포트를 차단하고, SSL/TLS 기반의 암호화 웹 통신을 제공하는 (②)번 포트만을 허용하도록 규칙을 수정하였다. 또한 서버 원격 관리를 위해 보안성이 취약한 Telnet(23번) 대신 데이터 암호화를 지원하는 (③) 프로토콜의 기본 포트인 22번을 활성화하였다.",
@@ -17370,11 +17323,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_044",
+    "id": "sheet_단_2_043",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 44,
+    "number": 43,
     "type": "단답형",
     "points": 3,
     "question": "네트워크 도청 공격인 스니핑을 수행하기 위해서는 네트워크 카드가 자신의 MAC 주소가 아닌 패킷도 무조건 수신하도록 (①) 모드로 설정해야 한다. 스니핑은 데이터를 조작하지 않는 수동적 공격이므로 탐지가 어려우나, 네트워크에 존재하지 않는 가짜 MAC 주소로 ICMP 패킷을 발송했을 때 응답을 반환하는 단말기를 찾아내는 (②) 기법이나, 패킷의 IP 주소를 문자 주소로 바꾸기 위해 발생하는 역방향 질의를 모니터링하는 (③) 기법 등을 통해 스니퍼를 탐지할 수 있다.",
@@ -17389,11 +17342,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_045",
+    "id": "sheet_단_2_044",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 45,
+    "number": 44,
     "type": "단답형",
     "points": 3,
     "question": "보안의 3대 목표 중 하나인 기밀성을 위협하는 (①)은 전송되는 메시지의 내용을 제3자가 몰래 가로채어 열람하는 도청 행위를 의미한다. 이 공격은 데이터의 무결성을 손상시키지 않고 흔적을 남기지 않는 (②) 공격의 일종이기 때문에 피해 사실을 즉각 탐지하기 어렵다. 따라서 이를 방어하기 위해서는 전송 계층이나 애플리케이션 계층에서 데이터를 통째로 변환하는 (③) 기술이 필수로 요구된다.",
@@ -17408,11 +17361,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_046",
+    "id": "sheet_단_2_045",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 46,
+    "number": 45,
     "type": "단답형",
     "points": 3,
     "question": "유선 전송 매체 보안 취약점 중 하나인 (①)은 통신 회선에 물리적 장비를 연결하거나 회선 주변의 전자기 유도 현상을 이용하여 전송 데이터를 도청하는 기법이다. 일반적으로 구리 기반의 UTP 케이블은 유도 전류를 이용한 비침투성 (①)에 취약하다. 반면, 빛의 굴절을 이용해 데이터를 보내는 (②) 케이블은 전자기 신호가 외부로 방출되지 않아 일반적인 전자기식 도청 공격으로부터 안전한 방어 특성을 가진다.",
@@ -17426,11 +17379,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_047",
+    "id": "sheet_단_2_046",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 47,
+    "number": 46,
     "type": "단답형",
     "points": 3,
     "question": "(①)은 무선 인터넷 환경에서 안전한 전자상거래와 인증을 제공하기 위해 기존 유선 PKI를 무선 환경의 제약 조건에 맞추어 재설계한 구조이다. 이 구조는 무선 단말기의 제한된 연산 능력과 대역폭을 고려하여, RSA보다 키 길이가 짧으면서도 동등한 보안 성능을 내는 (②) 알고리즘을 주로 사용하며, 유선망과의 연계를 위해 프로토콜 변환을 수행하는 (③) 인터페이스 장비를 경유하는 특징이 있다.",
@@ -17445,11 +17398,11 @@
     "sub_questions": null
   },
   {
-    "id": "sheet_단_2_048",
+    "id": "sheet_단_2_047",
     "source": "요약시트",
     "exam": "네트워크보안",
     "subject_num": 2,
-    "number": 48,
+    "number": 47,
     "type": "단답형",
     "points": 3,
     "question": "(①): 방화벽, VPN, IPS, 안티바이러스 등 다수의 보안 기능을 단일 어플라이언스 하드웨어에 통합하여 관리 편의성을 높인 장비이다.\n\n(②): 이기종 보안 장비의 로그를 수집하여 통합 관리하며, 구조적으로 'Agent - Manager - Console'의 3계층 구조를 기반으로 중앙 통제를 수행하는 시스템이다.\n\n(③): 전사적인 이기종 로그들을 표준 포맷으로 통일하는 '정규화' 과정을 거친 후, 빅데이터 기반의 '상관관계 분석' 엔진을 통해 지능형 지속 위협(APT)을 탐지해내는 고도화된 솔루션이다.",
@@ -17464,6 +17417,23 @@
     "sub_questions": null
   },
   {
+    "id": "sheet_서_2_001",
+    "source": "요약시트",
+    "exam": "네트워크보안",
+    "subject_num": 2,
+    "number": 1,
+    "type": "서술형",
+    "points": 5,
+    "question": "보안담당자 E씨는 사내 웹 서버(Apache)를 타깃으로 한 웹 취약점 공격을 방어하기 위해 오픈소스 웹 애플리케이션 방화벽(WAF)인 ModSecurity를 도입하였다. 다음 각 질문에 답하시오.\n\n(1) ModSecurity가 작동하는 OSI 7계층을 쓰고, 일반적인 네트워크 방화벽(L3/L4)과 비교했을 때 이 솔루션이 가진 주요 탐지 내역(역할)을 서술하시오.\n(2) E씨는 웹 방화벽 규칙을 새로 갱신한 후, 정상적인 사용자 요청이 차단되는 오탐 피해를 막기 위해 실제 차단은 수행하지 않고 탐지 및 로그 기록만 수행하는 모드를 먼저 적용하고자 한다. 이때 modsecurity.conf 파일에서 설정해야 하는 지시어 명칭과 설정값을 라인 형태로 쓰시오.",
+    "answer": "(1) 응용계층(또는 애플리케이션 계층/7계층) 역할 : IP나 포트기반의 차단을 넘어, HTTP/HTTPS 프로토콜의 헤더와 바디 데이터를 분석하여 SQL 인젝션, XSS 등의 웹 애플리케이션 공격을 탐지 및 차단한다.\n(2) SecRuleEngine DetectionOnly",
+    "keywords": [
+      "SecRuleEngine DetectionOnly"
+    ],
+    "commentary": "",
+    "difficulty": "",
+    "sub_questions": null
+  },
+  {
     "id": "sheet_서_2_002",
     "source": "요약시트",
     "exam": "네트워크보안",
@@ -17471,9 +17441,13 @@
     "number": 2,
     "type": "서술형",
     "points": 5,
-    "question": "(1) 응용계층(또는 애플리케이션 계층/7계층) 역할 : IP나 포트기반의 차단을 넘어, HTTP/HTTPS 프로토콜의 헤더와 바디 데이터를 분석하여 SQL 인젝션, XSS 등의 웹 애플리케이션 공격을 탐지 및 차단한다.\n(2) SecRuleEngine DetectionOnly",
-    "answer": "보안담당자 E씨는 사내 웹 서버(Apache)를 타깃으로 한 웹 취약점 공격을 방어하기 위해 오픈소스 웹 애플리케이션 방화벽(WAF)인 ModSecurity를 도입하였다. 다음 각 질문에 답하시오.\n\n(1) ModSecurity가 작동하는 OSI 7계층을 쓰고, 일반적인 네트워크 방화벽(L3/L4)과 비교했을 때 이 솔루션이 가진 주요 탐지 내역(역할)을 서술하시오.\n(2) E씨는 웹 방화벽 규칙을 새로 갱신한 후, 정상적인 사용자 요청이 차단되는 오탐 피해를 막기 위해 실제 차단은 수행하지 않고 탐지 및 로그 기록만 수행하는 모드를 먼저 적용하고자 한다. 이때 modsecurity.conf 파일에서 설정해야 하는 지시어 명칭과 설정값을 라인 형태로 쓰시오.",
-    "keywords": [],
+    "question": "*작업형\n다음은 윈도우 서버에서 침해사고 분석을 위해 특정 명령을 수행한 결과 화면의 일부이다. 지문과 출력 결과를 보고 각 질문에 답하시오.\n\nC:\\> [   ①   ]\n\n공유 이름   리소스                         설명\n-------------------------------------------------------------------------------\nC$         C:\\                            기본 공유\nADMIN$     C:\\Windows                     원격 관리\nIPC$                                      원격 IPC\n명령을 잘 완료했습니다.\n\n(1) 위 출력 결과를 도출하기 위해 실행한 빈칸 (1)에 들어갈 윈도우 기본 명령을 쓰시오.\n(2) 출력 결과 중 C$이나 ADMIN$와 같이 공유 이름 뒤에 $가 붙은 자원들의 공통적인 명칭(개념)을 쓰고, 이러한 설정이 활성화되어 있을 때 발생할 수 있는 보안 위협을 간략히 서술하시오.\n(3) 위 공유 자원 중 드라이브 전체가 노출되어 가장 위험한 C$ 공유 자원을 명령 프롬프트 상에서 즉시 삭제(해제)하기 위한 실행 명령 명령어 전체를 쓰시오.",
+    "answer": "(1) net share\n(2) 명칭 : 기본공유 (또는 숨김공유/관리목적공유)\n보안위협 : 공유 이름 뒤에 $가 붙어 네트워크 탐색기 등에서는 숨겨져 있으나, 공격자가 관리자 계정 정보를 획득할 경우 원격에서 해당 드라이브나 시스템 디렉터리에 직접 접근하여 파일을 탈취하거나 악성코드를 실행할 수 있는 통로가 된다.\n(3) net share C$ /delete (또는 net share C$ /d)",
+    "keywords": [
+      "net share",
+      "명칭 : 기본공유 (또는 숨김공유/관리목적공유)",
+      "net share C$ /delete (또는 net share C$ /d)"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17486,14 +17460,11 @@
     "number": 3,
     "type": "서술형",
     "points": 5,
-    "question": "(1) net share\n(2) 명칭 : 기본공유 (또는 숨김공유/관리목적공유)\n보안위협 : 공유 이름 뒤에 $가 붙어 네트워크 탐색기 등에서는 숨겨져 있으나, 공격자가 관리자 계정 정보를 획득할 경우 원격에서 해당 드라이브나 시스템 디렉터리에 직접 접근하여 파일을 탈취하거나 악성코드를 실행할 수 있는 통로가 된다.\n(3) net share C$ /delete (또는 net share C$ /d)",
-    "answer": "*작업형\n다음은 윈도우 서버에서 침해사고 분석을 위해 특정 명령을 수행한 결과 화면의 일부이다. 지문과 출력 결과를 보고 각 질문에 답하시오.\n\nC:\\> [   ①   ]\n\n공유 이름   리소스                         설명\n-------------------------------------------------------------------------------\nC$         C:\\                            기본 공유\nADMIN$     C:\\Windows                     원격 관리\nIPC$                                      원격 IPC\n명령을 잘 완료했습니다.\n\n(1) 위 출력 결과를 도출하기 위해 실행한 빈칸 (1)에 들어갈 윈도우 기본 명령을 쓰시오.\n(2) 출력 결과 중 C$이나 ADMIN$와 같이 공유 이름 뒤에 $가 붙은 자원들의 공통적인 명칭(개념)을 쓰고, 이러한 설정이 활성화되어 있을 때 발생할 수 있는 보안 위협을 간략히 서술하시오.\n(3) 위 공유 자원 중 드라이브 전체가 노출되어 가장 위험한 C$ 공유 자원을 명령 프롬프트 상에서 즉시 삭제(해제)하기 위한 실행 명령 명령어 전체를 쓰시오.",
+    "question": "네트워크 관리자 G씨는 외부 웹 서버와 통신 지연 원인을 파악하기 위해 리눅스 환경에서 traceroute 명령을 실행하였다. 다음 각 질문에 답하시오.\n\n(1) traceroute가 목적지까지 거쳐가는 경로상의 라우터 IP를 한 단계씩 알아내기 위해, 패킷을 전송할 때마다 1씩 순차적으로 증가시키며 사용하는 IP 헤더 내의 필드 명칭을 쓰시오.\n(2) 경로상의 라우터들이 해당 패킷을 수신한 후 명이 다해 패킷을 폐기할 때, 출발지 호스트로 응답하는 ICMP 메시지의 명칭을 쓰시오.\n(3) 리눅스 환경에서 traceroute가 최종 목적지 서버에 도달했을 때, 목적지 서버가 출발지로 반환하여 동작을 종료하게 만드는 ICMP 메시지의 명칭(또는 세부 원인)을 서술하시오.",
+    "answer": "(1) TTL\n(2) ICMP Time Eceeded (또는 ICMP Type 11)\n(3) 목적지 서버가 사용하지 않은 포트로 UDP 요청을 받으면, 더 이상 시간 초과가 아니라 포트가 열려있지 않다는 의미의 ICMP Destination Unreachable(또는 Port Unreachable) 메시지를 반환한다.",
     "keywords": [
-      "*작업형",
-      "C:\\> [   ①   ]",
-      "공유 이름   리소스                         설명",
-      "C$         C:\\                            기본 공유",
-      "ADMIN$     C:\\Windows                     원격 관리"
+      "TTL",
+      "ICMP Time Eceeded (또는 ICMP Type 11)"
     ],
     "commentary": "",
     "difficulty": "",
@@ -17507,9 +17478,11 @@
     "number": 4,
     "type": "서술형",
     "points": 5,
-    "question": "(1) TTL\n(2) ICMP Time Eceeded (또는 ICMP Type 11)\n(3) 목적지 서버가 사용하지 않은 포트로 UDP 요청을 받으면, 더 이상 시간 초과가 아니라 포트가 열려있지 않다는 의미의 ICMP Destination Unreachable(또는 Port Unreachable) 메시지를 반환한다.",
-    "answer": "네트워크 관리자 G씨는 외부 웹 서버와 통신 지연 원인을 파악하기 위해 리눅스 환경에서 traceroute 명령을 실행하였다. 다음 각 질문에 답하시오.\n\n(1) traceroute가 목적지까지 거쳐가는 경로상의 라우터 IP를 한 단계씩 알아내기 위해, 패킷을 전송할 때마다 1씩 순차적으로 증가시키며 사용하는 IP 헤더 내의 필드 명칭을 쓰시오.\n(2) 경로상의 라우터들이 해당 패킷을 수신한 후 명이 다해 패킷을 폐기할 때, 출발지 호스트로 응답하는 ICMP 메시지의 명칭을 쓰시오.\n(3) 리눅스 환경에서 traceroute가 최종 목적지 서버에 도달했을 때, 목적지 서버가 출발지로 반환하여 동작을 종료하게 만드는 ICMP 메시지의 명칭(또는 세부 원인)을 서술하시오.",
-    "keywords": [],
+    "question": "WIPS (Wireless Intrusion Prevention System, 무선 침해 방지 시스템)",
+    "answer": "무선 주파수 공간을 실시간 모니터링하여 인가되지 않은 불법 AP나 무선 공격을 탐지하고 차단하는 시스템",
+    "keywords": [
+      "무선 주파수 공간을 실시간 모니터링하여 인가되지 않은 불법 AP나 무선 공격을 탐지하고 차단하는 시스템"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17522,11 +17495,9 @@
     "number": 5,
     "type": "서술형",
     "points": 5,
-    "question": "무선 주파수 공간을 실시간 모니터링하여 인가되지 않은 불법 AP나 무선 공격을 탐지하고 차단하는 시스템",
-    "answer": "WIPS (Wireless Intrusion Prevention System, 무선 침해 방지 시스템)",
-    "keywords": [
-      "WIPS (Wireless Intrusion Prevention System, 무선 침해 방지 시스템)"
-    ],
+    "question": "PMF (Protected Management Frames / 802.11w)",
+    "answer": "무선 관리 프레임을 암호화하여, 공격자가 WIPS나 정상 장비인 척 위조 패킷을 날려 연결을 끊는 DoS 공격을 방어하는 기술",
+    "keywords": [],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17539,11 +17510,9 @@
     "number": 6,
     "type": "서술형",
     "points": 5,
-    "question": "무선 관리 프레임을 암호화하여, 공격자가 WIPS나 정상 장비인 척 위조 패킷을 날려 연결을 끊는 DoS 공격을 방어하는 기술",
-    "answer": "PMF (Protected Management Frames / 802.11w)",
-    "keywords": [
-      "PMF (Protected Management Frames / 802.11w)"
-    ],
+    "question": "보안 담당자 H씨는 사내 무선 보안 강화를 위해 WIPS를 도입하였다. WIPS환경에서 유선 네트워크에 무단 연결된 Rogue AP를 탐지했을 때, WIPS 센서가 무선 공기 중에서 해당 불법 AP와 사용자 간의 연결을 강제로 끊기 위해 사용하는 핵심 메커니즘과 유선 네트워크 단에서 취할 수 있는 차단 대책을 각각 서술하시오.",
+    "answer": "1. 무선 차단 원리 : WIPS 센서가 공기 중에 인증해제 프레임을 위조하여 전송함으로써 Rogue AP와 단말 간의 무선 연결을 강제로 끊어버린다.\n2. 유선 차단 대책 : 해당 Rogue AP가 연결된 유선 스위치 장비의 포트를 찾아 네트워크 포트를 비활성화 하거나 MAC 주소 필터링을 통해 유선망 진입을 차단한다.",
+    "keywords": [],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17556,8 +17525,8 @@
     "number": 7,
     "type": "서술형",
     "points": 5,
-    "question": "1. 무선 차단 원리 : WIPS 센서가 공기 중에 인증해제 프레임을 위조하여 전송함으로써 Rogue AP와 단말 간의 무선 연결을 강제로 끊어버린다.\n2. 유선 차단 대책 : 해당 Rogue AP가 연결된 유선 스위치 장비의 포트를 찾아 네트워크 포트를 비활성화 하거나 MAC 주소 필터링을 통해 유선망 진입을 차단한다.",
-    "answer": "보안 담당자 H씨는 사내 무선 보안 강화를 위해 WIPS를 도입하였다. WIPS환경에서 유선 네트워크에 무단 연결된 Rogue AP를 탐지했을 때, WIPS 센서가 무선 공기 중에서 해당 불법 AP와 사용자 간의 연결을 강제로 끊기 위해 사용하는 핵심 메커니즘과 유선 네트워크 단에서 취할 수 있는 차단 대책을 각각 서술하시오.",
+    "question": "보안 관리자 I씨는 사내 PC 보안 정책을 수립하면서, 모든 임직원 PC의 무선 랜카드 설정에서 'Ad-hoc 모드' 진입을 강제로 차단하도록 설정하였다. 기업 내부망에 연결된 단말기가 외부 단말기와 Ad-hoc 무선 연결을 임의로 허용했을 때 발생할 수 있는 보안 위협을 기술하시오.",
+    "answer": "중앙 무선 액세스 포인트(AP)나 방화벽의 보안 통제를 우회하여 단말 간 직접 연결이 수립되므로, 외부 악성 단말로부터 내부 PC로 악성코드가 직접 유포되거나 사내 유선망이 연결되는 매개체가 되어 내부 핵심 자산 및 기밀 정보가 외부로 유출되는 우회 경로(백도어)로 악용될수 있다.",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -17571,9 +17540,12 @@
     "number": 8,
     "type": "서술형",
     "points": 5,
-    "question": "중앙 무선 액세스 포인트(AP)나 방화벽의 보안 통제를 우회하여 단말 간 직접 연결이 수립되므로, 외부 악성 단말로부터 내부 PC로 악성코드가 직접 유포되거나 사내 유선망이 연결되는 매개체가 되어 내부 핵심 자산 및 기밀 정보가 외부로 유출되는 우회 경로(백도어)로 악용될수 있다.",
-    "answer": "보안 관리자 I씨는 사내 PC 보안 정책을 수립하면서, 모든 임직원 PC의 무선 랜카드 설정에서 'Ad-hoc 모드' 진입을 강제로 차단하도록 설정하였다. 기업 내부망에 연결된 단말기가 외부 단말기와 Ad-hoc 무선 연결을 임의로 허용했을 때 발생할 수 있는 보안 위협을 기술하시오.",
-    "keywords": [],
+    "question": "보안 관제 요원 J씨는 웹 서버의 급격한 부하 상승을 인지하고 패킷을 덤프하여 분석하던 중, 동일한 IP로부터 아래와 같은 HTTP 요청 헤더가 대량으로 유입되는 것을 확인하였다.\n\nHTTP\nGET /index.html HTTP/1.1\nHost: www.example.com\nUser-Agent: Mozilla/5.5\nCache-Control: no-store, must-revalidate\nPragma: no-cache\n\n(1) 위 패킷 흐름에 해당하는 구체적인 DoS/DDoS 공격 명칭을 쓰시오.\n(2) 이 공격이 웹 서버(Origin Server)에 심각한 과부하를 유발하는 기술적인 이유(동작원리)를 캐시 서버의 역할과 연계하여 서술하시오.\n(3) 이 공격을 웹 애플리케이션 방화벽(WAF)이나 보안 장비 단에서 차단하기 위해 설정할 수 있는 실무적인 방어 대책 1가지를 기술하시오.",
+    "answer": "(1) HTTP CC Attack\n(2) 공격자가 헤더에 Cache-Control: no-store 및 Pragma: no-cache를 지정하여 보냈기 때문에, 중간에 위치한 캐시 서버가 자원을 처리하지 못하고 모든 공격 요청을 백엔드 웹 서버(Origin)로 그대로 우회시켜 직접 처리하게 만들므로 서버 과부하를 유발한다.\n(3) 아래 중 1가지 기재시 인정\n- 임계치 기반 제어 : 동일한 IP에서 단시간에 과도한 횟수의 HTTP 요청이 들어올 경우 임시로 해당 IP의 접속을 차단하는 임계치 설정을 적용한다.\n- 웹 방화벽(WAF) 규칙 적용 : HTTP 요청 헤더 중 Cache-Control: no-store 또는 no-cache가 비정상적으로 반복되는 패턴을 탐지하여 드랍시킨다.",
+    "keywords": [
+      "HTTP CC Attack",
+      "아래 중 1가지 기재시 인정"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17586,14 +17558,10 @@
     "number": 9,
     "type": "서술형",
     "points": 5,
-    "question": "(1) HTTP CC Attack\n(2) 공격자가 헤더에 Cache-Control: no-store 및 Pragma: no-cache를 지정하여 보냈기 때문에, 중간에 위치한 캐시 서버가 자원을 처리하지 못하고 모든 공격 요청을 백엔드 웹 서버(Origin)로 그대로 우회시켜 직접 처리하게 만들므로 서버 과부하를 유발한다.\n(3) 아래 중 1가지 기재시 인정\n- 임계치 기반 제어 : 동일한 IP에서 단시간에 과도한 횟수의 HTTP 요청이 들어올 경우 임시로 해당 IP의 접속을 차단하는 임계치 설정을 적용한다.\n- 웹 방화벽(WAF) 규칙 적용 : HTTP 요청 헤더 중 Cache-Control: no-store 또는 no-cache가 비정상적으로 반복되는 패턴을 탐지하여 드랍시킨다.",
-    "answer": "보안 관제 요원 J씨는 웹 서버의 급격한 부하 상승을 인지하고 패킷을 덤프하여 분석하던 중, 동일한 IP로부터 아래와 같은 HTTP 요청 헤더가 대량으로 유입되는 것을 확인하였다.\n\nHTTP\nGET /index.html HTTP/1.1\nHost: www.example.com\nUser-Agent: Mozilla/5.5\nCache-Control: no-store, must-revalidate\nPragma: no-cache\n\n(1) 위 패킷 흐름에 해당하는 구체적인 DoS/DDoS 공격 명칭을 쓰시오.\n(2) 이 공격이 웹 서버(Origin Server)에 심각한 과부하를 유발하는 기술적인 이유(동작원리)를 캐시 서버의 역할과 연계하여 서술하시오.\n(3) 이 공격을 웹 애플리케이션 방화벽(WAF)이나 보안 장비 단에서 차단하기 위해 설정할 수 있는 실무적인 방어 대책 1가지를 기술하시오.",
+    "question": "보안 개발자 K씨는 사내 회원가입 및 개인정보 수정 페이지가 CSRF  공격에 노출되어 있음을 확인하고 소스코드 및 세션 제어 수준에서 방어대책을 수립하고자 한다. CSRF 공격을 방어하기 위해 적용할 수 있는 구체적인 기술적 방어 대책 3가지를 서술하시오.",
+    "answer": "아래 중 3가지 기술\n1. CSRF Token 사용 : 난수 형태의 일회성 토큰을 사용자의 세션에 저장하고 페이지 요청 시마다 검증하여, 정상적인 폼을 통해서만 요청이 유입되었는지 확인한다.\n2. SameSite 쿠키 속성 설정 : 쿠키의 SameSite 속성을 Strict 또는 Lax로 설정하여 타 사이트에서 발생하는 크로스 사이트(Cross-site) 요청 시 쿠키가 자동으로 전송되지 않도록 차단한다.\n3. 재인증 요구 : 패스워드 변경, 결제 등 민감한 기능을 수행할 때 비밀번호를 다시 입력받거나 CAPCHA 인증을 요구하여 자동화된 위조 요청을 차단한다.\n4. Referer 헤더 검증 : HTTP 요청 헤더의 Referer 값을 확인하여 사내 정상 도메인에서 출발한 요청이 맞는지 검증하고 타 도메인에서의 요청을 드랍한다.",
     "keywords": [
-      "HTTP",
-      "GET /index.html HTTP/1.1",
-      "Host: www.example.com",
-      "User-Agent: Mozilla/5.5",
-      "Cache-Control: no-store, must-revalidate"
+      "아래 중 3가지 기술"
     ],
     "commentary": "",
     "difficulty": "",
@@ -17607,9 +17575,11 @@
     "number": 10,
     "type": "서술형",
     "points": 5,
-    "question": "아래 중 3가지 기술\n1. CSRF Token 사용 : 난수 형태의 일회성 토큰을 사용자의 세션에 저장하고 페이지 요청 시마다 검증하여, 정상적인 폼을 통해서만 요청이 유입되었는지 확인한다.\n2. SameSite 쿠키 속성 설정 : 쿠키의 SameSite 속성을 Strict 또는 Lax로 설정하여 타 사이트에서 발생하는 크로스 사이트(Cross-site) 요청 시 쿠키가 자동으로 전송되지 않도록 차단한다.\n3. 재인증 요구 : 패스워드 변경, 결제 등 민감한 기능을 수행할 때 비밀번호를 다시 입력받거나 CAPCHA 인증을 요구하여 자동화된 위조 요청을 차단한다.\n4. Referer 헤더 검증 : HTTP 요청 헤더의 Referer 값을 확인하여 사내 정상 도메인에서 출발한 요청이 맞는지 검증하고 타 도메인에서의 요청을 드랍한다.",
-    "answer": "보안 개발자 K씨는 사내 회원가입 및 개인정보 수정 페이지가 CSRF  공격에 노출되어 있음을 확인하고 소스코드 및 세션 제어 수준에서 방어대책을 수립하고자 한다. CSRF 공격을 방어하기 위해 적용할 수 있는 구체적인 기술적 방어 대책 3가지를 서술하시오.",
-    "keywords": [],
+    "question": "웹 애플리케이션 보안 진단 결과, 사내 공지사항 게시판 시스템이 XSS 공격에 노출되어 있는 것이 확인되었다.\n(1) XSS 공격과 사이트 간 요청 위조(CSRF)공격의 핵심적인 목적(메커니즘) 차이점을 '사용자의 세션 쿠키' 관점에서 비교하여 서술하시오.\n(2) 웹 애플리케이션 소스코드(시큐어코딩) 및 웹 브라우저 단에서 XSS 공격을 원천 차단하기 위해 적용할 수 있는 구체적인 기술적 방어 대책 2가지를 기술하시오.",
+    "answer": "(1) XSS는 스크립트를 통해 주체의 세션 쿠키나 인증 토큰 정보를 직접 탈취(유출)하는 것이 주 목적인 반면, CSRF는 공격자가 사용자의 쿠키를 직접 탈취하지 않고 브라우저와 서버 간의 신뢰관계를 이용해 사용자의 권한을 도용하여 위조된 공격 명령을 서버로 전송하는 것이 목적이다.\n(2) 아래 중 2가지 서술 시 인정\n- 입력값 검증 및 출력값 에스케이핑(Escaping) : 사용자 입력값 중 특수문자(<, >, &, \", ')를 &lt;, &gt;와 같은 HTML 엔티티로 치환하여 브라우저가 스크립트로 인식하지 못하게 통제한다.\n- Http Only 쿠키 속성 설정 : 쿠키를 생성할 때 HttpOnly 속성을 부여하여, 공격자가 악성 자바 스크립트(document.cookie)를 주입하더라도 쿠키 정보에 아예 접근할 수 없도록 원천 차단한다.\n- CSP (Content Security Policy) 도입 : 웹 서버 응답 헤더에 콘텐츠 보안 정책(CSP)을 설정하여, 신뢰할 수 있는 특정 도메인에서만 스크립트가 로드되고 실행되도록 브라우저 단의 실행 범위를 제한한다.",
+    "keywords": [
+      "아래 중 2가지 서술 시 인정"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17622,9 +17592,12 @@
     "number": 11,
     "type": "서술형",
     "points": 5,
-    "question": "(1) XSS는 스크립트를 통해 주체의 세션 쿠키나 인증 토큰 정보를 직접 탈취(유출)하는 것이 주 목적인 반면, CSRF는 공격자가 사용자의 쿠키를 직접 탈취하지 않고 브라우저와 서버 간의 신뢰관계를 이용해 사용자의 권한을 도용하여 위조된 공격 명령을 서버로 전송하는 것이 목적이다.\n(2) 아래 중 2가지 서술 시 인정\n- 입력값 검증 및 출력값 에스케이핑(Escaping) : 사용자 입력값 중 특수문자(<, >, &, \", ')를 &lt;, &gt;와 같은 HTML 엔티티로 치환하여 브라우저가 스크립트로 인식하지 못하게 통제한다.\n- Http Only 쿠키 속성 설정 : 쿠키를 생성할 때 HttpOnly 속성을 부여하여, 공격자가 악성 자바 스크립트(document.cookie)를 주입하더라도 쿠키 정보에 아예 접근할 수 없도록 원천 차단한다.\n- CSP (Content Security Policy) 도입 : 웹 서버 응답 헤더에 콘텐츠 보안 정책(CSP)을 설정하여, 신뢰할 수 있는 특정 도메인에서만 스크립트가 로드되고 실행되도록 브라우저 단의 실행 범위를 제한한다.",
-    "answer": "웹 애플리케이션 보안 진단 결과, 사내 공지사항 게시판 시스템이 XSS 공격에 노출되어 있는 것이 확인되었다.\n(1) XSS 공격과 사이트 간 요청 위조(CSRF)공격의 핵심적인 목적(메커니즘) 차이점을 '사용자의 세션 쿠키' 관점에서 비교하여 서술하시오.\n(2) 웹 애플리케이션 소스코드(시큐어코딩) 및 웹 브라우저 단에서 XSS 공격을 원천 차단하기 위해 적용할 수 있는 구체적인 기술적 방어 대책 2가지를 기술하시오.",
-    "keywords": [],
+    "question": "네트워크 관리자 L씨는 특정 외부 서버와의 구간별 라우팅 경로와 지연 시간을 확인하기 위해 경로 추적 도구를 사용하고 있다.\n(1) 리눅스와 윈도우 환경에서 각각 사용하는 경로 추적 명령어의 명칭을 순서대로 쓰시오.\n(2) 이 도구가 목적지까지 가는 경로상의 라우터를 IP를 하나씩 알아내기 위해, 송신 패킷의 IP 헤더 내부에서 1부터 시작하여 1씩 순차적으로 증가시키며 전송하는 필드의 명칭을 쓰시오.\n(3) 리눅스 환경의 경로 추적 도구가 최종 목적지 서버에 도달했을 때, 목적지 서버가 사용하지 않는 고번호 UDP 포트 요청을 수신하여 동작을 최종 종료하게 만드는 ICMP 메시지의 명칭(또는 Type 번호)를 쓰시오.",
+    "answer": "(1) traceroute, tracert\n(2) TTL\n(3) ICMP Destination Unreachable (또는 Port Unreachable / ICMP Type 3)",
+    "keywords": [
+      "traceroute, tracert",
+      "TTL"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17637,10 +17610,14 @@
     "number": 12,
     "type": "서술형",
     "points": 5,
-    "question": "(1) traceroute, tracert\n(2) TTL\n(3) ICMP Destination Unreachable (또는 Port Unreachable / ICMP Type 3)",
-    "answer": "네트워크 관리자 L씨는 특정 외부 서버와의 구간별 라우팅 경로와 지연 시간을 확인하기 위해 경로 추적 도구를 사용하고 있다.\n(1) 리눅스와 윈도우 환경에서 각각 사용하는 경로 추적 명령어의 명칭을 순서대로 쓰시오.\n(2) 이 도구가 목적지까지 가는 경로상의 라우터를 IP를 하나씩 알아내기 위해, 송신 패킷의 IP 헤더 내부에서 1부터 시작하여 1씩 순차적으로 증가시키며 전송하는 필드의 명칭을 쓰시오.\n(3) 리눅스 환경의 경로 추적 도구가 최종 목적지 서버에 도달했을 때, 목적지 서버가 사용하지 않는 고번호 UDP 포트 요청을 수신하여 동작을 최종 종료하게 만드는 ICMP 메시지의 명칭(또는 Type 번호)를 쓰시오.",
+    "question": "보안 관제 서버의 모니터링 결과, 특정 웹 애플리케이션을 대상으로 아래 세가지 유형의 비정상적인 트래픽 및 보안 취약점이 접수되었다. 각 서술형 질문에 답하시오.\n\n[유형A] HTTP 요청 헤더에 Cache-Control: no-store, must-revalidate 및 Pragma: no-cache 설정을 대량으로 포함하여 유입되는 트래픽.\n[유형B] 웹 브라우저와 웹 서버 간의 신뢰 관계를 악용하여, 이미 인증된 사용자의 브라우저를 통해 사용자가 의도하지 않은 비밀번호 변경 등의 위조 요청을 서버로 강제 전송하는 공격.\n[유형C] 사용자가 게시판에 글을 작성할 때 악성 자바 스크립트를 삽입하여, 이를 열람하는 불특정 다수 사용자의 웹 브라우저 환경에서 스크립트가 실행되도록 데이터베이스에 악성 코드를 영구 저장하는 공격.\n\n(1) 유형A에 해당하는 DDoS 공격 기법의 명칭을 쓰고, 이 공격이 중간 프록시/캐시 서버를 무력화하고 원본 웹 서버(Origin)에 과부하를 유발하는 기술적인 원리를 서술하시오.\n(2) 유형B 공격을 소스코드 및 세션 제어 수준에서 원천 방어하기 위해 적용할 수 있는 구체적인 보안 대책 2가지를 기술하시오.\n(3) 유형C 공격의 정확한 명칭을 쓰고, 개발자가 소스코드(시큐어코딩) 상에서 입력값 및 출력값의 특수문자(<,>,& 등)를 브라우저가 인식하지 못하는 문자로 지환하는 방어 기법의 명칭(행위)를 쓰시오.",
+    "answer": "(1) HTTP CC Attack\n원리 : 요청 헤더의 캐시 거부 지시어로 인해 중간 캐시 서버가 자원을 반환하지 못하고, 모든 공격 트래픽을 백엔드 원본 웹 서버로 우회시켜 직접 처리하게 강제하기 때문이다.\n(2) 아래 중 2가지 서술 시 인정\n- 난수 형태의 일회성 토큰을 검증하는 CSRF 토큰 메커니즘 적용\n- 크로스사이트 요청 시 쿠키 전송을 제한하는 쿠키의 SameSite 속성(Strict 또는 Lax) 설정\n- 민감 기능 수행 시 패스워드 재입력 및 CAPCHA 인증 강제\n- HTTP Referer 헤더 검증을 통해 신뢰할 수 있는 도메인 유입인지 확인\n(3) Stored XSS (저장형 크로스 사이트 스크립팅)\n방어기법 : HTML 엔티티 치환 (또는 Escaping)",
     "keywords": [
-      "리눅스와 윈도우 환경에서 각각 사용하는 경로 추적 명령어의 명칭을 순서대로 쓰시오."
+      "HTTP CC Attack",
+      "아래 중 2가지 서술 시 인정",
+      "- 난수 형태의 일회성 토큰을 검증하는 CSRF 토큰 메커니즘 적용",
+      "- 크로스사이트 요청 시 쿠키 전송을 제한하는 쿠키의 SameSite 속성(Strict 또는 Lax) 설정",
+      "- 민감 기능 수행 시 패스워드 재입력 및 CAPCHA 인증 강제"
     ],
     "commentary": "",
     "difficulty": "",
@@ -17654,9 +17631,11 @@
     "number": 13,
     "type": "서술형",
     "points": 5,
-    "question": "(1) HTTP CC Attack\n원리 : 요청 헤더의 캐시 거부 지시어로 인해 중간 캐시 서버가 자원을 반환하지 못하고, 모든 공격 트래픽을 백엔드 원본 웹 서버로 우회시켜 직접 처리하게 강제하기 때문이다.\n(2) 아래 중 2가지 서술 시 인정\n- 난수 형태의 일회성 토큰을 검증하는 CSRF 토큰 메커니즘 적용\n- 크로스사이트 요청 시 쿠키 전송을 제한하는 쿠키의 SameSite 속성(Strict 또는 Lax) 설정\n- 민감 기능 수행 시 패스워드 재입력 및 CAPCHA 인증 강제\n- HTTP Referer 헤더 검증을 통해 신뢰할 수 있는 도메인 유입인지 확인\n(3) Stored XSS (저장형 크로스 사이트 스크립팅)\n방어기법 : HTML 엔티티 치환 (또는 Escaping)",
-    "answer": "보안 관제 서버의 모니터링 결과, 특정 웹 애플리케이션을 대상으로 아래 세가지 유형의 비정상적인 트래픽 및 보안 취약점이 접수되었다. 각 서술형 질문에 답하시오.\n\n[유형A] HTTP 요청 헤더에 Cache-Control: no-store, must-revalidate 및 Pragma: no-cache 설정을 대량으로 포함하여 유입되는 트래픽.\n[유형B] 웹 브라우저와 웹 서버 간의 신뢰 관계를 악용하여, 이미 인증된 사용자의 브라우저를 통해 사용자가 의도하지 않은 비밀번호 변경 등의 위조 요청을 서버로 강제 전송하는 공격.\n[유형C] 사용자가 게시판에 글을 작성할 때 악성 자바 스크립트를 삽입하여, 이를 열람하는 불특정 다수 사용자의 웹 브라우저 환경에서 스크립트가 실행되도록 데이터베이스에 악성 코드를 영구 저장하는 공격.\n\n(1) 유형A에 해당하는 DDoS 공격 기법의 명칭을 쓰고, 이 공격이 중간 프록시/캐시 서버를 무력화하고 원본 웹 서버(Origin)에 과부하를 유발하는 기술적인 원리를 서술하시오.\n(2) 유형B 공격을 소스코드 및 세션 제어 수준에서 원천 방어하기 위해 적용할 수 있는 구체적인 보안 대책 2가지를 기술하시오.\n(3) 유형C 공격의 정확한 명칭을 쓰고, 개발자가 소스코드(시큐어코딩) 상에서 입력값 및 출력값의 특수문자(<,>,& 등)를 브라우저가 인식하지 못하는 문자로 지환하는 방어 기법의 명칭(행위)를 쓰시오.",
-    "keywords": [],
+    "question": "어느 가상 자산 거래소의 인프라 구축을 담당하는 보안 엔지니어 M씨는 내부 시스템 관리를 위해 C클래스 대역인 192.168.10.0 네트워크 주소를 할당받았다. 해당 C 클래스 네트워크 대역을 서브네팅하지 않고 기본 서브넷 마스크(255.255.255.0)를 그대로 유지하여 사용할 때, 단말기에 실제로 할당 가능한 최대 가용 호스트의 개수를 쓰고, 그 개수가 도출되는 기술적인 이유(수식)를 간략히 서술하시오.",
+    "answer": "최대 가용 호스트 수 : 254개\n이유 : C클래스의 호스트 비트는 총 8비트이므로 전체 할당 가능한 IP는 2^8 = 256개이다. 그러나 이 중 호스트 비트가 모드 0인 네트워크 주소와, 호스트 비트가 모두 1인 브로드캐스트 주소 총 2개의 IP는 단말기에 할당할 수 없으므로 (2^8 - 2 = 254)개가 된다.",
+    "keywords": [
+      "최대 가용 호스트 수 : 254개"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17669,9 +17648,13 @@
     "number": 14,
     "type": "서술형",
     "points": 5,
-    "question": "최대 가용 호스트 수 : 254개\n이유 : C클래스의 호스트 비트는 총 8비트이므로 전체 할당 가능한 IP는 2^8 = 256개이다. 그러나 이 중 호스트 비트가 모드 0인 네트워크 주소와, 호스트 비트가 모두 1인 브로드캐스트 주소 총 2개의 IP는 단말기에 할당할 수 없으므로 (2^8 - 2 = 254)개가 된다.",
-    "answer": "어느 가상 자산 거래소의 인프라 구축을 담당하는 보안 엔지니어 M씨는 내부 시스템 관리를 위해 C클래스 대역인 192.168.10.0 네트워크 주소를 할당받았다. 해당 C 클래스 네트워크 대역을 서브네팅하지 않고 기본 서브넷 마스크(255.255.255.0)를 그대로 유지하여 사용할 때, 단말기에 실제로 할당 가능한 최대 가용 호스트의 개수를 쓰고, 그 개수가 도출되는 기술적인 이유(수식)를 간략히 서술하시오.",
-    "keywords": [],
+    "question": "다음은 사내 웹 서버의 네트워크 인프라 환경 설정 정보와 방화벽 진단 결과의 일부이다. \n- 할당된 IP 대역 : 172.16.5.0 (B 클래스 사설 대역 일부)\n- 적용된 서브넷 마스크 : 255.255.255.192\n(1) 지문에 제시된 서브넷 마스크를 CIDR 표기법인 /[비트수] 형태로 변환하여 쓰시오.\n(2) 이 네트워크 환경에서 하나의 서브넷당 할당할 수 있는 실제 가용 호스트(IP)의 개수를 구하시오.\n(3) 이 네트워크에서 첫 번째 서브넷 구간의 네트워크 주소와 브로드캐스트 주소를 순서대로 쓰시오.",
+    "answer": "(1) /26\n(2) 62개\n(3) 172.16.5.0, 172.16.5.63",
+    "keywords": [
+      "/26",
+      "62개",
+      "172.16.5.0, 172.16.5.63"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17684,15 +17667,9 @@
     "number": 15,
     "type": "서술형",
     "points": 5,
-    "question": "(1) /26\n(2) 62개\n(3) 172.16.5.0, 172.16.5.63",
-    "answer": "다음은 사내 웹 서버의 네트워크 인프라 환경 설정 정보와 방화벽 진단 결과의 일부이다. \n- 할당된 IP 대역 : 172.16.5.0 (B 클래스 사설 대역 일부)\n- 적용된 서브넷 마스크 : 255.255.255.192\n(1) 지문에 제시된 서브넷 마스크를 CIDR 표기법인 /[비트수] 형태로 변환하여 쓰시오.\n(2) 이 네트워크 환경에서 하나의 서브넷당 할당할 수 있는 실제 가용 호스트(IP)의 개수를 구하시오.\n(3) 이 네트워크에서 첫 번째 서브넷 구간의 네트워크 주소와 브로드캐스트 주소를 순서대로 쓰시오.",
-    "keywords": [
-      "다음은 사내 웹 서버의 네트워크 인프라 환경 설정 정보와 방화벽 진단 결과의 일부이다.",
-      "- 할당된 IP 대역 : 172.16.5.0 (B 클래스 사설 대역 일부)",
-      "- 적용된 서브넷 마스크 : 255.255.255.192",
-      "지문에 제시된 서브넷 마스크를 CIDR 표기법인 /[비트수] 형태로 변환하여 쓰시오.",
-      "이 네트워크 환경에서 하나의 서브넷당 할당할 수 있는 실제 가용 호스트(IP)의 개수를 구하시오."
-    ],
+    "question": "보안담당자는 외부망으로부터 유입되는 포트 스캔 공격을 방어하기 위해 침임탐지 시스템(IDS)룰을 정비하고 있다.  공격자가 대상 시스템의 활성화된 포트를 찾기 위해 FIN 스캔, NULL스캔, Xmas 스캔과 같은 비정상 플래그 조합 패킷을 전송했을 때, 대상 시스템의 포트 상태(열림/닫힘)에 따른 응답 특징(동작원리)를 비교하여 서술하시오.",
+    "answer": "FIN, NULL, Xmas 스캔 패킷을 수신했을 때, 대상 시스템의 포트가 열려있는 경우에는 패킷을 무시하여 아무런 응답을 반환하지 않으며, 포트가 닫혀있는 경우에는 표준 규격에 따라 RST+ACK 패킷을 반환하여 응답한다.",
+    "keywords": [],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17705,8 +17682,8 @@
     "number": 16,
     "type": "서술형",
     "points": 5,
-    "question": "FIN, NULL, Xmas 스캔 패킷을 수신했을 때, 대상 시스템의 포트가 열려있는 경우에는 패킷을 무시하여 아무런 응답을 반환하지 않으며, 포트가 닫혀있는 경우에는 표준 규격에 따라 RST+ACK 패킷을 반환하여 응답한다.",
-    "answer": "보안담당자는 외부망으로부터 유입되는 포트 스캔 공격을 방어하기 위해 침임탐지 시스템(IDS)룰을 정비하고 있다.  공격자가 대상 시스템의 활성화된 포트를 찾기 위해 FIN 스캔, NULL스캔, Xmas 스캔과 같은 비정상 플래그 조합 패킷을 전송했을 때, 대상 시스템의 포트 상태(열림/닫힘)에 따른 응답 특징(동작원리)를 비교하여 서술하시오.",
+    "question": "보안분석가 O씨는 사내 주요 서버들을 대상으로 외부 위협을 점검하기 위해 Xmas 스캔을 수행하였다. 리눅스 서버 환경에서는 포트 열림/닫힘 상태가 명확히 판별되었으나, 특정 Windows 기반 웹 서버에서는 포트 상태와 관련없이 동일한 응답이 돌아와 분석에 실패하였다. \nWindows 시스템에서 Xmas 스캔을 통한 포트 활성화 여부 판별이 불가능한 기술적인 이유를 응답 패킷의 특성과 연계하여 서술하시오.",
+    "answer": "Unix/Linux 시스템과 달리 Windows 시스템은 RFC 793 표준 규격을 올바르게 준수하지 않기 때문에, 대상 포트가 열려있거나 닫혀 있는 상태에 상관없이 모두 RST 패킷을 반환하므로 포트의 활성화 여부를 가려낼 수 없다.",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -17720,8 +17697,8 @@
     "number": 17,
     "type": "서술형",
     "points": 5,
-    "question": "Unix/Linux 시스템과 달리 Windows 시스템은 RFC 793 표준 규격을 올바르게 준수하지 않기 때문에, 대상 포트가 열려있거나 닫혀 있는 상태에 상관없이 모두 RST 패킷을 반환하므로 포트의 활성화 여부를 가려낼 수 없다.",
-    "answer": "보안분석가 O씨는 사내 주요 서버들을 대상으로 외부 위협을 점검하기 위해 Xmas 스캔을 수행하였다. 리눅스 서버 환경에서는 포트 열림/닫힘 상태가 명확히 판별되었으나, 특정 Windows 기반 웹 서버에서는 포트 상태와 관련없이 동일한 응답이 돌아와 분석에 실패하였다. \nWindows 시스템에서 Xmas 스캔을 통한 포트 활성화 여부 판별이 불가능한 기술적인 이유를 응답 패킷의 특성과 연계하여 서술하시오.",
+    "question": "공격자가 대상 서버의 보안 로그 생성을 회피하기 위해 NULL 스캔을 수행하였다. 대상 서버의 포트가 열려있을 때와 닫혀있을 때 발생하는 응답 패킷의 차이점을 기술하시오.",
+    "answer": "NULL 스캔 패킷을 수신했을 때, 대상 시스템의 포트가 열려있는 경우에는 패킷을 무시하여 아무런 응답을 반환하지 않으며, 포트가 닫혀있는 경우에는 표준 규격에 따라 RST+ACK 패킷을 반환한다.",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -17735,8 +17712,8 @@
     "number": 18,
     "type": "서술형",
     "points": 5,
-    "question": "NULL 스캔 패킷을 수신했을 때, 대상 시스템의 포트가 열려있는 경우에는 패킷을 무시하여 아무런 응답을 반환하지 않으며, 포트가 닫혀있는 경우에는 표준 규격에 따라 RST+ACK 패킷을 반환한다.",
-    "answer": "공격자가 대상 서버의 보안 로그 생성을 회피하기 위해 NULL 스캔을 수행하였다. 대상 서버의 포트가 열려있을 때와 닫혀있을 때 발생하는 응답 패킷의 차이점을 기술하시오.",
+    "question": "보안 담당자는 침입탐지시스템(IDS) 로그를 분석하던 중, 외부 공격자가 대상 서버의 포트 활성화 여부를 정찰하기 위해 FIN 스캔, NULL 스캔, Xmas 스캔을 교차로 수행한 흔적을 발견했다. 이 3가지 스캔 기법이 탐지(정찰)대상 서버의 포트가 '열려있을때' 공통적으로 보이는 응답 특징을 기술하시오.",
+    "answer": "FIN, NULL, Xmas 스캔은 모두 비정상적인 플래그 조합을 이용하는 스캔방식으로, TCP 표준 규격에 따라 대상 시스템의 포트가 열려있는 경우 패킷을 그대로 폐기(무시)하므로 공통적으로 아무런 응답을 반환하지 않는다.",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -17750,9 +17727,11 @@
     "number": 19,
     "type": "서술형",
     "points": 5,
-    "question": "FIN, NULL, Xmas 스캔은 모두 비정상적인 플래그 조합을 이용하는 스캔방식으로, TCP 표준 규격에 따라 대상 시스템의 포트가 열려있는 경우 패킷을 그대로 폐기(무시)하므로 공통적으로 아무런 응답을 반환하지 않는다.",
-    "answer": "보안 담당자는 침입탐지시스템(IDS) 로그를 분석하던 중, 외부 공격자가 대상 서버의 포트 활성화 여부를 정찰하기 위해 FIN 스캔, NULL 스캔, Xmas 스캔을 교차로 수행한 흔적을 발견했다. 이 3가지 스캔 기법이 탐지(정찰)대상 서버의 포트가 '열려있을때' 공통적으로 보이는 응답 특징을 기술하시오.",
-    "keywords": [],
+    "question": "인터넷 서비스 공급자(ISP)인 가전 통신은 기존 IPv4 인프라 환경에서 IPv6망으로의 점진적인 전환을 추진하고 있다. 두 주소 체계의 공존을 위해 사용되는 전환 기술 3가지의 명칭을 쓰고, 그 중 터널링 기술의 개념(동작원리)를 서술하시오.",
+    "answer": "1.전환기술 3가지 : 듀얼스택, 터널링, 주소변환\n2. 터널링 개념 : IPv6 패킷이 IPv4 전용 네트워크 구간을 통과할 수 있도록, IPv6 패킷의 앞부분에 IPv4 헤더를 붙여 캡슐화 하고 전송하고, 수신측에서 이를 다시 역캡슐화하여 통신하는 기술이다.",
+    "keywords": [
+      "1.전환기술 3가지 : 듀얼스택, 터널링, 주소변환"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17765,8 +17744,8 @@
     "number": 20,
     "type": "서술형",
     "points": 5,
-    "question": "1.전환기술 3가지 : 듀얼스택, 터널링, 주소변환\n2. 터널링 개념 : IPv6 패킷이 IPv4 전용 네트워크 구간을 통과할 수 있도록, IPv6 패킷의 앞부분에 IPv4 헤더를 붙여 캡슐화 하고 전송하고, 수신측에서 이를 다시 역캡슐화하여 통신하는 기술이다.",
-    "answer": "인터넷 서비스 공급자(ISP)인 가전 통신은 기존 IPv4 인프라 환경에서 IPv6망으로의 점진적인 전환을 추진하고 있다. 두 주소 체계의 공존을 위해 사용되는 전환 기술 3가지의 명칭을 쓰고, 그 중 터널링 기술의 개념(동작원리)를 서술하시오.",
+    "question": "보안담당자는 외부 모의해킹 수행 중 사내 방화벽을 대상으로 TCP ACK 스캔 공격이 유입된 것을 확인하였다. 공격자가 특정포트로 ACK 스캔을 수행한 결과, 시스템으로 부터 RST 패킷이 반환되었다면 (1) 공격자는 해당 포트의 보안 장비 통과 상태를 어떻게 판단하는지 쓰고, 이를 통과시킨 사내 방화벽의 기술적인 취약점(작동방식의한계)을 서술하시오.",
+    "answer": "(1) 보안장비 통과 상태 : 해당 포트는 방화벽에 의해 필터링되지 않고 열려있는 Unfiltered (필터링 되지 않음) 상태로 판단한다.\n(2) 방화벽의 기술적 한계 : 사내 방화벽이 세션의 열결 상태를 추적하지 않는 단순 패킷 필터링방식이기 때문에, 연결 수립 단계(SYN) 없이 유입된 비정상적인 ACK 패킷을 차단하지 못하고 통과시키는 한계점을 가지고 있다.",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -17780,9 +17759,15 @@
     "number": 21,
     "type": "서술형",
     "points": 5,
-    "question": "(1) 보안장비 통과 상태 : 해당 포트는 방화벽에 의해 필터링되지 않고 열려있는 Unfiltered (필터링 되지 않음) 상태로 판단한다.\n(2) 방화벽의 기술적 한계 : 사내 방화벽이 세션의 열결 상태를 추적하지 않는 단순 패킷 필터링방식이기 때문에, 연결 수립 단계(SYN) 없이 유입된 비정상적인 ACK 패킷을 차단하지 못하고 통과시키는 한계점을 가지고 있다.",
-    "answer": "보안담당자는 외부 모의해킹 수행 중 사내 방화벽을 대상으로 TCP ACK 스캔 공격이 유입된 것을 확인하였다. 공격자가 특정포트로 ACK 스캔을 수행한 결과, 시스템으로 부터 RST 패킷이 반환되었다면 (1) 공격자는 해당 포트의 보안 장비 통과 상태를 어떻게 판단하는지 쓰고, 이를 통과시킨 사내 방화벽의 기술적인 취약점(작동방식의한계)을 서술하시오.",
-    "keywords": [],
+    "question": "네트워크 엔지니어 R 씨는 예산 부족으로 인해 별도의 방화벽 전용 장비를 도입하지 않고, 경계 라우터의 패킷 필터링 기능만을 이용하여 사내 네트워크 보안 정책을 구현하고자 한다.\n\n(1) 이와 같은 방화벽 구축 형태의 정확한 명칭을 쓰시오. (2점)\n\n(2) 해당 방식이 전용 방화벽 장비나 어플리케이션 게이트웨이에 비해 가질 수 있는 보안 관리 및 추적성 관점에서의 치명적인 기술적 한계점(단점) 2가지를 서술하시오.",
+    "answer": "(1) 명칭: Screening Router (스크리닝 라우터) (2점)\n\n(2) 한계점 (아래 중 2가지 서술 시 만점, 각 2점):\n\n패킷 내부의 데이터(콘텐츠) 내용을 분석할 수 없어 어플리케이션 계층(L7) 공격을 차단하지 못한다.\n\n정상적인 연결 수립 상태를 추적하지 못하므로 상태 기반 검사가 불가능하다.\n\n접속 및 공격 시도에 대한 상세한 로그(감사 추적 Log)를 기록하고 관리하기 어렵다.\n\n라우터 자체의 ACL 규칙이 복잡해지면 라우터의 과부하로 인해 전체 네트워크 성능이 저하된다.",
+    "keywords": [
+      "명칭: Screening Router (스크리닝 라우터) (2점)",
+      "한계점 (아래 중 2가지 서술 시 만점, 각 2점):",
+      "패킷 내부의 데이터(콘텐츠) 내용을 분석할 수 없어 어플리케이션 계층(L7) 공격을 차단하지 못한다.",
+      "정상적인 연결 수립 상태를 추적하지 못하므로 상태 기반 검사가 불가능하다.",
+      "접속 및 공격 시도에 대한 상세한 로그(감사 추적 Log)를 기록하고 관리하기 어렵다."
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17795,11 +17780,9 @@
     "number": 22,
     "type": "서술형",
     "points": 5,
-    "question": "(1) 명칭: Screening Router (스크리닝 라우터) (2점)\n\n(2) 한계점 (아래 중 2가지 서술 시 만점, 각 2점):\n\n패킷 내부의 데이터(콘텐츠) 내용을 분석할 수 없어 어플리케이션 계층(L7) 공격을 차단하지 못한다.\n\n정상적인 연결 수립 상태를 추적하지 못하므로 상태 기반 검사가 불가능하다.\n\n접속 및 공격 시도에 대한 상세한 로그(감사 추적 Log)를 기록하고 관리하기 어렵다.\n\n라우터 자체의 ACL 규칙이 복잡해지면 라우터의 과부하로 인해 전체 네트워크 성능이 저하된다.",
-    "answer": "네트워크 엔지니어 R 씨는 예산 부족으로 인해 별도의 방화벽 전용 장비를 도입하지 않고, 경계 라우터의 패킷 필터링 기능만을 이용하여 사내 네트워크 보안 정책을 구현하고자 한다.\n\n(1) 이와 같은 방화벽 구축 형태의 정확한 명칭을 쓰시오. (2점)\n\n(2) 해당 방식이 전용 방화벽 장비나 어플리케이션 게이트웨이에 비해 가질 수 있는 보안 관리 및 추적성 관점에서의 치명적인 기술적 한계점(단점) 2가지를 서술하시오.",
-    "keywords": [
-      "이와 같은 방화벽 구축 형태의 정확한 명칭을 쓰시오. (2점)"
-    ],
+    "question": "보안 담당자 S 씨는 내부 중요 기밀 정보가 보관된 폐쇄망의 보안을 위해 Dual-Homed Gateway 구조의 방화벽을 도입하였다.\n\n이 구조에서 외부망의 해커가 네트워크 계층(L3)의 IP 패킷 조작이나 라우팅 공격을 시도하더라도 **내부망 시스템에 직접 접근할 수 없는 기술적인 이유(차단 메커니즘)**를 두 네트워크 인터페이스(NIC) 간의 통신 방식 특성과 연계하여 서술하시오.",
+    "answer": "Dual-Homed Gateway는 내·외부망과 연결된 2개의 인터페이스 간에 IP 라우팅(Routing) 기능이 철저히 소프트웨어적으로 비활성화되어 있다. 따라서 외부망 패킷이 네트워크 계층에서 내부망으로 직접 넘어갈 수 없으며, 모든 통신은 오직 게이트웨이의 어플리케이션 프록시(Proxy) 서비스를 통해서만 대행 처리되기 때문에 직접적인 침투가 불가능하다.",
+    "keywords": [],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17812,9 +17795,11 @@
     "number": 23,
     "type": "서술형",
     "points": 5,
-    "question": "Dual-Homed Gateway는 내·외부망과 연결된 2개의 인터페이스 간에 IP 라우팅(Routing) 기능이 철저히 소프트웨어적으로 비활성화되어 있다. 따라서 외부망 패킷이 네트워크 계층에서 내부망으로 직접 넘어갈 수 없으며, 모든 통신은 오직 게이트웨이의 어플리케이션 프록시(Proxy) 서비스를 통해서만 대행 처리되기 때문에 직접적인 침투가 불가능하다.",
-    "answer": "보안 담당자 S 씨는 내부 중요 기밀 정보가 보관된 폐쇄망의 보안을 위해 Dual-Homed Gateway 구조의 방화벽을 도입하였다.\n\n이 구조에서 외부망의 해커가 네트워크 계층(L3)의 IP 패킷 조작이나 라우팅 공격을 시도하더라도 **내부망 시스템에 직접 접근할 수 없는 기술적인 이유(차단 메커니즘)**를 두 네트워크 인터페이스(NIC) 간의 통신 방식 특성과 연계하여 서술하시오.",
-    "keywords": [],
+    "question": "다음은 모 외주 개발사의 인프라 네트워크 구성도 아키텍처 2가지와 이에 대한 설명이다. 지문과 그림의 개념을 파악하여 각 질문에 답하시오.\n\n[구성도 A]: [외부망] ➔ [스크리닝 라우터] ➔ [배스천 호스트] ➔ [내부망 호스트]\n\n[구성도 B]: [외부망] ➔ [외부 라우터] ➔ [DMZ 구간 (Web/Bastion)] ➔ [내부 라우터] ➔ [내부망]\n\n(1) **[구성도 A]**와 **[구성도 B]**의 네트워크 방화벽 토폴로지 구조 정확한 명칭을 각각 쓰시오. (4점)\n\n(2) [구성도 A] 구조의 치명적인 취약점 중 하나는 1차 방어선인 스크리닝 라우터가 해킹당하거나, 내부의 특정 핵심 호스트인 **'이 장비'**가 해커에게 완벽히 장악(침해)당할 경우 내부 전체 네트워크가 무방비로 노출된다는 점이다. 공격의 징검다리가 되는 '이 장비(서버)'의 명칭을 쓰시오. (3점)\n\n(3) [구성도 B] 구조가 **[구성도 A]**에 비해 외부 공격으로부터 **내부망(내부 자산)을 보호하는 데 있어 훨씬 더 안전하고 강력한 기술적 우위성(이유)**을 서술하시오.",
+    "answer": "(1) 명칭: [구성도 A] Screened Host Gateway / [구성도 B] Screened Subnet Gateway \n\n(2) 장비 명칭: Bastion Host (배스천 호스트) \n\n(3) 우위성 서술 예시: [구성도 B]는 내·외부 라우터 사이에 독립된 완충 구간인 DMZ 서브넷을 가지고 있기 때문에, 외부 라우터와 DMZ에 있는 웹 서버나 배스천 호스트가 해커에게 완벽히 장악당하더라도 안쪽에 위치한 '내부 스크리닝 라우터'가 2차 방어선 역할을 수행하여 외부 공격자가 내부망 자산으로 직접 진입하는 것을 물리적·논리적으로 차단해 주기 때문이다.",
+    "keywords": [
+      "장비 명칭: Bastion Host (배스천 호스트)"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17827,10 +17812,10 @@
     "number": 24,
     "type": "서술형",
     "points": 5,
-    "question": "(1) 명칭: [구성도 A] Screened Host Gateway / [구성도 B] Screened Subnet Gateway \n\n(2) 장비 명칭: Bastion Host (배스천 호스트) \n\n(3) 우위성 서술 예시: [구성도 B]는 내·외부 라우터 사이에 독립된 완충 구간인 DMZ 서브넷을 가지고 있기 때문에, 외부 라우터와 DMZ에 있는 웹 서버나 배스천 호스트가 해커에게 완벽히 장악당하더라도 안쪽에 위치한 '내부 스크리닝 라우터'가 2차 방어선 역할을 수행하여 외부 공격자가 내부망 자산으로 직접 진입하는 것을 물리적·논리적으로 차단해 주기 때문이다.",
-    "answer": "다음은 모 외주 개발사의 인프라 네트워크 구성도 아키텍처 2가지와 이에 대한 설명이다. 지문과 그림의 개념을 파악하여 각 질문에 답하시오.\n\n[구성도 A]: [외부망] ➔ [스크리닝 라우터] ➔ [배스천 호스트] ➔ [내부망 호스트]\n\n[구성도 B]: [외부망] ➔ [외부 라우터] ➔ [DMZ 구간 (Web/Bastion)] ➔ [내부 라우터] ➔ [내부망]\n\n(1) **[구성도 A]**와 **[구성도 B]**의 네트워크 방화벽 토폴로지 구조 정확한 명칭을 각각 쓰시오. (4점)\n\n(2) [구성도 A] 구조의 치명적인 취약점 중 하나는 1차 방어선인 스크리닝 라우터가 해킹당하거나, 내부의 특정 핵심 호스트인 **'이 장비'**가 해커에게 완벽히 장악(침해)당할 경우 내부 전체 네트워크가 무방비로 노출된다는 점이다. 공격의 징검다리가 되는 '이 장비(서버)'의 명칭을 쓰시오. (3점)\n\n(3) [구성도 B] 구조가 **[구성도 A]**에 비해 외부 공격으로부터 **내부망(내부 자산)을 보호하는 데 있어 훨씬 더 안전하고 강력한 기술적 우위성(이유)**을 서술하시오.",
+    "question": "사내 웹 서버가 외부로부터 대규모 TCP SYN Flooding 공격을 받아 마비되는 사고가 발생하였다. 보안 담당자 T 씨는 시스템 환경 설정 변경 및 네트워크 보안 장비 도입을 통해 이를 방어하고자 한다. SYN Flooding 공격을 방어하기 위해 취할 수 있는 구체적인 기술적 대책 3가지를 시스템 설정과 네트워크 보안 장비 관점에서 나누어 서술하시오.",
+    "answer": "정답 예시 (아래 중 3가지 기술 시 만점, 각 3.3점 부과):\n\nSYN Cookie (신 쿠키) 활성화: 서버의 백로그 큐가 가득 차더라도 가용 연결을 유지할 수 있도록, Half-Open 상태에서 자원을 할당하지 않고 암호화된 쿠키 값을 SYN+ACK의 시퀀스 넘버에 담아 보낸 뒤, 최종 ACK가 돌아오면 그때 자원을 할당하는 기술을 적용한다.\n\nBacklog Queue 크기 확장: 리눅스 커널 설정(sysctl -w net.ipv4.tcp_max_syn_backlog=[크기])을 통해 서버가 동시에 버틸 수 있는 백로그 큐의 임계 크기를 대폭 늘려준다.\n\nSYN Timeout 시간 단축: 서버가 ACK를 기다리는 대기 시간(tcp_synack_retries 값 감소 등)을 줄여서, 응답이 없는 Half-Open 연결 정보를 백로그 큐에서 빠르게 삭제(회수)하도록 유도한다.\n\n방화벽/DDoS 대응 장비의 위조 검증 (SYN Proxy): 네트워크 전방의 보안 장비가 서버 대신 SYN 요청을 받아 3-Way Handshaking을 대신 완료(인증)해 보고, 정상적인 연결임이 검증된 트래픽만 서버로 넘겨주는 SYN Proxy 기능을 활성화한다.",
     "keywords": [
-      "[구성도 A]: [외부망] ➔ [스크리닝 라우터] ➔ [배스천 호스트] ➔ [내부망 호스트]"
+      "정답 예시 (아래 중 3가지 기술 시 만점, 각 3.3점 부과):"
     ],
     "commentary": "",
     "difficulty": "",
@@ -17844,9 +17829,11 @@
     "number": 25,
     "type": "서술형",
     "points": 5,
-    "question": "정답 예시 (아래 중 3가지 기술 시 만점, 각 3.3점 부과):\n\nSYN Cookie (신 쿠키) 활성화: 서버의 백로그 큐가 가득 차더라도 가용 연결을 유지할 수 있도록, Half-Open 상태에서 자원을 할당하지 않고 암호화된 쿠키 값을 SYN+ACK의 시퀀스 넘버에 담아 보낸 뒤, 최종 ACK가 돌아오면 그때 자원을 할당하는 기술을 적용한다.\n\nBacklog Queue 크기 확장: 리눅스 커널 설정(sysctl -w net.ipv4.tcp_max_syn_backlog=[크기])을 통해 서버가 동시에 버틸 수 있는 백로그 큐의 임계 크기를 대폭 늘려준다.\n\nSYN Timeout 시간 단축: 서버가 ACK를 기다리는 대기 시간(tcp_synack_retries 값 감소 등)을 줄여서, 응답이 없는 Half-Open 연결 정보를 백로그 큐에서 빠르게 삭제(회수)하도록 유도한다.\n\n방화벽/DDoS 대응 장비의 위조 검증 (SYN Proxy): 네트워크 전방의 보안 장비가 서버 대신 SYN 요청을 받아 3-Way Handshaking을 대신 완료(인증)해 보고, 정상적인 연결임이 검증된 트래픽만 서버로 넘겨주는 SYN Proxy 기능을 활성화한다.",
-    "answer": "사내 웹 서버가 외부로부터 대규모 TCP SYN Flooding 공격을 받아 마비되는 사고가 발생하였다. 보안 담당자 T 씨는 시스템 환경 설정 변경 및 네트워크 보안 장비 도입을 통해 이를 방어하고자 한다. SYN Flooding 공격을 방어하기 위해 취할 수 있는 구체적인 기술적 대책 3가지를 시스템 설정과 네트워크 보안 장비 관점에서 나누어 서술하시오.",
-    "keywords": [],
+    "question": "보안 분석가 U 씨는 침입탐지시스템(IDS)에서 다량의 분할된 패킷이 유입되는 패턴을 발견하고 패킷 덤프를 수행하여 아래와 같은 수치를 확인하였다.\n\n패킷 1: 데이터 길이 800 바이트, Fragment Offset = 0\n\n패킷 2: 데이터 길이 800 바이트, Fragment Offset = 400\n\n(1) 위 패킷 데이터 구조를 분석하여 유추할 수 있는 구체적인 DoS 공격 기법의 명칭을 쓰시오. (2점)\n\n(2) 해당 패킷이 수신측 시스템에 유입되었을 때 운영체제가 왜 다운되거나 마비되는지 그 기술적인 원인을 오프셋 수치 분석과 연계하여 서술하시오. (4점)",
+    "answer": "(1) 정답: Teardrop Attack (또는 티어드롭 공격) (2점)\n\n(2) 정답 예시: 패킷 1의 범위가 0 ~ 799 바이트임에도 불구하고, 패킷 2의 오프셋 시작점(Fragment Offset = 400)이 패킷 1의 중간 영역으로 조작되어 들어왔다. 이로 인해 두 패킷 간의 데이터 구간 중첩(Overlap)이 발생하며, 이를 정상적으로 처리하지 못하는 운영체제는 패킷 재조합(Reassembly) 루프에서 오류를 일으켜 커널 패닉 또는 시스템 크래시를 유발하게 된다. (4점)",
+    "keywords": [
+      "정답: Teardrop Attack (또는 티어드롭 공격) (2점)"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17859,13 +17846,9 @@
     "number": 26,
     "type": "서술형",
     "points": 5,
-    "question": "(1) 정답: Teardrop Attack (또는 티어드롭 공격) (2점)\n\n(2) 정답 예시: 패킷 1의 범위가 0 ~ 799 바이트임에도 불구하고, 패킷 2의 오프셋 시작점(Fragment Offset = 400)이 패킷 1의 중간 영역으로 조작되어 들어왔다. 이로 인해 두 패킷 간의 데이터 구간 중첩(Overlap)이 발생하며, 이를 정상적으로 처리하지 못하는 운영체제는 패킷 재조합(Reassembly) 루프에서 오류를 일으켜 커널 패닉 또는 시스템 크래시를 유발하게 된다. (4점)",
-    "answer": "보안 분석가 U 씨는 침입탐지시스템(IDS)에서 다량의 분할된 패킷이 유입되는 패턴을 발견하고 패킷 덤프를 수행하여 아래와 같은 수치를 확인하였다.\n\n패킷 1: 데이터 길이 800 바이트, Fragment Offset = 0\n\n패킷 2: 데이터 길이 800 바이트, Fragment Offset = 400\n\n(1) 위 패킷 데이터 구조를 분석하여 유추할 수 있는 구체적인 DoS 공격 기법의 명칭을 쓰시오. (2점)\n\n(2) 해당 패킷이 수신측 시스템에 유입되었을 때 운영체제가 왜 다운되거나 마비되는지 그 기술적인 원인을 오프셋 수치 분석과 연계하여 서술하시오. (4점)",
-    "keywords": [
-      "패킷 1: 데이터 길이 800 바이트, Fragment Offset = 0",
-      "패킷 2: 데이터 길이 800 바이트, Fragment Offset = 400",
-      "위 패킷 데이터 구조를 분석하여 유추할 수 있는 구체적인 DoS 공격 기법의 명칭을 쓰시오. (2점)"
-    ],
+    "question": "시스템 및 네트워크 단에서 Teardrop 공격을 원천적으로 차단하기 위해 취할 수 있는 근본적인 대응 대책 2가지를 기술하시오.",
+    "answer": "운영체제 취약점 패치: 패킷 재조합 오류를 해결하기 위해 해당 OS 및 커널의 최신 보안 패치(Hotfix)를 적용한다.\n\n네트워크 보안 장비 활용: 방화벽이나 침입차단시스템(IPS) 단에서 분할 패킷 유입 시 오프셋의 중첩 여부를 사전에 검사하여 비정상 패킷을 폐기(Drop)하도록 룰셋을 설정한다.",
+    "keywords": [],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17878,8 +17861,8 @@
     "number": 27,
     "type": "서술형",
     "points": 5,
-    "question": "운영체제 취약점 패치: 패킷 재조합 오류를 해결하기 위해 해당 OS 및 커널의 최신 보안 패치(Hotfix)를 적용한다.\n\n네트워크 보안 장비 활용: 방화벽이나 침입차단시스템(IPS) 단에서 분할 패킷 유입 시 오프셋의 중첩 여부를 사전에 검사하여 비정상 패킷을 폐기(Drop)하도록 룰셋을 설정한다.",
-    "answer": "시스템 및 네트워크 단에서 Teardrop 공격을 원천적으로 차단하기 위해 취할 수 있는 근본적인 대응 대책 2가지를 기술하시오.",
+    "question": "보안 관제 센터(SOC)의 엔지니어 V 씨는 사내에 SIEM 솔루션을 구축하면서 다양한 상관관계 룰(Correlation Rule)을 정의하고 있다.\n\n**SIEM에서 '상관관계 분석' 기술이 왜 필요한지 그 개념적 유용성(목적)**을 단일 로그 분석과 비교하여 서술하시오.",
+    "answer": "단일 보안 장비의 로그만 보면 정상적이거나 단순한 오류로 보일 수 있는 파편화된 이벤트들을, 시간, IP, 목적지 등 공통 요소를 기준으로 연계하여 추적함으로써 전체적인 공격 맥락을 파악하고 정교한 지능형 위협(APT)을 정확하게 탐지하기 위해 필요하다.",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -17893,9 +17876,12 @@
     "number": 28,
     "type": "서술형",
     "points": 5,
-    "question": "단일 보안 장비의 로그만 보면 정상적이거나 단순한 오류로 보일 수 있는 파편화된 이벤트들을, 시간, IP, 목적지 등 공통 요소를 기준으로 연계하여 추적함으로써 전체적인 공격 맥락을 파악하고 정교한 지능형 위협(APT)을 정확하게 탐지하기 위해 필요하다.",
-    "answer": "보안 관제 센터(SOC)의 엔지니어 V 씨는 사내에 SIEM 솔루션을 구축하면서 다양한 상관관계 룰(Correlation Rule)을 정의하고 있다.\n\n**SIEM에서 '상관관계 분석' 기술이 왜 필요한지 그 개념적 유용성(목적)**을 단일 로그 분석과 비교하여 서술하시오.",
-    "keywords": [],
+    "question": "보안 담당자 W 씨는 침입탐지시스템(IDS)으로부터 비정상적인 포트 접근 경고를 받고, 콘솔 상에서 공격자가 실행한 것으로 추정되는 nmap 명령어와 서버 측 패킷 덤프 내역을 확보하였다.\n\n[실행된 명령어]\n\nBash\n\n\n# nmap -sX -p 80 10.10.10.5\n[서버 측 패킷 수신 기록]\n\n외부 IP로부터 TCP Flags 가 **0x029 (FIN, PSH, URG)**로 설정된 패킷 유입됨.\n\n대상 서버는 해당 패킷을 수신한 후 **아무런 응답 패킷도 전송하지 않고 무시(Drop)**함.\n\n(1) 위 명령어에 사용된 스캔 기법의 정확한 명칭을 쓰시오. (3점)\n\n(2) 패킷 수신 기록을 바탕으로 분석했을 때, 현재 대상 서버의 **80번 포트 상태(열림/닫힘)**를 쓰고, 그렇게 판단할 수 있는 **기술적인 근거(TCP 표준 규격에 따른 동작 원리)**를 서술하시오. (7점)",
+    "answer": "(1) 명칭: Xmas 스캔 (또는 크리스마스 스캔 / Christmas Tree Scan) (3점)\n\n(2) 포트 상태: 열림 (Open) (2점)\n\n기술적 근거: TCP 표준 규격(RFC 793)에 따르면 Xmas 스캔 패킷을 수신했을 때, 대상 시스템의 포트가 닫혀있는 경우에는 RST(또는 RST+ACK) 패킷을 반환해야 하지만, 포트가 열려있는 경우에는 해당 비정상 패킷을 그냥 폐기하고 아무런 응답을 보내지 않기(No Response) 때문이다. (5점)",
+    "keywords": [
+      "명칭: Xmas 스캔 (또는 크리스마스 스캔 / Christmas Tree Scan) (3점)",
+      "포트 상태: 열림 (Open) (2점)"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17908,15 +17894,9 @@
     "number": 29,
     "type": "서술형",
     "points": 5,
-    "question": "(1) 명칭: Xmas 스캔 (또는 크리스마스 스캔 / Christmas Tree Scan) (3점)\n\n(2) 포트 상태: 열림 (Open) (2점)\n\n기술적 근거: TCP 표준 규격(RFC 793)에 따르면 Xmas 스캔 패킷을 수신했을 때, 대상 시스템의 포트가 닫혀있는 경우에는 RST(또는 RST+ACK) 패킷을 반환해야 하지만, 포트가 열려있는 경우에는 해당 비정상 패킷을 그냥 폐기하고 아무런 응답을 보내지 않기(No Response) 때문이다. (5점)",
-    "answer": "보안 담당자 W 씨는 침입탐지시스템(IDS)으로부터 비정상적인 포트 접근 경고를 받고, 콘솔 상에서 공격자가 실행한 것으로 추정되는 nmap 명령어와 서버 측 패킷 덤프 내역을 확보하였다.\n\n[실행된 명령어]\n\nBash\n\n\n# nmap -sX -p 80 10.10.10.5\n[서버 측 패킷 수신 기록]\n\n외부 IP로부터 TCP Flags 가 **0x029 (FIN, PSH, URG)**로 설정된 패킷 유입됨.\n\n대상 서버는 해당 패킷을 수신한 후 **아무런 응답 패킷도 전송하지 않고 무시(Drop)**함.\n\n(1) 위 명령어에 사용된 스캔 기법의 정확한 명칭을 쓰시오. (3점)\n\n(2) 패킷 수신 기록을 바탕으로 분석했을 때, 현재 대상 서버의 **80번 포트 상태(열림/닫힘)**를 쓰고, 그렇게 판단할 수 있는 **기술적인 근거(TCP 표준 규격에 따른 동작 원리)**를 서술하시오. (7점)",
-    "keywords": [
-      "[실행된 명령어]",
-      "Bash",
-      "# nmap -sX -p 80 10.10.10.5",
-      "[서버 측 패킷 수신 기록]",
-      "외부 IP로부터 TCP Flags 가 **0x029 (FIN, PSH, URG)**로 설정된 패킷 유입됨."
-    ],
+    "question": "인프라 보안 팀의 X 씨는 사내 망에 서킷 게이트웨이(Circuit Gateway) 방식의 방화벽을 도입하여 운영 중이다.\n\n해당 방식이 이전 세대인 어플리케이션 게이트웨이(Application Gateway) 방식과 비교했을 때 가질 수 있는 기술적 장점과 단점(한계점)을 각각 1가지씩 서술하시오. (6점)",
+    "answer": "장점: 서비스(프로토콜)별로 각각 전용 프록시 데몬을 설치할 필요 없이 하나의 범용 프록시(SOCKS)를 사용하여 모든 서비스를 처리할 수 있으므로 구축이 용이하고 성능(처리 속도)이 더 빠르다. (3점)\n\n단점: 패킷 내부의 데이터 영역(콘텐츠)을 분석하거나 필터링하는 기능이 없기 때문에, 데이터 내부에 숨겨진 어플리케이션 계층의 악성 코드 공격이나 취약점 유입을 차단할 수 없다. (3점)",
+    "keywords": [],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17929,9 +17909,11 @@
     "number": 30,
     "type": "서술형",
     "points": 5,
-    "question": "장점: 서비스(프로토콜)별로 각각 전용 프록시 데몬을 설치할 필요 없이 하나의 범용 프록시(SOCKS)를 사용하여 모든 서비스를 처리할 수 있으므로 구축이 용이하고 성능(처리 속도)이 더 빠르다. (3점)\n\n단점: 패킷 내부의 데이터 영역(콘텐츠)을 분석하거나 필터링하는 기능이 없기 때문에, 데이터 내부에 숨겨진 어플리케이션 계층의 악성 코드 공격이나 취약점 유입을 차단할 수 없다. (3점)",
-    "answer": "인프라 보안 팀의 X 씨는 사내 망에 서킷 게이트웨이(Circuit Gateway) 방식의 방화벽을 도입하여 운영 중이다.\n\n해당 방식이 이전 세대인 어플리케이션 게이트웨이(Application Gateway) 방식과 비교했을 때 가질 수 있는 기술적 장점과 단점(한계점)을 각각 1가지씩 서술하시오. (6점)",
-    "keywords": [],
+    "question": "보안 담당자 Y 씨는 방화벽, IDS, IPS 등 이기종 보안 장비를 연동하여 ESM을 구축하였다.\n\nESM 매니저가 서로 다른 제조사의 보안 장비로부터 들어오는 로그를 분석하기 전, 시간대 표기법이나 이벤트 명칭을 일정한 표준 형식으로 일치시켜 주는 '이 과정'의 명칭을 쓰고, 이 과정이 왜 필수적으로 선행되어야 하는지 그 필요성을 서술하시오. (6점)",
+    "answer": "정답 명칭: 정규화 (Normalization) (2점)\n\n필요성: 제조사마다 로그를 기록하는 문법(포맷), 날짜/시간 표기 방식, 공격 위험도 점수 등이 모두 다르다. 이를 하나의 표준 표준 포맷으로 통일해 주지 않으면 ESM 매니저 엔진이 데이터를 연계하여 종합적인 위협 규칙(상관관계 룰)을 정확하게 판단하거나 분석할 수 없기 때문이다. (4점)",
+    "keywords": [
+      "정답 명칭: 정규화 (Normalization) (2점)"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17944,10 +17926,10 @@
     "number": 31,
     "type": "서술형",
     "points": 5,
-    "question": "정답 명칭: 정규화 (Normalization) (2점)\n\n필요성: 제조사마다 로그를 기록하는 문법(포맷), 날짜/시간 표기 방식, 공격 위험도 점수 등이 모두 다르다. 이를 하나의 표준 표준 포맷으로 통일해 주지 않으면 ESM 매니저 엔진이 데이터를 연계하여 종합적인 위협 규칙(상관관계 룰)을 정확하게 판단하거나 분석할 수 없기 때문이다. (4점)",
-    "answer": "보안 담당자 Y 씨는 방화벽, IDS, IPS 등 이기종 보안 장비를 연동하여 ESM을 구축하였다.\n\nESM 매니저가 서로 다른 제조사의 보안 장비로부터 들어오는 로그를 분석하기 전, 시간대 표기법이나 이벤트 명칭을 일정한 표준 형식으로 일치시켜 주는 '이 과정'의 명칭을 쓰고, 이 과정이 왜 필수적으로 선행되어야 하는지 그 필요성을 서술하시오. (6점)",
+    "question": "보안 엔지니어 Z 씨는 사내 경계망에 침입방지시스템(IPS)을 추가하려고 한다. 기존 라우터 설정을 유지하기 위해 IPS의 네트워크 모드를 **브릿지 모드(Transparent Mode)**로 설정하여 구축을 완료하였다.\n\n이와 같이 보안 장비를 일반 라우터 방식(L3 모드)이 아닌 브릿지 모드로 구축했을 때 얻을 수 있는 기술적 장점(보안적 우위 및 가용성) 2가지를 서술하시오. (6점)",
+    "answer": "정답 예시 (아래 중 2가지 서술 시 만점, 각 3점):\n\n네트워크 설정 불변: 기존 네트워크 인프라의 IP 주소 체계, 서브넷 설정, 라우팅 테이블을 단 하나도 변경하지 않고 장비를 투명하게 배치할 수 있어 도입 및 유지가 편리하다.\n\n장비 자체 공격 차단: 보안 장비에 외부 노출용 IP를 직접 할당하지 않기 때문에, 해커가 보안 장비 자체를 인식하기 힘들어 방화벽/IPS를 타깃으로 한 직접적인 해킹이나 스캔 공격을 원천 무력화할 수 있다.\n\n가용성 보장 (Bypass 지원): 브릿지 모드 장비는 하드웨어 장애 발생 시 패킷을 차단하지 않고 그대로 통과시키는 Bypass(바이패스) 기능과 연계하기 용이하여, 장비 장애가 전체 네트워크 마비로 이어지는 위험을 최소화한다.",
     "keywords": [
-      "보안 담당자 Y 씨는 방화벽, IDS, IPS 등 이기종 보안 장비를 연동하여 ESM을 구축하였다."
+      "정답 예시 (아래 중 2가지 서술 시 만점, 각 3점):"
     ],
     "commentary": "",
     "difficulty": "",
@@ -17961,8 +17943,8 @@
     "number": 32,
     "type": "서술형",
     "points": 5,
-    "question": "정답 예시 (아래 중 2가지 서술 시 만점, 각 3점):\n\n네트워크 설정 불변: 기존 네트워크 인프라의 IP 주소 체계, 서브넷 설정, 라우팅 테이블을 단 하나도 변경하지 않고 장비를 투명하게 배치할 수 있어 도입 및 유지가 편리하다.\n\n장비 자체 공격 차단: 보안 장비에 외부 노출용 IP를 직접 할당하지 않기 때문에, 해커가 보안 장비 자체를 인식하기 힘들어 방화벽/IPS를 타깃으로 한 직접적인 해킹이나 스캔 공격을 원천 무력화할 수 있다.\n\n가용성 보장 (Bypass 지원): 브릿지 모드 장비는 하드웨어 장애 발생 시 패킷을 차단하지 않고 그대로 통과시키는 Bypass(바이패스) 기능과 연계하기 용이하여, 장비 장애가 전체 네트워크 마비로 이어지는 위험을 최소화한다.",
-    "answer": "보안 엔지니어 Z 씨는 사내 경계망에 침입방지시스템(IPS)을 추가하려고 한다. 기존 라우터 설정을 유지하기 위해 IPS의 네트워크 모드를 **브릿지 모드(Transparent Mode)**로 설정하여 구축을 완료하였다.\n\n이와 같이 보안 장비를 일반 라우터 방식(L3 모드)이 아닌 브릿지 모드로 구축했을 때 얻을 수 있는 기술적 장점(보안적 우위 및 가용성) 2가지를 서술하시오. (6점)",
+    "question": "사내 사설 네트워크망 내에서 악성코드에 감염된 특정 단말기가 게이트웨이의 MAC 주소를 도용하는 ARP 스푸핑 공격을 수행하여 전사적인 인터넷 연결 품질 저하 및 중요 패킷 유출 사고가 발생하였다.\n\n보안 담당자 A 씨가 호스트 단말기 단위 및 스위치 장비 단에서 각각 취할 수 있는 구체적인 기술적 방어 대책 2가지를 서술하시오. (6점)",
+    "answer": "호스트 단말기 대책 (Static 옵션 설정): 운영체제의 명령창(CMD 등)에서 주요 IP와 MAC 주소의 매핑 정보를 유동적인 Dynamic 상태가 아닌 고정적인 Static(정적) 상태로 직접 수동 바인딩(arp -s [IP] [MAC])하여 가짜 ARP 패킷이 들어오더라도 캐시 테이블이 변조되지 않도록 고정한다. (3점)\n\n스위치 장비 단 대책 (Dynamic ARP Inspection): 네트워크 스위치 장비에서 DAI(Dynamic ARP Inspection) 기능을 활성화하여, 스위치를 통과하는 ARP 패킷의 유효성을 검증하고 바인딩 테이블과 일치하지 않는 위조된 ARP 응답을 사전에 차단(Drop)한다. (3점)",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -17976,9 +17958,11 @@
     "number": 33,
     "type": "서술형",
     "points": 5,
-    "question": "호스트 단말기 대책 (Static 옵션 설정): 운영체제의 명령창(CMD 등)에서 주요 IP와 MAC 주소의 매핑 정보를 유동적인 Dynamic 상태가 아닌 고정적인 Static(정적) 상태로 직접 수동 바인딩(arp -s [IP] [MAC])하여 가짜 ARP 패킷이 들어오더라도 캐시 테이블이 변조되지 않도록 고정한다. (3점)\n\n스위치 장비 단 대책 (Dynamic ARP Inspection): 네트워크 스위치 장비에서 DAI(Dynamic ARP Inspection) 기능을 활성화하여, 스위치를 통과하는 ARP 패킷의 유효성을 검증하고 바인딩 테이블과 일치하지 않는 위조된 ARP 응답을 사전에 차단(Drop)한다. (3점)",
-    "answer": "사내 사설 네트워크망 내에서 악성코드에 감염된 특정 단말기가 게이트웨이의 MAC 주소를 도용하는 ARP 스푸핑 공격을 수행하여 전사적인 인터넷 연결 품질 저하 및 중요 패킷 유출 사고가 발생하였다.\n\n보안 담당자 A 씨가 호스트 단말기 단위 및 스위치 장비 단에서 각각 취할 수 있는 구체적인 기술적 방어 대책 2가지를 서술하시오. (6점)",
-    "keywords": [],
+    "question": "스위치의 CAM 테이블 공간을 마비시키는 MAC 플러딩 공격을 네트워크 코어 스위치 장비 단에서 원천 차단하기 위해 설정할 수 있는 L2 보안 기능의 명칭과 그 차단 제어 원리를 서술하시오.",
+    "answer": "보안 기능 명칭: 포트 보안 (Port Security) (2점)\n\n차단 제어 원리: 스위치의 각 물리 포트(Port)별로 접속할 수 있는 정상 MAC 주소의 최대 개수를 제한(임계치 설정)하거나, 사전에 허용된 특정 MAC 주소만 통신을 허용하도록 규칙을 바인딩한다. 이를 위반하여 무작위 MAC 주소가 대량 유입될 경우 해당 포트를 자동으로 차단(Shutdown)하거나 패킷을 폐기(Drop)하여 전체 테이블 고갈을 방어한다. (3점)",
+    "keywords": [
+      "보안 기능 명칭: 포트 보안 (Port Security) (2점)"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -17991,9 +17975,11 @@
     "number": 34,
     "type": "서술형",
     "points": 5,
-    "question": "보안 기능 명칭: 포트 보안 (Port Security) (2점)\n\n차단 제어 원리: 스위치의 각 물리 포트(Port)별로 접속할 수 있는 정상 MAC 주소의 최대 개수를 제한(임계치 설정)하거나, 사전에 허용된 특정 MAC 주소만 통신을 허용하도록 규칙을 바인딩한다. 이를 위반하여 무작위 MAC 주소가 대량 유입될 경우 해당 포트를 자동으로 차단(Shutdown)하거나 패킷을 폐기(Drop)하여 전체 테이블 고갈을 방어한다. (3점)",
-    "answer": "스위치의 CAM 테이블 공간을 마비시키는 MAC 플러딩 공격을 네트워크 코어 스위치 장비 단에서 원천 차단하기 위해 설정할 수 있는 L2 보안 기능의 명칭과 그 차단 제어 원리를 서술하시오.",
-    "keywords": [],
+    "question": "보안 진단 요원 B 씨는 사내 레거시 웹 서버를 점검하던 중 Heartbleed 취약점이 잔존하고 있음을 확인하였다.\n\n(1) 이 취약점이 서버 메모리 내부의 중요 정보를 공격자에게 유출하게 만드는 **근본적인 소스코드 상의 취약한 원인(공격 원리)**을 서술하시오. (3점)\n\n(2) 이 취약점을 해결하기 위해 서버 관리자가 취할 수 있는 가장 확실한 조치(대책) 2가지를 기술하시오. (3점)",
+    "answer": "(1) 클라이언트가 전송한 Heartbeat 패킷의 실제 페이로드(데이터) 크기와 헤더에 명시된 'Payload Length(길이 필드)'의 일치 여부를 검사하지 않는 입력값 검증 부재로 인해 발생한다. 서버는 길이 필드만큼의 메모리 데이터를 무조건 반환하므로, 메모리에 남아있던 다른 유저의 세션 및 개인키 정보가 유출된다.\n\n(2) \nOpenSSL 라이브러리를 해당 취약점이 패치된 최신 버전으로 업데이트(업그레이드)한다.\n\n업데이트가 불가할 경우, OpenSSL 컴파일 시 하트비트 기능을 비활성화하는 옵션(-DOPENSSL_NO_HEARTBEATS)을 적용하여 재컴파일한다.\n\n채점 기준: 'OpenSSL 버전 업데이트' 또는 '하트비트 기능 비활성화 옵션 컴파일' 맥락이 서술되면 만점. (추가적으로 유출 가능성이 있는 '서버 인증서/개인키 재발급'도 인정)",
+    "keywords": [
+      "OpenSSL 라이브러리를 해당 취약점이 패치된 최신 버전으로 업데이트(업그레이드)한다."
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -18006,9 +17992,11 @@
     "number": 35,
     "type": "서술형",
     "points": 5,
-    "question": "(1) 클라이언트가 전송한 Heartbeat 패킷의 실제 페이로드(데이터) 크기와 헤더에 명시된 'Payload Length(길이 필드)'의 일치 여부를 검사하지 않는 입력값 검증 부재로 인해 발생한다. 서버는 길이 필드만큼의 메모리 데이터를 무조건 반환하므로, 메모리에 남아있던 다른 유저의 세션 및 개인키 정보가 유출된다.\n\n(2) \nOpenSSL 라이브러리를 해당 취약점이 패치된 최신 버전으로 업데이트(업그레이드)한다.\n\n업데이트가 불가할 경우, OpenSSL 컴파일 시 하트비트 기능을 비활성화하는 옵션(-DOPENSSL_NO_HEARTBEATS)을 적용하여 재컴파일한다.\n\n채점 기준: 'OpenSSL 버전 업데이트' 또는 '하트비트 기능 비활성화 옵션 컴파일' 맥락이 서술되면 만점. (추가적으로 유출 가능성이 있는 '서버 인증서/개인키 재발급'도 인정)",
-    "answer": "보안 진단 요원 B 씨는 사내 레거시 웹 서버를 점검하던 중 Heartbleed 취약점이 잔존하고 있음을 확인하였다.\n\n(1) 이 취약점이 서버 메모리 내부의 중요 정보를 공격자에게 유출하게 만드는 **근본적인 소스코드 상의 취약한 원인(공격 원리)**을 서술하시오. (3점)\n\n(2) 이 취약점을 해결하기 위해 서버 관리자가 취할 수 있는 가장 확실한 조치(대책) 2가지를 기술하시오. (3점)",
-    "keywords": [],
+    "question": "OS 개발사들은 인텔 CPU에서 발생하는 멜트다운(Meltdown) 취약점을 방어하기 위해 커널 메모리를 사용자 공간으로부터 철저히 격리하는 소프트웨어 패치를 배포하였다.\n\n이 **커널 구조 격리 기술의 명칭(약어)**을 쓰고, 이 패치를 적용했을 때 시스템에 발생할 수 있는 치명적인 성능적 부작용을 서술하시오. (6점)",
+    "answer": "정답 명칭: KPTI (Kernel Page Table Isolation, 커널 페이지 테이블 격리) (2점)\n\n(참고: 원래 명칭인 KAISER도 정답 인정)\n\n성능적 부작용: 응용 프로그램이 실행되면서 커널 영역의 자원을 요청할 때마다 사용자 모드와 커널 모드 간의 컨텍스트 스위칭(Context Switching) 오버헤드가 급격히 증가하게 된다. 이로 인해 CPU 연산이 잦은 시스템 환경에서는 전반적인 CPU 성능(처리 속도)이 저하되는 현상이 발생한다. (4점)",
+    "keywords": [
+      "(참고: 원래 명칭인 KAISER도 정답 인정)"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -18021,9 +18009,15 @@
     "number": 36,
     "type": "서술형",
     "points": 5,
-    "question": "정답 명칭: KPTI (Kernel Page Table Isolation, 커널 페이지 테이블 격리) (2점)\n\n(참고: 원래 명칭인 KAISER도 정답 인정)\n\n성능적 부작용: 응용 프로그램이 실행되면서 커널 영역의 자원을 요청할 때마다 사용자 모드와 커널 모드 간의 컨텍스트 스위칭(Context Switching) 오버헤드가 급격히 증가하게 된다. 이로 인해 CPU 연산이 잦은 시스템 환경에서는 전반적인 CPU 성능(처리 속도)이 저하되는 현상이 발생한다. (4점)",
-    "answer": "OS 개발사들은 인텔 CPU에서 발생하는 멜트다운(Meltdown) 취약점을 방어하기 위해 커널 메모리를 사용자 공간으로부터 철저히 격리하는 소프트웨어 패치를 배포하였다.\n\n이 **커널 구조 격리 기술의 명칭(약어)**을 쓰고, 이 패치를 적용했을 때 시스템에 발생할 수 있는 치명적인 성능적 부작용을 서술하시오. (6점)",
-    "keywords": [],
+    "question": "시스템 보안 담당자 Z 씨는 운영 중인 리눅스 서버의 Shellshock 취약점 잔존 여부를 로컬 콘솔 상에서 수동 진단하고자 아래와 같은 명령을 실행하였다.\n\nBash\n$ env x='() { :; }; echo vulnerable' bash -c \"echo test\"\n\n(1) 위 검증 명령을 실행했을 때, 해당 리눅스 시스템이 **Shellshock 취약점에 노출되어 있는 상태(Vulnerable)**라면 화면 콘솔에 최종 출력되는 문구 2줄을 순서대로 쓰시오. (4점)\n\n(2) 만약 최신 보안 패치가 완료되어 안전한 시스템 상태라면 화면 콘솔에 최종 출력되는 문구를 쓰시오. (3점)\n\n(3) 이 취약점을 해결하기 위해 시스템 관리자가 취할 수 있는 가장 근본적인 조치 대책을 서술하시오. (3점)",
+    "answer": "(1) ```text\nvulnerable\ntest\n('vulnerable'과 'test'가 줄 바꿈 형태로 두 단어 모두 정확히 명시되어야 4점 만점 인정.)\n(2) test\n(3) 패키지 관리 도구를 사용하여 Bash라이브러리를 취약점이 해결된 최신 버전으로 업데이트한다.",
+    "keywords": [
+      "```text",
+      "vulnerable",
+      "test",
+      "test",
+      "패키지 관리 도구를 사용하여 Bash라이브러리를 취약점이 해결된 최신 버전으로 업데이트한다."
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -18036,13 +18030,10 @@
     "number": 37,
     "type": "서술형",
     "points": 5,
-    "question": "(1) ```text\nvulnerable\ntest\n('vulnerable'과 'test'가 줄 바꿈 형태로 두 단어 모두 정확히 명시되어야 4점 만점 인정.)\n(2) test\n(3) 패키지 관리 도구를 사용하여 Bash라이브러리를 취약점이 해결된 최신 버전으로 업데이트한다.",
-    "answer": "시스템 보안 담당자 Z 씨는 운영 중인 리눅스 서버의 Shellshock 취약점 잔존 여부를 로컬 콘솔 상에서 수동 진단하고자 아래와 같은 명령을 실행하였다.\n\nBash\n$ env x='() { :; }; echo vulnerable' bash -c \"echo test\"\n\n(1) 위 검증 명령을 실행했을 때, 해당 리눅스 시스템이 **Shellshock 취약점에 노출되어 있는 상태(Vulnerable)**라면 화면 콘솔에 최종 출력되는 문구 2줄을 순서대로 쓰시오. (4점)\n\n(2) 만약 최신 보안 패치가 완료되어 안전한 시스템 상태라면 화면 콘솔에 최종 출력되는 문구를 쓰시오. (3점)\n\n(3) 이 취약점을 해결하기 위해 시스템 관리자가 취할 수 있는 가장 근본적인 조치 대책을 서술하시오. (3점)",
+    "question": "보안 인프라 팀의 C 씨는 사내에서 운영 중인 일부 Memcached 캐시 서버가 외부 공격자들에 의해 DDoS 공격의 '반사판(Reflector)'으로 악용되고 있는 정황을 확인하였다.\n\n외부 해커들이 사내 Memcached 서버를 디도스 공격의 반사 장비로 악용하지 못하도록 시스템 및 네트워크 단에서 조치할 수 있는 구체적인 방어 대책 2가지를 서술하시오. (6점)",
+    "answer": "정답 예시 (아래 중 2가지 서술 시 만점, 각 3점):\n\nUDP 프로토콜 비활성화: Memcached의 가장 취약한 고리인 UDP 서비스를 원천 차단하기 위해, 실행 옵션 스크립트나 환경 설정 파일에서 UDP 포트를 비활성화(-U 0)하고 TCP 통신만을 허용하도록 제한한다.\n\n바인딩 주소 제한 (로컬호스트 고정): 외부 인터넷망에서 Memcached 서비스로 직접 접근하지 못하도록 환경 설정 변수(-l 127.0.0.1)를 수정하여 내부 로컬 호스트 또는 신뢰된 사설 내부 IP에서만 접속할 수 있도록 바인딩을 제한한다.\n\n방화벽을 통한 접근 제어 (ACL): 인프라 전방의 방화벽이나 인바운드 보안 규칙(Security Group)을 통해 외부망에서 들어오는 11211번 포트 트래픽을 완전히 차단(Drop)한다.",
     "keywords": [
-      "Bash",
-      "$ env x='() { :; }; echo vulnerable' bash -c \"echo test\"",
-      "만약 최신 보안 패치가 완료되어 안전한 시스템 상태라면 화면 콘솔에 최종 출력되는 문구를 쓰시오. (3점)",
-      "이 취약점을 해결하기 위해 시스템 관리자가 취할 수 있는 가장 근본적인 조치 대책을 서술하시오. (3점)"
+      "정답 예시 (아래 중 2가지 서술 시 만점, 각 3점):"
     ],
     "commentary": "",
     "difficulty": "",
@@ -18056,8 +18047,8 @@
     "number": 38,
     "type": "서술형",
     "points": 5,
-    "question": "정답 예시 (아래 중 2가지 서술 시 만점, 각 3점):\n\nUDP 프로토콜 비활성화: Memcached의 가장 취약한 고리인 UDP 서비스를 원천 차단하기 위해, 실행 옵션 스크립트나 환경 설정 파일에서 UDP 포트를 비활성화(-U 0)하고 TCP 통신만을 허용하도록 제한한다.\n\n바인딩 주소 제한 (로컬호스트 고정): 외부 인터넷망에서 Memcached 서비스로 직접 접근하지 못하도록 환경 설정 변수(-l 127.0.0.1)를 수정하여 내부 로컬 호스트 또는 신뢰된 사설 내부 IP에서만 접속할 수 있도록 바인딩을 제한한다.\n\n방화벽을 통한 접근 제어 (ACL): 인프라 전방의 방화벽이나 인바운드 보안 규칙(Security Group)을 통해 외부망에서 들어오는 11211번 포트 트래픽을 완전히 차단(Drop)한다.",
-    "answer": "보안 인프라 팀의 C 씨는 사내에서 운영 중인 일부 Memcached 캐시 서버가 외부 공격자들에 의해 DDoS 공격의 '반사판(Reflector)'으로 악용되고 있는 정황을 확인하였다.\n\n외부 해커들이 사내 Memcached 서버를 디도스 공격의 반사 장비로 악용하지 못하도록 시스템 및 네트워크 단에서 조치할 수 있는 구체적인 방어 대책 2가지를 서술하시오. (6점)",
+    "question": "보안 엔지니어 A 씨는 본사와 지사 간의 라우터 구간 보안을 강화하기 위해 IPSec VPN을 구축하고자 한다. IPSec은 적용 범위에 따라 **수송 모드(Transport Mode)**와 **터널 모드(Tunneling Mode)**로 구분되어 동작한다.\n\n이 중 **'터널 모드'를 적용했을 때 IP 패킷이 캡슐화되는 구체적인 구조적 특징(수송 모드와의 결정적 차이점)**을 패킷 헤더 관점에서 서술하시오. (6점)",
+    "answer": "수송 모드는 원래 IP 헤더는 그대로 두고 데이터(페이로드) 영역만 암호화하는 반면, 터널 모드는 원래의 IP 헤더를 포함한 원본 패킷 전체를 통째로 암호화(캡슐화)한다. 그리고 그 앞에 VPN 게이트웨이(라우터) 간의 경로 라우팅을 위한 새로운 IP 헤더(New IP Header)를 추가하여 전송하는 구조적 특징을 가진다.",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -18071,9 +18062,11 @@
     "number": 39,
     "type": "서술형",
     "points": 5,
-    "question": "수송 모드는 원래 IP 헤더는 그대로 두고 데이터(페이로드) 영역만 암호화하는 반면, 터널 모드는 원래의 IP 헤더를 포함한 원본 패킷 전체를 통째로 암호화(캡슐화)한다. 그리고 그 앞에 VPN 게이트웨이(라우터) 간의 경로 라우팅을 위한 새로운 IP 헤더(New IP Header)를 추가하여 전송하는 구조적 특징을 가진다.",
-    "answer": "보안 엔지니어 A 씨는 본사와 지사 간의 라우터 구간 보안을 강화하기 위해 IPSec VPN을 구축하고자 한다. IPSec은 적용 범위에 따라 **수송 모드(Transport Mode)**와 **터널 모드(Tunneling Mode)**로 구분되어 동작한다.\n\n이 중 **'터널 모드'를 적용했을 때 IP 패킷이 캡슐화되는 구체적인 구조적 특징(수송 모드와의 결정적 차이점)**을 패킷 헤더 관점에서 서술하시오. (6점)",
-    "keywords": [],
+    "question": "[지문]\n보안 아키텍트 B 씨는 원격 근무 시스템 설계를 위해 VPN 터널링 기술을 검토하던 중, 과년도 기출지문에서 아래와 같은 프로토콜 군을 확인하였다.\n\n프로토콜 군: PPTP, L2TP, IPSec, SSL\n\n이 4가지 프로토콜 중 (1) 터널링 패킷 자체에 대한 '자체 암호화(기밀성)' 기능을 원천적으로 내장하고 있어 단독으로 보안 통신이 가능한 프로토콜 2가지를 골라 쓰고, (2) 나머지 프로토콜들이 단독으로 사용되기 어려운 기술적 한계점을 서술하시오. (6점)",
+    "answer": "(1) 자체 암호화 가능 프로토콜: IPSec , SSL (2점)\n\n(2) 나머지 프로토콜의 한계점: PPTP와 L2TP는 OSI 2계층에서 동작하는 터널링 프로토콜로서 패킷을 캡슐화하여 전송 경로(터널)를 생성하는 기능은 있으나, 데이터 자체를 암호화하는 기밀성 기능과 무결성 인증 메커니즘을 자체 내장하고 있지 않기 때문에 단독으로는 안전한 보안 전송이 어렵다. (4점)",
+    "keywords": [
+      "자체 암호화 가능 프로토콜: IPSec , SSL (2점)"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -18086,13 +18079,14 @@
     "number": 40,
     "type": "서술형",
     "points": 5,
-    "question": "(1) 자체 암호화 가능 프로토콜: IPSec , SSL (2점)\n\n(2) 나머지 프로토콜의 한계점: PPTP와 L2TP는 OSI 2계층에서 동작하는 터널링 프로토콜로서 패킷을 캡슐화하여 전송 경로(터널)를 생성하는 기능은 있으나, 데이터 자체를 암호화하는 기밀성 기능과 무결성 인증 메커니즘을 자체 내장하고 있지 않기 때문에 단독으로는 안전한 보안 전송이 어렵다. (4점)",
-    "answer": "[지문]\n보안 아키텍트 B 씨는 원격 근무 시스템 설계를 위해 VPN 터널링 기술을 검토하던 중, 과년도 기출지문에서 아래와 같은 프로토콜 군을 확인하였다.\n\n프로토콜 군: PPTP, L2TP, IPSec, SSL\n\n이 4가지 프로토콜 중 (1) 터널링 패킷 자체에 대한 '자체 암호화(기밀성)' 기능을 원천적으로 내장하고 있어 단독으로 보안 통신이 가능한 프로토콜 2가지를 골라 쓰고, (2) 나머지 프로토콜들이 단독으로 사용되기 어려운 기술적 한계점을 서술하시오. (6점)",
+    "question": "보안 담당자 가 씨는 재택근무용 노트북이 회사 내부망에 접속할 때 악성코드 전파의 매개체가 되는 것을 막기 위해 NAC 시스템을 도입하였다.\n\n외부 단말기가 내부망에 연결될 때, NAC가 정상 네트워크 접근 권한을 부여하기 전에 단말기 내부 상태에 대해 검사하는 구체적인 보안 무결성 점검 항목 3가지를 서술하시오. (6점)",
+    "answer": "정답 예시 (아래 중 3가지 기술 시 만점, 각 2점):\n\n운영체제(OS) 최신 보안 패치 및 업데이트 적용 여부\n\n지정된 백신(Anti-Virus) 프로그램의 설치 및 실시간 감시 기능 활성화 여부\n\n사내 보안 정책상 금지된 유해/불법 소프트웨어(예: P2P, 우회 프로그램 등)의 실행 및 설치 여부\n\n단말기 방화벽(개인 방화벽) 기능의 활성화 상태 여부",
     "keywords": [
-      "[지문]",
-      "프로토콜 군: PPTP, L2TP, IPSec, SSL",
-      "이 4가지 프로토콜 중",
-      "나머지 프로토콜들이 단독으로 사용되기 어려운 기술적 한계점을 서술하시오. (6점)"
+      "정답 예시 (아래 중 3가지 기술 시 만점, 각 2점):",
+      "운영체제(OS) 최신 보안 패치 및 업데이트 적용 여부",
+      "지정된 백신(Anti-Virus) 프로그램의 설치 및 실시간 감시 기능 활성화 여부",
+      "사내 보안 정책상 금지된 유해/불법 소프트웨어(예: P2P, 우회 프로그램 등)의 실행 및 설치 여부",
+      "단말기 방화벽(개인 방화벽) 기능의 활성화 상태 여부"
     ],
     "commentary": "",
     "difficulty": "",
@@ -18106,9 +18100,13 @@
     "number": 41,
     "type": "서술형",
     "points": 5,
-    "question": "정답 예시 (아래 중 3가지 기술 시 만점, 각 2점):\n\n운영체제(OS) 최신 보안 패치 및 업데이트 적용 여부\n\n지정된 백신(Anti-Virus) 프로그램의 설치 및 실시간 감시 기능 활성화 여부\n\n사내 보안 정책상 금지된 유해/불법 소프트웨어(예: P2P, 우회 프로그램 등)의 실행 및 설치 여부\n\n단말기 방화벽(개인 방화벽) 기능의 활성화 상태 여부",
-    "answer": "보안 담당자 가 씨는 재택근무용 노트북이 회사 내부망에 접속할 때 악성코드 전파의 매개체가 되는 것을 막기 위해 NAC 시스템을 도입하였다.\n\n외부 단말기가 내부망에 연결될 때, NAC가 정상 네트워크 접근 권한을 부여하기 전에 단말기 내부 상태에 대해 검사하는 구체적인 보안 무결성 점검 항목 3가지를 서술하시오. (6점)",
-    "keywords": [],
+    "question": "보안 엔지니어 A 씨는 IPSec VPN을 구축한 후 패킷 구조를 분석하고 있다. 원래 구조가 [원본 IP 헤더][TCP 헤더][데이터]인 패킷이 IPSec을 거쳐 다음과 같이 변형되었다.\n\n패킷 가: [원본 IP 헤더] [ AH 헤더 ] [TCP 헤더] [데이터(인증구간)]\n\n패킷 나: [새로운 IP 헤더] [ESP 헤더] [원본 IP 헤더] [TCP 헤더] [데이터(암호화구간)] [ESP 트레일러] [ESP 인증 데이터]\n\n(1) **'패킷 가'**에 적용된 IPSec 프로토콜 명칭과 동작 모드를 쓰시오. (4점)\n\n(2) **'패킷 나'**에 적용된 IPSec 프로토콜 명칭과 동작 모드를 쓰시오. (4점)\n\n(3) '패킷 가'와 '패킷 나' 중 데이터의 기밀성(암호화)을 보장하는 패킷이 무엇인지 쓰고, 그 이유를 프로토콜 특성과 연계하여 서술하시오. (2점)",
+    "answer": "(1) AH 프로토콜, 전송모드\n(2) ESP 프로토콜, 터널모드\n(3) 패킷 나\n이유 : AH 프로토콜은 인증과 무결성만 제공할 뿐 암호화 기능을 지원하지 않지만, ESP 프로토콜은 대칭키 알고리즘 기반의 암호화를 지원하여 데이터의 기밀성을 보장하기 때문이다.",
+    "keywords": [
+      "AH 프로토콜, 전송모드",
+      "ESP 프로토콜, 터널모드",
+      "패킷 나"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -18121,13 +18119,9 @@
     "number": 42,
     "type": "서술형",
     "points": 5,
-    "question": "(1) AH 프로토콜, 전송모드\n(2) ESP 프로토콜, 터널모드\n(3) 패킷 나\n이유 : AH 프로토콜은 인증과 무결성만 제공할 뿐 암호화 기능을 지원하지 않지만, ESP 프로토콜은 대칭키 알고리즘 기반의 암호화를 지원하여 데이터의 기밀성을 보장하기 때문이다.",
-    "answer": "보안 엔지니어 A 씨는 IPSec VPN을 구축한 후 패킷 구조를 분석하고 있다. 원래 구조가 [원본 IP 헤더][TCP 헤더][데이터]인 패킷이 IPSec을 거쳐 다음과 같이 변형되었다.\n\n패킷 가: [원본 IP 헤더] [ AH 헤더 ] [TCP 헤더] [데이터(인증구간)]\n\n패킷 나: [새로운 IP 헤더] [ESP 헤더] [원본 IP 헤더] [TCP 헤더] [데이터(암호화구간)] [ESP 트레일러] [ESP 인증 데이터]\n\n(1) **'패킷 가'**에 적용된 IPSec 프로토콜 명칭과 동작 모드를 쓰시오. (4점)\n\n(2) **'패킷 나'**에 적용된 IPSec 프로토콜 명칭과 동작 모드를 쓰시오. (4점)\n\n(3) '패킷 가'와 '패킷 나' 중 데이터의 기밀성(암호화)을 보장하는 패킷이 무엇인지 쓰고, 그 이유를 프로토콜 특성과 연계하여 서술하시오. (2점)",
-    "keywords": [
-      "패킷 가: [원본 IP 헤더] [ AH 헤더 ] [TCP 헤더] [데이터(인증구간)]",
-      "**'패킷 가'**에 적용된 IPSec 프로토콜 명칭과 동작 모드를 쓰시오. (4점)",
-      "**'패킷 나'**에 적용된 IPSec 프로토콜 명칭과 동작 모드를 쓰시오. (4점)"
-    ],
+    "question": "네트워크 전방에 NAT(Network Address Translation) 장비가 존재하는 환경에서, 내부의 한 호스트가 외부와 **AH 프로토콜(전송 모드)**을 사용하여 IPSec 통신을 시도하였으나 패킷이 목적지에서 계속 드랍(Drop)되는 현상이 발생하였다.\n\n암호화를 하지 않는 AH 프로토콜이 NAT 장비를 통과할 때 왜 무결성 검증 실패(에러)를 일으키며 통신이 마비되는지 그 기술적인 원인을 서술하시오.",
+    "answer": "AH 프로토콜은 패킷의 변조를 막기 위해 IP 헤더의 출발지/목적지 IP 주소까지 포함하여 인증값(ICV)을 계산한다. 그러나 이 패킷이 NAT 장비를 통과하면 IP 헤더의 IP 주소가 강제로 변환(변경)된다. 이로 인해 수신 측이 패킷을 받아 무결성을 재검증할 때, NAT에 의해 바뀐 IP 주소 때문에 원래의 인증값과 일치하지 않게 되어(무결성 검증 실패) 패킷을 무단 변조된 것으로 판단하고 드랍시키기 때문이다.",
+    "keywords": [],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -18140,9 +18134,11 @@
     "number": 43,
     "type": "서술형",
     "points": 5,
-    "question": "AH 프로토콜은 패킷의 변조를 막기 위해 IP 헤더의 출발지/목적지 IP 주소까지 포함하여 인증값(ICV)을 계산한다. 그러나 이 패킷이 NAT 장비를 통과하면 IP 헤더의 IP 주소가 강제로 변환(변경)된다. 이로 인해 수신 측이 패킷을 받아 무결성을 재검증할 때, NAT에 의해 바뀐 IP 주소 때문에 원래의 인증값과 일치하지 않게 되어(무결성 검증 실패) 패킷을 무단 변조된 것으로 판단하고 드랍시키기 때문이다.",
-    "answer": "네트워크 전방에 NAT(Network Address Translation) 장비가 존재하는 환경에서, 내부의 한 호스트가 외부와 **AH 프로토콜(전송 모드)**을 사용하여 IPSec 통신을 시도하였으나 패킷이 목적지에서 계속 드랍(Drop)되는 현상이 발생하였다.\n\n암호화를 하지 않는 AH 프로토콜이 NAT 장비를 통과할 때 왜 무결성 검증 실패(에러)를 일으키며 통신이 마비되는지 그 기술적인 원인을 서술하시오.",
-    "keywords": [],
+    "question": "IPSec은 네트워크 계층에서 안전한 데이터 전송을 보장하기 위해 다양한 보안 서비스를 내재하고 있다. 정보보안 기사 실기 기준, IPSec 프레임워크(AH 및 ESP 프로토콜)를 통해 제공받을 수 있는 공통적인 핵심 보안 서비스(보안 목표) 3가지의 명칭을 쓰고 각각의 개념을 간략히 설명하시오.",
+    "answer": "기밀성 (Confidentiality): 대칭키 암호화(ESP)를 통해 인가되지 않은 제3자가 패킷 내용을 훔쳐보지 못하도록 보호함.\n\n무결성 (Integrity): 메시지 인증 코드(MAC)를 통해 전송 중 패킷이 위변조되지 않았음을 보장함.\n\n송신처 인증 (Authentication): 패킷을 보낸 피어가 신뢰할 수 있는 정당한 송신처가 맞는지 검증함.\n(※ 대동소이하게 '재전송 공격 방지(Anti-replay)'를 기술해도 정답 인정)",
+    "keywords": [
+      "(※ 대동소이하게 '재전송 공격 방지(Anti-replay)'를 기술해도 정답 인정)"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -18155,8 +18151,8 @@
     "number": 44,
     "type": "서술형",
     "points": 5,
-    "question": "기밀성 (Confidentiality): 대칭키 암호화(ESP)를 통해 인가되지 않은 제3자가 패킷 내용을 훔쳐보지 못하도록 보호함.\n\n무결성 (Integrity): 메시지 인증 코드(MAC)를 통해 전송 중 패킷이 위변조되지 않았음을 보장함.\n\n송신처 인증 (Authentication): 패킷을 보낸 피어가 신뢰할 수 있는 정당한 송신처가 맞는지 검증함.\n(※ 대동소이하게 '재전송 공격 방지(Anti-replay)'를 기술해도 정답 인정)",
-    "answer": "IPSec은 네트워크 계층에서 안전한 데이터 전송을 보장하기 위해 다양한 보안 서비스를 내재하고 있다. 정보보안 기사 실기 기준, IPSec 프레임워크(AH 및 ESP 프로토콜)를 통해 제공받을 수 있는 공통적인 핵심 보안 서비스(보안 목표) 3가지의 명칭을 쓰고 각각의 개념을 간략히 설명하시오.",
+    "question": "아래는 IPSec ESP 터널 모드가 적용된 패킷의 후반부 구조 중 일부이다. 각 필드가 존재하는 기술적인 목적을 서술하시오.\n\n... [데이터 영역] [ ESP 트레일러 (Trailer) ] [ ESP 인증 데이터 (Auth Data) ]\n\n(1) ESP 트레일러(Trailer) 필드가 패킷 뒤에 붙어서 수행하는 기술적 역할(이유)을 블록 암호화 알고리즘의 특성과 연계하여 서술하시오. (3점)\n\n(2) ESP 인증 데이터(Authentication Data) 필드가 수행하는 보안적 역할을 서술하시오. (3점)",
+    "answer": "(1) ESP 트레일러의 역할: 대칭키 블록 암호화 알고리즘(AES 등)을 수행할 때 데이터 크기를 블록 단위 크기에 맞추기 위한 패딩(Padding) 공간을 제공하고, 패딩의 길이 및 다음 헤더의 종류를 기록하기 위해 존재한다. (3점)\n\n(2) ESP 인증 데이터의 역할: 패킷의 무결성을 검증하고 송신처를 인증하기 위한 메시지 인증 코드(MAC / ICV 값)를 저장하여 전송 중 변조 여부를 확인한다. (3점)",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -18170,9 +18166,12 @@
     "number": 45,
     "type": "서술형",
     "points": 5,
-    "question": "(1) ESP 트레일러의 역할: 대칭키 블록 암호화 알고리즘(AES 등)을 수행할 때 데이터 크기를 블록 단위 크기에 맞추기 위한 패딩(Padding) 공간을 제공하고, 패딩의 길이 및 다음 헤더의 종류를 기록하기 위해 존재한다. (3점)\n\n(2) ESP 인증 데이터의 역할: 패킷의 무결성을 검증하고 송신처를 인증하기 위한 메시지 인증 코드(MAC / ICV 값)를 저장하여 전송 중 변조 여부를 확인한다. (3점)",
-    "answer": "아래는 IPSec ESP 터널 모드가 적용된 패킷의 후반부 구조 중 일부이다. 각 필드가 존재하는 기술적인 목적을 서술하시오.\n\n... [데이터 영역] [ ESP 트레일러 (Trailer) ] [ ESP 인증 데이터 (Auth Data) ]\n\n(1) ESP 트레일러(Trailer) 필드가 패킷 뒤에 붙어서 수행하는 기술적 역할(이유)을 블록 암호화 알고리즘의 특성과 연계하여 서술하시오. (3점)\n\n(2) ESP 인증 데이터(Authentication Data) 필드가 수행하는 보안적 역할을 서술하시오. (3점)",
-    "keywords": [],
+    "question": "IPSec 통신을 개시하기 전, 데이터 트래픽을 어떻게 처리할지 결정하는 메커니즘에 대한 설명이다. 질문에 답하시오.\n\n(1) 특정 패킷이 유입되었을 때, 이 패킷을 암호화(Bypass)할지, 그냥 통과시킬지, 혹은 폐기(Discard)할지 결정하는 정책 조항들이 저장된 데이터베이스의 명칭(약어)을 쓰시오. (3점)\n\n(2) IPSec에서 통신 양단 간에 어떤 암호 알고리즘과 어떤 키를 사용할지 협상한 결과물로, 단방향성(One-way)을 가지기 때문에 양방향 통신을 위해서는 최소 2개가 생성되어야 하는 **'보안 관계'**의 영문 약어를 쓰시오. (4점)",
+    "answer": "(1) SPD (Security Policy Database) (3점)\n\n(2) SA (Security Association) (4점)",
+    "keywords": [
+      "SPD (Security Policy Database) (3점)",
+      "SA (Security Association) (4점)"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -18185,9 +18184,11 @@
     "number": 46,
     "type": "서술형",
     "points": 5,
-    "question": "(1) SPD (Security Policy Database) (3점)\n\n(2) SA (Security Association) (4점)",
-    "answer": "IPSec 통신을 개시하기 전, 데이터 트래픽을 어떻게 처리할지 결정하는 메커니즘에 대한 설명이다. 질문에 답하시오.\n\n(1) 특정 패킷이 유입되었을 때, 이 패킷을 암호화(Bypass)할지, 그냥 통과시킬지, 혹은 폐기(Discard)할지 결정하는 정책 조항들이 저장된 데이터베이스의 명칭(약어)을 쓰시오. (3점)\n\n(2) IPSec에서 통신 양단 간에 어떤 암호 알고리즘과 어떤 키를 사용할지 협상한 결과물로, 단방향성(One-way)을 가지기 때문에 양방향 통신을 위해서는 최소 2개가 생성되어야 하는 **'보안 관계'**의 영문 약어를 쓰시오. (4점)",
-    "keywords": [],
+    "question": "보안 담당자 B 씨는 NAT 환경을 우회하기 위해 ESP 프로토콜 패킷에 임의의 UDP 헤더를 강제로 삽입하여 캡슐화하는 NAT-T(NAT Traversal) 기술을 도입하고자 한다.\n\n이 과정에서 NAT-T가 사용하는 대표적인 전송 계층(L4) 프로토콜 포트 번호를 쓰고, 앞서 [문제 3]에서 다룬 AH와 달리 ESP 프로토콜은 왜 NAT 장비를 통과할 수 있는지 그 결정적인 차이점(인증 범위의 차이)을 서술하시오.",
+    "answer": "포트 번호: UDP 4500번 (또는 초기 협상용 UDP 500번 포함) (3점)\n\n이유 서술: AH 프로토콜은 NAT 장비가 변조하는 '외부 IP 헤더'까지 모두 포함하여 인증값을 계산하기 때문에 무결성 오류가 나지만, ESP 프로토콜은 IP 헤더를 제외한 패킷 내부(ESP 헤더 뒷부분부터)만을 인증 범위로 설정하기 때문에 NAT 장비가 외부 IP 주소를 변경하더라도 인증 값이 깨지지 않고 정상 통과할 수 있다. (7점)",
+    "keywords": [
+      "포트 번호: UDP 4500번 (또는 초기 협상용 UDP 500번 포함) (3점)"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -18200,8 +18201,8 @@
     "number": 47,
     "type": "서술형",
     "points": 5,
-    "question": "포트 번호: UDP 4500번 (또는 초기 협상용 UDP 500번 포함) (3점)\n\n이유 서술: AH 프로토콜은 NAT 장비가 변조하는 '외부 IP 헤더'까지 모두 포함하여 인증값을 계산하기 때문에 무결성 오류가 나지만, ESP 프로토콜은 IP 헤더를 제외한 패킷 내부(ESP 헤더 뒷부분부터)만을 인증 범위로 설정하기 때문에 NAT 장비가 외부 IP 주소를 변경하더라도 인증 값이 깨지지 않고 정상 통과할 수 있다. (7점)",
-    "answer": "보안 담당자 B 씨는 NAT 환경을 우회하기 위해 ESP 프로토콜 패킷에 임의의 UDP 헤더를 강제로 삽입하여 캡슐화하는 NAT-T(NAT Traversal) 기술을 도입하고자 한다.\n\n이 과정에서 NAT-T가 사용하는 대표적인 전송 계층(L4) 프로토콜 포트 번호를 쓰고, 앞서 [문제 3]에서 다룬 AH와 달리 ESP 프로토콜은 왜 NAT 장비를 통과할 수 있는지 그 결정적인 차이점(인증 범위의 차이)을 서술하시오.",
+    "question": "보안 분석가 C 씨는 사내 방화벽 정책의 취약점을 점검하기 위해 nmap -sT (TCP Connect 스캔) 방식과 nmap -sS (TCP SYN 스캔) 방식을 교차 검증하였다.\n\n두 스캔 기법이 대상 포트가 '열려있을 때' 서버와 주고받는 패킷 흐름 측면에서의 결정적인 차이점과 그로 인해 서버 보안 로그에 미치는 영향의 차이를 서술하시오. (6점)",
+    "answer": "TCP Connect 스캔은 SYN 전송 후 SYN+ACK를 받으면 최종 ACK 패킷을 전송하여 3-Way Handshaking을 완전히 완수하므로 서버에 정상 접속 로그가 남는다. 반면, TCP SYN 스캔은 SYN+ACK를 수신한 즉시 RST 패킷을 보내 세션 연결을 강제로 끊어버리기 때문에(Half-Open) 완전한 세션이 성립되지 않아 서버 애플리케이션 로그에 흔적이 남지 않는 차이가 있다.",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -18215,8 +18216,8 @@
     "number": 48,
     "type": "서술형",
     "points": 5,
-    "question": "TCP Connect 스캔은 SYN 전송 후 SYN+ACK를 받으면 최종 ACK 패킷을 전송하여 3-Way Handshaking을 완전히 완수하므로 서버에 정상 접속 로그가 남는다. 반면, TCP SYN 스캔은 SYN+ACK를 수신한 즉시 RST 패킷을 보내 세션 연결을 강제로 끊어버리기 때문에(Half-Open) 완전한 세션이 성립되지 않아 서버 애플리케이션 로그에 흔적이 남지 않는 차이가 있다.",
-    "answer": "보안 분석가 C 씨는 사내 방화벽 정책의 취약점을 점검하기 위해 nmap -sT (TCP Connect 스캔) 방식과 nmap -sS (TCP SYN 스캔) 방식을 교차 검증하였다.\n\n두 스캔 기법이 대상 포트가 '열려있을 때' 서버와 주고받는 패킷 흐름 측면에서의 결정적인 차이점과 그로 인해 서버 보안 로그에 미치는 영향의 차이를 서술하시오. (6점)",
+    "question": "모의해킹 전문가 D 씨는 사내 시스템의 포트 활성화 여부를 정찰하기 위해 일반 사용자 권한의 계정으로 nmap -sS 명령을 실행하였으나 오류가 발생하며 스캔에 실패하였다.\n\nTCP SYN(Half-Open) 스캔을 수행할 때 공격자 시스템의 '관리자(Root) 권한'이 반드시 요구되는 기술적인 이유를 패킷 제어 방식과 연계하여 서술하시오. (6점)",
+    "answer": "모의해킹 전문가 D 씨는 사내 시스템의 포트 활성화 여부를 정찰하기 위해 일반 사용자 권한의 계정으로 nmap -sS 명령을 실행하였으나 오류가 발생하며 스캔에 실패하였다.\n\nTCP SYN(Half-Open) 스캔을 수행할 때 공격자 시스템의 '관리자(Root) 권한'이 반드시 요구되는 기술적인 이유를 패킷 제어 방식과 연계하여 서술하시오. (6점)",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -18230,8 +18231,8 @@
     "number": 49,
     "type": "서술형",
     "points": 5,
-    "question": "모의해킹 전문가 D 씨는 사내 시스템의 포트 활성화 여부를 정찰하기 위해 일반 사용자 권한의 계정으로 nmap -sS 명령을 실행하였으나 오류가 발생하며 스캔에 실패하였다.\n\nTCP SYN(Half-Open) 스캔을 수행할 때 공격자 시스템의 '관리자(Root) 권한'이 반드시 요구되는 기술적인 이유를 패킷 제어 방식과 연계하여 서술하시오. (6점)",
-    "answer": "모의해킹 전문가 D 씨는 사내 시스템의 포트 활성화 여부를 정찰하기 위해 일반 사용자 권한의 계정으로 nmap -sS 명령을 실행하였으나 오류가 발생하며 스캔에 실패하였다.\n\nTCP SYN(Half-Open) 스캔을 수행할 때 공격자 시스템의 '관리자(Root) 권한'이 반드시 요구되는 기술적인 이유를 패킷 제어 방식과 연계하여 서술하시오. (6점)",
+    "question": "보안 및 네트워크 인프라 개편을 담당하는 E 씨는 기존에 사용하던 RIPv2 프로토콜의 한계를 느끼고 OSPF로의 전환을 검토하고 있다.\n\nOSPF 프로토콜이 RIPv2 프로토콜에 비해 대규모 네트워크 환경에 절대적으로 유리한 기술적인 장점(차이점) 2가지를 메트릭(Metric) 설정 방식 및 네트워크 구조 설계 관점에서 서술하시오. (6점)",
+    "answer": "1. 메트릭 방식의 고도화: RIPv2는 단순히 거쳐 가는 라우터 수인 홉 카운트(최대 15홉 제한)만 고려하므로 링크의 속도를 반영하지 못하지만, OSPF는 링크의 대역폭(속도)을 기준으로 비용을 계산하므로 고속 선로를 활용한 최적의 경로 지정이 가능하며 홉 수 제한이 없다. (3점)\n2. 계층적 구조 지원: RIPv2는 전 체 네트워크를 하나의 평면 구조로 관리하여 대규모 망에서 부하가 크지만, OSPF는 네트워크를 Area(구역) 단위의 계층 구조로 나누어 관리하므로 라우팅 정보의 유입량을 제어하고 전체 네트워크 관리 효율성을 극대화할 수 있다. (3점)",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -18245,8 +18246,8 @@
     "number": 50,
     "type": "서술형",
     "points": 5,
-    "question": "1. 메트릭 방식의 고도화: RIPv2는 단순히 거쳐 가는 라우터 수인 홉 카운트(최대 15홉 제한)만 고려하므로 링크의 속도를 반영하지 못하지만, OSPF는 링크의 대역폭(속도)을 기준으로 비용을 계산하므로 고속 선로를 활용한 최적의 경로 지정이 가능하며 홉 수 제한이 없다. (3점)\n2. 계층적 구조 지원: RIPv2는 전 체 네트워크를 하나의 평면 구조로 관리하여 대규모 망에서 부하가 크지만, OSPF는 네트워크를 Area(구역) 단위의 계층 구조로 나누어 관리하므로 라우팅 정보의 유입량을 제어하고 전체 네트워크 관리 효율성을 극대화할 수 있다. (3점)",
-    "answer": "보안 및 네트워크 인프라 개편을 담당하는 E 씨는 기존에 사용하던 RIPv2 프로토콜의 한계를 느끼고 OSPF로의 전환을 검토하고 있다.\n\nOSPF 프로토콜이 RIPv2 프로토콜에 비해 대규모 네트워크 환경에 절대적으로 유리한 기술적인 장점(차이점) 2가지를 메트릭(Metric) 설정 방식 및 네트워크 구조 설계 관점에서 서술하시오. (6점)",
+    "question": "사내 보안 관제 요원 F 씨는 최근 유행하는 지능형 지속 위협(APT)과 신종 악성코드를 효과적으로 차단하기 위해 기존 IDS의 오용탐지 솔루션 외에 이상탐지(Anomaly Detection) 솔루션을 추가 도입하고자 한다.\n\n이상탐지 방식과 비교했을 때, 기존 '오용탐지' 방식이 가지는 기술적 장점과 단점을 오탐률(False Positive) 및 제로데이(Zero-Day) 공격 대응 관점에서 각각 서술하시오. (6점)",
+    "answer": "장점: 명확한 공격 시그니처(패턴) 데이터베이스를 기반으로 매칭 및 탐지하기 때문에, 정상적인 트래픽을 공격으로 오인하여 차단하는 오탐률(False Positive)이 이상탐지 방식에 비해 현저히 낮다. (3점)\n\n단점: 데이터베이스에 등록된 패턴만을 식별할 수 있으므로, 아직 알려지지 않은 신종 위협이나 제로데이(Zero-Day) 공격, 혹은 변종 공격이 유입될 경우 이를 탐지하지 못하고 놓치는 한계(미탐률 증가)가 있다. (3점)",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -18260,8 +18261,8 @@
     "number": 51,
     "type": "서술형",
     "points": 5,
-    "question": "장점: 명확한 공격 시그니처(패턴) 데이터베이스를 기반으로 매칭 및 탐지하기 때문에, 정상적인 트래픽을 공격으로 오인하여 차단하는 오탐률(False Positive)이 이상탐지 방식에 비해 현저히 낮다. (3점)\n\n단점: 데이터베이스에 등록된 패턴만을 식별할 수 있으므로, 아직 알려지지 않은 신종 위협이나 제로데이(Zero-Day) 공격, 혹은 변종 공격이 유입될 경우 이를 탐지하지 못하고 놓치는 한계(미탐률 증가)가 있다. (3점)",
-    "answer": "사내 보안 관제 요원 F 씨는 최근 유행하는 지능형 지속 위협(APT)과 신종 악성코드를 효과적으로 차단하기 위해 기존 IDS의 오용탐지 솔루션 외에 이상탐지(Anomaly Detection) 솔루션을 추가 도입하고자 한다.\n\n이상탐지 방식과 비교했을 때, 기존 '오용탐지' 방식이 가지는 기술적 장점과 단점을 오탐률(False Positive) 및 제로데이(Zero-Day) 공격 대응 관점에서 각각 서술하시오. (6점)",
+    "question": "네트워크 엔지니어 B 씨는 방화벽을 설정하면서 \"DNS는 UDP 프로토콜만 사용하므로 방화벽에서 53번 UDP 포트만 열어두면 된다\"고 주장하였다.\n\n하지만 실제 운영 중 주 서버(Primary)와 보조 서버(Secondary) 간의 동기화 작업이 실패하는 장애가 발생하였다. DNS 서비스가 UDP 53번이 아닌 'TCP 53번 포트'를 반드시 사용해야 하는 구체적인 상황(조건) 2가지를 서술하시오. (6점)",
+    "answer": "1. 존 전송 (Zone Transfer): 주 DNS 서버와 보조 DNS 서버 간에 영역 파일(Zone File) 정보를 동기화하고 복제할 때는 데이터의 누락이 없어야 하므로 신뢰성 있는 전송을 위해 TCP 53번 포트를 사용한다. (3점)\n2. 메시지 크기 초과 (512바이트 초과): DNS 질의 응답 패킷의 크기가 일반적인 UDP 제한 크기인 512바이트를 초과하는 경우(예: DNSSEC 적용 등), 데이터 잘림(Truncation)을 방지하기 위해 TCP로 전환하여 53번 포트를 사용한다. (3점)",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -18275,9 +18276,15 @@
     "number": 52,
     "type": "서술형",
     "points": 5,
-    "question": "1. 존 전송 (Zone Transfer): 주 DNS 서버와 보조 DNS 서버 간에 영역 파일(Zone File) 정보를 동기화하고 복제할 때는 데이터의 누락이 없어야 하므로 신뢰성 있는 전송을 위해 TCP 53번 포트를 사용한다. (3점)\n2. 메시지 크기 초과 (512바이트 초과): DNS 질의 응답 패킷의 크기가 일반적인 UDP 제한 크기인 512바이트를 초과하는 경우(예: DNSSEC 적용 등), 데이터 잘림(Truncation)을 방지하기 위해 TCP로 전환하여 53번 포트를 사용한다. (3점)",
-    "answer": "네트워크 엔지니어 B 씨는 방화벽을 설정하면서 \"DNS는 UDP 프로토콜만 사용하므로 방화벽에서 53번 UDP 포트만 열어두면 된다\"고 주장하였다.\n\n하지만 실제 운영 중 주 서버(Primary)와 보조 서버(Secondary) 간의 동기화 작업이 실패하는 장애가 발생하였다. DNS 서비스가 UDP 53번이 아닌 'TCP 53번 포트'를 반드시 사용해야 하는 구체적인 상황(조건) 2가지를 서술하시오. (6점)",
-    "keywords": [],
+    "question": "보안 관리자 G 씨는 사내 LAN 구간에서 지속적인 스니핑 공격 징후를 발견하였다. 네트워크 모드를 방어하는 것만으로는 한계가 있다고 판단한 G 씨는 상위 계층에서 데이터를 보호하기 위한 대책을 수립하고자 한다.\n\n스니핑 공격자가 패킷을 중간에서 가로채더라도 패킷 내부의 원래 데이터를 읽지 못하도록 만드는 가장 근본적인 보안 대책을 기술하고, 이를 적용한 대표적인 암호화 프로토콜 또는 서비스 2가지를 서술하시오. (6점)",
+    "answer": "근본 대책: 애플리케이션 및 전송 계층에서 주고받는 모든 데이터(페이로드) 영역을 평문으로 두지 않고, 강력한 암호화 알고리즘을 적용하여 통신 구간을 암호화(비식별화)한다. (2점)\n\n적용 프로토콜/서비스 (아래 중 2가지 기술 시 만점, 각 2점):\n\nHTTPS (웹 보안): HTTP 평문 통신에 SSL/TLS 암호화를 적용\n\nSSH (원격 제어): 평문 텔넷(Telnet)을 대체하는 암호화 쉘 서비스\n\nSFTP / FTPS (파일 전송): 평문 FTP를 대체하는 암호화 파일 전송 프로토콜\n\nIPSec / VPN (네트워크 보안): 3계층 패킷 자체를 암호화하여 터널링 전송",
+    "keywords": [
+      "적용 프로토콜/서비스 (아래 중 2가지 기술 시 만점, 각 2점):",
+      "HTTPS (웹 보안): HTTP 평문 통신에 SSL/TLS 암호화를 적용",
+      "SSH (원격 제어): 평문 텔넷(Telnet)을 대체하는 암호화 쉘 서비스",
+      "SFTP / FTPS (파일 전송): 평문 FTP를 대체하는 암호화 파일 전송 프로토콜",
+      "IPSec / VPN (네트워크 보안): 3계층 패킷 자체를 암호화하여 터널링 전송"
+    ],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -18290,8 +18297,8 @@
     "number": 53,
     "type": "서술형",
     "points": 5,
-    "question": "근본 대책: 애플리케이션 및 전송 계층에서 주고받는 모든 데이터(페이로드) 영역을 평문으로 두지 않고, 강력한 암호화 알고리즘을 적용하여 통신 구간을 암호화(비식별화)한다. (2점)\n\n적용 프로토콜/서비스 (아래 중 2가지 기술 시 만점, 각 2점):\n\nHTTPS (웹 보안): HTTP 평문 통신에 SSL/TLS 암호화를 적용\n\nSSH (원격 제어): 평문 텔넷(Telnet)을 대체하는 암호화 쉘 서비스\n\nSFTP / FTPS (파일 전송): 평문 FTP를 대체하는 암호화 파일 전송 프로토콜\n\nIPSec / VPN (네트워크 보안): 3계층 패킷 자체를 암호화하여 터널링 전송",
-    "answer": "보안 관리자 G 씨는 사내 LAN 구간에서 지속적인 스니핑 공격 징후를 발견하였다. 네트워크 모드를 방어하는 것만으로는 한계가 있다고 판단한 G 씨는 상위 계층에서 데이터를 보호하기 위한 대책을 수립하고자 한다.\n\n스니핑 공격자가 패킷을 중간에서 가로채더라도 패킷 내부의 원래 데이터를 읽지 못하도록 만드는 가장 근본적인 보안 대책을 기술하고, 이를 적용한 대표적인 암호화 프로토콜 또는 서비스 2가지를 서술하시오. (6점)",
+    "question": "한 기업의 사내 네트워크가 이브스드로핑(Eavesdropping) 공격에 노출되어 주요 임직원의 자격 증명(ID/PW) 정보가 유출되는 사고가 발생하였다.\n\n(1) 침입탐지시스템(IDS)이나 방화벽만으로 이브스드로핑 공격의 **'발생 여부 자체'를 실시간으로 탐지하기 어려운 기술적인 유래(원인)**를 공격의 특성과 연계하여 서술하시오. (3점)\n\n(2) 이 도청 공격으로부터 데이터를 보호하기 위해 적용해야 하는 가장 근본적인 보안 대책을 서술하시오. (3점)",
+    "answer": "(1) 원인: 이브스드로핑은 패킷을 변조, 위조, 삭제하거나 시스템에 과부하를 주는 등 네트워크에 아무런 흔적을 남기지 않고 단순히 트래픽을 복사하여 읽기만 하는 수동적(Passive) 공격이기 때문에 일반적인 보안 장비에서 비정상 징후로 식별하기 어렵다. (3점)\n\n(2) 대책: 통신망을 통과하는 패킷 내부의 데이터(페이로드) 영역을 평문으로 전송하지 않고, 대칭키 및 공개키 알고리즘을 활용하여 구간 암호화(예: HTTPS, SSH, VPN 등 적용)를 수행함으로써 가로채더라도 내용을 알 수 없게 만든다. (3점)",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -18305,11 +18312,9 @@
     "number": 54,
     "type": "서술형",
     "points": 5,
-    "question": "(1) 원인: 이브스드로핑은 패킷을 변조, 위조, 삭제하거나 시스템에 과부하를 주는 등 네트워크에 아무런 흔적을 남기지 않고 단순히 트래픽을 복사하여 읽기만 하는 수동적(Passive) 공격이기 때문에 일반적인 보안 장비에서 비정상 징후로 식별하기 어렵다. (3점)\n\n(2) 대책: 통신망을 통과하는 패킷 내부의 데이터(페이로드) 영역을 평문으로 전송하지 않고, 대칭키 및 공개키 알고리즘을 활용하여 구간 암호화(예: HTTPS, SSH, VPN 등 적용)를 수행함으로써 가로채더라도 내용을 알 수 없게 만든다. (3점)",
-    "answer": "한 기업의 사내 네트워크가 이브스드로핑(Eavesdropping) 공격에 노출되어 주요 임직원의 자격 증명(ID/PW) 정보가 유출되는 사고가 발생하였다.\n\n(1) 침입탐지시스템(IDS)이나 방화벽만으로 이브스드로핑 공격의 **'발생 여부 자체'를 실시간으로 탐지하기 어려운 기술적인 유래(원인)**를 공격의 특성과 연계하여 서술하시오. (3점)\n\n(2) 이 도청 공격으로부터 데이터를 보호하기 위해 적용해야 하는 가장 근본적인 보안 대책을 서술하시오. (3점)",
-    "keywords": [
-      "이 도청 공격으로부터 데이터를 보호하기 위해 적용해야 하는 가장 근본적인 보안 대책을 서술하시오. (3점)"
-    ],
+    "question": "대외 보안이 중요한 국가 기관의 전용선 구간에 제3자가 침투하여 물리적인 태핑(Tapping) 공작을 수행한 정황이 국정원 보안 감사 결과 적발되었다.\n\n(1) 공격자가 통신 가용성에 전혀 타격을 주지 않는 '비침투성 전자기 유도 태핑'을 수행했을 때, 보안 관리자가 네트워크 모니터링 시스템(NMS)만으로 이를 알아채기 어려운 이유를 서술하시오. (3점)\n\n(2) 물리적 회선 보안을 강화하기 위해 인프라 전송 매체 단에서 취할 수 있는 가장 효과적인 하드웨어적 대책을 서술하시오. (3점)",
+    "answer": "(1) 원인: 비침투성 태핑은 케이블을 절단하거나 신호를 가로막지 않고 외부의 전자기장만 감지하여 데이터를 복사하므로, 통신 신호의 감쇄나 네트워크의 단절을 유발하지 않아 가용성 중심의 모니터링 시스템(NMS)에는 아무런 이상 징후가 잡히지 않기 때문이다. (3점)\n\n(2) 대책: 기존의 전자기 유도 도청에 취약한 구리 기반 UTP/동축 케이블 링크를, 전류 대신 빛을 사용하여 전자기적 누설 신호가 전혀 발생하지 않는 보안성이 높은 광케이블(Fiber Optic) 매체로 전면 교체(설치)한다. (3점)",
+    "keywords": [],
     "commentary": "",
     "difficulty": "",
     "sub_questions": null
@@ -18322,8 +18327,8 @@
     "number": 55,
     "type": "서술형",
     "points": 5,
-    "question": "(1) 원인: 비침투성 태핑은 케이블을 절단하거나 신호를 가로막지 않고 외부의 전자기장만 감지하여 데이터를 복사하므로, 통신 신호의 감쇄나 네트워크의 단절을 유발하지 않아 가용성 중심의 모니터링 시스템(NMS)에는 아무런 이상 징후가 잡히지 않기 때문이다. (3점)\n\n(2) 대책: 기존의 전자기 유도 도청에 취약한 구리 기반 UTP/동축 케이블 링크를, 전류 대신 빛을 사용하여 전자기적 누설 신호가 전혀 발생하지 않는 보안성이 높은 광케이블(Fiber Optic) 매체로 전면 교체(설치)한다. (3점)",
-    "answer": "대외 보안이 중요한 국가 기관의 전용선 구간에 제3자가 침투하여 물리적인 태핑(Tapping) 공작을 수행한 정황이 국정원 보안 감사 결과 적발되었다.\n\n(1) 공격자가 통신 가용성에 전혀 타격을 주지 않는 '비침투성 전자기 유도 태핑'을 수행했을 때, 보안 관리자가 네트워크 모니터링 시스템(NMS)만으로 이를 알아채기 어려운 이유를 서술하시오. (3점)\n\n(2) 물리적 회선 보안을 강화하기 위해 인프라 전송 매체 단에서 취할 수 있는 가장 효과적인 하드웨어적 대책을 서술하시오. (3점)",
+    "question": "보안 솔루션 개발자 H 씨는 모바일 뱅킹 앱의 인증 모듈을 설계하면서 유선 PKI 대신 WPKI 아키텍처의 특성을 반영하고자 한다.\n\nWPKI가 하드웨어 자원이 빈약한 무선 단말기 환경을 지원하기 위해, 기존 유선 PKI(X.509)와 비교하여 '인증서 구조' 및 '암호 알고리즘' 측면에서 각각 어떠한 최적화(경량화) 기술을 적용했는지 서술하시오. (6점)",
+    "answer": "1. 인증서 구조 측면: 유선 X.509 인증서의 복잡한 확장 필드 중 무선 환경에 불필요한 항목들을 과감히 제거하여 인증서 자체의 크기를 대폭 줄인 경량화된 무선 인증서 구조를 적용했다. (3점)\n\n2. 암호 알고리즘 측면: 연산량이 많고 키 길이가 긴 RSA 대신, 적은 비트 수(짧은 키 길이)로도 동일한 보안 강도를 제공하여 단말기의 CPU 연산 부하와 배터리 소모를 줄여주는 타원곡선암호(ECC) 알고리즘을 채택했다. (3점)",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
@@ -18337,23 +18342,8 @@
     "number": 56,
     "type": "서술형",
     "points": 5,
-    "question": "1. 인증서 구조 측면: 유선 X.509 인증서의 복잡한 확장 필드 중 무선 환경에 불필요한 항목들을 과감히 제거하여 인증서 자체의 크기를 대폭 줄인 경량화된 무선 인증서 구조를 적용했다. (3점)\n\n2. 암호 알고리즘 측면: 연산량이 많고 키 길이가 긴 RSA 대신, 적은 비트 수(짧은 키 길이)로도 동일한 보안 강도를 제공하여 단말기의 CPU 연산 부하와 배터리 소모를 줄여주는 타원곡선암호(ECC) 알고리즘을 채택했다. (3점)",
-    "answer": "보안 솔루션 개발자 H 씨는 모바일 뱅킹 앱의 인증 모듈을 설계하면서 유선 PKI 대신 WPKI 아키텍처의 특성을 반영하고자 한다.\n\nWPKI가 하드웨어 자원이 빈약한 무선 단말기 환경을 지원하기 위해, 기존 유선 PKI(X.509)와 비교하여 '인증서 구조' 및 '암호 알고리즘' 측면에서 각각 어떠한 최적화(경량화) 기술을 적용했는지 서술하시오. (6점)",
-    "keywords": [],
-    "commentary": "",
-    "difficulty": "",
-    "sub_questions": null
-  },
-  {
-    "id": "sheet_서_2_057",
-    "source": "요약시트",
-    "exam": "네트워크보안",
-    "subject_num": 2,
-    "number": 57,
-    "type": "서술형",
-    "points": 5,
-    "question": "1. 성능 병목 현상: 하나의 하드웨어 자원(CPU, 메모리)에서 방화벽, IPS, 백신 등 무거운 다중 보안 기능을 동시에 구동하므로, 대규모 트래픽 유입 시 급격한 리소스 고갈 및 전체적인 패킷 처리 성능 저하(병목)가 발생한다. (3점)\n\n2. 단일 장애점 (SPOF): 모든 보안 기능이 한 대의 장비에 몰려있기 때문에, 해당 UTM 장비 자체에 하드웨어 결함이 생기거나 크래시가 발생할 경우 사내 전체 네트워크 보안 체계가 동시에 마비되는 위험이 있다. (3점)",
-    "answer": "보안 담당자 사 씨는 지사의 네트워크 경계망 보안을 위해 여러 대의 개별 장비 대신 UTM(통합위협관리) 장비를 도입하여 운영 중이다.\n\n대기업 중심의 대규모 트래픽 환경에서 UTM 장비가 개별 전용 보안 장비(독립형 방화벽, 독립형 IPS 등)에 비해 가질 수 있는 구조적/기술적 한계점(단점) 2가지를 서술하시오. (6점)",
+    "question": "보안 담당자 사 씨는 지사의 네트워크 경계망 보안을 위해 여러 대의 개별 장비 대신 UTM(통합위협관리) 장비를 도입하여 운영 중이다.\n\n대기업 중심의 대규모 트래픽 환경에서 UTM 장비가 개별 전용 보안 장비(독립형 방화벽, 독립형 IPS 등)에 비해 가질 수 있는 구조적/기술적 한계점(단점) 2가지를 서술하시오. (6점)",
+    "answer": "1. 성능 병목 현상: 하나의 하드웨어 자원(CPU, 메모리)에서 방화벽, IPS, 백신 등 무거운 다중 보안 기능을 동시에 구동하므로, 대규모 트래픽 유입 시 급격한 리소스 고갈 및 전체적인 패킷 처리 성능 저하(병목)가 발생한다. (3점)\n\n2. 단일 장애점 (SPOF): 모든 보안 기능이 한 대의 장비에 몰려있기 때문에, 해당 UTM 장비 자체에 하드웨어 결함이 생기거나 크래시가 발생할 경우 사내 전체 네트워크 보안 체계가 동시에 마비되는 위험이 있다. (3점)",
     "keywords": [],
     "commentary": "",
     "difficulty": "",
