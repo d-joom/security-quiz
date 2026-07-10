@@ -309,18 +309,19 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
 .mode-card.selected {
   box-shadow: 0 12px 32px rgba(0,0,0,.35);
   transform: scale(1.04);
+  filter: saturate(1.6) brightness(1.05);
 }
 .mode-card:hover { opacity: .9; }
 .mode-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 5px; color: #fff; }
 .mode-card p { font-size: 11px; color: rgba(255,255,255,.7); margin: 0; line-height: 1.5; }
 
 /* 모드별 색상 */
-#modeAll    { background: linear-gradient(135deg, #2d4fd6 0%, #5b3d8f 100%); }
-#modeWrong  { background: linear-gradient(135deg, #c8183a 0%, #d95a28 100%); }
-#modeExam   { background: linear-gradient(135deg, #059660 0%, #0670a0 100%); }
-#modeType   { background: linear-gradient(135deg, #7040d8 0%, #4c0d8a 100%); }
-#modeBookmark { background: linear-gradient(135deg, #c97d10 0%, #b83a3a 100%); }
-#modeFlash  { background: linear-gradient(135deg, #0baec7 0%, #2d4fd6 100%); }
+#modeAll    { background: linear-gradient(135deg, #4f6ef7 0%, #7b5ea7 100%); }
+#modeWrong  { background: linear-gradient(135deg, #f24e6b 0%, #ff7b4f 100%); }
+#modeExam   { background: linear-gradient(135deg, #10d98a 0%, #0891b2 100%); }
+#modeType   { background: linear-gradient(135deg, #9b6cf5 0%, #6b21a8 100%); }
+#modeBookmark { background: linear-gradient(135deg, #f5a623 0%, #e05d5d 100%); }
+#modeFlash  { background: linear-gradient(135deg, #22d3ee 0%, #4f6ef7 100%); }
 
 .mode-start-row { display: flex; flex-direction: column; gap: 10px; width: 100%; }
 .mode-start-row .load-btn { width: 100%; display: block; }
@@ -420,6 +421,73 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
   border-radius: 50px; background: transparent; transition: all .15s; font-family: inherit;
 }
 .sum-expand-all:hover { color: var(--text); border-color: var(--accent2); }
+
+/* ── View toggle (카드형/문제지형) ── */
+.sum-view-seg { display:flex; gap:3px; background:var(--bg3); padding:3px; border-radius:10px; border:1px solid var(--border); }
+.sum-view-btn { padding:5px 14px; border-radius:8px; font-size:12px; font-weight:500; cursor:pointer; border:none; background:transparent; color:var(--text2); font-family:inherit; transition:all .15s; }
+.sum-view-btn.active { background:#fff; color:var(--accent); box-shadow:var(--shadow-sm); font-weight:600; }
+
+/* ── Exam paper (문제지형) ── */
+.ep-list { display:flex; flex-direction:column; gap:16px; }
+.ep-item { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius-sm); overflow:hidden; }
+.ep-item-head { display:flex; align-items:center; gap:10px; padding:14px 18px 10px; }
+.ep-qnum { font-size:15px; font-weight:600; color:var(--text); min-width:28px; }
+.ep-pts { font-size:12px; color:var(--text3); margin-left:auto; }
+.ep-qtext { padding:0 18px 14px; font-size:14px; line-height:1.85; white-space:pre-wrap; color:var(--text); border-bottom:1px solid var(--border); }
+.ep-input-row { padding:14px 18px; display:flex; flex-direction:column; gap:10px; }
+.ep-input-short { width:100%; padding:10px 14px; border:1.5px solid var(--border2); border-radius:var(--radius-sm); font-size:14px; font-family:inherit; background:var(--bg3); color:var(--text); transition:border-color .15s; }
+.ep-input-short:focus { outline:none; border-color:var(--accent); }
+.ep-input-essay { width:100%; padding:10px 14px; border:1.5px solid var(--border2); border-radius:var(--radius-sm); font-size:14px; font-family:inherit; background:var(--bg3); color:var(--text); resize:vertical; min-height:100px; transition:border-color .15s; }
+.ep-input-essay:focus { outline:none; border-color:var(--accent); }
+.ep-grade-btn { align-self:flex-end; padding:7px 20px; border-radius:50px; font-size:13px; font-weight:500; cursor:pointer; border:1.5px solid var(--accent); background:transparent; color:var(--accent); font-family:inherit; transition:all .15s; }
+.ep-grade-btn:hover { background:var(--accent); color:#fff; }
+.ep-result { padding:14px 18px; border-top:1px solid var(--border); font-size:14px; }
+.ep-result.correct { background:#ecfdf5; border-top-color:#a7f3d0; }
+.ep-result.partial { background:#fffbeb; border-top-color:#fde68a; }
+.ep-result.wrong { background:#fef2f2; border-top-color:#fecaca; }
+.ep-result-title { font-weight:600; margin-bottom:8px; font-size:15px; }
+.ep-result.correct .ep-result-title { color:var(--green); }
+.ep-result.partial .ep-result-title { color:var(--yellow); }
+.ep-result.wrong .ep-result-title { color:var(--red); }
+.ep-model-ans { margin-top:10px; padding:10px 14px; background:var(--bg3); border-radius:8px; border-left:3px solid var(--accent); font-size:13px; line-height:1.8; white-space:pre-wrap; }
+.ep-kw-row { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+.ep-kw { padding:3px 10px; border-radius:20px; font-size:12px; }
+.ep-kw.hit { background:rgba(5,150,105,.12); color:var(--green); }
+.ep-kw.miss { background:rgba(220,38,38,.1); color:var(--red); text-decoration:line-through; opacity:.7; }
+
+/* ── Mock exam (모의시험) ── */
+.mock-wrap { max-width:880px; width:100%; margin:0 auto; display:flex; flex-direction:column; gap:0; }
+.mock-header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:20px; flex-wrap:wrap; }
+.mock-header h2 { font-size:22px; font-weight:600; color:var(--text); }
+.mock-scoreboard { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:20px; }
+.mock-score-chip { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius-sm); padding:10px 18px; font-size:13px; color:var(--text2); }
+.mock-score-chip b { color:var(--text); font-size:16px; }
+.mock-section { margin-bottom:28px; }
+.mock-section-title { font-size:13px; font-weight:600; color:var(--text3); padding:8px 0; border-bottom:2px solid var(--border2); margin-bottom:14px; letter-spacing:.3px; }
+.mock-section-title span { color:var(--accent); }
+.mock-item { background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius-sm); overflow:hidden; margin-bottom:12px; }
+.mock-item.selected-practical { border-color:var(--accent); box-shadow:0 0 0 2px rgba(79,110,247,.15); }
+.mock-item-head { display:flex; align-items:center; gap:10px; padding:14px 18px 10px; }
+.mock-qnum { font-size:15px; font-weight:600; color:var(--text); min-width:32px; }
+.mock-pts { font-size:12px; color:var(--text3); margin-left:auto; }
+.mock-qtext { padding:0 18px 14px; font-size:14px; line-height:1.85; white-space:pre-wrap; color:var(--text); border-bottom:1px solid var(--border); }
+.mock-input-row { padding:14px 18px; display:flex; flex-direction:column; gap:10px; }
+.mock-practical-select { display:flex; gap:8px; padding:12px 18px; background:var(--bg3); font-size:13px; color:var(--text2); align-items:center; }
+.mock-sel-btn { padding:5px 14px; border-radius:50px; font-size:12px; cursor:pointer; border:1.5px solid var(--border2); background:transparent; color:var(--text2); font-family:inherit; transition:all .15s; }
+.mock-sel-btn.on { border-color:var(--accent); color:var(--accent); background:rgba(79,110,247,.08); font-weight:600; }
+
+/* ── Scroll-to-top ── */
+.scroll-top-btn {
+  position: fixed; bottom: 28px; right: 28px; z-index: 200;
+  width: 42px; height: 42px; border-radius: 50%;
+  background: var(--accent); color: #fff; border: none;
+  font-size: 18px; cursor: pointer; font-family: inherit;
+  box-shadow: 0 4px 16px rgba(79,110,247,.4);
+  opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s;
+  display: flex; align-items: center; justify-content: center;
+}
+.scroll-top-btn.visible { opacity: 1; pointer-events: auto; }
+.scroll-top-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(79,110,247,.55); }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
@@ -562,6 +630,7 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
           <div class="mode-start-row">
             <button class="load-btn" onclick="startStudy()">학습 시작 →</button>
             <button class="load-btn" onclick="openSummary()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">요약시트 보기</button>
+            <button class="load-btn" onclick="openMockExam()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">모의시험 응시</button>
           </div>
         </div>
       </div>
@@ -640,26 +709,50 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
     <div id="summaryArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
       <div class="summary-wrap">
         <div class="summary-header">
-          <h2>📋 요약시트</h2>
+          <div style="display:flex;align-items:center;gap:12px">
+            <h2>요약시트</h2>
+            <span id="sumCount" style="font-size:13px;color:var(--text3);font-weight:400"></span>
+          </div>
           <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <div class="sum-view-seg">
+              <button class="sum-view-btn active" id="sumViewCard" onclick="setSumView('card')">카드형</button>
+              <button class="sum-view-btn" id="sumViewPaper" onclick="setSumView('paper')">문제지형</button>
+            </div>
             <div class="sum-type-filter">
               <button class="sum-type-btn active" id="sumTypeAll" onclick="setSumType('all')">전체</button>
               <button class="sum-type-btn" id="sumTypeDan" onclick="setSumType('단답형')">단답형</button>
               <button class="sum-type-btn" id="sumTypeSeo" onclick="setSumType('서술형')">서술형</button>
             </div>
-            <button class="sum-expand-all" onclick="toggleAllSumItems()">전체 펼치기/접기</button>
+            <button class="sum-expand-all" id="btnExpandAll" onclick="toggleAllSumItems()">전체 펼치기/접기</button>
             <button class="sum-expand-all" onclick="goHome()">✕ 닫기</button>
           </div>
         </div>
         <div class="summary-tabs" id="summaryTabs"></div>
         <div style="height:16px"></div>
         <div class="sum-list" id="sumList"></div>
+        <div class="ep-list" id="sumPaperList" style="display:none"></div>
+      </div>
+    </div>
+
+    <!-- Mock exam page -->
+    <div id="mockExamArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
+      <div class="mock-wrap">
+        <div class="mock-header">
+          <div style="display:flex;align-items:center;gap:12px">
+            <h2>모의시험</h2>
+            <span style="font-size:13px;color:var(--text3);font-weight:400">단답형 12문항 · 서술형 4문항 · 실무형 택1</span>
+          </div>
+          <button class="sum-expand-all" onclick="goHome()">✕ 닫기</button>
+        </div>
+        <div class="mock-scoreboard" id="mockScoreboard"></div>
+        <div id="mockBody"></div>
       </div>
     </div>
   </main>
 </div>
 
 <div class="toast" id="toast"></div>
+<button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToSumTop()" title="맨위로">↑</button>
 
 <script>
 // ══════════════════════════════════════════════
@@ -1500,6 +1593,8 @@ function goHome() {
   document.getElementById('cardArea').style.display = 'none';
   document.getElementById('studyArea').style.display = 'none';
   document.getElementById('summaryArea').style.display = 'none';
+  document.getElementById('mockExamArea').style.display = 'none';
+  document.getElementById('scrollTopBtn').classList.remove('visible');
   document.getElementById('loadScreen').style.display = 'flex';
   document.getElementById('sidebar').style.display = 'none';
   document.getElementById('headerStats').style.display = 'none';
@@ -1517,7 +1612,9 @@ function openSummary() {
   document.getElementById('qArea').style.display = 'none';
   document.getElementById('sidebar').style.display = 'none';
   document.getElementById('headerStats').style.display = 'none';
-  document.getElementById('summaryArea').style.display = 'flex';
+  const sa = document.getElementById('summaryArea');
+  sa.style.display = 'flex';
+  document.getElementById('scrollTopBtn').classList.add('visible');
   buildSummaryTabs();
   renderSummary();
 }
@@ -1533,7 +1630,8 @@ function setSumSubject(s) {
   sumSubject = s;
   sumAllExpanded = false;
   buildSummaryTabs();
-  renderSummary();
+  if (sumView === 'paper') renderExamPaper();
+  else renderSummary();
 }
 
 function setSumType(t) {
@@ -1543,7 +1641,8 @@ function setSumType(t) {
     const m = { All: 'all', Dan: '단답형', Seo: '서술형' };
     document.getElementById('sumType' + k)?.classList.toggle('active', m[k] === t);
   });
-  renderSummary();
+  if (sumView === 'paper') renderExamPaper();
+  else renderSummary();
 }
 
 function renderSummary() {
@@ -1554,6 +1653,7 @@ function renderSummary() {
     return true;
   });
 
+  document.getElementById('sumCount').textContent = pool.length ? `${pool.length}개` : '';
   const list = document.getElementById('sumList');
   if (!pool.length) {
     list.innerHTML = '<div class="sum-empty">해당 과목/유형의 요약시트 데이터가 없습니다.<br>시트에 내용을 추가한 뒤 fetch_sheets.py를 실행하세요.</div>';
@@ -1581,6 +1681,15 @@ function toggleSumItem(i) {
   document.getElementById('sumItem_' + i)?.classList.toggle('open');
 }
 
+
+function scrollToSumTop() {
+  const sa = document.getElementById('summaryArea');
+  sa.scrollTop = 0;
+  sa.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('sumList').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function toggleAllSumItems() {
   sumAllExpanded = !sumAllExpanded;
   document.querySelectorAll('.sum-item').forEach(el => {
@@ -1603,6 +1712,276 @@ function showToast(msg) {
   t.textContent = msg;
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// ══════════════════════════════════════════════
+// Summary view toggle (카드형 / 문제지형)
+// ══════════════════════════════════════════════
+let sumView = 'card';
+let epPool = [];
+
+function setSumView(v) {
+  sumView = v;
+  document.getElementById('sumViewCard').classList.toggle('active', v === 'card');
+  document.getElementById('sumViewPaper').classList.toggle('active', v === 'paper');
+  document.getElementById('sumList').style.display = v === 'card' ? 'flex' : 'none';
+  document.getElementById('sumPaperList').style.display = v === 'paper' ? 'flex' : 'none';
+  document.getElementById('btnExpandAll').style.display = v === 'card' ? '' : 'none';
+  if (v === 'paper') renderExamPaper();
+  else renderSummary();
+}
+
+// ══════════════════════════════════════════════
+// 채점 공통 로직
+// ══════════════════════════════════════════════
+function normStr(s) {
+  return (s || '').trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+function gradeShortAnswer(userAns, correctAns) {
+  const user = normStr(userAns);
+  if (!user) return { status: 'empty', score: 0 };
+  const correct = normStr(correctAns);
+  const accepted = new Set([correct]);
+  // 괄호 처리: "ARP(주소결정프로토콜)" → "ARP" 또는 "주소결정프로토콜" 도 정답
+  const pm = correctAns.trim().match(/^([^(（]+?)\s*[(（]([^)）]+)[)）]\s*$/);
+  if (pm) { accepted.add(normStr(pm[1])); accepted.add(normStr(pm[2])); }
+  // 공백 무시 비교
+  const userNoSp = user.replace(/\s/g, '');
+  const hit = [...accepted].some(a => a === user || a.replace(/\s/g,'') === userNoSp);
+  return { status: hit ? 'correct' : 'wrong', score: hit ? 1 : 0 };
+}
+
+function gradeEssay(userAns, keywords, points) {
+  if (!keywords || !keywords.length) return { matched: [], missed: [], score: 0, total: 0 };
+  const u = (userAns || '').toLowerCase();
+  const matched = [], missed = [];
+  keywords.forEach(kw => {
+    (u.includes(kw.toLowerCase()) ? matched : missed).push(kw);
+  });
+  const score = keywords.length ? Math.round(matched.length / keywords.length * points) : 0;
+  return { matched, missed, score, total: keywords.length };
+}
+
+// ══════════════════════════════════════════════
+// 요약시트 문제지형
+// ══════════════════════════════════════════════
+function renderExamPaper() {
+  epPool = questions.filter(q => {
+    if (q.source !== '요약시트') return false;
+    if (q.exam !== sumSubject) return false;
+    if (sumType !== 'all' && q.type !== sumType) return false;
+    return true;
+  });
+
+  document.getElementById('sumCount').textContent = epPool.length ? `${epPool.length}개` : '';
+
+  const container = document.getElementById('sumPaperList');
+  if (!epPool.length) {
+    container.innerHTML = '<div class="sum-empty">해당 과목/유형의 요약시트 데이터가 없습니다.</div>';
+    return;
+  }
+
+  container.innerHTML = epPool.map((q, i) => {
+    const typeCls = q.type === '단답형' ? 't-dan' : 't-seo';
+    const inputEl = q.type === '단답형'
+      ? `<input type="text" class="ep-input-short" id="epInp_${i}" placeholder="답안 입력">`
+      : `<textarea class="ep-input-essay" id="epInp_${i}" placeholder="답안 입력" rows="4"></textarea>`;
+    return `<div class="ep-item" id="epItem_${i}">
+      <div class="ep-item-head">
+        <span class="ep-qnum">${i + 1}.</span>
+        <span class="badge type-${q.type}">${q.type}</span>
+        <span class="ep-pts">${q.points}점</span>
+      </div>
+      <div class="ep-qtext">${escHtml(q.question)}</div>
+      <div class="ep-input-row">
+        ${inputEl}
+        <button class="ep-grade-btn" id="epBtn_${i}" onclick="gradeEpItem(${i})">채점하기</button>
+      </div>
+      <div class="ep-result" id="epResult_${i}" style="display:none"></div>
+    </div>`;
+  }).join('');
+}
+
+function gradeEpItem(i) {
+  const q = epPool[i];
+  const inp = document.getElementById('epInp_' + i);
+  const userAns = inp ? inp.value : '';
+  const resultEl = document.getElementById('epResult_' + i);
+
+  let cls, title, body;
+  if (q.type === '단답형') {
+    const { status } = gradeShortAnswer(userAns, q.answer);
+    if (status === 'empty') { showToast('답안을 입력해주세요.'); return; }
+    cls = status;
+    title = status === 'correct' ? `✅ 정답  (${q.points}점)` : `❌ 오답  (0점 / ${q.points}점)`;
+    body = `<div class="ep-model-ans"><b>모범 답안</b><br>${escHtml(q.answer)}</div>`;
+  } else {
+    if (!userAns.trim()) { showToast('답안을 입력해주세요.'); return; }
+    const { matched, missed, score } = gradeEssay(userAns, q.keywords, q.points);
+    cls = score >= q.points ? 'correct' : score > 0 ? 'partial' : 'wrong';
+    title = `${cls === 'correct' ? '✅' : cls === 'partial' ? '🟡' : '❌'} ${score}점 / ${q.points}점`;
+    const kwHtml = [...matched.map(k=>`<span class="ep-kw hit">${escHtml(k)}</span>`),
+                    ...missed.map(k=>`<span class="ep-kw miss">${escHtml(k)}</span>`)].join('');
+    body = `${kwHtml ? `<div class="ep-kw-row">${kwHtml}</div>` : ''}
+            <div class="ep-model-ans"><b>모범 답안</b><br>${escHtml(q.answer)}</div>`;
+  }
+
+  resultEl.className = `ep-result ${cls}`;
+  resultEl.innerHTML = `<div class="ep-result-title">${title}</div>${body}`;
+  resultEl.style.display = 'block';
+  document.getElementById('epBtn_' + i).textContent = '다시 채점';
+}
+
+// renderSummary도 epPool 동기화
+const _origRenderSummary = typeof renderSummary === 'function' ? renderSummary : null;
+
+// ══════════════════════════════════════════════
+// 모의시험
+// ══════════════════════════════════════════════
+let mockShort = [], mockEssay = [], mockPractical = [];
+let mockSelectedP = -1;
+
+function openMockExam() {
+  document.getElementById('qArea').style.display = 'none';
+  document.getElementById('summaryArea').style.display = 'none';
+  document.getElementById('sidebar').style.display = 'none';
+  document.getElementById('headerStats').style.display = 'none';
+
+  const dan = shuffle([...questions.filter(q => q.type === '단답형')]).slice(0, 12);
+  const seo = shuffle([...questions.filter(q => q.type === '서술형')]).slice(0, 4);
+  const sil = shuffle([...questions.filter(q => q.type === '실무형')]).slice(0, 2);
+
+  if (dan.length < 12) { showToast('단답형 문제가 부족합니다.'); return; }
+  if (seo.length < 4)  { showToast('서술형 문제가 부족합니다.'); return; }
+
+  mockShort = dan; mockEssay = seo; mockPractical = sil;
+  mockSelectedP = sil.length > 0 ? 0 : -1;
+
+  document.getElementById('mockExamArea').style.display = 'flex';
+  document.getElementById('scrollTopBtn').classList.add('visible');
+  renderMockExam();
+}
+
+function renderMockExam() {
+  updateMockScore();
+
+  const shortHtml = mockShort.map((q, i) => mockItemHtml('short', i, i + 1, q, 3)).join('');
+  const essayHtml = mockEssay.map((q, i) => mockItemHtml('essay', i, 13 + i, q, 12)).join('');
+  const pracHtml  = mockPractical.length
+    ? mockPractical.map((q, i) => mockItemHtml('prac', i, 17 + i, q, 16)).join('')
+    : '<p style="color:var(--text3);font-size:14px">실무형 문제가 없습니다.</p>';
+
+  document.getElementById('mockBody').innerHTML = `
+    <div class="mock-section">
+      <div class="mock-section-title">A형 · 단답형 <span>12문항 × 3점 = 36점</span></div>
+      ${shortHtml}
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-title">B형 · 서술형 <span>4문항 × 12점 = 48점</span></div>
+      ${essayHtml}
+    </div>
+    <div class="mock-section">
+      <div class="mock-section-title">C형 · 실무형 <span>2문항 중 1문항 선택 × 16점</span></div>
+      ${mockPractical.length ? `<div class="mock-practical-select">
+        <span>답안 작성할 문항 선택:</span>
+        ${mockPractical.map((_, i) => `<button class="mock-sel-btn${mockSelectedP===i?' on':''}" onclick="selectPractical(${i})">${17+i}번</button>`).join('')}
+      </div>` : ''}
+      ${pracHtml}
+    </div>`;
+}
+
+function mockItemHtml(section, idx, num, q, pts) {
+  const isSelected = section !== 'prac' || mockSelectedP === idx;
+  const dimmed = section === 'prac' && mockSelectedP !== -1 && mockSelectedP !== idx;
+  const inputEl = (section === 'short')
+    ? `<input type="text" class="ep-input-short" id="mInp_${section}_${idx}" placeholder="답안 입력">`
+    : `<textarea class="ep-input-essay" id="mInp_${section}_${idx}" placeholder="답안 입력" rows="${section==='prac'?8:5}"></textarea>`;
+  return `<div class="mock-item${section==='prac'&&isSelected?' selected-practical':''}" id="mItem_${section}_${idx}" style="${dimmed?'opacity:.4;pointer-events:none':''}">
+    <div class="mock-item-head">
+      <span class="mock-qnum">${num}번</span>
+      <span class="badge type-${q.type}">${q.type}</span>
+      <span class="mock-pts">${pts}점</span>
+    </div>
+    <div class="mock-qtext">${escHtml(q.question)}</div>
+    <div class="mock-input-row">
+      ${inputEl}
+      <button class="ep-grade-btn" id="mBtn_${section}_${idx}" onclick="gradeMockItem('${section}',${idx},${pts})">채점하기</button>
+    </div>
+    <div class="ep-result" id="mResult_${section}_${idx}" style="display:none"></div>
+  </div>`;
+}
+
+function selectPractical(i) {
+  mockSelectedP = i;
+  renderMockExam();
+}
+
+function gradeMockItem(section, idx, pts) {
+  const q = section === 'short' ? mockShort[idx] : section === 'essay' ? mockEssay[idx] : mockPractical[idx];
+  const inp = document.getElementById(`mInp_${section}_${idx}`);
+  const userAns = inp ? inp.value : '';
+  const resultEl = document.getElementById(`mResult_${section}_${idx}`);
+
+  let cls, title, body;
+  if (section === 'short') {
+    const { status } = gradeShortAnswer(userAns, q.answer);
+    if (status === 'empty') { showToast('답안을 입력해주세요.'); return; }
+    cls = status;
+    title = status === 'correct' ? `✅ 정답 (${pts}점)` : `❌ 오답 (0점 / ${pts}점)`;
+    body = `<div class="ep-model-ans"><b>모범 답안</b><br>${escHtml(q.answer)}</div>`;
+  } else {
+    if (!userAns.trim()) { showToast('답안을 입력해주세요.'); return; }
+    const { matched, missed, score } = gradeEssay(userAns, q.keywords, pts);
+    cls = score >= pts ? 'correct' : score > 0 ? 'partial' : 'wrong';
+    title = `${cls==='correct'?'✅':cls==='partial'?'🟡':'❌'} ${score}점 / ${pts}점`;
+    const kwHtml = [...matched.map(k=>`<span class="ep-kw hit">${escHtml(k)}</span>`),
+                    ...missed.map(k=>`<span class="ep-kw miss">${escHtml(k)}</span>`)].join('');
+    body = `${kwHtml?`<div class="ep-kw-row">${kwHtml}</div>`:''}
+            <div class="ep-model-ans"><b>모범 답안</b><br>${escHtml(q.answer)}</div>`;
+  }
+
+  resultEl.className = `ep-result ${cls}`;
+  resultEl.innerHTML = `<div class="ep-result-title">${title}</div>${body}`;
+  resultEl.style.display = 'block';
+  document.getElementById(`mBtn_${section}_${idx}`).textContent = '다시 채점';
+  updateMockScore();
+}
+
+function updateMockScore() {
+  let total = 0, scored = 0;
+  const tally = (section, pool, pts) => {
+    pool.forEach((_, i) => {
+      if (section === 'prac' && mockSelectedP !== i) return;
+      const r = document.getElementById(`mResult_${section}_${i}`);
+      if (!r || r.style.display === 'none') { total += pts; return; }
+      total += pts;
+      const m = r.querySelector('.ep-result-title')?.textContent.match(/(\d+)점/);
+      if (m) scored += parseInt(m[1]);
+    });
+  };
+  tally('short', mockShort, 3);
+  tally('essay', mockEssay, 12);
+  tally('prac', mockPractical, 16);
+
+  document.getElementById('mockScoreboard').innerHTML = `
+    <div class="mock-score-chip">총점 <b id="mockTotalScore">${scored}</b> / ${total}점</div>
+    <div class="mock-score-chip">단답형 <b>${calcSectionScore('short', mockShort, 3)}</b> / ${mockShort.length*3}점</div>
+    <div class="mock-score-chip">서술형 <b>${calcSectionScore('essay', mockEssay, 12)}</b> / ${mockEssay.length*12}점</div>
+    ${mockPractical.length ? `<div class="mock-score-chip">실무형 <b>${calcSectionScore('prac', mockPractical, 16)}</b> / 16점</div>` : ''}
+  `;
+}
+
+function calcSectionScore(section, pool, pts) {
+  let s = 0;
+  pool.forEach((_, i) => {
+    if (section === 'prac' && mockSelectedP !== i) return;
+    const r = document.getElementById(`mResult_${section}_${i}`);
+    if (!r || r.style.display === 'none') return;
+    const m = r.querySelector('.ep-result-title')?.textContent.match(/(\d+)점/);
+    if (m) s += parseInt(m[1]);
+  });
+  return s;
 }
 </script>
 </body>
