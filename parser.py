@@ -29,15 +29,63 @@ def clean_text(text):
 def get_points(q_type):
     return {'단답형': 3, '서술형': 12, '실무형': 16}.get(q_type, 3)
 
+def split_top_level(text, seps=',，/'):
+    """괄호 안쪽은 무시하고 최상위 레벨에서만 구분자로 분리"""
+    parts = []
+    depth = 0
+    buf = []
+    for ch in text:
+        if ch in '([{':
+            depth += 1
+            buf.append(ch)
+        elif ch in ')]}':
+            depth = max(0, depth - 1)
+            buf.append(ch)
+        elif depth == 0 and ch in seps:
+            parts.append(''.join(buf))
+            buf = []
+        else:
+            buf.append(ch)
+    parts.append(''.join(buf))
+    return parts
+
+
 def extract_keywords(answer, q_type):
-    """답안에서 자동채점용 키워드 추출"""
-    keywords = []
+    """답안에서 자동채점용 키워드 추출
+    - 괄호 안(영문 정식명칭/한글 번역 등)은 분리하지 않고 그대로 보존한다.
+      (프론트엔드 matchAnswer가 괄호 안팎을 모두 정답으로 인정하기 때문)
+    - "( A ) : ..." / "(A): ..." 형식의 다중 빈칸 답안은 빈칸별로 분리한다.
+    - "1) ... 2) ..." 형식의 번호 매긴 다중 답안도 항목별로 분리한다.
+    """
     if not answer:
+        return []
+
+    blank_pat = re.compile(r'\(\s*[A-Za-z]\s*\)\s*:\s*')
+    blanks = list(blank_pat.finditer(answer))
+    if len(blanks) >= 2:
+        keywords = []
+        for i, m in enumerate(blanks):
+            start = m.end()
+            end = blanks[i + 1].start() if i + 1 < len(blanks) else len(answer)
+            kw = re.sub(r'\s+', ' ', answer[start:end]).strip()
+            if kw:
+                keywords.append(kw)
         return keywords
-    # 쉼표/슬래시로 구분된 항목들 추출
-    raw = re.split(r'[,，/]', answer)
-    for kw in raw:
-        kw = re.sub(r'\(.*?\)', '', kw)   # 괄호 내용 제거
+
+    num_pat = re.compile(r'(?:^|\n)\s*\d+\)\s*')
+    nums = list(num_pat.finditer(answer))
+    if len(nums) >= 2:
+        keywords = []
+        for i, m in enumerate(nums):
+            start = m.end()
+            end = nums[i + 1].start() if i + 1 < len(nums) else len(answer)
+            kw = re.sub(r'\s+', ' ', answer[start:end]).strip()
+            if kw:
+                keywords.append(kw)
+        return keywords
+
+    keywords = []
+    for kw in split_top_level(answer):
         kw = re.sub(r'\s+', ' ', kw).strip()
         if kw and 1 <= len(kw) <= 60:
             keywords.append(kw)

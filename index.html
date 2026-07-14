@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>정보보안기사 실기 문제은행</title>
 <script src="data.js" onerror="console.warn('data.js 없음, fetch 시도')"></script>
+<script src="glossary_data.js" onerror="console.warn('glossary_data.js 없음')"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
 :root {
@@ -415,6 +416,48 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
 .sum-type-badge.t-dan { background: #eff1fe; color: var(--accent); border: 1px solid #c7d0fb; }
 .sum-type-badge.t-seo { background: #ecfdf5; color: var(--green); border: 1px solid #a7f3d0; }
 .sum-empty { text-align: center; color: var(--text2); padding: 60px 20px; font-size: 14px; }
+
+/* ── Glossary (요약정리) ── */
+.glos-note {
+  font-size: 12px; font-weight: 800; color: var(--text3); letter-spacing: .2px;
+  margin: 14px 2px 2px; padding-top: 8px; border-top: 1px dashed var(--border);
+  white-space: pre-wrap; line-height: 1.6;
+}
+.glos-note:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+.glos-entry {
+  display: flex; gap: 16px; padding: 12px 16px; background: var(--bg2);
+  border: 1px solid var(--border); border-radius: var(--radius-sm); align-items: flex-start;
+}
+.glos-term-col { flex: 0 0 160px; display: flex; flex-direction: column; gap: 6px; }
+.glos-term { font-size: 14px; font-weight: 800; color: var(--text); line-height: 1.4; word-break: break-word; }
+.glos-mnemonic {
+  align-self: flex-start; font-size: 10px; font-weight: 800; color: var(--accent);
+  background: rgba(99,102,241,.1); border: 1px solid rgba(99,102,241,.25);
+  border-radius: 10px; padding: 2px 8px; letter-spacing: .3px;
+}
+.glos-defs-col { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.glos-defs { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+.glos-defs li { font-size: 13.5px; line-height: 1.7; color: var(--text2); }
+.glos-defs li.sub { list-style: none; margin-left: -18px; font-size: 12.5px; color: var(--text3); }
+.glos-acronym {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10.5px; font-weight: 800; color: #b45309;
+  background: rgba(245,158,11,.12); border: 1px solid rgba(245,158,11,.35);
+  border-radius: 10px; padding: 2px 9px; letter-spacing: .3px;
+}
+.glos-chapter-tag {
+  font-size: 10px; font-weight: 800; color: var(--text3); background: var(--bg3);
+  border-radius: 8px; padding: 2px 8px; flex-shrink: 0;
+}
+.glos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.glos-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+.glos-card-title { font-size: 13px; font-weight: 800; color: var(--cyan); margin-bottom: 8px; }
+.glos-card ul { margin: 0; padding-left: 16px; display: flex; flex-direction: column; gap: 3px; }
+.glos-card li { font-size: 12px; line-height: 1.6; color: var(--text2); }
+@media (max-width: 640px) {
+  .glos-entry { flex-direction: column; gap: 6px; }
+  .glos-term-col { flex: none; flex-direction: row; align-items: center; }
+}
 .sum-expand-all {
   font-size: 12px; font-weight: 700; color: var(--text2); cursor: pointer;
   padding: 5px 14px; border: 1.5px solid var(--border2);
@@ -571,7 +614,6 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
         <div class="filter-group" id="sourceFilters">
           <label class="filter-chip"><input type="checkbox" value="기출" checked onchange="onFilterChange()"> 기출문제</label>
           <label class="filter-chip"><input type="checkbox" value="151제" checked onchange="onFilterChange()"> 단답형 151제</label>
-          <label class="filter-chip"><input type="checkbox" value="요약정리" checked onchange="onFilterChange()"> 요약정리</label>
         </div>
       </div>
       <!-- 회차 필터 -->
@@ -630,6 +672,7 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
           <div class="mode-start-row">
             <button class="load-btn" onclick="startStudy()">학습 시작 →</button>
             <button class="load-btn" onclick="openSummary()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">요약시트 보기</button>
+            <button class="load-btn" onclick="openGlossary()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">요약정리 보기</button>
             <button class="load-btn" onclick="openMockExam()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">모의시험 응시</button>
           </div>
         </div>
@@ -734,6 +777,27 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
       </div>
     </div>
 
+    <!-- Glossary page (요약정리 재구성 열람 전용, 채점 없음) -->
+    <div id="glossaryArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
+      <div class="summary-wrap">
+        <div class="summary-header">
+          <div style="display:flex;align-items:center;gap:12px">
+            <h2>요약정리</h2>
+            <span id="glosCount" style="font-size:13px;color:var(--text3);font-weight:400"></span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <input type="text" id="glosSearch" placeholder="용어/설명 검색..." oninput="onGlosSearch()"
+              style="padding:8px 14px;border-radius:8px;border:1px solid var(--border);background:var(--bg2);color:var(--text);font-size:13px;min-width:200px">
+            <a id="glosOpenPdf" href="#" target="_blank" rel="noopener" class="sum-expand-all" style="text-decoration:none; display:inline-block">📄 원본 PDF</a>
+            <button class="sum-expand-all" onclick="goHome()">✕ 닫기</button>
+          </div>
+        </div>
+        <div class="summary-tabs" id="glosTabs"></div>
+        <div style="height:16px"></div>
+        <div id="glosBody"></div>
+      </div>
+    </div>
+
     <!-- Mock exam page -->
     <div id="mockExamArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
       <div class="mock-wrap">
@@ -809,7 +873,8 @@ async function loadQuestions() {
 }
 
 function onLoaded() {
-  document.getElementById('totalCount').textContent = questions.length;
+  // 요약정리(PDF 자동추출)는 파싱 품질 문제로 문제풀이 대상에서 제외 (별도 용어집 페이지에서만 열람)
+  document.getElementById('totalCount').textContent = questions.filter(q => q.source !== '요약정리').length;
 
   // 회차 목록
   allExams = [...new Set(questions.filter(q => q.source === '기출').map(q => q.exam))].sort();
@@ -819,7 +884,7 @@ function onLoaded() {
   // 유형 카운트
   for (const t of ['단답형', '서술형', '실무형']) {
     const el = document.getElementById('cnt-' + t);
-    if (el) el.textContent = questions.filter(q => q.type === t).length;
+    if (el) el.textContent = questions.filter(q => q.type === t && q.source !== '요약정리').length;
   }
 
   updateStats();
@@ -1159,7 +1224,11 @@ function checkAnswer() {
   const blankMatches = [...q.question.matchAll(/\(\s{0,3}([A-Za-z])\s{0,3}\)/g)];
   const hasMultiPart = blankMatches.length >= 2 && q.keywords.length > 1;
 
-  let correct = 0, total = 0;
+  // "OO가지" 서술 요구 문제: 요구 개수 이상 맞히면 정답으로 인정
+  const nGajiMatch = q.question.match(/(\d+)\s*가지/);
+  const requiredN = nGajiMatch ? parseInt(nGajiMatch[1], 10) : null;
+
+  let correct = 0, total = 0, passCount = 0;
   const kwResults = [];
 
   if (hasMultiPart && q.keywords.length > 1) {
@@ -1172,21 +1241,23 @@ function checkAnswer() {
       if (inp) inp.classList.add(hit ? 'correct' : 'wrong');
       kwResults.push({ kw, hit });
     });
+    passCount = total;
   } else {
     total = q.keywords.length || 1;
+    passCount = requiredN ? Math.min(requiredN, total) : total;
     const userAns = userAnswers[0].toLowerCase().trim();
     q.keywords.forEach(kw => {
       const hit = matchAnswer(userAns, kw);
       if (hit) correct++;
       kwResults.push({ kw, hit });
     });
-    if (inputs[0]) inputs[0].classList.add(correct === total ? 'correct' : correct > 0 ? 'correct' : 'wrong');
+    if (inputs[0]) inputs[0].classList.add(correct >= passCount ? 'correct' : correct > 0 ? 'correct' : 'wrong');
   }
 
   inputs.forEach(i => i.disabled = true);
   document.getElementById('btnRow').innerHTML = `<button class="btn btn-next" onclick="nextQuestion()">다음 문제 →</button>`;
 
-  const grade = correct === total ? 'correct' : correct > 0 ? 'partial' : 'wrong';
+  const grade = correct >= passCount ? 'correct' : correct > 0 ? 'partial' : 'wrong';
   const gradeLabel = { correct: '✅ 정답', partial: '🟡 부분 정답', wrong: '❌ 오답' };
 
   const kwChips = kwResults.map(r =>
@@ -1213,15 +1284,32 @@ function normalizeAns(s) {
   return s.replace(/[\s\-_]/g,'').toLowerCase();
 }
 
+// 문자열에서 첫 번째 최상위 "(...)" 쌍을 찾음 (중첩 괄호 지원)
+function findFirstParen(s) {
+  const start = s.indexOf('(');
+  if (start === -1) return null;
+  let depth = 0;
+  for (let i = start; i < s.length; i++) {
+    if (s[i] === '(') depth++;
+    else if (s[i] === ')') {
+      depth--;
+      if (depth === 0) return { start, end: i };
+    }
+  }
+  return null;
+}
+
 // "캐시(Cache)" → ["캐시(Cache)", "캐시", "Cache"]
+// "BIA(Business Impact Analysis, 업무영향도 분석)" → [..., "BIA", "Business Impact Analysis", "업무영향도 분석"]
 function parseAlternatives(kw) {
   const alts = [kw];
-  const m = kw.match(/^(.+?)\(([^)]+)\)(.*)$/);
-  if (m) {
-    const before = (m[1] + m[3]).trim();
-    const inside = m[2].trim();
+  const paren = findFirstParen(kw);
+  if (paren) {
+    const before = (kw.slice(0, paren.start) + kw.slice(paren.end + 1)).trim();
+    const inside = kw.slice(paren.start + 1, paren.end).trim();
     if (before) alts.push(before);
-    if (inside) alts.push(inside);
+    // 괄호 안에 쉼표/슬래시로 나열된 대안들(예: 영문 정식명칭, 한글 번역)도 각각 정답으로 인정
+    inside.split(/[,，\/]/).map(s => s.trim()).filter(Boolean).forEach(s => alts.push(s));
   }
   return alts;
 }
@@ -1593,6 +1681,7 @@ function goHome() {
   document.getElementById('cardArea').style.display = 'none';
   document.getElementById('studyArea').style.display = 'none';
   document.getElementById('summaryArea').style.display = 'none';
+  document.getElementById('glossaryArea').style.display = 'none';
   document.getElementById('mockExamArea').style.display = 'none';
   document.getElementById('scrollTopBtn').classList.remove('visible');
   document.getElementById('loadScreen').style.display = 'flex';
@@ -1695,6 +1784,124 @@ function toggleAllSumItems() {
   document.querySelectorAll('.sum-item').forEach(el => {
     el.classList.toggle('open', sumAllExpanded);
   });
+}
+
+// ══════════════════════════════════════════════
+// Glossary page (요약정리 재구성 열람, 문제풀이에는 미포함)
+// ══════════════════════════════════════════════
+const GLOS_PDF_PATH = '정보보안기사 요약 정리.pdf';
+let glosTabIdx = 0;       // 챕터 인덱스 또는 'quickref'
+let glosSearchTerm = '';
+
+function openGlossary() {
+  document.getElementById('qArea').style.display = 'none';
+  document.getElementById('sidebar').style.display = 'none';
+  document.getElementById('headerStats').style.display = 'none';
+  document.getElementById('glossaryArea').style.display = 'flex';
+  document.getElementById('scrollTopBtn').classList.add('visible');
+  document.getElementById('glosOpenPdf').href = encodeURI(GLOS_PDF_PATH);
+  document.getElementById('glosSearch').value = '';
+  glosSearchTerm = '';
+  glosTabIdx = 0;
+  buildGlosTabs();
+  renderGlossaryBody();
+}
+
+function buildGlosTabs() {
+  const data = window.GLOSSARY_DATA;
+  const el = document.getElementById('glosTabs');
+  if (!data) { el.innerHTML = ''; return; }
+  const chapterTabs = data.chapters.map((ch, i) =>
+    `<button class="sum-tab${glosTabIdx === i ? ' active' : ''}" onclick="setGlosTab(${i})">${escHtml(ch.title || ('챕터' + (i + 1)))}</button>`
+  ).join('');
+  const quickTab = `<button class="sum-tab${glosTabIdx === 'quickref' ? ' active' : ''}" onclick="setGlosTab('quickref')">⚡ 빠른 참고</button>`;
+  el.innerHTML = chapterTabs + quickTab;
+}
+
+function setGlosTab(idx) {
+  glosTabIdx = idx;
+  document.getElementById('glosSearch').value = '';
+  glosSearchTerm = '';
+  buildGlosTabs();
+  renderGlossaryBody();
+}
+
+function onGlosSearch() {
+  glosSearchTerm = (document.getElementById('glosSearch').value || '').trim().toLowerCase();
+  renderGlossaryBody();
+}
+
+function glosEntryHtml(b, chapterTag) {
+  // 부제(label, 예: [자산목록])는 용어 아래에, 암기용 두문자어(acronym, 예: 자위취)는
+  // 설명 옆에 별도 색상의 태그로 붙인다 (서로 성격이 다름)
+  const isAcronym = b.mnemonic && b.mnemonic_type === 'acronym';
+  const labelHtml = (b.mnemonic && !isAcronym) ? `<span class="glos-mnemonic">${escHtml(b.mnemonic)}</span>` : '';
+  const acronymHtml = isAcronym ? `<span class="glos-acronym">🧠 ${escHtml(b.mnemonic)}</span>` : '';
+  const tagHtml = chapterTag ? `<span class="glos-chapter-tag">${escHtml(chapterTag)}</span>` : '';
+  const defsHtml = (b.defs && b.defs.length)
+    ? b.defs.map(d => {
+        const m = d.match(/^-\s*(.+)$/);
+        return m ? `<li class="sub">└ ${escHtml(m[1])}</li>` : `<li>${escHtml(d)}</li>`;
+      }).join('')
+    : '<li style="color:var(--text3)">-</li>';
+  return `<div class="glos-entry">
+    <div class="glos-term-col">
+      <div class="glos-term">${escHtml(b.term)}</div>
+      ${labelHtml}
+      ${tagHtml}
+    </div>
+    <div class="glos-defs-col">
+      ${acronymHtml}
+      <ul class="glos-defs">${defsHtml}</ul>
+    </div>
+  </div>`;
+}
+
+function renderGlossaryBody() {
+  const data = window.GLOSSARY_DATA;
+  const body = document.getElementById('glosBody');
+  const countEl = document.getElementById('glosCount');
+
+  if (!data) {
+    body.innerHTML = '<div class="sum-empty">glossary_data.js가 없습니다.<br>build_glossary.py를 먼저 실행하세요.</div>';
+    countEl.textContent = '';
+    return;
+  }
+
+  if (glosSearchTerm) {
+    const results = [];
+    data.chapters.forEach(ch => {
+      (ch.blocks || []).forEach(b => {
+        if (b.type !== 'entry') return;
+        const hay = (b.term + ' ' + b.defs.join(' ') + ' ' + (b.mnemonic || '')).toLowerCase();
+        if (hay.includes(glosSearchTerm)) results.push({ ch, block: b });
+      });
+    });
+    countEl.textContent = results.length ? `검색결과 ${results.length}개` : '';
+    body.innerHTML = results.length
+      ? `<div class="sum-list">${results.map(r => glosEntryHtml(r.block, r.ch.title)).join('')}</div>`
+      : '<div class="sum-empty">검색 결과가 없습니다.</div>';
+    return;
+  }
+
+  if (glosTabIdx === 'quickref') {
+    const sections = data.mindmap || [];
+    countEl.textContent = sections.length ? `${sections.length}개 섹션` : '';
+    body.innerHTML = `<div class="glos-grid">${sections.map(s => `
+      <div class="glos-card">
+        <div class="glos-card-title">${escHtml(s.title)}</div>
+        <ul>${s.items.map(it => `<li>${escHtml(it)}</li>`).join('')}</ul>
+      </div>`).join('')}</div>`;
+    return;
+  }
+
+  const ch = data.chapters[glosTabIdx];
+  if (!ch) { body.innerHTML = ''; countEl.textContent = ''; return; }
+  const entryCount = (ch.blocks || []).filter(b => b.type === 'entry').length;
+  countEl.textContent = entryCount ? `${entryCount}개 용어` : '';
+  body.innerHTML = `<div class="sum-list">${(ch.blocks || []).map(b =>
+    b.type === 'note' ? `<div class="glos-note">${escHtml(b.text)}</div>` : glosEntryHtml(b)
+  ).join('')}</div>`;
 }
 
 
