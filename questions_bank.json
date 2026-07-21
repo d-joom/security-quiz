@@ -1260,9 +1260,9 @@
     "type": "단답형",
     "points": 3,
     "question": "Snort에서는 대량의 패킷에 대응하기 위하여 Threshold 옵션을 type(action 수행 유형), track(소스/목적지 IP), count(횟수), second(시간)으로 설정할 수 있다. 이 중 thresholod type 3가지를 기술하시오.\n\n(예) threshold type <(1)|(2)|(3)>, track<by_src|by_dst>, count <c>, seconds <s>",
-    "answer": "treshold, limit, both",
+    "answer": "threshold, limit, both",
     "keywords": [
-      "treshold",
+      "threshold",
       "limit",
       "both"
     ],
@@ -1296,8 +1296,7 @@
     "question": "DNS 서비스와 관련하여 ( )안에 들어갈 용어를 기술하시오. \n\n1) DNS 서비스는 53번 포트를 사용하고 전승 계층 프로토콜로 ( A ) 를 사용한다.\n\n2) DNS 서버는 반복적인 질의로 상위 DNS에 가해지는 부하를 줄이기 위해 ( B )를 사용하는데, 해당 정보가 유지되는 기간을 ( C ) 이라고 한다.",
     "answer": "UDP/TCP, Cache(DNS캐시), TTL(Time To Live)",
     "keywords": [
-      "UDP",
-      "TCP",
+      "UDP(TCP)",
       "Cache(DNS캐시)",
       "TTL(Time To Live)"
     ],
@@ -1348,10 +1347,10 @@
     "type": "단답형",
     "points": 3,
     "question": "개인정보의 안전성 확보조치 기준에 대하여 ( )에 들어갈 용어를 기술하시오.\n\n[제8조(접속기록의 보관 및 점검)] ① 개인정보처리자는 개인정보취급자가 개인정보처리시스템에 접속한 기록을 ( A ) 년 이상 보관·관리하여야 한다. 다만, ( B ) 명 이상의 정보주체에 관하여 개인정보를 처리하거나, 고유식별정보 또는 ( C ) 를 처리하는 개인정보처리시스템의 경우에는 2년 이상 보관·관리하여야 한다.",
-    "answer": "1년, 5만명, 민감정보",
+    "answer": "1, 5만, 민감정보",
     "keywords": [
-      "1년",
-      "5만명",
+      "1",
+      "5만",
       "민감정보"
     ],
     "commentary": "가장 기본이 되는 법규 문제입니다. 3점 모두 획득해야 합니다.",
@@ -2138,8 +2137,10 @@
     "type": "단답형",
     "points": 3,
     "question": "전자기기에서 발생되는 불필요한 전자 방사를 통해 민감한 정보를 도청하거나 유출하는 것을 방지하기 위한 일련의 표준과 기술을 무엇이라 하나?",
-    "answer": "TEMPEST (Telecommunications Electronics Material Protected from Emanating Spurious Transmissions",
-    "keywords": [],
+    "answer": "TEMPEST (Telecommunications Electronics Material Protected from Emanating Spurious Transmissions)",
+    "keywords": [
+      "TEMPEST(Telecommunications Electronics Material Protected from Emanating Spurious Transmissions)"
+    ],
     "commentary": "수험서에 없는 내용이나, 보기가 제시되었기에 유추하여 맞춰볼 수 있는 문제였습니다.\nTEMPEST 기술을 통해 정부, 군사 및 민간 기관은 전자기 방사로 인한 도청 및 정보 유출의 위험을 최소화할 수 있습니다. 다양한 물리적 및 기술적 방법(차폐, 필터링, 거리 유지, 장비 인증)을 사용하여 전자기 방사를 차단하고, 정보 보안을 강화합니다.\n참고로, EMP(ElectroMagnetic Pulse)는 전자기 방사를 이용하여 전자기기를 파괴하거나 기능을 방해하기 위한 목적으로 행해지는 공격 기술입니다. 즉, TEMPEST는 정보 유출(기밀성)을 방지하기 위한 보호 기술이고, EMP는 전자기기의 가용성을 손상시키기 위한 공격 기술입니다.\n참조 : 템페스트 (암호명) - 위키백과, 우리 모두의 백과사전 (wikipedia.org)",
     "difficulty": "",
     "sub_questions": null
