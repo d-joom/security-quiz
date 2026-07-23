@@ -648,6 +648,7 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
             <button class="load-btn" onclick="openGlossary()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">요약정리 보기</button>
             <button class="load-btn" onclick="openMockExam()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">모의시험 응시</button>
             <button class="load-btn" onclick="openFrequent()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🔥 빈출모음 보기</button>
+            <button class="load-btn" onclick="openFrequentEssay()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🔥 빈출모음 - 서술/실무형</button>
           </div>
         </div>
       </div>
@@ -786,6 +787,23 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
         </div>
         <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">18회~29회 기출문제 중 같은 주제로 3회 이상 반복 출제된 카테고리입니다. 문제를 클릭하면 정답이 펼쳐집니다.</p>
         <div id="freqList"></div>
+      </div>
+    </div>
+
+    <!-- 빈출 모음 - 서술형/실무형 (2문제 이상 주제 겹치면 포함) -->
+    <div id="frequentEssayArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
+      <div class="summary-wrap">
+        <div class="summary-header">
+          <div style="display:flex;align-items:center;gap:12px">
+            <h2>🔥 빈출 모음 - 서술/실무형</h2>
+            <span id="freqEssayCount" style="font-size:13px;color:var(--text3);font-weight:400"></span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <button class="sum-expand-all" onclick="goHome()">✕ 닫기</button>
+          </div>
+        </div>
+        <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">18회~29회 기출 서술형/실무형 중 같은 주제로 2회 이상 반복 출제된 카테고리입니다. 문제를 클릭하면 정답이 펼쳐집니다.</p>
+        <div id="freqEssayList"></div>
       </div>
     </div>
 
@@ -1686,6 +1704,7 @@ function goHome() {
   document.getElementById('glossaryArea').style.display = 'none';
   document.getElementById('mockExamArea').style.display = 'none';
   document.getElementById('frequentArea').style.display = 'none';
+  document.getElementById('frequentEssayArea').style.display = 'none';
   document.getElementById('scrollTopBtn').classList.remove('visible');
   document.getElementById('loadScreen').style.display = 'flex';
   document.getElementById('sidebar').style.display = 'flex';
@@ -2069,27 +2088,53 @@ const FREQUENT_TOPICS = [
   { name: '개인정보 안전성확보조치', ids: ['22회_11','22회_18','23회_17'] },
 ];
 
+// 서술형/실무형 전용 빈출 모음 (2문제 이상 주제 겹치면 포함)
+const FREQUENT_TOPICS_ESSAY = [
+  { name: '파일업로드 취약점', ids: ['19회_15','23회_13','29회_14'] },
+  { name: '유닉스 파일권한/특수비트(SetUID 등)', ids: ['19회_11','24회_13','27회_15'] },
+  { name: '개인정보 기술적/관리적 보호조치', ids: ['21회_13','22회_18','23회_17'] },
+  { name: '정보자산 중요도', ids: ['19회_16','25회_15','28회_16'] },
+  { name: 'SQL Injection / Prepared Statement', ids: ['18회_11','22회_17','27회_17'] },
+  { name: 'DRDoS/DNS 증폭 공격', ids: ['18회_12','18회_16','22회_16'] },
+  { name: '재해복구시스템 유형', ids: ['21회_12','27회_16'] },
+  { name: 'NetBIOS 바인딩 취약점', ids: ['23회_15','28회_14'] },
+  { name: 'IPTables', ids: ['21회_14','24회_15'] },
+  { name: 'DB 보안 (권한관리·감사로그)', ids: ['26회_17','28회_17'] },
+  { name: 'Promiscuous mode', ids: ['19회_13','26회_15'] },
+  { name: 'IDS 탐지방식/대응', ids: ['21회_11','25회_16'] },
+  { name: '위험분석 접근법', ids: ['22회_14','27회_13'] },
+];
+
 function openFrequent() {
   document.getElementById('qArea').style.display = 'none';
   document.getElementById('sidebar').style.display = 'none';
   document.getElementById('headerStats').style.display = 'none';
   document.getElementById('frequentArea').style.display = 'flex';
   document.getElementById('scrollTopBtn').classList.add('visible');
-  renderFrequent();
+  renderFreqList(FREQUENT_TOPICS, 'freqList', 'freqCount', 'freq');
 }
 
-function renderFrequent() {
-  const byId = new Map(questions.map(q => [q.id, q]));
-  const totalOccurrences = FREQUENT_TOPICS.reduce((s, t) => s + t.ids.length, 0);
-  document.getElementById('freqCount').textContent = `${FREQUENT_TOPICS.length}개 카테고리 · 총 ${totalOccurrences}회 출제`;
+function openFrequentEssay() {
+  document.getElementById('qArea').style.display = 'none';
+  document.getElementById('sidebar').style.display = 'none';
+  document.getElementById('headerStats').style.display = 'none';
+  document.getElementById('frequentEssayArea').style.display = 'flex';
+  document.getElementById('scrollTopBtn').classList.add('visible');
+  renderFreqList(FREQUENT_TOPICS_ESSAY, 'freqEssayList', 'freqEssayCount', 'freqEssay');
+}
 
-  document.getElementById('freqList').innerHTML = FREQUENT_TOPICS.map((topic, ti) => {
+function renderFreqList(topics, listElId, countElId, idPrefix) {
+  const byId = new Map(questions.map(q => [q.id, q]));
+  const totalOccurrences = topics.reduce((s, t) => s + t.ids.length, 0);
+  document.getElementById(countElId).textContent = `${topics.length}개 카테고리 · 총 ${totalOccurrences}회 출제`;
+
+  document.getElementById(listElId).innerHTML = topics.map((topic, ti) => {
     const items = topic.ids.map((qid, i) => {
       const q = byId.get(qid);
       if (!q) return '';
       const typeCls = q.type === '단답형' ? 't-dan' : 't-seo';
-      return `<div class="sum-item" id="freqItem_${ti}_${i}">
-        <div class="sum-item-head" onclick="toggleFreqItem(${ti},${i})">
+      return `<div class="sum-item" id="${idPrefix}Item_${ti}_${i}">
+        <div class="sum-item-head" onclick="toggleFreqItem('${idPrefix}',${ti},${i})">
           <span class="freq-num">${q.exam} ${q.number}번</span>
           <span class="sum-q">${escHtml(q.question)}</span>
           <span class="sum-type-badge ${typeCls}">${q.type}</span>
@@ -2110,8 +2155,8 @@ function renderFrequent() {
   }).join('');
 }
 
-function toggleFreqItem(ti, i) {
-  document.getElementById(`freqItem_${ti}_${i}`)?.classList.toggle('open');
+function toggleFreqItem(idPrefix, ti, i) {
+  document.getElementById(`${idPrefix}Item_${ti}_${i}`)?.classList.toggle('open');
 }
 
 // ══════════════════════════════════════════════
