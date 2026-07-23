@@ -396,6 +396,24 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
 .sum-type-badge.t-seo { background: #ecfdf5; color: var(--green); border: 1px solid #a7f3d0; }
 .sum-empty { text-align: center; color: var(--text2); padding: 60px 20px; font-size: 14px; }
 
+/* ── 빈출 모음 ── */
+.freq-cat { margin-bottom: 30px; }
+.freq-cat-title {
+  font-size: 15px; font-weight: 700; color: var(--text);
+  margin: 0 0 10px; display: flex; align-items: center; gap: 8px;
+}
+.freq-cat-count {
+  font-size: 11px; font-weight: 800; color: var(--accent2);
+  background: var(--bg4); border: 1px solid var(--border2);
+  padding: 2px 9px; border-radius: 10px;
+}
+.freq-cat .sum-item { margin-bottom: 8px; }
+.freq-num {
+  font-size: 11px; font-weight: 800; color: var(--accent2);
+  background: var(--bg4); border: 1px solid var(--border2);
+  padding: 3px 9px; border-radius: 10px; white-space: nowrap; flex-shrink: 0;
+}
+
 /* ── Glossary (요약정리) ── */
 .glos-note {
   font-size: 12px; font-weight: 800; color: var(--text3); letter-spacing: .2px;
@@ -629,6 +647,7 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
             <button class="load-btn" onclick="openSummary()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">요약시트 보기</button>
             <button class="load-btn" onclick="openGlossary()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">요약정리 보기</button>
             <button class="load-btn" onclick="openMockExam()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">모의시험 응시</button>
+            <button class="load-btn" onclick="openFrequent()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🔥 빈출모음 보기</button>
           </div>
         </div>
       </div>
@@ -750,6 +769,23 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
         <div class="summary-tabs" id="glosTabs"></div>
         <div style="height:16px"></div>
         <div id="glosBody"></div>
+      </div>
+    </div>
+
+    <!-- 빈출 모음 (18회~29회 기출 중 3회 이상 반복 출제 카테고리) -->
+    <div id="frequentArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
+      <div class="summary-wrap">
+        <div class="summary-header">
+          <div style="display:flex;align-items:center;gap:12px">
+            <h2>🔥 빈출 모음</h2>
+            <span id="freqCount" style="font-size:13px;color:var(--text3);font-weight:400"></span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <button class="sum-expand-all" onclick="goHome()">✕ 닫기</button>
+          </div>
+        </div>
+        <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">18회~29회 기출문제 중 같은 주제로 3회 이상 반복 출제된 카테고리입니다. 문제를 클릭하면 정답이 펼쳐집니다.</p>
+        <div id="freqList"></div>
       </div>
     </div>
 
@@ -1649,6 +1685,7 @@ function goHome() {
   document.getElementById('summaryArea').style.display = 'none';
   document.getElementById('glossaryArea').style.display = 'none';
   document.getElementById('mockExamArea').style.display = 'none';
+  document.getElementById('frequentArea').style.display = 'none';
   document.getElementById('scrollTopBtn').classList.remove('visible');
   document.getElementById('loadScreen').style.display = 'flex';
   document.getElementById('sidebar').style.display = 'flex';
@@ -2009,6 +2046,73 @@ function gradeEpItem(i) {
 
 // renderSummary도 epPool 동기화
 const _origRenderSummary = typeof renderSummary === 'function' ? renderSummary : null;
+
+// ══════════════════════════════════════════════
+// 빈출 모음 (18회~29회 기출 중 3회 이상 반복 출제된 카테고리)
+// ══════════════════════════════════════════════
+const FREQUENT_TOPICS = [
+  { name: '위험분석 접근법 (베이스라인/상세위험분석/복합접근법)', ids: ['20회_3','22회_14','27회_13','29회_9'] },
+  { name: '위험관리 절차/단계 (위험식별~위험처리)', ids: ['18회_8','23회_11','24회_7','26회_12','28회_10'] },
+  { name: '위험관리 3요소 (자산/위협/취약점)', ids: ['18회_5','19회_1','26회_11'] },
+  { name: '정보자산 중요도 평가', ids: ['19회_9','23회_12','25회_15','28회_9','28회_16'] },
+  { name: '위험처리 방안 (수용/회피/전가/감소)', ids: ['25회_11','27회_11','29회_16'] },
+  { name: 'IPSec', ids: ['20회_6','21회_7','25회_3','28회_15'] },
+  { name: 'DNS 서비스/DNS 공격', ids: ['18회_16','22회_8','22회_16','23회_18','26회_3','29회_7'] },
+  { name: '침입탐지시스템(IDS)', ids: ['19회_5','20회_5','21회_11','25회_16','26회_5','26회_10'] },
+  { name: 'APT 및 관련 방어개념', ids: ['18회_7','21회_5','26회_7','28회_6'] },
+  { name: '유닉스/리눅스 로그 파일', ids: ['22회_2','27회_5','28회_8','29회_12'] },
+  { name: '유닉스 파일권한/특수비트(SetUID 등)', ids: ['19회_11','24회_13','27회_15'] },
+  { name: '파일업로드 취약점', ids: ['19회_15','23회_13','29회_14'] },
+  { name: 'Prepared Statement (SQL Injection 방어)', ids: ['18회_11','23회_6','27회_17'] },
+  { name: 'VLAN 할당/구성방식', ids: ['24회_5','27회_3','28회_3'] },
+  { name: 'BCP/재해복구시스템', ids: ['19회_6','21회_4','21회_12','27회_16'] },
+  { name: '개인정보 안전성확보조치', ids: ['22회_11','22회_18','23회_17'] },
+];
+
+function openFrequent() {
+  document.getElementById('qArea').style.display = 'none';
+  document.getElementById('sidebar').style.display = 'none';
+  document.getElementById('headerStats').style.display = 'none';
+  document.getElementById('frequentArea').style.display = 'flex';
+  document.getElementById('scrollTopBtn').classList.add('visible');
+  renderFrequent();
+}
+
+function renderFrequent() {
+  const byId = new Map(questions.map(q => [q.id, q]));
+  const totalOccurrences = FREQUENT_TOPICS.reduce((s, t) => s + t.ids.length, 0);
+  document.getElementById('freqCount').textContent = `${FREQUENT_TOPICS.length}개 카테고리 · 총 ${totalOccurrences}회 출제`;
+
+  document.getElementById('freqList').innerHTML = FREQUENT_TOPICS.map((topic, ti) => {
+    const items = topic.ids.map((qid, i) => {
+      const q = byId.get(qid);
+      if (!q) return '';
+      const typeCls = q.type === '단답형' ? 't-dan' : 't-seo';
+      return `<div class="sum-item" id="freqItem_${ti}_${i}">
+        <div class="sum-item-head" onclick="toggleFreqItem(${ti},${i})">
+          <span class="freq-num">${q.exam} ${q.number}번</span>
+          <span class="sum-q">${escHtml(q.question)}</span>
+          <span class="sum-type-badge ${typeCls}">${q.type}</span>
+          <span class="sum-toggle">▾</span>
+        </div>
+        <div class="sum-ans">
+          <div class="sum-ans-label">정답</div>
+          <div class="sum-ans-box">${escHtml(q.answer)}</div>
+        </div>
+      </div>`;
+    }).join('');
+    return `
+      <div class="freq-cat">
+        <h3 class="freq-cat-title">${escHtml(topic.name)} <span class="freq-cat-count">${topic.ids.length}회</span></h3>
+        ${items}
+      </div>
+    `;
+  }).join('');
+}
+
+function toggleFreqItem(ti, i) {
+  document.getElementById(`freqItem_${ti}_${i}`)?.classList.toggle('open');
+}
 
 // ══════════════════════════════════════════════
 // 모의시험
