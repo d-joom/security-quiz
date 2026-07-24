@@ -659,6 +659,7 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
             <button class="load-btn" onclick="openFrequent()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🔥 빈출모음 보기</button>
             <button class="load-btn" onclick="openFrequentEssay()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🔥 빈출모음 - 서술/실무형</button>
             <button class="load-btn" onclick="openEssayPoint()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🎯 서술형포인트문제</button>
+            <button class="load-btn" onclick="openPracticalPoint()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🛠️ 실무형포인트문제</button>
           </div>
         </div>
       </div>
@@ -834,6 +835,26 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
         <div id="essayConceptList"></div>
         <h3 class="freq-section-title">⚙️ 동작원리/공격원리/대응법형</h3>
         <div id="essayPrincipleList"></div>
+      </div>
+    </div>
+
+    <!-- 실무형포인트문제 (공격 파악형 · iptables/설정값 작성형) -->
+    <div id="practicalPointArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
+      <div class="summary-wrap">
+        <div class="summary-header">
+          <div style="display:flex;align-items:center;gap:12px">
+            <h2>🛠️ 실무형포인트문제</h2>
+            <span id="practicalPointCount" style="font-size:13px;color:var(--text3);font-weight:400"></span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <button class="sum-expand-all" onclick="goHome()">✕ 닫기</button>
+          </div>
+        </div>
+        <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">실무형 중 "공격을 파악해서 정의·이유·원리·대책을 설명하라"는 유형과 "iptables 룰·설정값을 작성하라"는 유형으로 나눠, 반복출제되었거나 실무 중요도가 높은 주제를 정리했습니다.</p>
+        <h3 class="freq-section-title">🔍 공격 파악형 (정의/이유/원리/대책)</h3>
+        <div id="practicalAttackList"></div>
+        <h3 class="freq-section-title">⌨️ 룰/설정값 작성형 (iptables 등)</h3>
+        <div id="practicalConfigList"></div>
       </div>
     </div>
 
@@ -1736,6 +1757,7 @@ function goHome() {
   document.getElementById('frequentArea').style.display = 'none';
   document.getElementById('frequentEssayArea').style.display = 'none';
   document.getElementById('essayPointArea').style.display = 'none';
+  document.getElementById('practicalPointArea').style.display = 'none';
   document.getElementById('scrollTopBtn').classList.remove('visible');
   document.getElementById('loadScreen').style.display = 'flex';
   document.getElementById('sidebar').style.display = 'flex';
@@ -2245,6 +2267,47 @@ function openEssayPoint() {
 
   renderFreqList(ESSAY_POINT_CONCEPT, 'essayConceptList', null, 'essayConcept');
   renderFreqList(ESSAY_POINT_PRINCIPLE, 'essayPrincipleList', null, 'essayPrinciple');
+}
+
+// ══════════════════════════════════════════════
+// 실무형포인트문제 (공격 파악형 · iptables/설정값 작성형)
+// ══════════════════════════════════════════════
+const PRACTICAL_POINT_ATTACK = [
+  { name: 'DNS 증폭 DRDoS 공격 로그분석 (판단이유/원리/이유)', ids: ['18회_16'], note: 'DRDoS/DNS증폭 관련 반복출제 · DDoS 방어 실무 대표문제' },
+  { name: 'SQL Injection 로그분석·대응방안', ids: ['22회_17'], note: 'SQLi 관련 반복출제 · OWASP 최우선 취약점 실무' },
+  { name: 'ARP Spoofing/Redirect 캐시테이블 분석', ids: ['25회_17'], note: '네트워크 공격 탐지·대응 실무 핵심' },
+  { name: '하트블리드(Heartbleed) 취약점 점검결과 분석', ids: ['26회_18'], note: '실제 CVE-2014-0160 · 취약점 점검 실무 대표사례' },
+  { name: '리눅스 원격접속 취약점 분석 (telnet/ftp 배너)', ids: ['28회_18'], note: '배너 그래빙 기반 취약점 파악 · 시스템 보안 실무 필수' },
+  { name: '이메일 로그 분석 (RSA 용도·스팸 대응기법)', ids: ['18회_14'], note: '이메일 보안(TLS 키교환) 실무' },
+  { name: '악성코드(PE파일) 분석기법 (자동/반자동/수동)', ids: ['25회_18'], note: '최근 악성코드 분석 트렌드' },
+];
+
+const PRACTICAL_POINT_CONFIG = [
+  { name: 'IPTables 룰 작성 (SYN Flood 차단)', ids: ['21회_14'], note: 'iptables 대표 실무형 · 룰 옵션 구성 필수' },
+  { name: 'IPTables DROP 정책 등록', ids: ['18회_15'], note: 'iptables 기본 문법' },
+  { name: 'Smurf 공격 방지 라우터 명령어 작성', ids: ['20회_15'], note: '라우터 설정(ACL/directed-broadcast) 실무' },
+  { name: 'DNS named.conf 설정값 작성 (Master/Slave)', ids: ['23회_18'], note: 'DNS 관련 반복출제 · DNS 서버 구성 실무' },
+  { name: '유닉스 계열 패스워드 최소길이 설정 (4개 OS)', ids: ['24회_17'], note: '패스워드 정책 관련 · OS별 설정파일/값 암기 필수' },
+  { name: 'xinetd 설정파일 값 채우기', ids: ['24회_18'], note: '서비스 접근제어 설정 실무' },
+  { name: 'SQL Injection 방지 코드 작성 (PreparedStatement)', ids: ['27회_17'], note: 'SQLi/Prepared Statement 관련 반복출제 · 코드 레벨 대응' },
+  { name: 'DB 감사로그 설정값 해석·수정', ids: ['28회_17'], note: 'DB 보안 설정 실무' },
+  { name: '.htaccess 파일업로드 대응 설정 해석', ids: ['19회_15'], note: '파일업로드 취약점 관련 반복출제 · 웹서버 설정 실무' },
+];
+
+function openPracticalPoint() {
+  document.getElementById('qArea').style.display = 'none';
+  document.getElementById('sidebar').style.display = 'none';
+  document.getElementById('headerStats').style.display = 'none';
+  document.getElementById('practicalPointArea').style.display = 'flex';
+  document.getElementById('scrollTopBtn').classList.add('visible');
+
+  const attackN = PRACTICAL_POINT_ATTACK.reduce((s, t) => s + t.ids.length, 0);
+  const configN = PRACTICAL_POINT_CONFIG.reduce((s, t) => s + t.ids.length, 0);
+  document.getElementById('practicalPointCount').textContent =
+    `공격 파악형 ${PRACTICAL_POINT_ATTACK.length}개(${attackN}회) · 룰/설정값 작성형 ${PRACTICAL_POINT_CONFIG.length}개(${configN}회)`;
+
+  renderFreqList(PRACTICAL_POINT_ATTACK, 'practicalAttackList', null, 'practicalAttack');
+  renderFreqList(PRACTICAL_POINT_CONFIG, 'practicalConfigList', null, 'practicalConfig');
 }
 
 // ══════════════════════════════════════════════
