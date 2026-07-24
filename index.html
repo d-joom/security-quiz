@@ -408,10 +408,19 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
   padding: 2px 9px; border-radius: 10px;
 }
 .freq-cat .sum-item { margin-bottom: 8px; }
+.freq-cat-note {
+  font-size: 12.5px; color: var(--text2);
+  background: var(--bg3); border-left: 3px solid var(--accent2);
+  border-radius: 0 8px 8px 0; padding: 7px 12px; margin-bottom: 10px;
+}
 .freq-num {
   font-size: 11px; font-weight: 800; color: var(--accent2);
   background: var(--bg4); border: 1px solid var(--border2);
   padding: 3px 9px; border-radius: 10px; white-space: nowrap; flex-shrink: 0;
+}
+.freq-section-title {
+  font-size: 16px; font-weight: 700; color: var(--text);
+  margin: 4px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border2);
 }
 
 /* ── Glossary (요약정리) ── */
@@ -649,6 +658,7 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
             <button class="load-btn" onclick="openMockExam()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">모의시험 응시</button>
             <button class="load-btn" onclick="openFrequent()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🔥 빈출모음 보기</button>
             <button class="load-btn" onclick="openFrequentEssay()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🔥 빈출모음 - 서술/실무형</button>
+            <button class="load-btn" onclick="openEssayPoint()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🎯 서술형포인트문제</button>
           </div>
         </div>
       </div>
@@ -804,6 +814,26 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
         </div>
         <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">18회~29회 기출 서술형/실무형 중 같은 주제로 2회 이상 반복 출제된 카테고리입니다. 문제를 클릭하면 정답이 펼쳐집니다.</p>
         <div id="freqEssayList"></div>
+      </div>
+    </div>
+
+    <!-- 서술형포인트문제 (개념/정의형 · 동작원리/공격원리/대응법형) -->
+    <div id="essayPointArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
+      <div class="summary-wrap">
+        <div class="summary-header">
+          <div style="display:flex;align-items:center;gap:12px">
+            <h2>🎯 서술형포인트문제</h2>
+            <span id="essayPointCount" style="font-size:13px;color:var(--text3);font-weight:400"></span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <button class="sum-expand-all" onclick="goHome()">✕ 닫기</button>
+          </div>
+        </div>
+        <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">서술형 중 "개념/정의를 설명하라"는 유형과 "동작원리·공격원리·대응법을 설명하라"는 유형으로 나눠, 반복출제되었거나 요즘 중요도가 높은 주제를 정리했습니다.</p>
+        <h3 class="freq-section-title">🧩 개념/정의형</h3>
+        <div id="essayConceptList"></div>
+        <h3 class="freq-section-title">⚙️ 동작원리/공격원리/대응법형</h3>
+        <div id="essayPrincipleList"></div>
       </div>
     </div>
 
@@ -1705,6 +1735,7 @@ function goHome() {
   document.getElementById('mockExamArea').style.display = 'none';
   document.getElementById('frequentArea').style.display = 'none';
   document.getElementById('frequentEssayArea').style.display = 'none';
+  document.getElementById('essayPointArea').style.display = 'none';
   document.getElementById('scrollTopBtn').classList.remove('visible');
   document.getElementById('loadScreen').style.display = 'flex';
   document.getElementById('sidebar').style.display = 'flex';
@@ -2126,7 +2157,7 @@ function openFrequentEssay() {
 function renderFreqList(topics, listElId, countElId, idPrefix) {
   const byId = new Map(questions.map(q => [q.id, q]));
   const totalOccurrences = topics.reduce((s, t) => s + t.ids.length, 0);
-  document.getElementById(countElId).textContent = `${topics.length}개 카테고리 · 총 ${totalOccurrences}회 출제`;
+  if (countElId) document.getElementById(countElId).textContent = `${topics.length}개 카테고리 · 총 ${totalOccurrences}회 출제`;
 
   document.getElementById(listElId).innerHTML = topics.map((topic, ti) => {
     const items = topic.ids.map((qid, i) => {
@@ -2149,6 +2180,7 @@ function renderFreqList(topics, listElId, countElId, idPrefix) {
     return `
       <div class="freq-cat">
         <h3 class="freq-cat-title">${escHtml(topic.name)} <span class="freq-cat-count">${topic.ids.length}회</span></h3>
+        ${topic.note ? `<div class="freq-cat-note">💡 ${escHtml(topic.note)}</div>` : ''}
         ${items}
       </div>
     `;
@@ -2157,6 +2189,62 @@ function renderFreqList(topics, listElId, countElId, idPrefix) {
 
 function toggleFreqItem(idPrefix, ti, i) {
   document.getElementById(`${idPrefix}Item_${ti}_${i}`)?.classList.toggle('open');
+}
+
+// ══════════════════════════════════════════════
+// 서술형포인트문제 (개념/정의형 · 동작원리/공격원리/대응법형)
+// ══════════════════════════════════════════════
+const ESSAY_POINT_CONCEPT = [
+  { name: 'Prepared Statement (SQL Injection 방어 개념)', ids: ['18회_11'], note: 'SQL Injection 방어의 핵심 개념 문제' },
+  { name: 'Promiscuous mode 정의', ids: ['19회_13','26회_15'], note: '문항 거의 동일하게 반복출제 · 스니핑 공격의 기초 개념' },
+  { name: 'IDS 오용탐지/이상탐지 정의', ids: ['21회_11'], note: 'IDS 탐지방식의 핵심 구분 개념' },
+  { name: '위험분석 접근법 개념 (기준선/상세위험분석/복합)', ids: ['22회_14','27회_13'], note: '반복출제 · 위험관리 핵심 개념' },
+  { name: '쿠키 보안속성 의미 (Secure/HttpOnly/Expires)', ids: ['22회_15'], note: '웹 애플리케이션 보안 기본 개념' },
+  { name: 'TCP Flag 의미 (SYN/ACK/FIN/RST)', ids: ['23회_14'], note: '네트워크 보안 기초 개념' },
+  { name: 'XSS 정의와 공격기법', ids: ['26회_16'], note: '최근 비중이 커지는 애플리케이션 보안의 대표 취약점' },
+  { name: '쉘의 정의와 기능', ids: ['28회_13'], note: '시스템 보안 기초 개념' },
+  { name: 'IPSec 정의 및 보안모드', ids: ['28회_15'], note: '네트워크 보안 핵심 프로토콜 개념' },
+  { name: '정보자산 중요도 산정 개념/등급기준', ids: ['25회_15','28회_16'], note: '위험관리 핵심 개념, 반복출제' },
+  { name: '인증서 고정(Certificate Pinning) 정의', ids: ['29회_13'], note: '모바일 앱 보안의 최신 트렌드 주제' },
+  { name: '네트워크 보안관제(SOC) 구성요소', ids: ['29회_15'], note: '보안관제 실무 핵심 개념' },
+  { name: '재해복구시스템 유형 정의 (미러/핫/웜/콜드사이트)', ids: ['21회_12','27회_16'], note: '문항 거의 동일하게 반복출제 · BCP 필수 개념' },
+  { name: 'BYOD 모바일보안 기술 (MDM/컨테이너화/모바일가상화)', ids: ['22회_13'], note: '모바일 오피스 보안 트렌드 개념' },
+];
+
+const ESSAY_POINT_PRINCIPLE = [
+  { name: 'DRDoS 공격 원리', ids: ['18회_12'], note: 'DDoS 계열 공격의 기초 원리' },
+  { name: 'Spoofing 대응 원리 및 Tiny Fragment 공격', ids: ['18회_13'], note: '방화벽 패킷 필터링 동작 원리' },
+  { name: '스위칭허브 동작원리', ids: ['20회_12'], note: '네트워크 장비 기초 동작원리' },
+  { name: 'Snort 룰 기반 공격 탐지 (Anonymous FTP)', ids: ['20회_13'], note: '탐지 규칙 해석 실무' },
+  { name: 'DNS 증폭 공격 원리', ids: ['22회_16'], note: 'DDoS 방어 실무의 핵심 공격 원리' },
+  { name: '파일업로드 취약점 우회기법·공격 성공조건', ids: ['23회_13','29회_14'], note: '문항 거의 동일하게 반복출제 · OWASP 핵심 취약점' },
+  { name: 'NetBIOS 바인딩 취약원리·대응법', ids: ['23회_15','28회_14'], note: '문항 거의 동일하게 반복출제 · 윈도우 보안 실무' },
+  { name: 'HTTP GET Flooding 공격 분석', ids: ['23회_16'], note: '웹 서비스 대상 DDoS 공격 판단 실무' },
+  { name: 'SetUID/SetGID 제거 조치 이유', ids: ['24회_13'], note: '유닉스 시스템 보안 점검 실무' },
+  { name: 'rsh/rlogin 위험성 및 안전설정', ids: ['24회_14'], note: '원격접속 보안 설정 실무' },
+  { name: 'IPTables Chain 동작·룰 해석', ids: ['24회_15'], note: '방화벽 설정 실무 핵심' },
+  { name: 'SNMP 보안설정', ids: ['24회_16'], note: '네트워크 장비 보안 설정 실무' },
+  { name: '스니핑 탐지 원리 (Ping 기반)', ids: ['25회_14'], note: '네트워크 보안 탐지 실무' },
+  { name: 'IDS 대응행위', ids: ['25회_16'], note: '보안관제 대응 절차 실무' },
+  { name: 'UAC 팝업 동작원리', ids: ['26회_13'], note: '윈도우 보안 메커니즘 분석' },
+  { name: '개인정보 영향평가(PIA) 수행 고려사항', ids: ['26회_14'], note: '개인정보보호 컴플라이언스 최신 이슈' },
+  { name: 'ISMS-P 위험처리 방법', ids: ['29회_16'], note: '최신 인증기준 실무 · 위험관리 핵심' },
+];
+
+function openEssayPoint() {
+  document.getElementById('qArea').style.display = 'none';
+  document.getElementById('sidebar').style.display = 'none';
+  document.getElementById('headerStats').style.display = 'none';
+  document.getElementById('essayPointArea').style.display = 'flex';
+  document.getElementById('scrollTopBtn').classList.add('visible');
+
+  const conceptN = ESSAY_POINT_CONCEPT.reduce((s, t) => s + t.ids.length, 0);
+  const principleN = ESSAY_POINT_PRINCIPLE.reduce((s, t) => s + t.ids.length, 0);
+  document.getElementById('essayPointCount').textContent =
+    `개념/정의형 ${ESSAY_POINT_CONCEPT.length}개(${conceptN}회) · 원리/대응법형 ${ESSAY_POINT_PRINCIPLE.length}개(${principleN}회)`;
+
+  renderFreqList(ESSAY_POINT_CONCEPT, 'essayConceptList', null, 'essayConcept');
+  renderFreqList(ESSAY_POINT_PRINCIPLE, 'essayPrincipleList', null, 'essayPrinciple');
 }
 
 // ══════════════════════════════════════════════
