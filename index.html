@@ -422,6 +422,10 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
   font-size: 16px; font-weight: 700; color: var(--text);
   margin: 4px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border2);
 }
+.ai-pick-divider {
+  height: 2px; margin: 36px 0 30px;
+  background: linear-gradient(90deg, transparent, var(--border2) 15%, var(--border2) 85%, transparent);
+}
 
 /* ── Glossary (요약정리) ── */
 .glos-note {
@@ -660,6 +664,7 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
             <button class="load-btn" onclick="openFrequentEssay()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🔥 빈출모음 - 서술/실무형</button>
             <button class="load-btn" onclick="openEssayPoint()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🎯 서술형포인트문제</button>
             <button class="load-btn" onclick="openPracticalPoint()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🛠️ 실무형포인트문제</button>
+            <button class="load-btn" onclick="openAiPick()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🤖 AI픽 문제</button>
           </div>
         </div>
       </div>
@@ -855,6 +860,41 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
         <div id="practicalAttackList"></div>
         <h3 class="freq-section-title">⌨️ 룰/설정값 작성형 (iptables 등)</h3>
         <div id="practicalConfigList"></div>
+      </div>
+    </div>
+
+    <!-- AI픽 문제 (기출픽 + 이슈픽) -->
+    <div id="aiPickArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
+      <div class="summary-wrap">
+        <div class="summary-header">
+          <div style="display:flex;align-items:center;gap:12px">
+            <h2>🤖 AI픽 문제</h2>
+            <span id="aiPickCount" style="font-size:13px;color:var(--text3);font-weight:400"></span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <button class="sum-expand-all" onclick="goHome()">✕ 닫기</button>
+          </div>
+        </div>
+
+        <h3 class="freq-section-title">📚 기출픽 — 재출제 유력 문제 (단답형 10 · 서술형 5 · 실무형 5)</h3>
+        <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">18~29회 기출문제 전체를 분석해, 반복출제 이력·법규 고정출제·최신 인증기준 반영 등을 기준으로 다음 회차에 다시 나올 가능성이 높다고 판단한 문제입니다.</p>
+        <h4 style="font-size:14px;font-weight:700;color:var(--accent2);margin:0 0 10px">단답형</h4>
+        <div id="aiExamDanList"></div>
+        <h4 style="font-size:14px;font-weight:700;color:var(--accent2);margin:20px 0 10px">서술형</h4>
+        <div id="aiExamSeoList"></div>
+        <h4 style="font-size:14px;font-weight:700;color:var(--accent2);margin:20px 0 10px">실무형</h4>
+        <div id="aiExamSilList"></div>
+
+        <div class="ai-pick-divider"></div>
+
+        <h3 class="freq-section-title">🆕 이슈픽 — 신규 출제 예상 문제 (단답형 10 · 서술형 2 · 실무형 3)</h3>
+        <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">기존 기출에는 없지만, 랜섬웨어 이중갈취·제로트러스트·크리덴셜 스터핑·딥페이크·컨테이너 보안 등 최근 정보보안 이슈 중 정보보안기사 출제기준(시스템/네트워크/애플리케이션/일반/관리법규)에 부합하는 주제로 직접 작성한 예상 문제입니다.</p>
+        <h4 style="font-size:14px;font-weight:700;color:var(--green);margin:0 0 10px">단답형</h4>
+        <div id="aiIssueDanList"></div>
+        <h4 style="font-size:14px;font-weight:700;color:var(--green);margin:20px 0 10px">서술형</h4>
+        <div id="aiIssueSeoList"></div>
+        <h4 style="font-size:14px;font-weight:700;color:var(--green);margin:20px 0 10px">실무형</h4>
+        <div id="aiIssueSilList"></div>
       </div>
     </div>
 
@@ -1758,6 +1798,7 @@ function goHome() {
   document.getElementById('frequentEssayArea').style.display = 'none';
   document.getElementById('essayPointArea').style.display = 'none';
   document.getElementById('practicalPointArea').style.display = 'none';
+  document.getElementById('aiPickArea').style.display = 'none';
   document.getElementById('scrollTopBtn').classList.remove('visible');
   document.getElementById('loadScreen').style.display = 'flex';
   document.getElementById('sidebar').style.display = 'flex';
@@ -2308,6 +2349,113 @@ function openPracticalPoint() {
 
   renderFreqList(PRACTICAL_POINT_ATTACK, 'practicalAttackList', null, 'practicalAttack');
   renderFreqList(PRACTICAL_POINT_CONFIG, 'practicalConfigList', null, 'practicalConfig');
+}
+
+// ══════════════════════════════════════════════
+// AI픽 문제 (기출픽: 기존 문제 중 재출제 유력 / 이슈픽: 신규 출제 예상 문제)
+// ══════════════════════════════════════════════
+const AI_PICK_EXAM = {
+  단답형: [
+    { name: '위험분석 접근법 (베이스라인/상세위험분석/복합)', ids: ['29회_9'], note: '4회 반복출제(20,22,27,29회) · 위험관리 최다빈출 개념' },
+    { name: '위험관리 3요소 (자산/위협/취약점)', ids: ['26회_11'], note: '3회 반복출제(18,19,26회) · 위험관리 파트의 가장 기본이 되는 개념' },
+    { name: 'DNS 서비스 (UDP/TCP, Cache, TTL)', ids: ['29회_7'], note: '22회·29회 문항이 완전히 동일하게 재출제된 이력' },
+    { name: 'IDS 오탐/미탐 (False Positive/Negative)', ids: ['26회_5'], note: '20,26회 반복출제 · 관제 실무 기본 용어' },
+    { name: '접근통제 정책 (DAC/MAC/RBAC)', ids: ['27회_1'], note: '20,27회 반복출제 · 정보보안일반 핵심 개념' },
+    { name: '디렉터리 인덱싱 취약점 (indexes 지시자)', ids: ['29회_11'], note: '20회·29회 문항이 완전히 동일하게 재출제된 이력' },
+    { name: 'VLAN 주소 할당 방식 (정적/동적)', ids: ['28회_3'], note: '24,27,28회 반복출제 · 네트워크 보안 필수 개념' },
+    { name: '유닉스 로그 파일명 (lastlog/sulog/acct-pacct 등)', ids: ['22회_2'], note: '22,27,28,29회에 걸쳐 다양한 로그파일이 꾸준히 출제' },
+    { name: '개인정보 안전성 확보조치 (접속기록 보관 1년/5만명/민감정보)', ids: ['22회_11'], note: '개인정보보호 법규는 매 회차 고정 비중으로 출제' },
+    { name: '정보자산 중요도 평가 기준', ids: ['28회_9'], note: '5회 이상 반복출제 · 위험관리 파트 최다빈출 주제 중 하나' },
+  ],
+  서술형: [
+    { name: '재해복구시스템 유형 (미러/핫/웜/콜드사이트)', ids: ['27회_16'], note: '21회·27회 문항이 완전히 동일하게 재출제된 이력' },
+    { name: '위험분석 접근법 개념 (복합접근법 등)', ids: ['27회_13'], note: '22,27회 반복출제 · 단답형으로도 자주 겹쳐 나오는 주제' },
+    { name: 'NetBIOS 바인딩 취약점과 대응', ids: ['28회_14'], note: '23회·28회 문항이 완전히 동일하게 재출제된 이력' },
+    { name: '파일업로드 취약점 (우회기법/성공조건)', ids: ['29회_14'], note: '23회·29회 문항이 완전히 동일하게 재출제된 이력 · OWASP 최우선 취약점' },
+    { name: 'IPSec 정의 및 보안모드', ids: ['28회_15'], note: '정보보안일반/네트워크보안 공통 핵심 프로토콜' },
+  ],
+  실무형: [
+    { name: 'IPTables 룰 작성 (SYN Flood 차단)', ids: ['21회_14'], note: 'iptables는 18,21,24회에 걸쳐 꾸준히 실무형으로 출제' },
+    { name: 'DNS 증폭 DRDoS 공격 로그분석', ids: ['18회_16'], note: 'DNS증폭/DRDoS 관련 반복출제 · DDoS 로그분석 대표 유형' },
+    { name: 'SQL Injection 로그분석·대응방안', ids: ['22회_17'], note: 'SQLi 관련 반복출제 · 웹 취약점 실무 최우선 순위' },
+    { name: '리눅스 원격접속 취약점 분석 (telnet/ftp 배너)', ids: ['28회_18'], note: '배너그래빙 기반 취약점 파악은 실무형 단골 유형' },
+    { name: '개인정보 안전성 확보조치 실무 (접근권한관리)', ids: ['23회_17'], note: '개인정보보호 법규 실무 적용 문제 · 매 회차 고정 출제' },
+  ],
+};
+
+const AI_PICK_ISSUE = {
+  단답형: [
+    { question: '공격자가 피해 시스템을 암호화한 뒤 복호화 대가를 요구할 뿐만 아니라, 탈취한 데이터를 유출하겠다고 추가로 협박하는 랜섬웨어 공격 방식을 무엇이라 하는가?', answer: '이중갈취(Double Extortion)', reason: '랜섬웨어가 이제 백업만으로는 방어할 수 없는 이중 위협으로 진화 · 최근 몇 년간 가장 활발한 침해사고 유형' },
+      { question: '랜섬웨어 제작 도구와 인프라를 구독 형태로 제공하고, 공격 성공 시 수익을 배분하는 사이버 범죄 비즈니스 모델을 무엇이라 하는가?', answer: 'RaaS(Ransomware as a Service)', reason: '기술 지식이 없는 공격자도 랜섬웨어 공격을 수행할 수 있게 만든 산업화 트렌드' },
+    { question: '네트워크 내‧외부를 신뢰/비신뢰로 구분하지 않고 모든 접근 요청을 매번 검증하는 "Never Trust, Always Verify" 원칙의 보안 모델을 무엇이라 하는가?', answer: '제로트러스트(Zero Trust)', reason: '원격근무 확산과 경계 기반 보안의 한계로 정부·기업 도입이 급증한 최신 보안 아키텍처' },
+    { question: '다른 사이트에서 유출된 아이디/비밀번호 목록으로 여러 사이트에 무작위 로그인을 시도하는 공격 기법을 무엇이라 하는가?', answer: '크리덴셜 스터핑(Credential Stuffing)', reason: '대규모 개인정보 유출사고 이후 2차 피해로 급증하는 대표 공격' },
+    { question: 'QR코드를 이용하여 사용자를 악성 URL로 유도하는 피싱 공격 기법을 무엇이라 하는가?', answer: '큐싱(Qshing, QR Code Phishing)', reason: '주차·주문 등 QR코드 사용 보편화와 함께 국내 피해사례가 늘고 있는 신종 기법' },
+    { question: '생체인증이나 기기 내 보안키를 이용해 비밀번호 없이 로그인하는 FIDO2 기반의 차세대 인증 수단을 무엇이라 하는가?', answer: '패스키(Passkey)', reason: '구글·애플·MS가 도입을 확대 중인 비밀번호 대체 인증 트렌드' },
+    { question: '공격자가 정상 로그인 요청처럼 보이는 MFA 푸시 알림을 반복 전송하여, 피해자가 지쳐서 실수로 승인하도록 유도하는 공격을 무엇이라 하는가?', answer: 'MFA 피로 공격(MFA Fatigue Attack, 푸시 폭탄)', reason: 'MFA가 보편화되며 등장한 MFA 우회 사회공학 기법' },
+    { question: '공격자가 대상이 자주 방문하는 정상 웹사이트를 사전에 감염시켜, 방문 시 악성코드에 감염되도록 유도하는 공격 기법을 무엇이라 하는가?', answer: '워터링홀(Watering Hole) 공격', reason: 'APT 공격 초기 침투 단계의 대표 기법 · 시스템보안 공격기법 파트 출제 가능성' },
+    { question: '소프트웨어의 개발·배포 과정(업데이트 서버, 오픈소스 라이브러리 등)에 악성코드를 은밀히 삽입하여 사용 조직을 동시에 공격하는 기법을 무엇이라 하는가?', answer: '공급망 공격(Supply Chain Attack)', reason: 'SolarWinds, Log4j 등 파급력이 큰 실제 침해사고의 공통 유형' },
+    { question: '양자컴퓨터로도 해독이 어렵도록 설계되어, 기존 RSA·ECC 공개키 암호를 대체하기 위해 개발되고 있는 암호 방식을 무엇이라 하는가?', answer: '양자내성암호(PQC, Post-Quantum Cryptography)', reason: '2024년 NIST PQC 표준 확정 이후 국내외 도입 논의가 활발한 최신 암호학 이슈' },
+  ],
+  서술형: [
+    { question: '랜섬웨어 이중갈취(Double Extortion) 공격의 동작 방식을 설명하고, 이에 대한 대응 방안을 3가지 이상 기술하시오.',
+      answer: '1) 동작 방식: 공격자는 피해 시스템에 침투하여 우선 중요 데이터를 외부로 유출(탈취)한 뒤 시스템 내 파일을 암호화한다. 이후 피해자에게 복호화 비용을 요구함과 동시에, 비용을 지불하지 않으면 유출된 데이터를 다크웹 등에 공개하겠다고 이중으로 협박한다.\n\n2) 대응 방안\n- 오프라인/분리된 백업 체계 구축 및 정기적인 복구 테스트 수행 (암호화 대응)\n- DLP 솔루션 도입 및 중요 데이터 암호화 저장 (유출 대응)\n- 이메일 첨부파일 실행 제한 등 초기 침투 경로 차단\n- EDR을 통한 이상행위 조기 탐지 및 대응\n- 사고 대응 절차(비상연락체계, 법적 대응 포함) 사전 수립',
+      reason: '단답형으로도, 서술형(원리+대응)으로도 모두 나올 수 있는 최신 최대 위협' },
+    { question: '제로트러스트(Zero Trust) 보안 모델의 핵심 원칙 3가지를 설명하시오.',
+      answer: '1) 명시적 검증(Verify Explicitly): 사용자, 기기, 위치 등 접근 관련 모든 요소를 매번 명시적으로 인증·인가하며, 한번 인증되었다고 계속 신뢰하지 않는다.\n\n2) 최소권한 접근(Least Privilege Access): 업무 수행에 필요한 최소한의 권한만 부여하고 Just-In-Time 접근 등으로 권한 노출을 최소화한다.\n\n3) 침해 가정(Assume Breach): 내부에 이미 공격자가 존재할 수 있다고 가정하고, 마이크로 세그멘테이션 등으로 피해 확산을 최소화하며 지속 모니터링한다.',
+      reason: '전통적 경계보안 개념(DMZ, 방화벽)과 대비되는 최신 아키텍처로 개념형 서술 문제 출제 가능성' },
+    { question: '컨테이너(Docker/Kubernetes) 환경에서 발생할 수 있는 주요 보안 위협을 3가지 이상 설명하고, 이에 대한 대응 방안을 기술하시오.',
+      answer: '1) 주요 보안 위협\n- 취약한 컨테이너 이미지: 신뢰할 수 없는 소스의 이미지에 악성코드·알려진 취약점이 포함될 수 있음\n- 컨테이너 탈출(Container Escape): 격리 취약점을 악용해 호스트 OS 권한을 획득할 수 있음\n- 과도한 권한 설정: root 또는 privileged 모드 실행 시 피해 범위가 확대됨\n- 쿠버네티스 API 서버·etcd 등 관리 평면 노출 시 클러스터 전체가 탈취될 수 있음\n\n2) 대응 방안\n- 신뢰 가능한 레지스트리 사용 및 이미지 취약점 정기 스캐닝(Trivy, Clair 등)\n- non-root 사용자로 실행하고 불필요한 권한 제거\n- 네트워크 정책을 통한 컨테이너 간 통신 최소화\n- API 서버 접근 제어(RBAC), etcd 암호화 등 관리 평면 보호',
+      reason: '출제기준 시스템보안 항목에 Cloud가 명시되어 있고, 클라우드/컨테이너 전환이 보편화된 최신 인프라 트렌드' },
+  ],
+  실무형: [
+    { question: "최근 딥페이크(Deepfake) 기술을 악용해 지인·임원의 목소리를 실시간 합성하여 금전을 편취하는 '딥보이스 보이스피싱' 사례가 증가하고 있다.\n\n1) 이를 예방하기 위한 조직 차원의 실무 대응 방안을 3가지 이상 기술하시오.\n\n2) 통화 중 딥페이크 여부를 의심할 수 있는 기술적/행동적 징후를 2가지 이상 기술하시오.",
+      answer: '1) 조직 차원의 대응 방안\n- 고액 송금·중요정보 요청 시 사전 등록된 번호로 재통화하는 2차 확인(콜백) 절차 의무화\n- 임직원 대상 딥페이크 사기 사례 교육 및 모의훈련 정기 실시\n- 임원 SNS·유튜브 등에 노출된 음성·영상 데이터 최소화(딥페이크 학습 데이터 차단)\n\n2) 의심 징후\n- 음질이 부자연스럽거나 어색한 끊김, 감정 표현의 단조로움이 반복됨\n- 즉흥적 질문에 답변을 회피하거나 반응이 지연됨\n- 극도의 긴급성을 강조하며 정상 검증 절차를 생략하도록 압박함\n- 영상통화를 회피하거나, 영상 중 화면·얼굴 윤곽이 부자연스럽게 흐려짐',
+      reason: '최근 국내 금융권 보이스피싱 피해사례와 맞물린 최신 사회공학 공격 · 실무형의 전형적인 "사례 제시 후 대응" 패턴' },
+    { question: "다음은 로그인 서버의 접근 로그 일부이다. 짧은 시간 동안 동일 출발지 IP에서 서로 다른 다수의 계정으로 로그인 시도가 발생했고 일부가 성공하였다.\n\n[로그]\n09:00:01 SRC=203.0.113.50 user=kim1234 result=FAIL\n09:00:02 SRC=203.0.113.50 user=lee5678 result=FAIL\n09:00:02 SRC=203.0.113.50 user=park0001 result=SUCCESS\n09:00:03 SRC=203.0.113.50 user=choi9999 result=FAIL\n(동일 IP에서 수백 건의 서로 다른 계정 시도 반복)\n\n1) 위 로그로 판단할 수 있는 공격 기법은?\n\n2) 그렇게 판단한 이유는?\n\n3) 대응 방안을 3가지 이상 기술하시오.",
+      answer: "1) 크리덴셜 스터핑(Credential Stuffing)\n\n2) 판단 이유: 동일 출발지 IP에서 짧은 시간 내 서로 다른 다수의 계정으로 로그인을 시도하고 있음. 무작위 대입(Brute Force)과 달리 계정마다 사전에 확보한 정확한 아이디/비밀번호 조합을 대입하는 특징을 보이며, 일부 계정에서 SUCCESS가 발생한 것은 실제 자격증명이 재사용되고 있음을 시사함\n\n3) 대응 방안\n- 다중인증(MFA) 적용\n- 동일 IP/기기의 비정상적 다중 계정 접근 패턴 탐지(FDS) 도입\n- CAPTCHA 적용 및 로그인 실패 임계치 초과 시 IP 차단(Rate Limiting)\n- 유출된 비밀번호 DB와 비교하여 재사용 비밀번호 제한",
+      reason: 'HTTP 로그를 보고 공격을 판단하는 기존 실무형 출제 패턴(SQLi 로그분석 등)과 동일한 형식으로 변주 가능성 높음' },
+    { question: "회사가 운영 중인 쿠버네티스(Kubernetes) 클러스터의 이미지 취약점 점검 결과가 다음과 같다.\n\n[점검 결과]\n- 컨테이너 이미지: nginx:1.14 (2018년 배포, 최신 버전 1.25)\n- 실행 계정: root (UID 0)\n- Pod 설정: privileged: true\n- 이미지 출처: Docker Hub 미인증(unofficial) 레포지토리\n\n1) 확인되는 보안 문제점을 3가지 이상 지적하시오.\n\n2) 각 문제점에 대한 구체적인 개선 방안을 기술하시오.",
+      answer: '1) 보안 문제점\n- 오래된 이미지(2018년) 사용으로 다수의 알려진 취약점(CVE)에 노출\n- root(UID 0) 권한 실행으로 컨테이너 탈출 시 호스트 권한 획득 위험\n- privileged: true 설정으로 호스트 디바이스·커널 기능에 접근 가능해 격리 효과 무력화\n- 미인증 레포지토리 이미지는 악성코드 삽입 여부를 신뢰할 수 없음\n\n2) 개선 방안\n- 최신 안정 버전으로 업그레이드하고 Trivy 등으로 정기 취약점 스캐닝\n- non-root 사용자로 실행되도록 SecurityContext(runAsNonRoot: true) 설정\n- privileged 모드 비활성화, 필요한 최소 capability만 부여\n- 공식 인증 레지스트리만 사용하고 이미지 서명 검증 적용',
+      reason: '18,28회에 이미 나온 "취약점 점검 결과 분석" 실무형 패턴을 클라우드/컨테이너 환경으로 확장한 변형' },
+  ],
+};
+
+function openAiPick() {
+  document.getElementById('qArea').style.display = 'none';
+  document.getElementById('sidebar').style.display = 'none';
+  document.getElementById('headerStats').style.display = 'none';
+  document.getElementById('aiPickArea').style.display = 'flex';
+  document.getElementById('scrollTopBtn').classList.add('visible');
+
+  const examN = AI_PICK_EXAM.단답형.length + AI_PICK_EXAM.서술형.length + AI_PICK_EXAM.실무형.length;
+  const issueN = AI_PICK_ISSUE.단답형.length + AI_PICK_ISSUE.서술형.length + AI_PICK_ISSUE.실무형.length;
+  document.getElementById('aiPickCount').textContent = `기출픽 ${examN}개 · 이슈픽 ${issueN}개`;
+
+  renderFreqList(AI_PICK_EXAM.단답형, 'aiExamDanList', null, 'aiExamDan');
+  renderFreqList(AI_PICK_EXAM.서술형, 'aiExamSeoList', null, 'aiExamSeo');
+  renderFreqList(AI_PICK_EXAM.실무형, 'aiExamSilList', null, 'aiExamSil');
+
+  renderIssuePickList(AI_PICK_ISSUE.단답형, 'aiIssueDanList', 'aiIssueDan');
+  renderIssuePickList(AI_PICK_ISSUE.서술형, 'aiIssueSeoList', 'aiIssueSeo');
+  renderIssuePickList(AI_PICK_ISSUE.실무형, 'aiIssueSilList', 'aiIssueSil');
+}
+
+// 이슈픽은 questions_bank에 없는 신규 문제라, id 조회 없이 문제 객체를 바로 렌더링
+function renderIssuePickList(items, listElId, idPrefix) {
+  document.getElementById(listElId).innerHTML = items.map((item, i) => `
+    <div class="sum-item" id="${idPrefix}Item_0_${i}">
+      <div class="sum-item-head" onclick="toggleFreqItem('${idPrefix}',0,${i})">
+        <span class="freq-num">NEW</span>
+        <span class="sum-q">${escHtml(item.question)}</span>
+        <span class="sum-toggle">▾</span>
+      </div>
+      <div class="sum-ans">
+        <div class="freq-cat-note">💡 ${escHtml(item.reason)}</div>
+        <div class="sum-ans-label">모범 답안</div>
+        <div class="sum-ans-box">${escHtml(item.answer)}</div>
+      </div>
+    </div>
+  `).join('');
 }
 
 // ══════════════════════════════════════════════
