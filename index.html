@@ -1327,8 +1327,6 @@ function checkAnswer() {
   const inputs = document.querySelectorAll('.ans-input');
   const userAnswers = [...inputs].map(i => i.value.trim());
 
-  if (userAnswers.every(a => !a)) { showToast('답을 입력하세요.'); return; }
-
   const labels = getPartLabels(q);
   const hasMultiPart = labels && labels.length >= 2 && q.keywords.length > 1;
 
