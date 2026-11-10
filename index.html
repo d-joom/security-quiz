@@ -564,12 +564,13 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
 .flash-card.flipped .flash-inner { transform: rotateY(180deg); }
 .flash-front, .flash-back { position: absolute; width: 100%; min-height: 280px; backface-visibility: hidden; border-radius: var(--radius); padding: 32px 36px; display: flex; flex-direction: column; justify-content: center; }
 .flash-front { background: var(--bg2); border: 2px solid var(--border); }
-.flash-back { background: var(--bg3); border: 2px solid var(--accent); transform: rotateY(180deg); }
 .flash-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text2); margin-bottom: 14px; }
+.flash-back .flash-tag { color: rgba(255,255,255,.75); }
 .flash-q { font-size: 16px; line-height: 1.85; white-space: pre-wrap; }
 .flash-ans { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 14px; line-height: 1.5; white-space: pre-wrap; }
 .flash-kws { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
 .flash-kw { background: rgba(91,106,240,.2); color: var(--accent2); border-radius: 20px; padding: 3px 12px; font-size: 13px; font-weight: 600; }
+.flash-back .flash-kw { background: rgba(255,255,255,.2); color: #fff; }
 .flash-hint { font-size: 12px; color: var(--text2); margin-top: 16px; }
 .flash-spacer { min-height: 280px; }
 .flash-nav { display: flex; align-items: center; gap: 14px; width: 100%; max-width: 700px; }
