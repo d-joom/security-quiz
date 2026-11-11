@@ -684,6 +684,8 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
             <button class="load-btn" onclick="openPracticalPoint()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🛠️ 실무형포인트문제</button>
             <button class="load-btn" onclick="openAiPick()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🤖 AI픽 문제</button>
             <button class="load-btn" onclick="openLayerAttack()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🧱 계층별 공격 모음</button>
+            <button class="load-btn" onclick="openWebAttack()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🕸️ 웹 취약점 공격 모음</button>
+            <button class="load-btn" onclick="openSysAttack()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🧬 시스템·암호·킬체인 공격 모음</button>
           </div>
         </div>
       </div>
@@ -897,6 +899,40 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
         </div>
         <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">OSI 계층별 공격 유형 중 사이트에 등록된 기출·151제 문제를 공격별로 모았습니다. 문제를 클릭하면 정답이 펼쳐지고, 맨 아래에서 비슷한 공격끼리 표로 비교할 수 있습니다.</p>
         <div id="layerAttackList"></div>
+      </div>
+    </div>
+
+    <!-- 시스템·암호·킬체인 공격 모음 -->
+    <div id="sysAttackArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
+      <div class="summary-wrap">
+        <div class="summary-header">
+          <div style="display:flex;align-items:center;gap:12px">
+            <h2>🧬 시스템·암호·킬체인 공격 모음</h2>
+            <span id="sysAttackCount" style="font-size:13px;color:var(--text3);font-weight:400"></span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <button class="sum-expand-all" onclick="goHome()">✕ 닫기</button>
+          </div>
+        </div>
+        <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">시스템·메모리 손상, 암호·무선 공격, 사이버 킬체인 단계별 공격 중 사이트에 등록된 기출·151제 문제를 공격별로 모았습니다. 문제를 클릭하면 정답이 펼쳐지고, 맨 아래에서 비슷한 공격끼리 표로 비교할 수 있습니다.</p>
+        <div id="sysAttackList"></div>
+      </div>
+    </div>
+
+    <!-- 웹 취약점 공격 모음 -->
+    <div id="webAttackArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
+      <div class="summary-wrap">
+        <div class="summary-header">
+          <div style="display:flex;align-items:center;gap:12px">
+            <h2>🕸️ 웹 취약점 공격 모음</h2>
+            <span id="webAttackCount" style="font-size:13px;color:var(--text3);font-weight:400"></span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <button class="sum-expand-all" onclick="goHome()">✕ 닫기</button>
+          </div>
+        </div>
+        <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">웹 취약점·애플리케이션 공격 중 사이트에 등록된 기출·151제 문제를 공격별로 모았습니다. 문제를 클릭하면 정답이 펼쳐지고, 맨 아래에서 비슷한 공격끼리 표로 비교할 수 있습니다.</p>
+        <div id="webAttackList"></div>
       </div>
     </div>
 
@@ -1834,6 +1870,8 @@ function goHome() {
   document.getElementById('practicalPointArea').style.display = 'none';
   document.getElementById('aiPickArea').style.display = 'none';
   document.getElementById('layerAttackArea').style.display = 'none';
+  document.getElementById('webAttackArea').style.display = 'none';
+  document.getElementById('sysAttackArea').style.display = 'none';
   document.getElementById('scrollTopBtn').classList.remove('visible');
   document.getElementById('loadScreen').style.display = 'flex';
   document.getElementById('sidebar').style.display = 'flex';
@@ -2371,12 +2409,212 @@ const LAYER_COMPARE = [
     ]},
 ];
 
+// ══════════════════════════════════════════════
+// 웹 취약점 및 애플리케이션 공격 모음 (공격별 기출/151제 문제 + 비교표)
+// ══════════════════════════════════════════════
+const WEB_ATTACKS = [
+  { layer: '주입(Injection) 및 입력값 검증 공격', attacks: [
+    { name: 'SQL Injection (Error-based, Blind, Time-based)', ids: ['18회_3','18회_11','22회_10','22회_17','23회_6','27회_7','27회_17'],
+      note: '18회_3·27회_7은 SQL Injection, XSS, 운영체제 명령어 삽입을 한 문제에서 묻습니다. Error/Blind/Time-based 유형 구분 문제는 등록되어 있지 않습니다.' },
+    { name: 'Command Injection', ids: ['18회_3','27회_7','29회_8'],
+      note: '29회_8은 access 로그에서 생성되는 b.php(웹쉘)를 묻는 문제입니다.' },
+    { name: 'Cross-Site Scripting (Reflected, Stored, DOM XSS)', ids: ['18회_3','26회_9','26회_16','27회_7','31회_6','22회_15','151제_105'],
+      note: '22회_15는 쿠키 Secure/HttpOnly 설정 문제로, HttpOnly가 XSS 쿠키 탈취 대응으로 나옵니다.' },
+    { name: 'Cross-Site Request Forgery (CSRF)', ids: [] },
+    { name: 'Server-Side Request Forgery (SSRF)', ids: ['25회_10','28회_2'] },
+    { name: 'Local File Inclusion (LFI) / Remote File Inclusion (RFI)', ids: ['22회_5'],
+      note: '22회_5는 "파일 삽입 취약점"이라는 이름으로 PHP require/include, allow_url_fopen 대응을 묻습니다.' },
+    { name: 'Directory Traversal (Path Traversal)', ids: [] },
+    { name: 'XML External Entity (XXE) Injection', ids: ['26회_6'],
+      note: '26회_6은 XXE가 아니라 XML 삽입 공격 대응을 위한 SW 설계 고려사항 문제입니다. 가장 가까운 문제로 넣었습니다.' },
+  ]},
+  { layer: '인증 및 세션 공격', attacks: [
+    { name: 'Session Hijacking', ids: ['19회_10','25회_4'] },
+    { name: 'Session Fixation (세션 고정)', ids: [] },
+    { name: 'Credential Stuffing', ids: ['151제_090'] },
+    { name: 'Brute Force Attack', ids: [] },
+    { name: 'Dictionary Attack', ids: [] },
+  ]},
+  { layer: '파일 및 기타 웹 공격', attacks: [
+    { name: 'Web Shell Upload (Unrestricted File Upload)', ids: ['19회_15','23회_13','29회_14','29회_8','31회_17'],
+      note: '23회_13과 29회_14는 같은 문제(PHP 게시판 파일 업로드 우회)가 반복 출제된 것입니다.' },
+    { name: 'Clickjacking', ids: [] },
+    { name: 'Fileless Malware Attack (Living off the Land)', ids: [] },
+  ]},
+  { layer: '목록에는 없지만 등록된 웹 공격 문제', attacks: [
+    { name: 'HTTP Request Smuggling', ids: ['26회_4'] },
+    { name: 'HTTP 응답 분할 (Response Splitting, CRLF 삽입)', ids: ['28회_5'] },
+  ]},
+];
+
+const WEB_COMPARE = [
+  { title: 'XSS 유형 비교 (Reflected · Stored · DOM based)',
+    cols: ['유형', '이용하는 것', '실행 시점 / 피해', '등록 문제'],
+    rows: [
+      ['Reflected XSS (반사형)', '{{use|악성 스크립트가 포함된 URL 파라미터 값}}이 서버에 저장되지 않고 HTTP 응답에 그대로 포함됨. 이메일·메신저로 링크 클릭 유도', '사용자가 {{dmg|악의적인 링크에 접속할 때}} 사용자 브라우저에서 실행', '26회_9, 26회_16, 31회_6'],
+      ['Stored XSS (저장형)', '{{use|게시판·코멘트·프로필 입력 Form}}으로 악성 스크립트를 삽입해 서버(DB)에 저장', '{{dmg|다른 사용자가 저장된 페이지를 열람}}할 때마다 실행', '26회_9, 26회_16, 31회_6'],
+      ['DOM based XSS', '{{use|스크립트(JS)가 DOM을 제어하는 과정}}을 공격자가 조작. URL 파라미터 값이 {{key|서버를 거치지 않고}} DOM 생성의 일부로 실행', '{{dmg|사용자 브라우저(클라이언트)}}에서 공격 성립', '26회_9, 26회_16, 31회_6'],
+    ]},
+  { title: '입력값 검증 공격 비교 (SQL Injection · XSS · Command Injection · SSRF)',
+    cols: ['공격', '이용하는 것', '피해', '대응', '등록 문제'],
+    rows: [
+      ['SQL Injection', '{{use|DB와 연결된 애플리케이션의 입력값을 조작}}', '{{dmg|의도하지 않은 결과 반환}}, 인증 로직 우회(1\' or \'1\'=\'1\')', '{{def|Prepared Statement}}, {{def|최소권한 계정}}, 동적 쿼리 생성 금지, {{def|서버단 입력값 검증}}', '18회_3, 18회_11, 22회_10, 22회_17, 23회_6, 27회_17'],
+      ['XSS', '{{use|게시판·웹·메일 등에 삽입된 악의적인 스크립트}}', '{{dmg|쿠키 및 기타 개인정보를 특정 사이트로 전송}}', '{{def|HttpOnly}}(document.cookie 접근 차단)', '18회_3, 22회_15, 26회_16'],
+      ['Command Injection (운영체제 명령어 삽입)', '{{use|검증 없는 사용자 입력값}}이 운영체제 명령어의 일부로 전달됨', '{{dmg|의도하지 않은 시스템 명령어 실행}}', '-', '18회_3, 27회_7'],
+      ['SSRF', '{{use|외부 입력 기반으로 HTTP 요청을 생성하는 서버 기능}}', '{{dmg|서버가 신뢰하는 서버·네트워크 리소스에 임의 요청}}을 보내도록 속임', '{{def|허용 도메인/IP 화이트리스트}}, 무작위 입력이 필요하면 블랙리스트', '25회_10, 28회_2'],
+    ]},
+  { title: '파일 관련 공격 비교 (파일 업로드/웹쉘 · 파일 삽입)',
+    cols: ['공격', '이용하는 것', '피해', '대응', '등록 문제'],
+    rows: [
+      ['파일 업로드 (웹쉘)', '{{use|실행 가능한 파일 업로드}}. 우회: {{use|Content-Type 변조}}, {{use|확장자 변조(대소문자·이중 확장자)}}, {{use|Null 바이트(%00) 삽입}}', '{{dmg|중요정보 탈취, 시스템 명령어 수행}}', '{{def|허용 확장자 화이트리스트 검증}}, {{def|업로드 디렉토리 스크립트 실행 권한 제거}}, 웹 루트 외부 저장, .htaccess(FilesMatch 직접 호출 금지 · AddType MIME 재조정)', '19회_15, 23회_13, 29회_14, 31회_17'],
+      ['파일 삽입 (PHP)', '{{use|악성 스크립트를 서버에 전달}}해 코드가 실행되도록 함', '{{dmg|서버에서 악성 코드 실행}}', '{{def|require/include 함수 확인}}, php.ini의 allow_url_fopen을 {{def|Off}}로 설정', '22회_5'],
+    ]},
+  { title: '인증 · 세션 · 쿠키 비교',
+    cols: ['항목', '원리 / 의미', '등록 문제'],
+    rows: [
+      ['Session Hijacking', '{{use|이미 접속되어 있는 활성 세션}}을 가로채 {{dmg|사용자의 신원으로 서버와 통신}}을 시도', '19회_10, 25회_4'],
+      ['Credential Stuffing', '{{use|미리 확보한 로그인 자격증명(ID·PW)}}을 이용자가 쓸 만한 {{dmg|다른 사이트에 무작위 대입}}해 비인가 접속 시도', '151제_090'],
+      ['쿠키 Secure 속성', '통신(SSL/TLS) 시에만 쿠키를 전송해 기밀성 보장. {{def|스니핑을 통한 쿠키 탈취 대응}}', '22회_15'],
+      ['쿠키 HttpOnly 속성', '자바스크립트(document.cookie)로 쿠키 접근을 차단. {{def|XSS를 통한 쿠키 탈취 대응}}', '22회_15'],
+    ]},
+];
+
+// ══════════════════════════════════════════════
+// 시스템·암호·킬체인 공격 모음 (3. 시스템/메모리 · 4. 암호/무선 · 5. 킬체인)
+// ══════════════════════════════════════════════
+const SYS_ATTACKS = [
+  { layer: '3. 시스템 및 메모리 손상 — 메모리 버퍼 취약점 공격', attacks: [
+    { name: 'Buffer Overflow (Stack / Heap Overflow)', ids: ['29회_5'],
+      note: '29회_5는 strcpy()가 쓰인 소스코드를 보고 취약점명과 취약한 함수를 묻는 문제입니다.' },
+    { name: 'Format String Attack', ids: ['23회_2'],
+      note: '23회_2는 printf 호출 시 인자가 저장되는 64비트 레지스터(RDI, RSI, RDX)를 묻는 문제로, 포맷 스트링 공격 자체를 묻는 문제는 등록되어 있지 않습니다.' },
+    { name: 'Race Condition (TOCTOU)', ids: ['19회_3'] },
+    { name: 'Return-to-libc (RTL) Attack', ids: ['23회_2'],
+      note: '23회_2는 64비트 함수 호출 시 인자 전달 레지스터 문제로, RTL 공격 자체를 묻는 문제는 등록되어 있지 않습니다.' },
+  ]},
+  { layer: '3. 시스템 및 메모리 손상 — 권한 및 악성코드', attacks: [
+    { name: 'SetUID / SetGID 악용 Privilege Escalation (권한 상승)', ids: ['19회_11','24회_13','31회_18'] },
+    { name: 'Ransomware', ids: [] },
+    { name: 'Rootkit', ids: ['28회_7'] },
+    { name: 'Trojan Horse', ids: [] },
+    { name: 'Keylogger', ids: [] },
+  ]},
+  { layer: '4. 무선 및 암호학/네트워크 스니핑 — 암호 프로토콜 및 인증 공격', attacks: [
+    { name: 'Replay Attack (재전송 공격)', ids: ['20회_6','25회_3'],
+      note: 'IPSec이 제공하는 기능(서비스)을 묻는 문제의 정답에 재전송 공격 방지가 포함되어 있습니다.' },
+    { name: 'Birthday Attack (생일 역설 기반 해시 충돌)', ids: [] },
+    { name: 'Man-in-the-Middle (MITM)', ids: ['18회_14','29회_13'],
+      note: '18회_14는 이메일 로그의 ECDHE 서명을 묻는 문제(키교환 중 중간자 공격 방지), 29회_13은 중간자 공격 대응인 인증서 고정(Certificate Pinning) 문제입니다.' },
+    { name: 'Pass the Hash (PtH)', ids: ['151제_082'] },
+    { name: 'Downgrade Attack (Heartbleed, POODLE)', ids: ['151제_111','23회_10','26회_18','31회_7'],
+      note: 'POODLE은 151제_111, Heartbleed는 23회_10·26회_18(실무)·31회_7입니다.' },
+  ]},
+  { layer: '4. 무선 및 암호학/네트워크 스니핑 — 무선(Wireless) 네트워크 공격', attacks: [
+    { name: 'Rogue AP (Evil Twin Attack)', ids: [] },
+    { name: 'WEP Key Cracking (IV 재사용 취약점)', ids: ['151제_096'],
+      note: '151제_096은 WEP·WPA·WPA2가 사용하는 암호화 알고리즘을 묻는 문제입니다.' },
+    { name: 'WPA/WPA2 4-Way Handshake Cracking', ids: ['18회_1','24회_4'],
+      note: '18회_1·24회_4는 같은 문제(EAP 인증, AES-CCMP를 지원하는 무선랜 표준)가 반복 출제된 것으로, 핸드셰이크 크래킹 자체를 묻는 문제는 아닙니다.' },
+  ]},
+  { layer: '5. 사이버 킬체인 — Reconnaissance (정찰 / 정보 수집)', attacks: [
+    { name: 'Port Scanning (TCP Connect, SYN, Xmas, Null, FIN, ACK)', ids: ['27회_6'] },
+    { name: 'Zone Transfer (AXFR / DNS 영역 전송)', ids: [] },
+    { name: 'Banner Grabbing', ids: ['28회_18','27회_8'],
+      note: '28회_18은 telnet 접속 배너에 OS·커널 정보가 노출되는 문제, 27회_8은 telnet으로 HTTP OPTIONS를 요청해 서버 정보를 확인하는 문제입니다.' },
+  ]},
+  { layer: '5. 사이버 킬체인 — Weaponization & Delivery (무기화 및 전달)', attacks: [
+    { name: 'Spear Phishing (스피어 피싱)', ids: [] },
+    { name: 'Watering Hole Attack (워터링 홀)', ids: [] },
+    { name: 'Supply Chain Attack (공급망 공격)', ids: [] },
+  ]},
+  { layer: '5. 사이버 킬체인 — Exploitation & Installation (취약점 악용 및 설치)', attacks: [
+    { name: '0-day Exploit', ids: [] },
+    { name: 'Living off the Land (LotL)', ids: [] },
+    { name: 'DLL Hijacking / DLL Side-Loading', ids: [] },
+  ]},
+  { layer: '5. 사이버 킬체인 — Command & Control (C2 제어 및 유출)', attacks: [
+    { name: 'DNS Tunneling', ids: [] },
+    { name: 'Covert Channel (은닉 채널)', ids: [] },
+    { name: 'Data Exfiltration (데이터 유출)', ids: ['24회_8','29회_4','25회_2'],
+      note: '24회_8·29회_4는 같은 문제(DLP)가 반복 출제된 것이고, 25회_2는 전자 방사를 통한 정보 유출 방지(TEMPEST) 문제입니다. 유출 공격 자체보다 방지 솔루션을 묻습니다.' },
+  ]},
+  { layer: '목록에는 없지만 등록된 관련 문제', attacks: [
+    { name: '사이버 킬 체인 / MITRE ATT&CK 개념', ids: ['28회_6','151제_084'] },
+    { name: 'DGA (C&C 도메인 지속 변경)', ids: ['18회_7'] },
+    { name: '스니핑 탐지 (Promiscuous mode · Ping 방식)', ids: ['19회_13','26회_15','25회_14'] },
+    { name: '서브도메인 하이재킹 (서브도메인 테이크오버)', ids: ['151제_057'] },
+    { name: '악성코드 분석 (PE 파일 · 샌드박스)', ids: ['25회_18','31회_12'] },
+  ]},
+];
+
+const SYS_COMPARE = [
+  { title: '특수 권한 비교 (SetUID · SetGID · Sticky Bit)',
+    cols: ['항목', '이용하는 것', '피해 / 의미', '대응·점검', '등록 문제'],
+    rows: [
+      ['SetUID', '{{use|파일의 Owner 실행권한이 s}}', '일반 사용자가 실행해도 {{dmg|파일 소유자(root면 root) 권한으로 실행}}되어 root 권한 탈취 가능', '제거 {{def|chmod -s}}, 점검 {{def|find / -perm -4000}}', '19회_11, 24회_13, 31회_18'],
+      ['SetGID', '{{use|파일의 Group 실행권한이 s}}', '일반 사용자가 실행해도 {{dmg|소유 그룹 권한으로 명령 실행}}, 권한 상승 가능', '제거 {{def|chmod -s}}, 점검 {{def|find / -perm -2000}}', '19회_11, 24회_13, 31회_18'],
+      ['Sticky Bit (/tmp)', 'Others의 실행 권한이 t', '누구나 파일 생성·수정·읽기 가능하나 {{key|파일 소유자와 root 외에는 삭제 불가}}', '-', '19회_11'],
+    ]},
+  { title: '메모리·경합 취약점 비교 (Buffer Overflow · Race Condition)',
+    cols: ['공격', '이용하는 것', '대응', '등록 문제'],
+    rows: [
+      ['Buffer Overflow', '{{use|strcpy() 같은 길이 검증 없는 복사 함수}}로 버퍼 크기를 넘겨 복사', '{{def|strncpy(buffer, argv[1], sizeof(buffer)-1)}}처럼 복사 길이를 제한하는 안전한 함수 사용, {{def|입력값 길이 사전 검증}}', '29회_5'],
+      ['Race Condition', '{{use|여러 프로세스가 공유자원에 동시에 접근}}할 때 접근 순서에 따라 비정상 결과가 발생하는 상황', '-', '19회_3'],
+    ]},
+  { title: '암호 프로토콜·인증 공격 비교',
+    cols: ['공격', '이용하는 것', '피해', '대응', '등록 문제'],
+    rows: [
+      ['Replay Attack (재전송)', '-', '-', 'IPSec의 {{def|재전송 공격 방지}} 기능', '20회_6, 25회_3'],
+      ['MITM (중간자 공격)', 'TLS 키교환 과정', '-', '{{def|ECDHE 변수를 송신자 개인키로 서명, 공개키로 검증}}(18회_14). 모바일앱은 {{def|인증서 고정}}: 서버 인증서를 앱에 저장해 일치할 때만 통신 허용(29회_13)', '18회_14, 29회_13'],
+      ['Pass the Hash', '{{use|mimikatz 같은 툴로 메모리의 NTLM·LanMan 해시 탈취}}', '{{dmg|원격 서버 인증 시도}}', '-', '151제_082'],
+      ['POODLE (Downgrade)', '{{use|TLS 연결을 SSL 3.0으로 낮춤}}', '{{dmg|SSL 3.0 취약점으로 암호문 해독}}', '-', '151제_111'],
+      ['Heartbleed', '{{use|OpenSSL 하트비트 체크 로직의 취약점}}', '{{dmg|시스템 메모리에서 중요 데이터 탈취}}', '{{def|OpenSSL을 패치된 상위 버전(예: 1.0.1g)으로 업데이트}}, 불가하면 Heartbeat를 끄고 재컴파일, 서버 인증서 재발급, 사용자 비밀번호 재설정 안내', '23회_10, 26회_18, 31회_7'],
+    ]},
+  { title: '무선랜 보안 표준 비교 (WEP · WPA · WPA2)',
+    cols: ['표준', '암호화 알고리즘', '비고', '등록 문제'],
+    rows: [
+      ['WEP', '{{key|RC4}}', '-', '151제_096'],
+      ['WPA', '{{key|TKIP}}', '-', '151제_096'],
+      ['WPA2', '{{key|AES}}', '{{key|EAP 인증, AES-CCMP 기반 암호화}} 지원', '151제_096, 18회_1, 24회_4'],
+    ]},
+  { title: '킬체인 관련 개념 비교 (정찰 · C2)',
+    cols: ['항목', '핵심 내용', '등록 문제'],
+    rows: [
+      ['사이버 킬 체인', '록히드 마틴사가 제시한 APT 대응 방법. 공격 단계를 {{key|7단계}}로 분리해 {{def|그중 하나만 사전에 확실히 제거해도}} 실제 공격으로 이어질 수 없도록 방어', '28회_6'],
+      ['MITRE ATT&CK', '사이버 킬 체인의 7단계를 확장한 {{key|14단계}} 모델', '151제_084'],
+      ['DGA', 'DDoS·APT 공격 시 {{use|C&C 서버와 접속하기 위한 도메인명을 지속적으로 변경}}해 {{dmg|보안장비의 탐지를 우회}}', '18회_7'],
+      ['Banner 정보 노출', '{{use|telnet 접속 배너의 OS·커널·데몬 버전 정보}}를 CVE와 매핑해 익스플로잇. {{def|SSH 사용, root 직접 로그인 차단}}', '28회_18'],
+    ]},
+];
+
 function fmtCmp(text) {
   return escHtml(text).replace(/\{\{(use|dmg|def|key)\|(.+?)\}\}/g, '<span class="kw-$1">$2</span>');
 }
 
 function layerLabel(q) {
   return q.source === '기출' ? `${q.exam} ${q.number}번` : `151제 ${q.number}번`;
+}
+
+function renderLayerAttacks() {
+  renderAttackPage(LAYER_ATTACKS, LAYER_COMPARE, 'layerAttackList', 'layerAttackCount', 'layer');
+}
+
+function openWebAttack() {
+  document.getElementById('qArea').style.display = 'none';
+  document.getElementById('sidebar').style.display = 'none';
+  document.getElementById('headerStats').style.display = 'none';
+  document.getElementById('webAttackArea').style.display = 'flex';
+  document.getElementById('scrollTopBtn').classList.add('visible');
+  renderAttackPage(WEB_ATTACKS, WEB_COMPARE, 'webAttackList', 'webAttackCount', 'web');
+}
+
+function openSysAttack() {
+  document.getElementById('qArea').style.display = 'none';
+  document.getElementById('sidebar').style.display = 'none';
+  document.getElementById('headerStats').style.display = 'none';
+  document.getElementById('sysAttackArea').style.display = 'flex';
+  document.getElementById('scrollTopBtn').classList.add('visible');
+  renderAttackPage(SYS_ATTACKS, SYS_COMPARE, 'sysAttackList', 'sysAttackCount', 'sys');
 }
 
 function openLayerAttack() {
@@ -2388,18 +2626,18 @@ function openLayerAttack() {
   renderLayerAttacks();
 }
 
-function renderLayerAttacks() {
+function renderAttackPage(groups, compare, listId, countId, prefix) {
   const byId = new Map(questions.map(q => [q.id, q]));
   let ai = 0, withQ = 0;
-  const html = LAYER_ATTACKS.map(L => {
+  const html = groups.map(L => {
     const cats = L.attacks.map(a => {
       const idx = ai++;
       const items = a.ids.map((qid, i) => {
         const q = byId.get(qid);
         if (!q) return '';
         const typeCls = q.type === '단답형' ? 't-dan' : 't-seo';
-        return `<div class="sum-item" id="layerItem_${idx}_${i}">
-          <div class="sum-item-head" onclick="toggleFreqItem('layer',${idx},${i})">
+        return `<div class="sum-item" id="${prefix}Item_${idx}_${i}">
+          <div class="sum-item-head" onclick="toggleFreqItem('${prefix}',${idx},${i})">
             <span class="freq-num">${layerLabel(q)}</span>
             <span class="sum-q">${escHtml(q.question)}</span>
             <span class="sum-type-badge ${typeCls}">${q.type}</span>
@@ -2427,15 +2665,15 @@ function renderLayerAttacks() {
     <span><span class="kw-def">초록</span> 대응</span>
     <span><span class="kw-key">보라</span> 판별 핵심</span>
   </div>`;
-  const tables = LAYER_COMPARE.map(t => `
+  const tables = compare.map(t => `
     <h4 style="font-size:14px;font-weight:700;color:var(--text);margin:0 0 10px">${escHtml(t.title)}</h4>
     <div class="cmp-wrap"><table class="cmp-table">
       <thead><tr>${t.cols.map(c => `<th>${escHtml(c)}</th>`).join('')}</tr></thead>
       <tbody>${t.rows.map(r => `<tr>${r.map(c => `<td>${fmtCmp(c)}</td>`).join('')}</tr>`).join('')}</tbody>
     </table></div>`).join('');
 
-  document.getElementById('layerAttackCount').textContent = `${ai}개 공격 중 ${withQ}개에 문제 등록`;
-  document.getElementById('layerAttackList').innerHTML =
+  document.getElementById(countId).textContent = `${ai}개 공격 중 ${withQ}개에 문제 등록`;
+  document.getElementById(listId).innerHTML =
     html + `<h3 class="layer-title">📊 비슷한 공격 비교 요약</h3>` + legend + tables;
 }
 
