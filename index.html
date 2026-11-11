@@ -689,6 +689,7 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
             <button class="load-btn" onclick="openSysAttack()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🧬 시스템·암호·킬체인 공격 모음</button>
             <button class="load-btn" onclick="openLinuxPage()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🐧 리눅스·유닉스 설정/보안 모음</button>
             <button class="load-btn" onclick="openWinPage()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🪟 윈도우 설정/보안 모음</button>
+            <button class="load-btn" onclick="openPartPage()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">📚 파트별 기출 모음 (시험 범위 목차)</button>
           </div>
         </div>
       </div>
@@ -902,6 +903,24 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
         </div>
         <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">OSI 계층별 공격 유형 중 사이트에 등록된 기출·151제 문제를 공격별로 모았습니다. 문제를 클릭하면 정답이 펼쳐지고, 맨 아래에서 비슷한 공격끼리 표로 비교할 수 있습니다.</p>
         <div id="layerAttackList"></div>
+      </div>
+    </div>
+
+    <!-- 파트별 기출 모음 -->
+    <div id="partArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
+      <div class="summary-wrap">
+        <div class="summary-header">
+          <div style="display:flex;align-items:center;gap:12px">
+            <h2>📚 파트별 기출 모음</h2>
+            <span id="partCount" style="font-size:13px;color:var(--text3);font-weight:400"></span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <button class="sum-expand-all" onclick="goHome()">✕ 닫기</button>
+          </div>
+        </div>
+        <p style="color:var(--text2);font-size:13px;margin:-4px 0 6px">시험 범위 목차(파트 1~6) 항목별로 사이트에 등록된 기출·151제 문제를 모았습니다. 문제를 클릭하면 정답이 펼쳐집니다. 같은 문제가 여러 항목에 걸치면 각 항목에 모두 표시됩니다.</p>
+        <p style="color:var(--text2);font-size:13px;margin:0 0 20px">파트 6(법규)은 해당 법령 시행일 이후에 치러진 회차의 문제만 포함합니다. 회차 일자는 연 3회(4·7·11월) 시행 기준의 추정이므로 시행일 직전·직후 회차는 확인이 필요합니다.</p>
+        <div id="partList"></div>
       </div>
     </div>
 
@@ -1911,6 +1930,7 @@ function goHome() {
   document.getElementById('sysAttackArea').style.display = 'none';
   document.getElementById('linuxArea').style.display = 'none';
   document.getElementById('winArea').style.display = 'none';
+  document.getElementById('partArea').style.display = 'none';
   document.getElementById('scrollTopBtn').classList.remove('visible');
   document.getElementById('loadScreen').style.display = 'flex';
   document.getElementById('sidebar').style.display = 'flex';
@@ -2809,6 +2829,123 @@ const WIN_COMPARE = [
     ]},
 ];
 
+// ══════════════════════════════════════════════
+// 파트별 시험 범위 기출 모음 (파트 1~6, 목차 항목별 기출/151제 문제)
+// 법규(파트 6)는 시행일 이후에 치러진 회차의 문제만 포함
+// 회차 일자 기준: 연 3회(4·7·11월) 시행, 19회=2022-04-23 · 23회≈2023-07-29 · 25회=2024-04-27 기준으로 추정
+// ══════════════════════════════════════════════
+const PART_GROUPS = [
+  { layer: '파트1. 유닉스/리눅스, 윈도우 설정 및 서버 취약점', attacks: [
+    { name: '[리눅스·유닉스] 계정 · 패스워드 (passwd · shadow · login.defs · PAM)', ids: ['22회_3','29회_6','151제_093','26회_1','24회_17','18회_15','151제_091','23회_7','29회_1'] },
+    { name: '[리눅스·유닉스] 로그 파일', ids: ['22회_2','27회_5','151제_120','28회_8','29회_12','23회_5'] },
+    { name: '[리눅스·유닉스] 파일 권한 · SetUID/SetGID', ids: ['27회_15','19회_11','24회_13','31회_18'] },
+    { name: '[리눅스·유닉스] 원격 접속 · 서비스 설정 (xinetd · r command · Telnet)', ids: ['24회_18','24회_14','31회_14','28회_18'] },
+    { name: '[리눅스·유닉스] 프로세스 · 쉘 · 시스템 점검', ids: ['24회_9','28회_7','151제_100','28회_13'] },
+    { name: '[리눅스·유닉스] 컴파일 · 메모리 구조 · 익스플로잇', ids: ['23회_2','23회_3','29회_5','19회_3','151제_045'] },
+    { name: '[윈도우] 계정 · 권한 (계정 그룹 · UAC)', ids: ['25회_1','26회_13'] },
+    { name: '[윈도우] 로그 · 감사 정책', ids: ['31회_9','29회_17','23회_1'] },
+    { name: '[윈도우] 파일시스템 · 패치', ids: ['29회_2','27회_9'] },
+    { name: '[윈도우] 네트워크 · 서비스 설정 (NetBIOS · FTP 권한)', ids: ['23회_15','28회_14','31회_13'] },
+    { name: '[윈도우] 인증 공격 (Pass the Hash)', ids: ['151제_082'] },
+  ]},
+  { layer: '파트2. 네트워크 프로토콜과 공격 · 네트워크 보안', attacks: [
+    { name: '프로토콜 · 7계층 (라우팅 · 스위칭 · VLAN)', ids: ['22회_1','20회_12','24회_3','24회_5','27회_3','28회_3','26회_2'] },
+    { name: 'TCP/IP 프로토콜', ids: [] },
+    { name: 'ARP / RARP 프로토콜', ids: ['19회_4','22회_7','25회_17','27회_2','151제_109'] },
+    { name: 'IP 프로토콜', ids: ['25회_8','18회_13','20회_15'] },
+    { name: 'ICMP 프로토콜', ids: ['28회_1','31회_15'] },
+    { name: 'TCP 프로토콜', ids: ['23회_14','21회_14'] },
+    { name: 'UDP 프로토콜', ids: [] },
+    { name: '포트 스캐닝', ids: ['27회_6','23회_8','31회_8'] },
+    { name: '서비스 거부 공격 (DoS)', ids: ['31회_15','151제_106','18회_9','26회_8','23회_16','21회_14'] },
+    { name: '분산 서비스 거부 공격 (DDoS)', ids: ['18회_7','18회_12'] },
+    { name: 'DRDoS', ids: ['18회_12','18회_16','22회_16','27회_18','28회_1','151제_099','151제_107'] },
+    { name: '무선랜 보안', ids: ['18회_1','24회_4','151제_096','26회_2'] },
+    { name: 'VPN', ids: ['151제_114'] },
+    { name: 'IP 보안 (IPsec)', ids: ['20회_6','21회_7','25회_3','28회_15','151제_117'] },
+    { name: 'SSL/TLS', ids: ['151제_103','151제_150','18회_14','29회_13'] },
+    { name: '라우터 보안', ids: ['21회_2','20회_15'] },
+    { name: 'ACL', ids: ['31회_2','20회_15','18회_13'] },
+  ]},
+  { layer: '파트3. 응용 프로토콜 · 웹 · 메일 · DB · 클라우드', attacks: [
+    { name: 'DNS', ids: ['22회_8','29회_7','26회_3','31회_1','23회_18','151제_083','151제_057','18회_16','22회_16'] },
+    { name: 'HTTP', ids: ['22회_4','28회_5','26회_4','28회_4','22회_15','20회_1','27회_8'] },
+    { name: 'FTP', ids: ['20회_13','31회_13'] },
+    { name: 'SNMP', ids: ['21회_2','24회_16','27회_10'] },
+    { name: 'DHCP', ids: ['23회_1'], note: '23회_1은 윈도우 DHCP 서비스 로그 파일 경로를 묻는 문제입니다.' },
+    { name: 'SQL Injection', ids: ['18회_3','18회_11','22회_10','22회_17','23회_6','27회_7','27회_17','151제_019'] },
+    { name: 'XSS (CSS)', ids: ['18회_3','26회_9','26회_16','27회_7','31회_6','151제_105','22회_15','28회_4'] },
+    { name: 'CSRF', ids: [] },
+    { name: 'SSRF', ids: ['25회_10','28회_2'] },
+    { name: '운영체제 명령 실행 취약점', ids: ['18회_3','27회_7','29회_8'] },
+    { name: '파일 업로드 취약점', ids: ['19회_15','23회_13','29회_14','29회_8','31회_17','21회_10'] },
+    { name: '파일 다운로드 취약점', ids: [] },
+    { name: '경로 추적 취약점', ids: [] },
+    { name: '파일 삽입 취약점', ids: ['22회_5'] },
+    { name: 'URL/파라미터 변조 취약점', ids: ['25회_7'], note: '25회_7은 요청·응답을 중간에서 가로채 수정하는 웹 프락시 도구 문제입니다.' },
+    { name: '불충분한 세션 관리 취약점', ids: ['19회_10','25회_4','22회_15','28회_4'] },
+    { name: '정보누출 취약점', ids: ['21회_6','28회_18'] },
+    { name: '기타 웹 애플리케이션 취약점 (모바일 딥링크 · Log4J 등)', ids: ['26회_6','18회_10','28회_12','24회_12','22회_4','28회_5','26회_4'] },
+    { name: '개발 보안관리 (보안 약점 진단 · 테스트)', ids: ['22회_9','151제_092','25회_9','25회_13','22회_10'] },
+    { name: '디렉터리 리스팅 취약점', ids: ['20회_8','29회_11'] },
+    { name: '웹 서비스 메소드 설정 취약점', ids: ['20회_1','27회_8'] },
+    { name: '관리자 페이지 노출 취약점', ids: [] },
+    { name: '위치공개 취약점', ids: [] },
+    { name: '검색엔진 정보 노출 취약점', ids: ['24회_6'] },
+    { name: '기타 웹서버 보안 대책 (Apache 설정)', ids: ['21회_10','19회_7','19회_15'] },
+    { name: '웹 로그 분석', ids: ['24회_10','29회_8','31회_17','23회_16','19회_7'] },
+    { name: '보안서버 구축', ids: [] },
+    { name: '이메일 보안 · 메일서버 보안 설정 · 이메일 인증 기술 (스팸 메일 방지)', ids: ['31회_16','21회_1','25회_6','19회_8','18회_14'] },
+    { name: '데이터베이스 보안 · DBMS 보안통제 · DB 암호화', ids: ['24회_2','26회_17','28회_17','22회_10'] },
+    { name: '클라우드 컴퓨팅 (개요 · 특징 · 분류 · SecaaS)', ids: [] },
+  ]},
+  { layer: '파트4. 보안 솔루션 · 점검도구 · 침해사고 시나리오', attacks: [
+    { name: 'Snort', ids: ['20회_13','22회_6','151제_108'] },
+    { name: 'iptables', ids: ['21회_14','24회_15','18회_15'] },
+    { name: '보안 솔루션 종류 및 특징 · 네트워크 보안장비', ids: ['19회_2','19회_5','20회_5','21회_11','25회_16','26회_5','26회_10','151제_098','151제_123','24회_8','29회_4','25회_12','31회_5','29회_15','151제_097','151제_101'] },
+    { name: '보안 솔루션 취약점', ids: [] },
+    { name: '취약점 점검도구 (Nessus · Nikto) · 무결성 점검 (Tripwire) · 루트킷 점검', ids: ['23회_9','23회_8','31회_8','25회_9','151제_085','28회_7'] },
+    { name: '리버스쉘 침해사고 시나리오', ids: [] },
+    { name: '루트킷 침해사고 시나리오', ids: ['28회_7'] },
+    { name: 'DBD 침해사고 시나리오', ids: [] },
+    { name: '악성코드 행위 분석 시나리오', ids: ['18회_2','25회_18','31회_12','18회_4'] },
+    { name: '워터링 홀 침해사고 시나리오', ids: [] },
+    { name: 'GNU Bash 취약점 (Shellshock)', ids: ['29회_8'], note: '29회_8은 access 로그에서 Shellshock 형태의 요청으로 생성되는 b.php(웹쉘)를 묻는 문제입니다.' },
+    { name: 'SSL/TLS 관련 취약점 (Heartbleed · POODLE)', ids: ['23회_10','26회_18','31회_7','151제_111'] },
+    { name: 'NTP 분산서비스거부 취약점', ids: ['27회_18'] },
+    { name: 'SSDP 분산서비스거부 취약점', ids: ['151제_107'] },
+  ]},
+  { layer: '파트5. 정보보호 관리 · 침해사고 대응', attacks: [
+    { name: '정보보호 개요', ids: ['18회_6','25회_5'] },
+    { name: '접근통제 (Access Control)', ids: ['20회_4','27회_1','151제_115'] },
+    { name: '정보보호정책', ids: ['151제_095'] },
+    { name: '위험관리 (자산 · 위협 · 취약점 · 위험분석 · 처리)', ids: ['18회_5','19회_1','18회_8','19회_9','19회_16','20회_2','20회_3','21회_3','21회_8','21회_15','22회_12','22회_14','23회_11','23회_12','24회_7','25회_11','25회_15','26회_11','26회_12','27회_11','27회_13','28회_9','28회_10','28회_16','29회_9','29회_16','31회_4','151제_053','151제_088','151제_102','151제_113','151제_131','151제_132','151제_133'] },
+    { name: '업무 연속성 계획 (BCP) / 재해복구계획 (DRP)', ids: ['19회_6','21회_4','21회_12','27회_16','31회_11','151제_134'] },
+    { name: '침해사고 대응 (대응 절차 · APT · 킬체인 · 경보)', ids: ['151제_086','151제_145','151제_119','21회_5','26회_7','28회_6','151제_084'] },
+    { name: '디지털 포렌식', ids: ['151제_104'] },
+    { name: '공통평가기준 (CC)', ids: ['151제_121'] },
+    { name: '사회공학 기법', ids: [] },
+    { name: '정보보호 및 개인정보보호 관리체계 (ISMS-P) 인증', ids: ['20회_10','23회_4','28회_11','151제_112','151제_116','29회_16'] },
+  ]},
+  { layer: '파트6. 정보보안 법규 (시행일 이후 회차만 포함)', attacks: [
+    { name: '정보보안 법규 개요', ids: ['151제_110','151제_148'],
+      note: '151제는 시험 일자가 없어 법규 항목 기준으로는 회차를 판단할 수 없습니다. 개요 문제(법률 명칭·용어)만 참고용으로 넣었습니다.' },
+    { name: '개인정보 보호법 (시행 24.03.15 → 25회 이후)', ids: ['26회_14','29회_18'],
+      note: '시행일 이전 회차라 제외한 문제: 19회_12, 20회_11, 22회_18, 23회_17, 24회_1, 24회_11 (개인정보 보호법 관련). 151제 문제는 회차 판단이 불가해 제외했습니다.' },
+    { name: '개인정보의 안전성 확보조치 기준 (시행 23.09.22 → 24회 이후)', ids: ['31회_3'],
+      note: '시행일 이전 회차라 제외한 문제: 21회_13, 22회_11, 22회_18, 23회_17. 151제_036·149도 회차 판단이 불가해 제외했습니다.' },
+    { name: '정보통신망 이용촉진 및 정보보호 등에 관한 법률 (시행 24.1.23 → 25회 이후)', ids: ['27회_14','29회_10'] },
+    { name: '정보통신기반보호법 (시행 22.09.11 → 21회 이후)', ids: [] },
+    { name: '전자서명법 (시행 22.10.20 → 21회 이후)', ids: [] },
+    { name: '위치정보의 보호 및 이용 등에 관한 법률 (시행 22.04.20 → 19회 이후)', ids: [] },
+    { name: '그 외 등록된 법령 문제 (전자금융거래법 등)', ids: ['27회_4'] },
+  ]},
+  { layer: '목차에 없는 기출 문제 (참고)', attacks: [
+    { name: '스니핑 · Promiscuous mode 탐지', ids: ['19회_13','25회_14','26회_15'] },
+    { name: '암호 · 모바일 · 전자파 · 블록체인 등 기타', ids: ['29회_3','31회_10','22회_13','25회_2','20회_7'] },
+  ]},
+];
+
 function fmtCmp(text) {
   return escHtml(text).replace(/\{\{(use|dmg|def|key)\|(.+?)\}\}/g, '<span class="kw-$1">$2</span>');
 }
@@ -2855,6 +2992,15 @@ function openWinPage() {
   document.getElementById('winArea').style.display = 'flex';
   document.getElementById('scrollTopBtn').classList.add('visible');
   renderAttackPage(WIN_GROUPS, WIN_COMPARE, 'winList', 'winCount', 'win', { unit: '주제', legend: OS_LEGEND, cmpTitle: '설정 · 정책 비교 요약' });
+}
+
+function openPartPage() {
+  document.getElementById('qArea').style.display = 'none';
+  document.getElementById('sidebar').style.display = 'none';
+  document.getElementById('headerStats').style.display = 'none';
+  document.getElementById('partArea').style.display = 'flex';
+  document.getElementById('scrollTopBtn').classList.add('visible');
+  renderAttackPage(PART_GROUPS, [], 'partList', 'partCount', 'part', { unit: '목차 항목' });
 }
 
 function openLayerAttack() {
@@ -2916,7 +3062,7 @@ function renderAttackPage(groups, compare, listId, countId, prefix, opts) {
 
   document.getElementById(countId).textContent = `${ai}개 ${opts.unit || '공격'} 중 ${withQ}개에 문제 등록`;
   document.getElementById(listId).innerHTML =
-    html + `<h3 class="layer-title">📊 ${opts.cmpTitle || '비슷한 공격 비교 요약'}</h3>` + legend + tables;
+    html + (compare.length ? `<h3 class="layer-title">📊 ${opts.cmpTitle || '비슷한 공격 비교 요약'}</h3>` + legend + tables : '');
 }
 
 // ══════════════════════════════════════════════
