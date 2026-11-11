@@ -431,6 +431,12 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
 .layer-title { font-size: 17px; font-weight: 800; color: var(--accent2); margin: 34px 0 14px; padding-bottom: 8px; border-bottom: 2px solid var(--border2); }
 .layer-title:first-of-type { margin-top: 4px; }
 .atk-empty { font-size: 12.5px; color: var(--text3); background: var(--bg3); border: 1px dashed var(--border2); border-radius: 8px; padding: 9px 14px; }
+.kw-use, .kw-dmg, .kw-def, .kw-key { font-weight: 800; border-radius: 4px; padding: 0 3px; }
+.kw-use { color: #1d4ed8; background: rgba(59,130,246,.12); }
+.kw-dmg { color: #dc2626; background: rgba(239,68,68,.12); }
+.kw-def { color: #15803d; background: rgba(34,197,94,.14); }
+.kw-key { color: #7c3aed; background: rgba(139,92,246,.13); }
+.cmp-legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12.5px; color: var(--text2); margin: -4px 0 16px; }
 .cmp-wrap { overflow-x: auto; margin-bottom: 26px; border: 1px solid var(--border2); border-radius: 12px; }
 .cmp-table { width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.6; min-width: 640px; }
 .cmp-table th { background: var(--bg4); color: var(--text); font-weight: 700; text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border2); white-space: nowrap; }
@@ -2322,47 +2328,52 @@ const LAYER_ATTACKS = [
 ];
 
 // 비슷한 공격 비교표 (내용은 사이트에 등록된 문제·정답에서만 가져옴)
+// 표기: {{use|…}} 공격에 이용하는 수단 · {{dmg|…}} 희생자가 받는 피해 · {{def|…}} 대응 · {{key|…}} 판별 핵심
 const LAYER_COMPARE = [
   { title: '패킷 조작형 DoS 비교 (Land · Smurf · Teardrop · SYN Flooding)',
     cols: ['공격', '계층', '핵심 조작/원리', '등록 문제'],
     rows: [
-      ['Land Attack', 'L3/L4', '출발지 IP와 목적지 IP를 같은 주소(공격 대상)로 만들어 전송해, 수신자가 자기 자신에게 응답하게 함', '31회_15, 151제_106'],
-      ['Smurf', 'L3', '출발지 IP를 공격 대상으로 위조해 네트워크 전체에 ICMP Echo를 브로드캐스트, 응답(echo reply)이 대상에게 집중됨 (Directed Broadcast)', '20회_15, 28회_1, 31회_15'],
-      ['Teardrop', 'L3', 'IP 단편 재조합 시 Fragment Offset을 잘못 조작해 재조합 오류를 유발', '31회_15'],
-      ['TCP SYN Flooding', 'L4', '3-Way Handshaking에서 마지막 ACK를 보내지 않아 Half-Open 연결(Backlog Queue)을 고갈시킴. 대응: SYN Cookie', '21회_14 (iptables 룰)'],
+      ['Land Attack', 'L3/L4', '{{use|출발지 IP와 목적지 IP를 같은 주소(공격 대상)}}로 만들어 전송해, 수신자가 {{dmg|자기 자신에게 응답}}하게 함', '31회_15, 151제_106'],
+      ['Smurf', 'L3', '{{use|출발지 IP를 공격 대상으로 위조}}해 네트워크 전체에 {{use|ICMP Echo를 브로드캐스트}}(Directed Broadcast), {{dmg|응답(echo reply)이 대상에게 집중}}됨', '20회_15, 28회_1, 31회_15'],
+      ['Teardrop', 'L3', 'IP 단편 재조합 시 {{use|Fragment Offset을 잘못 조작}}해 {{dmg|재조합 오류}}를 유발', '31회_15'],
+      ['TCP SYN Flooding', 'L4', '3-Way Handshaking에서 {{use|마지막 ACK를 보내지 않아}} {{dmg|Half-Open 연결(Backlog Queue)을 고갈}}시킴. 대응: {{def|SYN Cookie}}', '21회_14 (iptables 룰)'],
     ]},
   { title: '포트 스캔 비교 (SYN · FIN · Xmas · Null)',
     cols: ['스캔', '전송 패킷', '포트 상태별 응답', '비고'],
     rows: [
-      ['TCP SYN (Half-Open)', 'SYN', 'Open이면 SYN+ACK 수신 후 RST로 연결 종료', '완전한 세션을 맺지 않아 로그가 남지 않음, nmap -sS'],
-      ['FIN', 'FIN 플래그만 설정', 'Closed 포트만 RST 응답, Open은 무응답', '27회_6'],
-      ['Xmas', 'FIN·PSH·URG 모두 설정', 'Closed 포트만 RST 응답, Open은 무응답', '27회_6'],
-      ['Null', '제어 플래그를 설정하지 않음', 'Closed 포트만 RST 응답, Open은 무응답', '27회_6'],
+      ['TCP SYN (Half-Open)', '{{use|SYN}}', 'Open이면 {{key|SYN+ACK 수신 후 RST}}로 연결 종료', '완전한 세션을 맺지 않아 {{key|로그가 남지 않음}}, nmap -sS'],
+      ['FIN', '{{use|FIN 플래그만 설정}}', '{{key|Closed 포트만 RST 응답}}, Open은 무응답', '27회_6'],
+      ['Xmas', '{{use|FIN·PSH·URG 모두 설정}}', '{{key|Closed 포트만 RST 응답}}, Open은 무응답', '27회_6'],
+      ['Null', '{{use|제어 플래그를 설정하지 않음}}', '{{key|Closed 포트만 RST 응답}}, Open은 무응답', '27회_6'],
     ]},
   { title: 'Slow 계열 / 요청 폭주형 DoS 비교',
     cols: ['공격', '핵심 원리', '등록 문제'],
     rows: [
-      ['Slowloris (Slow HTTP Header)', '헤더의 CRLF(개행문자) 필드를 조작해 조작된 HTTP 헤더를 지속적으로 보내 연결을 붙잡음', '18회_9'],
-      ['Slow HTTP Read', '공격자가 TCP 윈도우 사이즈를 0으로 설정하고 다수의 HTTP 패킷을 보내 서버가 정상 응답하지 못하게 함', '26회_8'],
+      ['Slowloris (Slow HTTP Header)', '헤더의 {{use|CRLF(개행문자) 필드를 조작}}한 HTTP 헤더를 지속적으로 보내 {{dmg|연결을 계속 붙잡음}}', '18회_9'],
+      ['Slow HTTP Read', '공격자가 {{use|TCP 윈도우 사이즈를 0}}으로 설정하고 다수의 HTTP 패킷을 보내 {{dmg|서버가 정상 응답하지 못하게}} 함', '26회_8'],
       ['Slow HTTP POST (RUDY)', '등록된 문제 없음', '-'],
-      ['HTTP GET Flooding (CC Attack)', 'Cache-Control 헤더를 조작해 캐시를 거치지 않고 웹/DB 서버에 부하를 발생시킴', '23회_16'],
+      ['HTTP GET Flooding (CC Attack)', '{{use|Cache-Control 헤더를 조작}}해 캐시를 거치지 않고 {{dmg|웹/DB 서버에 부하}}를 발생시킴', '23회_16'],
     ]},
   { title: '반사 · 증폭형 공격 비교',
     cols: ['공격', '이용 대상', '핵심 원리', '등록 문제'],
     rows: [
-      ['Smurf', 'ICMP Echo + 브로드캐스트', '출발지 IP를 공격 대상으로 위조해 증폭 네트워크로 전송', '28회_1'],
-      ['DNS Amplification', 'DNS 서버 (ANY 질의)', '출발지 IP를 공격 대상으로 위조해 DNS 질의를 보내고, 대용량 응답이 대상에게 반사됨', '18회_12, 18회_16, 22회_16'],
-      ['NTP 증폭', 'NTP 서버', 'NTP 취약점을 이용한 DDoS (대응방안 4가지 문제)', '27회_18'],
-      ['SSDP DRDoS', 'UDP 1900번 포트 (IoT)', 'Reflection 공격의 일종', '151제_107'],
-      ['Memcached 증폭', 'Memcached (UDP 11211)', 'GitHub DDoS에 악용된 캐시 솔루션', '151제_099'],
+      ['Smurf', '{{use|ICMP Echo + 브로드캐스트}}', '{{use|출발지 IP를 공격 대상으로 위조}}해 증폭 네트워크로 전송, {{dmg|대량의 echo reply가 대상에게 집중}}', '28회_1'],
+      ['DNS Amplification', '{{use|DNS 서버 (ANY 질의)}}', '{{use|출발지 IP를 공격 대상으로 위조}}해 DNS 질의를 보내고, {{dmg|대용량 응답이 대상에게 반사}}됨', '18회_12, 18회_16, 22회_16'],
+      ['NTP 증폭', '{{use|NTP 서버}}', '{{use|NTP 취약점}}을 이용한 DDoS (대응방안 4가지 문제)', '27회_18'],
+      ['SSDP DRDoS', '{{use|UDP 1900번 포트 (IoT)}}', 'Reflection 공격의 일종', '151제_107'],
+      ['Memcached 증폭', '{{use|Memcached (UDP 11211)}}', '{{dmg|GitHub DDoS}}에 {{use|악용된 캐시 솔루션}}', '151제_099'],
     ]},
   { title: 'L2 공격 비교 (ARP · MAC Flooding)',
     cols: ['공격', '원리', '대응', '등록 문제'],
     rows: [
-      ['ARP Spoofing', '특정 호스트의 MAC 주소를 공격자의 MAC 주소로 위조한 ARP Reply를 전송해 데이터를 중간에서 가로챔', 'ARP 캐시 테이블 정적(Static) 설정', '19회_4, 25회_17, 151제_109'],
-      ['MAC Flooding (Switch Jamming)', '스위치의 CAM 테이블 공간을 마비시켜 스니핑 가능하게 함', '포트 보안(Port Security)', '(기출 없음)'],
+      ['ARP Spoofing', '{{use|특정 호스트의 MAC 주소를 공격자의 MAC 주소로 위조한 ARP Reply}}를 전송해 {{dmg|데이터를 중간에서 가로챔}}', '{{def|ARP 캐시 테이블 정적(Static) 설정}}', '19회_4, 25회_17, 151제_109'],
+      ['MAC Flooding (Switch Jamming)', '{{use|스위치의 CAM 테이블 공간}}을 마비시켜 {{dmg|스니핑이 가능}}하게 함', '{{def|포트 보안(Port Security)}}', '(기출 없음)'],
     ]},
 ];
+
+function fmtCmp(text) {
+  return escHtml(text).replace(/\{\{(use|dmg|def|key)\|(.+?)\}\}/g, '<span class="kw-$1">$2</span>');
+}
 
 function layerLabel(q) {
   return q.source === '기출' ? `${q.exam} ${q.number}번` : `151제 ${q.number}번`;
@@ -2410,16 +2421,22 @@ function renderLayerAttacks() {
     return `<h3 class="layer-title">${escHtml(L.layer)}</h3>${cats}`;
   }).join('');
 
+  const legend = `<div class="cmp-legend">
+    <span><span class="kw-use">파랑</span> 공격에 이용하는 수단</span>
+    <span><span class="kw-dmg">빨강</span> 희생자가 받는 피해</span>
+    <span><span class="kw-def">초록</span> 대응</span>
+    <span><span class="kw-key">보라</span> 판별 핵심</span>
+  </div>`;
   const tables = LAYER_COMPARE.map(t => `
     <h4 style="font-size:14px;font-weight:700;color:var(--text);margin:0 0 10px">${escHtml(t.title)}</h4>
     <div class="cmp-wrap"><table class="cmp-table">
       <thead><tr>${t.cols.map(c => `<th>${escHtml(c)}</th>`).join('')}</tr></thead>
-      <tbody>${t.rows.map(r => `<tr>${r.map(c => `<td>${escHtml(c)}</td>`).join('')}</tr>`).join('')}</tbody>
+      <tbody>${t.rows.map(r => `<tr>${r.map(c => `<td>${fmtCmp(c)}</td>`).join('')}</tr>`).join('')}</tbody>
     </table></div>`).join('');
 
   document.getElementById('layerAttackCount').textContent = `${ai}개 공격 중 ${withQ}개에 문제 등록`;
   document.getElementById('layerAttackList').innerHTML =
-    html + `<h3 class="layer-title">📊 비슷한 공격 비교 요약</h3>` + tables;
+    html + `<h3 class="layer-title">📊 비슷한 공격 비교 요약</h3>` + legend + tables;
 }
 
 // ══════════════════════════════════════════════
