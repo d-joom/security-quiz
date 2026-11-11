@@ -687,6 +687,8 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
             <button class="load-btn" onclick="openLayerAttack()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🧱 계층별 공격 모음</button>
             <button class="load-btn" onclick="openWebAttack()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🕸️ 웹 취약점 공격 모음</button>
             <button class="load-btn" onclick="openSysAttack()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🧬 시스템·암호·킬체인 공격 모음</button>
+            <button class="load-btn" onclick="openLinuxPage()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🐧 리눅스·유닉스 설정/보안 모음</button>
+            <button class="load-btn" onclick="openWinPage()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🪟 윈도우 설정/보안 모음</button>
           </div>
         </div>
       </div>
@@ -900,6 +902,40 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
         </div>
         <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">OSI 계층별 공격 유형 중 사이트에 등록된 기출·151제 문제를 공격별로 모았습니다. 문제를 클릭하면 정답이 펼쳐지고, 맨 아래에서 비슷한 공격끼리 표로 비교할 수 있습니다.</p>
         <div id="layerAttackList"></div>
+      </div>
+    </div>
+
+    <!-- 리눅스·유닉스 설정/보안 모음 -->
+    <div id="linuxArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
+      <div class="summary-wrap">
+        <div class="summary-header">
+          <div style="display:flex;align-items:center;gap:12px">
+            <h2>🐧 리눅스·유닉스 설정/보안 모음</h2>
+            <span id="linuxCount" style="font-size:13px;color:var(--text3);font-weight:400"></span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <button class="sum-expand-all" onclick="goHome()">✕ 닫기</button>
+          </div>
+        </div>
+        <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">리눅스·유닉스의 계정, 로그, 권한, 서비스 설정, 방화벽 등과 관련해 사이트에 등록된 기출·151제 문제를 주제별로 모았습니다. 문제를 클릭하면 정답이 펼쳐지고, 맨 아래에서 설정 파일과 옵션을 표로 비교할 수 있습니다.</p>
+        <div id="linuxList"></div>
+      </div>
+    </div>
+
+    <!-- 윈도우 설정/보안 모음 -->
+    <div id="winArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
+      <div class="summary-wrap">
+        <div class="summary-header">
+          <div style="display:flex;align-items:center;gap:12px">
+            <h2>🪟 윈도우 설정/보안 모음</h2>
+            <span id="winCount" style="font-size:13px;color:var(--text3);font-weight:400"></span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <button class="sum-expand-all" onclick="goHome()">✕ 닫기</button>
+          </div>
+        </div>
+        <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">윈도우의 계정, 감사·로그, 파일시스템, 서비스 설정 등과 관련해 사이트에 등록된 기출·151제 문제를 주제별로 모았습니다. 문제를 클릭하면 정답이 펼쳐지고, 맨 아래에서 정책과 설정을 표로 비교할 수 있습니다.</p>
+        <div id="winList"></div>
       </div>
     </div>
 
@@ -1873,6 +1909,8 @@ function goHome() {
   document.getElementById('layerAttackArea').style.display = 'none';
   document.getElementById('webAttackArea').style.display = 'none';
   document.getElementById('sysAttackArea').style.display = 'none';
+  document.getElementById('linuxArea').style.display = 'none';
+  document.getElementById('winArea').style.display = 'none';
   document.getElementById('scrollTopBtn').classList.remove('visible');
   document.getElementById('loadScreen').style.display = 'flex';
   document.getElementById('sidebar').style.display = 'flex';
@@ -2588,6 +2626,189 @@ const SYS_COMPARE = [
     ]},
 ];
 
+// ══════════════════════════════════════════════
+// 리눅스·유닉스 / 윈도우 설정·보안 모음 (주제별 기출/151제 문제 + 비교표)
+// ══════════════════════════════════════════════
+const OS_LEGEND = [
+  ['use', '파랑', '취약 요소 / 대상'],
+  ['dmg', '빨강', '위험 · 피해'],
+  ['def', '초록', '설정 · 대응'],
+  ['key', '보라', '핵심 파일 · 명령 · 값'],
+];
+
+const LINUX_GROUPS = [
+  { layer: '계정 · 패스워드', attacks: [
+    { name: '/etc/passwd · /etc/shadow 구조', ids: ['22회_3','29회_6','151제_093'] },
+    { name: '패스워드 정책 설정 (login.defs · 최소 길이 · 계정 임계값)', ids: ['26회_1','24회_17','18회_15','151제_091'],
+      note: '18회_15는 계정 임계값(pam_tally), iptables, /etc/shadow 권한, Apache LimitRequestBody를 함께 묻는 문제입니다.' },
+    { name: 'PAM (Pluggable Authentication Module)', ids: ['23회_7','29회_1'],
+      note: '23회_7과 29회_1은 같은 문제(PAM 모듈 종류)가 반복 출제된 것입니다.' },
+  ]},
+  { layer: '로그 파일 · 감사', attacks: [
+    { name: '로그인 기록 파일 (utmp · wtmp · btmp · lastlog · sulog · acct/pacct)', ids: ['22회_2','27회_5','151제_120','28회_8','29회_12'] },
+    { name: '시스템 로그 (/var/log/message)', ids: ['23회_5'] },
+  ]},
+  { layer: '파일 권한 · 특수 권한', attacks: [
+    { name: '파일 권한 해석 (rwx)', ids: ['27회_15'] },
+    { name: 'SetUID · SetGID · Sticky Bit', ids: ['19회_11','24회_13','31회_18'] },
+  ]},
+  { layer: '원격 접속 · 서비스 설정', attacks: [
+    { name: 'xinetd 서비스 설정 (접근 통제)', ids: ['24회_18'] },
+    { name: 'r command (rsh · rlogin · rexec)', ids: ['24회_14','31회_14'] },
+    { name: 'Telnet 접속 시 정보 노출 · root 직접 로그인', ids: ['28회_18'] },
+  ]},
+  { layer: '방화벽 (iptables)', attacks: [
+    { name: 'iptables 룰 작성 · 해석', ids: ['21회_14','24회_15','18회_15'] },
+  ]},
+  { layer: '프로세스 · 시스템 점검', attacks: [
+    { name: '프로세스 점검 (/proc · lsof · strace)', ids: ['24회_9','28회_7','151제_100'] },
+    { name: '스니핑 흔적 점검 (Promiscuous mode 로그)', ids: ['19회_13','26회_15'] },
+  ]},
+  { layer: '서버 서비스 설정 — 웹 (Apache)', attacks: [
+    { name: 'Apache 로그 · 설정 파일 (httpd.conf)', ids: ['19회_7','24회_10'] },
+    { name: '디렉터리 인덱싱 대응 (Options Indexes)', ids: ['20회_8','29회_11'],
+      note: '20회_8과 29회_11은 같은 문제가 반복 출제된 것입니다.' },
+    { name: '업로드 제한 · 실행 제한 (LimitRequestBody · .htaccess)', ids: ['21회_10','19회_15','18회_15'] },
+    { name: 'HTTP OPTIONS (Telnet으로 허용 메서드 확인)', ids: ['20회_1','27회_8'] },
+  ]},
+  { layer: '서버 서비스 설정 — 메일 · DNS', attacks: [
+    { name: 'Sendmail 릴레이 제한 (/etc/mail/access)', ids: ['21회_1','25회_6'] },
+    { name: 'DNS (BIND named.conf · resolv.conf)', ids: ['23회_18','31회_1','29회_7'] },
+  ]},
+  { layer: '컴파일 · 실행 구조', attacks: [
+    { name: '동적 링킹 (PLT · GOT)', ids: ['23회_3'] },
+    { name: '64비트 함수 호출 인자 레지스터', ids: ['23회_2'] },
+  ]},
+];
+
+const LINUX_COMPARE = [
+  { title: '로그 파일 비교 (utmp · wtmp · btmp · lastlog · sulog · acct/pacct)',
+    cols: ['로그 파일', '기록 내용', '확인 명령', '등록 문제'],
+    rows: [
+      ['utmp', '{{key|현재 시스템에 로그인한 사용자}}의 상태', '-', '27회_5, 151제_120'],
+      ['wtmp', '사용자의 {{key|로그인·로그아웃, 시스템 재부팅}} 정보가 누적', '-', '27회_5, 151제_120'],
+      ['btmp', '{{key|로그인 실패}} 정보 (5번 이상 실패 시 기록)', '{{def|lastb}}', '28회_8, 151제_120'],
+      ['lastlog', '사용자의 {{key|가장 최근(마지막 성공) 로그인}} 시각, 접근 호스트', '-', '22회_2, 27회_5'],
+      ['sulog', '{{key|SU 권한 변경}}(성공 또는 실패) 로그', '-', '22회_2'],
+      ['acct/pacct', '로그인한 모든 사용자가 {{key|실행한 명령어}} 정보', '{{def|lastcomm}}', '22회_2, 29회_12'],
+    ]},
+  { title: '패스워드 최소 길이 설정 비교 (유닉스 계열별)',
+    cols: ['OS', '설정 대상 파일', '설정값', '등록 문제'],
+    rows: [
+      ['Solaris', '{{key|/etc/default/passwd}}', 'PASSLENGTH = 8', '24회_17'],
+      ['Linux', '{{key|/etc/login.defs}}', 'PASS_MIN_LEN 8', '24회_17, 26회_1'],
+      ['AIX', '{{key|/etc/security/user}}', 'minlen = 8', '24회_17'],
+      ['HP-UX', '{{key|/etc/default/security}}', 'MIN_PASSWORD_LENGTH = 8', '24회_17'],
+    ]},
+  { title: '계정 관련 파일 · 설정 비교',
+    cols: ['대상', '역할 / 의미', '등록 문제'],
+    rows: [
+      ['/etc/passwd', '항목 예: test01:x:100:1000:/home/exam:/bin/bash → {{key|1000은 GID(그룹ID)}}, {{key|/home/exam은 사용자 홈 디렉토리}}, {{key|/bin/bash는 로그인 쉘}}', '22회_3'],
+      ['/etc/shadow', '비밀번호 해시와 비밀번호 만료 정보 저장. 암호화된 값의 첫 항목은 {{key|패스워드 암호화에 사용된 해시 알고리즘}}. {{def|소유자 root, 소유자만 읽기(chmod 400)}}로 설정', '29회_6, 151제_093, 18회_15'],
+      ['/etc/login.defs', '패스워드의 {{key|사용기간 만료, 최대 사용기간, 최소 변경 기간}} 등 정책 설정', '26회_1, 151제_091'],
+      ['PAM 모듈', '{{key|auth · account · session}} (password 모듈 포함)', '23회_7, 29회_1'],
+      ['계정 임계값 (pam_tally)', '{{def|/etc/pam.d/system-auth(common-auth)}}에 {{def|deny=5 unlock_time=120}} 형태로 설정', '18회_15'],
+    ]},
+  { title: '원격 접속 서비스 접근 통제 비교 (xinetd · r command)',
+    cols: ['설정 / 대상', '의미', '등록 문제'],
+    rows: [
+      ['no_access', '해당 대역은 {{def|서비스 미허용}} (예: 10.0.0.0/8)', '24회_18'],
+      ['only_from', '해당 대역만 {{def|서비스 허용}} (예: 192.168.10.0/24)', '24회_18'],
+      ['instances', '{{def|동시에 접속 가능한 최대 세션 수}} 제한', '24회_18'],
+      ['access_time', '{{def|접속 가능 시간 제한}} (예: 09:00-18:00)', '24회_18'],
+      ['r command (/etc/hosts.equiv, $HOME/.rhosts)', 'rsh·rlogin·rexec는 {{use|인증 없이 관리자 원격접속}}이 가능하므로 사용하지 않는 것이 안전. {{def|소유자를 root(또는 해당 계정)로 변경, 권한 600 이하, 파일에서 + 제거}} 후 필요한 호스트·계정만 등록', '24회_14, 31회_14'],
+      ['Telnet 배너 · root 로그인', '배너에 {{use|OS·커널 정보 출력}} → 취약점(CVE) 매핑 후 익스플로잇 가능, root 직접 로그인 허용 시 {{dmg|최고 권한 탈취 위험}}. {{def|SSH 사용, root 직접 로그인 차단}}', '28회_18'],
+    ]},
+  { title: 'iptables 비교 (체인 · 룰 옵션)',
+    cols: ['항목', '의미', '등록 문제'],
+    rows: [
+      ['INPUT Chain', '방화벽이 {{key|최종 목적지}}인 룰이 등록되는 체인', '24회_15'],
+      ['FORWARD Chain', '방화벽을 {{key|경유}}하는 룰이 등록되는 체인', '24회_15'],
+      ['OUTPUT Chain', '방화벽이 {{key|최초 출발지}}인 룰이 등록되는 체인', '24회_15'],
+      ['-j DROP', '패킷을 {{def|차단}} (예: iptables -A INPUT -p tcp -s 172.30.1.55 --dport 21 -j DROP)', '18회_15'],
+      ['-m recent --update --seconds 2 --hitcount 30', '{{def|동일 IP에서 2초 동안 30번 이상 요청}} 시 차단하는 SYN Flooding 대응 룰 옵션', '21회_14'],
+      ['-p tcp ! --syn -m state --state NEW -j LOG', '신규(NEW) 연결인데 {{use|SYN이 아닌 TCP Flag}}인 패킷을 로그로 남김', '24회_15'],
+    ]},
+  { title: 'Apache 설정 지시자 비교',
+    cols: ['지시자 / 파일', '의미', '등록 문제'],
+    rows: [
+      ['Options Indexes', '디렉터리 인덱싱 취약점 대응을 위해 {{def|삭제해야 하는 지시자}}', '20회_8, 29회_11'],
+      ['LimitRequestBody', '디렉토리에 {{def|업로드 가능한 최대 파일 크기}}를 제한 (5,000,000 바이트 ≈ 5MB). 악의적인 웹쉘 업로드를 방지', '21회_10, 18회_15'],
+      ['.htaccess FilesMatch', 'Server Side Script 파일의 {{def|직접 URL 호출 금지}} (업로드된 웹쉘 실행 방지)', '19회_15'],
+      ['.htaccess AddType', 'Server Side Script 확장자를 {{def|실행 불가한 text/html MIME Type으로 재조정}}', '19회_15'],
+      ['httpd.conf', '{{key|Access 로그}}(정상 접속)와 {{key|Error 로그}}(접속 에러)의 {{key|경로를 확인}}할 수 있는 파일', '19회_7'],
+    ]},
+  { title: '메일 · DNS 설정 비교',
+    cols: ['대상', '설정 / 옵션', '의미', '등록 문제'],
+    rows: [
+      ['Sendmail /etc/mail/access', '{{key|RELAY}}', '해당 도메인(예: kca.or.kr)의 메일 릴레이 {{def|허용}}', '25회_6'],
+      ['Sendmail /etc/mail/access', '{{key|DISCARD}}', '해당 도메인(예: spam.com)의 메일 {{def|폐기}}', '25회_6'],
+      ['Sendmail access.db 생성', '{{key|makemap hash}} etc/mail/access.db < etc/mail/access', 'access 설정을 DB로 생성', '21회_1'],
+      ['BIND Master /etc/named.conf', '{{key|type master}}; file "zone파일"; allow-update', 'Master DNS의 zone 설정', '23회_18'],
+      ['BIND Slave /etc/named.conf', '{{key|type slave}}; file "slave/zone파일"; {{key|masters}} { Master IP }; allow-update { none; }', 'Slave DNS의 zone 설정', '23회_18'],
+      ['named.conf vs resolv.conf', 'named.conf: DNS 서버의 기본 설정(zone 관리) / resolv.conf: 네임서버 설정 및 도메인 검색 규칙', '파일 역할 구분', '31회_1'],
+    ]},
+];
+
+const WIN_GROUPS = [
+  { layer: '계정 · 권한', attacks: [
+    { name: '계정 그룹 (Administrators · Power Users · Backup Operators · Users · Guests)', ids: ['25회_1'] },
+    { name: 'UAC (사용자 계정 컨트롤)', ids: ['26회_13'] },
+  ]},
+  { layer: '로그 · 감사', attacks: [
+    { name: '감사 정책', ids: ['31회_9'] },
+    { name: '이벤트 로그 크기 · 설정 경로', ids: ['29회_17'] },
+    { name: '서비스 로그 경로 (IIS · HTTPERR · DHCP)', ids: ['23회_1'] },
+  ]},
+  { layer: '파일시스템 · 패치', attacks: [
+    { name: 'NTFS', ids: ['29회_2'] },
+    { name: '패치 종류 (핫픽스 · 업데이트)', ids: ['27회_9'] },
+  ]},
+  { layer: '네트워크 · 서비스 설정', attacks: [
+    { name: 'NetBIOS 바인딩', ids: ['23회_15','28회_14'],
+      note: '23회_15와 28회_14는 같은 문제가 반복 출제된 것입니다.' },
+    { name: 'FTP 디렉토리 접근 권한', ids: ['31회_13'] },
+  ]},
+  { layer: '인증 · 악성코드', attacks: [
+    { name: 'Pass the Hash (NTLM · LanMan 해시 탈취)', ids: ['151제_082'] },
+    { name: 'PE 파일 악성코드 분석', ids: ['25회_18'] },
+  ]},
+];
+
+const WIN_COMPARE = [
+  { title: '윈도우 계정 그룹 비교',
+    cols: ['그룹', '권한 / 용도', '등록 문제'],
+    rows: [
+      ['Administrators', '도메인 또는 로컬 컴퓨터에 대한 {{key|모든 권한}} 보유', '25회_1'],
+      ['Power Users', '일반 사용자보다는 많은 권한, Administrators보다는 {{key|제한적인 권한}}', '25회_1'],
+      ['Backup Operators', '{{key|시스템 백업}} 목적으로 모든 파일과 디렉터리 접근 가능', '25회_1'],
+      ['Users', '도메인 및 로컬 컴퓨터를 {{key|일반적으로 사용}}하는 그룹', '25회_1'],
+      ['Guests', '제한된 권한, {{key|일시적으로 시스템을 사용}}하는 사용자를 위해 설계', '25회_1'],
+    ]},
+  { title: '감사 정책 · 로그 설정 비교',
+    cols: ['항목', '기록 / 설정 내용', '등록 문제'],
+    rows: [
+      ['계정 관리 감사', '{{key|계정 변경, 암호 변경, 권한 변경}} 등의 관리 작업 기록', '31회_9'],
+      ['계정 로그온 이벤트 감사', '사용자 계정의 {{key|로그온 성공 또는 실패}} 기록', '31회_9'],
+      ['권한 사용 감사', '{{key|관리자 권한이나 특수 권한(Privilege) 사용 여부}} 기록', '31회_9'],
+      ['이벤트 로그 최대 크기', '500바이트 × 1,000개 × 30일 = {{key|15,000,000 바이트 (약 15,000KB)}}', '29회_17'],
+      ['이벤트 로그 크기 설정 경로', '{{def|이벤트 뷰어 > 해당 로그 선택 > 속성 > 일반 > 최대 로그 크기}}', '29회_17'],
+      ['IIS 로그 경로', 'C:\\Windows\\inetpub\\logs\\Logfiles\\{{key|W3SVC1}}(웹), {{key|MSFTPSVC1}}(FTP). HTTP 에러 로그는 System32\\Logfiles\\{{key|HTTPERR}}', '23회_1'],
+      ['DHCP 로그 경로', 'C:\\Windows\\System32\\Logfiles\\{{key|DHCP}}', '23회_1'],
+    ]},
+  { title: '윈도우 설정 · 취약점 비교',
+    cols: ['항목', '위험 / 특징', '설정 · 대응', '등록 문제'],
+    rows: [
+      ['NetBIOS 바인딩', '인터넷에 직접 연결된 시스템에서 NetBIOS TCP/IP 바인딩이 활성화되면 {{dmg|원격에서 네트워크 공유자원을 사용할 우려}}', '{{def|ncpa.cpl > 로컬 영역 연결 > 속성 > TCP/IP > 고급 > WINS 탭에서 NetBIOS 사용 안 함}}', '23회_15, 28회_14'],
+      ['FTP 디렉토리 접근 권한 미흡', '{{dmg|비인가자(Anonymous 등)에 의한 중요 파일 유출·변조}}, {{dmg|악의적 파일 업로드·실행으로 권한 상승 및 시스템 침해}}', '-', '31회_13'],
+      ['UAC 관리자 권한 실행', '명령 처리기(cmd.exe)를 {{key|관리자 권한으로 실행}}해야 처리되는 명령어가 있음', '-', '26회_13'],
+      ['NTFS', '-', '{{key|대용량 파일 처리, 저널링, 파일/폴더 수준 권한 관리, 암호화}}를 지원하는 파일시스템', '29회_2'],
+      ['핫픽스 (Hot Fix)', '{{use|즉시 교정되어야 하는 주요 취약점}} 패치용. 서비스팩 발표 후 필요 시 별도 발표', '-', '27회_9'],
+      ['업데이트 (Update)', '문제를 예방·해결하거나 컴퓨터 작동 방식·경험을 향상시키는 추가 소프트웨어', '-', '27회_9'],
+      ['Pass the Hash', '{{use|mimikatz 같은 툴로 메모리의 NTLM·LanMan 해시 탈취}} → {{dmg|원격 서버 인증 시도}}', '-', '151제_082'],
+    ]},
+];
+
 function fmtCmp(text) {
   return escHtml(text).replace(/\{\{(use|dmg|def|key)\|(.+?)\}\}/g, '<span class="kw-$1">$2</span>');
 }
@@ -2618,6 +2839,24 @@ function openSysAttack() {
   renderAttackPage(SYS_ATTACKS, SYS_COMPARE, 'sysAttackList', 'sysAttackCount', 'sys');
 }
 
+function openLinuxPage() {
+  document.getElementById('qArea').style.display = 'none';
+  document.getElementById('sidebar').style.display = 'none';
+  document.getElementById('headerStats').style.display = 'none';
+  document.getElementById('linuxArea').style.display = 'flex';
+  document.getElementById('scrollTopBtn').classList.add('visible');
+  renderAttackPage(LINUX_GROUPS, LINUX_COMPARE, 'linuxList', 'linuxCount', 'linux', { unit: '주제', legend: OS_LEGEND, cmpTitle: '설정 · 파일 비교 요약' });
+}
+
+function openWinPage() {
+  document.getElementById('qArea').style.display = 'none';
+  document.getElementById('sidebar').style.display = 'none';
+  document.getElementById('headerStats').style.display = 'none';
+  document.getElementById('winArea').style.display = 'flex';
+  document.getElementById('scrollTopBtn').classList.add('visible');
+  renderAttackPage(WIN_GROUPS, WIN_COMPARE, 'winList', 'winCount', 'win', { unit: '주제', legend: OS_LEGEND, cmpTitle: '설정 · 정책 비교 요약' });
+}
+
 function openLayerAttack() {
   document.getElementById('qArea').style.display = 'none';
   document.getElementById('sidebar').style.display = 'none';
@@ -2627,7 +2866,8 @@ function openLayerAttack() {
   renderLayerAttacks();
 }
 
-function renderAttackPage(groups, compare, listId, countId, prefix) {
+function renderAttackPage(groups, compare, listId, countId, prefix, opts) {
+  opts = opts || {};
   const byId = new Map(questions.map(q => [q.id, q]));
   let ai = 0, withQ = 0;
   const html = groups.map(L => {
@@ -2660,12 +2900,13 @@ function renderAttackPage(groups, compare, listId, countId, prefix) {
     return `<h3 class="layer-title">${escHtml(L.layer)}</h3>${cats}`;
   }).join('');
 
-  const legend = `<div class="cmp-legend">
-    <span><span class="kw-use">파랑</span> 공격에 이용하는 수단</span>
-    <span><span class="kw-dmg">빨강</span> 희생자가 받는 피해</span>
-    <span><span class="kw-def">초록</span> 대응</span>
-    <span><span class="kw-key">보라</span> 판별 핵심</span>
-  </div>`;
+  const legendRows = opts.legend || [
+    ['use', '파랑', '공격에 이용하는 수단'],
+    ['dmg', '빨강', '희생자가 받는 피해'],
+    ['def', '초록', '대응'],
+    ['key', '보라', '판별 핵심'],
+  ];
+  const legend = `<div class="cmp-legend">${legendRows.map(l => `<span><span class="kw-${l[0]}">${l[1]}</span> ${l[2]}</span>`).join('')}</div>`;
   const tables = compare.map(t => `
     <h4 style="font-size:14px;font-weight:700;color:var(--text);margin:0 0 10px">${escHtml(t.title)}</h4>
     <div class="cmp-wrap"><table class="cmp-table">
@@ -2673,9 +2914,9 @@ function renderAttackPage(groups, compare, listId, countId, prefix) {
       <tbody>${t.rows.map(r => `<tr>${r.map(c => `<td>${fmtCmp(c)}</td>`).join('')}</tr>`).join('')}</tbody>
     </table></div>`).join('');
 
-  document.getElementById(countId).textContent = `${ai}개 공격 중 ${withQ}개에 문제 등록`;
+  document.getElementById(countId).textContent = `${ai}개 ${opts.unit || '공격'} 중 ${withQ}개에 문제 등록`;
   document.getElementById(listId).innerHTML =
-    html + `<h3 class="layer-title">📊 비슷한 공격 비교 요약</h3>` + legend + tables;
+    html + `<h3 class="layer-title">📊 ${opts.cmpTitle || '비슷한 공격 비교 요약'}</h3>` + legend + tables;
 }
 
 // ══════════════════════════════════════════════
