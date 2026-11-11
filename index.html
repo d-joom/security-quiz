@@ -427,6 +427,17 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
   background: linear-gradient(90deg, transparent, var(--border2) 15%, var(--border2) 85%, transparent);
 }
 
+/* ── 계층별 공격 모음 ── */
+.layer-title { font-size: 17px; font-weight: 800; color: var(--accent2); margin: 34px 0 14px; padding-bottom: 8px; border-bottom: 2px solid var(--border2); }
+.layer-title:first-of-type { margin-top: 4px; }
+.atk-empty { font-size: 12.5px; color: var(--text3); background: var(--bg3); border: 1px dashed var(--border2); border-radius: 8px; padding: 9px 14px; }
+.cmp-wrap { overflow-x: auto; margin-bottom: 26px; border: 1px solid var(--border2); border-radius: 12px; }
+.cmp-table { width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.6; min-width: 640px; }
+.cmp-table th { background: var(--bg4); color: var(--text); font-weight: 700; text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border2); white-space: nowrap; }
+.cmp-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; color: var(--text2); }
+.cmp-table tr:last-child td { border-bottom: none; }
+.cmp-table td:first-child { font-weight: 700; color: var(--text); white-space: nowrap; }
+
 /* ── Glossary (요약정리) ── */
 .glos-note {
   font-size: 12px; font-weight: 800; color: var(--text3); letter-spacing: .2px;
@@ -666,6 +677,7 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
             <button class="load-btn" onclick="openEssayPoint()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🎯 서술형포인트문제</button>
             <button class="load-btn" onclick="openPracticalPoint()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🛠️ 실무형포인트문제</button>
             <button class="load-btn" onclick="openAiPick()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🤖 AI픽 문제</button>
+            <button class="load-btn" onclick="openLayerAttack()" style="background:#fff;border:1.5px solid var(--border2);color:var(--text2);box-shadow:none;font-weight:600">🧱 계층별 공격 모음</button>
           </div>
         </div>
       </div>
@@ -865,6 +877,23 @@ progress::-webkit-progress-value { background: linear-gradient(90deg, var(--acce
     </div>
 
     <!-- AI픽 문제 (기출픽 + 이슈픽) -->
+    <!-- 계층별 공격 모음 -->
+    <div id="layerAttackArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
+      <div class="summary-wrap">
+        <div class="summary-header">
+          <div style="display:flex;align-items:center;gap:12px">
+            <h2>🧱 계층별 공격 모음</h2>
+            <span id="layerAttackCount" style="font-size:13px;color:var(--text3);font-weight:400"></span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <button class="sum-expand-all" onclick="goHome()">✕ 닫기</button>
+          </div>
+        </div>
+        <p style="color:var(--text2);font-size:13px;margin:-4px 0 20px">OSI 계층별 공격 유형 중 사이트에 등록된 기출·151제 문제를 공격별로 모았습니다. 문제를 클릭하면 정답이 펼쳐지고, 맨 아래에서 비슷한 공격끼리 표로 비교할 수 있습니다.</p>
+        <div id="layerAttackList"></div>
+      </div>
+    </div>
+
     <div id="aiPickArea" style="display:none; flex:1; padding:24px; overflow-y:auto;">
       <div class="summary-wrap">
         <div class="summary-header">
@@ -1798,6 +1827,7 @@ function goHome() {
   document.getElementById('essayPointArea').style.display = 'none';
   document.getElementById('practicalPointArea').style.display = 'none';
   document.getElementById('aiPickArea').style.display = 'none';
+  document.getElementById('layerAttackArea').style.display = 'none';
   document.getElementById('scrollTopBtn').classList.remove('visible');
   document.getElementById('loadScreen').style.display = 'flex';
   document.getElementById('sidebar').style.display = 'flex';
@@ -2251,6 +2281,145 @@ function renderFreqList(topics, listElId, countElId, idPrefix) {
 
 function toggleFreqItem(idPrefix, ti, i) {
   document.getElementById(`${idPrefix}Item_${ti}_${i}`)?.classList.toggle('open');
+}
+
+// ══════════════════════════════════════════════
+// 계층별 공격 모음 (OSI 계층 · 공격별 기출/151제 문제 + 비교표)
+// ══════════════════════════════════════════════
+const LAYER_ATTACKS = [
+  { layer: 'L2 (데이터링크 계층)', attacks: [
+    { name: 'ARP Spoofing (ARP Poisoning)', ids: ['19회_4','22회_7','25회_17','151제_109'] },
+    { name: 'MAC Flooding (Switch Jamming)', ids: [] },
+    { name: 'Spanning Tree Protocol (STP) Attack', ids: [] },
+    { name: 'DHCP Snooping', ids: [] },
+  ]},
+  { layer: 'L3 (네트워크 계층 / IP)', attacks: [
+    { name: 'IP Spoofing', ids: ['18회_13','24회_14'] },
+    { name: 'ICMP Redirect Attack', ids: [] },
+    { name: 'Smurf Attack', ids: ['20회_15','28회_1','31회_15','151제_106'] },
+    { name: 'Fraggle Attack (UDP)', ids: [] },
+    { name: 'Teardrop Attack', ids: ['31회_15'] },
+    { name: 'Bonk / Boink Attack', ids: [] },
+    { name: 'Ping of Death (PoD)', ids: [] },
+    { name: 'Tiny Fragment Attack', ids: [] },
+  ]},
+  { layer: 'L4 (전송 계층 / TCP·UDP)', attacks: [
+    { name: 'TCP SYN Flooding', ids: ['21회_14','151제_106'] },
+    { name: 'Land Attack', ids: ['31회_15','151제_106'] },
+    { name: 'TCP Half-Open (SYN) Scan', ids: ['27회_6'] },
+    { name: 'TCP FIN / Xmas / Null Scan', ids: ['27회_6'] },
+    { name: 'UDP Flooding', ids: [] },
+  ]},
+  { layer: 'L7 (응용 계층 / 웹·애플리케이션)', attacks: [
+    { name: 'Slowloris (Slow HTTP Header DoS)', ids: ['18회_9'] },
+    { name: 'Slow HTTP POST (RUDY)', ids: [] },
+    { name: 'Slow HTTP Read DoS', ids: ['26회_8'] },
+    { name: 'HTTP GET Flooding (Cache-Control 공격)', ids: ['23회_16'] },
+    { name: 'DNS Amplification (반사 증폭 DDoS)', ids: ['18회_16','18회_12','22회_16'] },
+    { name: 'NTP / SNMP Amplification (그 외 반사 증폭 포함)', ids: ['27회_18','151제_099','151제_107'],
+      note: '27회_18은 NTP, 151제_099는 Memcached, 151제_107은 SSDP 반사 증폭 문제입니다. SNMP 증폭 문제는 등록되어 있지 않습니다.' },
+  ]},
+];
+
+// 비슷한 공격 비교표 (내용은 사이트에 등록된 문제·정답에서만 가져옴)
+const LAYER_COMPARE = [
+  { title: '패킷 조작형 DoS 비교 (Land · Smurf · Teardrop · SYN Flooding)',
+    cols: ['공격', '계층', '핵심 조작/원리', '등록 문제'],
+    rows: [
+      ['Land Attack', 'L3/L4', '출발지 IP와 목적지 IP를 같은 주소(공격 대상)로 만들어 전송해, 수신자가 자기 자신에게 응답하게 함', '31회_15, 151제_106'],
+      ['Smurf', 'L3', '출발지 IP를 공격 대상으로 위조해 네트워크 전체에 ICMP Echo를 브로드캐스트, 응답(echo reply)이 대상에게 집중됨 (Directed Broadcast)', '20회_15, 28회_1, 31회_15'],
+      ['Teardrop', 'L3', 'IP 단편 재조합 시 Fragment Offset을 잘못 조작해 재조합 오류를 유발', '31회_15'],
+      ['TCP SYN Flooding', 'L4', '3-Way Handshaking에서 마지막 ACK를 보내지 않아 Half-Open 연결(Backlog Queue)을 고갈시킴. 대응: SYN Cookie', '21회_14 (iptables 룰)'],
+    ]},
+  { title: '포트 스캔 비교 (SYN · FIN · Xmas · Null)',
+    cols: ['스캔', '전송 패킷', '포트 상태별 응답', '비고'],
+    rows: [
+      ['TCP SYN (Half-Open)', 'SYN', 'Open이면 SYN+ACK 수신 후 RST로 연결 종료', '완전한 세션을 맺지 않아 로그가 남지 않음, nmap -sS'],
+      ['FIN', 'FIN 플래그만 설정', 'Closed 포트만 RST 응답, Open은 무응답', '27회_6'],
+      ['Xmas', 'FIN·PSH·URG 모두 설정', 'Closed 포트만 RST 응답, Open은 무응답', '27회_6'],
+      ['Null', '제어 플래그를 설정하지 않음', 'Closed 포트만 RST 응답, Open은 무응답', '27회_6'],
+    ]},
+  { title: 'Slow 계열 / 요청 폭주형 DoS 비교',
+    cols: ['공격', '핵심 원리', '등록 문제'],
+    rows: [
+      ['Slowloris (Slow HTTP Header)', '헤더의 CRLF(개행문자) 필드를 조작해 조작된 HTTP 헤더를 지속적으로 보내 연결을 붙잡음', '18회_9'],
+      ['Slow HTTP Read', '공격자가 TCP 윈도우 사이즈를 0으로 설정하고 다수의 HTTP 패킷을 보내 서버가 정상 응답하지 못하게 함', '26회_8'],
+      ['Slow HTTP POST (RUDY)', '등록된 문제 없음', '-'],
+      ['HTTP GET Flooding (CC Attack)', 'Cache-Control 헤더를 조작해 캐시를 거치지 않고 웹/DB 서버에 부하를 발생시킴', '23회_16'],
+    ]},
+  { title: '반사 · 증폭형 공격 비교',
+    cols: ['공격', '이용 대상', '핵심 원리', '등록 문제'],
+    rows: [
+      ['Smurf', 'ICMP Echo + 브로드캐스트', '출발지 IP를 공격 대상으로 위조해 증폭 네트워크로 전송', '28회_1'],
+      ['DNS Amplification', 'DNS 서버 (ANY 질의)', '출발지 IP를 공격 대상으로 위조해 DNS 질의를 보내고, 대용량 응답이 대상에게 반사됨', '18회_12, 18회_16, 22회_16'],
+      ['NTP 증폭', 'NTP 서버', 'NTP 취약점을 이용한 DDoS (대응방안 4가지 문제)', '27회_18'],
+      ['SSDP DRDoS', 'UDP 1900번 포트 (IoT)', 'Reflection 공격의 일종', '151제_107'],
+      ['Memcached 증폭', 'Memcached (UDP 11211)', 'GitHub DDoS에 악용된 캐시 솔루션', '151제_099'],
+    ]},
+  { title: 'L2 공격 비교 (ARP · MAC Flooding)',
+    cols: ['공격', '원리', '대응', '등록 문제'],
+    rows: [
+      ['ARP Spoofing', '특정 호스트의 MAC 주소를 공격자의 MAC 주소로 위조한 ARP Reply를 전송해 데이터를 중간에서 가로챔', 'ARP 캐시 테이블 정적(Static) 설정', '19회_4, 25회_17, 151제_109'],
+      ['MAC Flooding (Switch Jamming)', '스위치의 CAM 테이블 공간을 마비시켜 스니핑 가능하게 함', '포트 보안(Port Security)', '(기출 없음)'],
+    ]},
+];
+
+function layerLabel(q) {
+  return q.source === '기출' ? `${q.exam} ${q.number}번` : `151제 ${q.number}번`;
+}
+
+function openLayerAttack() {
+  document.getElementById('qArea').style.display = 'none';
+  document.getElementById('sidebar').style.display = 'none';
+  document.getElementById('headerStats').style.display = 'none';
+  document.getElementById('layerAttackArea').style.display = 'flex';
+  document.getElementById('scrollTopBtn').classList.add('visible');
+  renderLayerAttacks();
+}
+
+function renderLayerAttacks() {
+  const byId = new Map(questions.map(q => [q.id, q]));
+  let ai = 0, withQ = 0;
+  const html = LAYER_ATTACKS.map(L => {
+    const cats = L.attacks.map(a => {
+      const idx = ai++;
+      const items = a.ids.map((qid, i) => {
+        const q = byId.get(qid);
+        if (!q) return '';
+        const typeCls = q.type === '단답형' ? 't-dan' : 't-seo';
+        return `<div class="sum-item" id="layerItem_${idx}_${i}">
+          <div class="sum-item-head" onclick="toggleFreqItem('layer',${idx},${i})">
+            <span class="freq-num">${layerLabel(q)}</span>
+            <span class="sum-q">${escHtml(q.question)}</span>
+            <span class="sum-type-badge ${typeCls}">${q.type}</span>
+            <span class="sum-toggle">▾</span>
+          </div>
+          <div class="sum-ans">
+            <div class="sum-ans-label">정답</div>
+            <div class="sum-ans-box">${escHtml(q.answer)}</div>
+          </div>
+        </div>`;
+      }).join('');
+      if (items) withQ++;
+      return `<div class="freq-cat">
+        <h3 class="freq-cat-title">${escHtml(a.name)} <span class="freq-cat-count">${a.ids.length}문제</span></h3>
+        ${a.note ? `<div class="freq-cat-note">💡 ${escHtml(a.note)}</div>` : ''}
+        ${items || '<div class="atk-empty">등록된 기출·151제 문제가 없습니다.</div>'}
+      </div>`;
+    }).join('');
+    return `<h3 class="layer-title">${escHtml(L.layer)}</h3>${cats}`;
+  }).join('');
+
+  const tables = LAYER_COMPARE.map(t => `
+    <h4 style="font-size:14px;font-weight:700;color:var(--text);margin:0 0 10px">${escHtml(t.title)}</h4>
+    <div class="cmp-wrap"><table class="cmp-table">
+      <thead><tr>${t.cols.map(c => `<th>${escHtml(c)}</th>`).join('')}</tr></thead>
+      <tbody>${t.rows.map(r => `<tr>${r.map(c => `<td>${escHtml(c)}</td>`).join('')}</tr>`).join('')}</tbody>
+    </table></div>`).join('');
+
+  document.getElementById('layerAttackCount').textContent = `${ai}개 공격 중 ${withQ}개에 문제 등록`;
+  document.getElementById('layerAttackList').innerHTML =
+    html + `<h3 class="layer-title">📊 비슷한 공격 비교 요약</h3>` + tables;
 }
 
 // ══════════════════════════════════════════════
